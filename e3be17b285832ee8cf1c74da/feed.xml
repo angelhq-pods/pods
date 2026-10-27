@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mr. X — Daily X Briefing</title>
+    <link>https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/</link>
+    <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Angel's private daily briefing on Cernovich, Adam Townsend, BowTiedBull and Peter B: facts, labeled analysis, and speculative business angles. Unlisted feed for personal use.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Oct 2026 12:32:48 -0700</lastBuildDate>
+    <itunes:author>Mr. X</itunes:author>
+    <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
+    <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/cover.jpg"/>
+    <image><url>https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/cover.jpg</url><title>Mr. X — Daily X Briefing</title><link>https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/</link></image>
+    <itunes:category text="News"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Oct 27, 2026</title>
+      <description>Good morning, Angel. It's Tuesday, October twenty-seventh, and this is your X briefing. Today there's a fourth voice in the room. Peter B joins Mike Cernovich, Adam Townsend and BowTiedBull. Grab the coffee. Here's the headline. Monday was the day AI came for the office job, at least on paper. Anthropic filed to go public, and Microsoft offered buyouts to about sixty thousand employees. All four…</description>
+      <itunes:summary>Good morning, Angel. It's Tuesday, October twenty-seventh, and this is your X briefing. Today there's a fourth voice in the room. Peter B joins Mike Cernovich, Adam Townsend and BowTiedBull. Grab the coffee. Here's the headline. Monday was the day AI came for the office job, at least on paper. Anthropic filed to go public, and Microsoft offered buyouts to about sixty thousand employees. All four…</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-10-27.mp3" length="2944940" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-10-27</guid>
+      <pubDate>Tue, 27 Oct 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:06:08</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
