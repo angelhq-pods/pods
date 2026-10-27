@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Angel's private daily briefing on Cernovich, Adam Townsend, BowTiedBull and Peter B: facts, labeled analysis, and speculative business angles. Unlisted feed for personal use.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Oct 2026 16:05:57 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 27 Oct 2026 16:06:00 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/cover.jpg"/>
@@ -23,6 +23,17 @@
       <guid isPermaLink="false">x-briefing-2026-10-27</guid>
       <pubDate>Tue, 27 Oct 2026 06:00:00 -0700</pubDate>
       <itunes:duration>00:06:08</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>X Briefing — Oct 26, 2026</title>
+      <description>Good morning. This is your X briefing for Monday, October twenty-sixth. I went through a hundred and eighteen posts from Mike Cernovich, Adam Townsend, and BowTiedBull from the last day. Here's what matters. The headline: doom went mainstream in your feed. Cernovich's two biggest posts were one word, prepare, and a vague line, something is coming, you can sense it. Each passed four hundred…</description>
+      <itunes:summary>Good morning. This is your X briefing for Monday, October twenty-sixth. I went through a hundred and eighteen posts from Mike Cernovich, Adam Townsend, and BowTiedBull from the last day. Here's what matters. The headline: doom went mainstream in your feed. Cernovich's two biggest posts were one word, prepare, and a vague line, something is coming, you can sense it. Each passed four hundred…</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-10-26.mp3" length="2056364" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-10-26</guid>
+      <pubDate>Mon, 26 Oct 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:04:17</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>false</itunes:explicit>
     </item>
