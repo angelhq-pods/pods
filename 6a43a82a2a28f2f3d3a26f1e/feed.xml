@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Market Analyst Briefing</title>
+    <link>https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/</link>
+    <atom:link href="https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Angel's private industry and market briefings from the Market Analyst bot. Unlisted feed for personal use.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Oct 2026 12:40:50 -0700</lastBuildDate>
+    <itunes:author>Market Analyst</itunes:author>
+    <itunes:owner><itunes:name>Market Analyst</itunes:name></itunes:owner>
+    <itunes:image href="https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/cover.jpg"/>
+    <image><url>https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/cover.jpg</url><title>Market Analyst Briefing</title><link>https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/</link></image>
+    <itunes:category text="Business"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <itunes:block>yes</itunes:block>
+
+  </channel>
+</rss>
