@@ -71,8 +71,8 @@ def main():
     img = bg.convert("RGBA")
 
     # MARK with accent glow
-    mark_f = fit(F_MARK, a.mark, 2300, 1500, 1900)
-    cy_mark = 1120
+    mark_f = fit(F_MARK, a.mark, 2300, 1400, 1900)
+    cy_mark = 1160
     glow = Image.new("RGBA", (S, S), (0, 0, 0, 0))
     gd = ImageDraw.Draw(glow)
     centered(gd, a.mark, mark_f, cy_mark, acc + (255,))
