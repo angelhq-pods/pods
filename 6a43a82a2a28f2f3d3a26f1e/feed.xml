@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Angel's private industry and market briefings from the Market Analyst bot. Unlisted feed for personal use.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 12:39:20 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 12:39:33 -0700</lastBuildDate>
     <itunes:author>Market Analyst</itunes:author>
     <itunes:owner><itunes:name>Market Analyst</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/cover-v2.jpg"/>
@@ -16,13 +16,13 @@
     <itunes:type>episodic</itunes:type>
     <itunes:block>yes</itunes:block>
     <item>
-      <title>Weekly refresh Oct 26: Anthropic's S-1 and pricier AI money</title>
-      <description>Weekly Abundance Tracker refresh for Space, AI and US manufacturing. This week, AI demand got its first audited proof: Anthropic filed its S-1 with $16.3B of first-half revenue and positive operating cash flow. At the same time, AI financing got more expensive. CoreWeave fell 11.7% with its bonds yielding above 15%, and GE Vernova fell 11.5%. A hot economy (October flash factory PMI 56.0, 10-year…</description>
-      <itunes:summary>Weekly Abundance Tracker refresh for Space, AI and US manufacturing. This week, AI demand got its first audited proof: Anthropic filed its S-1 with $16.3B of first-half revenue and positive operating cash flow. At the same time, AI financing got more expensive. CoreWeave fell 11.7% with its bonds yielding above 15%, and GE Vernova fell 11.5%. A hot economy (October flash factory PMI 56.0, 10-year…</itunes:summary>
-      <enclosure url="https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/episodes/market-analyst-2026-10-26.mp3" length="4183632" type="audio/mpeg"/>
+      <title>Anthropic Opens Its Books as A.I. Borrowers Crack</title>
+      <description>Is anyone actually making money on A I? Anthropic's newly public S-1 gives the first audited answer, and it's yes. But in the same week the neoclouds that borrow to build A I got hammered, a hot economy boxed in the Fed, and NASA turned the Moon race into a race to be ready. Who can pay for growth, who can't, and what it means for your portfolio and your job search.</description>
+      <itunes:summary>Is anyone actually making money on A I? Anthropic's newly public S-1 gives the first audited answer, and it's yes. But in the same week the neoclouds that borrow to build A I got hammered, a hot economy boxed in the Fed, and NASA turned the Moon race into a race to be ready. Who can pay for growth, who can't, and what it means for your portfolio and your job search.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/episodes/market-analyst-2026-10-26.mp3" length="3768140" type="audio/mpeg"/>
       <guid isPermaLink="false">market-analyst-2026-10-26</guid>
       <pubDate>Mon, 26 Oct 2026 06:00:00 -0700</pubDate>
-      <itunes:duration>00:11:37</itunes:duration>
+      <itunes:duration>00:10:28</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>false</itunes:explicit>
     </item>
