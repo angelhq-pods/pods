@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#060A14">
+<meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Briefs">
+<meta name="referrer" content="no-referrer">
+<title>Briefs</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="stylesheet" href="app.css?v=1">
+</head>
+<body>
+<div id="bg"></div>
+<header id="top">
+  <div class="brand"><span class="mark"></span><span class="word">BRIEFS</span></div>
+  <button id="refresh" class="icon-btn" aria-label="Refresh feeds"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5"/></svg></button>
+</header>
+<main id="view" aria-live="polite"></main>
+
+<div id="mini" class="hidden" role="button" aria-label="Open player">
+  <div class="mini-progress"><span></span></div>
+  <img class="mini-art" alt="">
+  <div class="mini-meta"><div class="mini-show"></div><div class="mini-title"></div></div>
+  <button class="icon-btn mini-back" data-skip="-15" aria-label="Back 15 seconds"><svg viewBox="0 0 24 24"><path d="M11 5 4 12l7 7M20 5l-7 7 7 7"/></svg></button>
+  <button class="icon-btn mini-play" aria-label="Play"><svg class="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z" class="fill"/></svg><svg class="i-pause" viewBox="0 0 24 24"><path d="M7 4h3.5v16H7zM13.5 4H17v16h-3.5z" class="fill"/></svg></button>
+</div>
+
+<nav id="tabs">
+  <a href="#/" data-tab="latest"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Latest</span></a>
+  <a href="#/show/x" data-tab="x"><span class="tab-dot" style="--c:#FF2D55"></span><span>X Briefing</span></a>
+  <a href="#/show/ma" data-tab="ma"><span class="tab-dot" style="--c:#FF8B1E"></span><span>Market Analyst</span></a>
+</nav>
+
+<section id="player" class="sheet" aria-hidden="true">
+  <div class="player-bg"></div>
+  <div class="player-inner">
+    <div class="sheet-bar"><button class="icon-btn" id="p-close" aria-label="Close player"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="sheet-label" id="p-show"></div><button class="icon-btn" id="p-more" aria-label="Mark as played"><svg viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></button></div>
+    <div class="p-art-wrap"><img id="p-art" alt=""></div>
+    <div class="p-meta"><h2 id="p-title"></h2><div id="p-date"></div></div>
+    <div class="scrub">
+      <input type="range" id="p-seek" min="0" max="1000" value="0" step="1" aria-label="Seek">
+      <div class="times"><span id="p-cur">0:00</span><span id="p-rem">-0:00</span></div>
+    </div>
+    <div class="controls">
+      <button class="icon-btn skip" data-skip="-15" aria-label="Back 15 seconds"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v5h5"/></svg><b>15</b></button>
+      <button class="play-big" id="p-play" aria-label="Play"><svg class="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z" class="fill"/></svg><svg class="i-pause" viewBox="0 0 24 24"><path d="M7 4h3.5v16H7zM13.5 4H17v16h-3.5z" class="fill"/></svg></button>
+      <button class="icon-btn skip" data-skip="30" aria-label="Forward 30 seconds"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v5h-5"/></svg><b>30</b></button>
+    </div>
+    <div class="p-row">
+      <button class="chip" id="p-speed" aria-label="Playback speed">1×</button>
+      <button class="chip" id="p-tx" hidden>Transcript</button>
+    </div>
+    <div class="p-desc" id="p-desc"></div>
+  </div>
+</section>
+
+<section id="tx" class="sheet" aria-hidden="true">
+  <div class="sheet-bar"><button class="icon-btn" id="tx-close" aria-label="Close transcript"><svg viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></button><div class="sheet-label">Transcript</div><span style="width:44px"></span></div>
+  <article id="tx-body"></article>
+</section>
+
+<audio id="audio" preload="metadata" playsinline></audio>
+<div id="toast" role="status"></div>
+<script src="app.js?v=1"></script>
+</body>
+</html>

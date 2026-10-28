@@ -1,0 +1,33 @@
+Good morning. This is your X briefing for Monday, October twenty-sixth. I went through a hundred and eighteen posts from Mike Cernovich, Adam Townsend, and BowTiedBull from the last day. Here's what matters.
+
+The headline: doom went mainstream in your feed. Cernovich's two biggest posts were one word, prepare, and a vague line, something is coming, you can sense it. Each passed four hundred thousand views. Adam Townsend amplified the second one. And BowTiedBull pushed back the same night, calling it a really questionable propaganda campaign.
+
+Let's start with Cernovich. Ninety-one posts, forty-four of them quote posts.
+
+His biggest theme was preparing for an AI-driven cyber crisis. He quoted a viral essay called Black October with the single word: prepare. He called a follower's family prep kit smart: cash in small bills, a week of water and food. And he said everyone should be a prepper-lite, with seventy-two hours of food, a generator, and extra toilet paper.
+
+So what is Black October? It's real, but narrower than it sounds. On October twenty-first, the PHP project, which runs close to seventy percent of websites, rushed out fixes for two critical security flaws that researchers found with the help of AI models. Security teams scrambled to patch. The viral essay Cernovich quoted, by John Milinovich of Figma, claimed several dozen attacks in two days, each among the worst of any year. I couldn't find an independent count backing that up. And reporting citing 404 Media says many of the exploit scripts going around don't actually work.
+
+One claim from that circle does check out: Britain really did tell households to keep three days of food and water. The UK government launched its Be Ready campaign on October twenty-second. Officially it's framed around severe weather, and British press reports add cyber attacks and hostile states.
+
+Cernovich's second theme was Afghanistan, specifically the abuse of boys by American-allied Afghan men. His post saying Obama tried to send a Green Beret to prison for beating an Afghan police chief got over ten thousand likes.
+
+Third was Brazil. Lula won Sunday's runoff, fifty-one point eight percent to forty-eight point two, after losing the first round. Flávio Bolsonaro refused to concede, and Cernovich called the election rigged. The facts: voting was extended two hours after both campaigns asked for it, and the court president who confirmed the result was appointed by Jair Bolsonaro.
+
+Adam Townsend quoted Cernovich's something-is-coming post with just an eyes emoji, which got ten times his usual views. Otherwise it was opera: Tosca or Medea, and a tip that the Met's cheap Family Circle seats have the best acoustics.
+
+BowTiedBull had five posts. He said fear mongering has gone parabolic and that headlines now control markets, quoting a Fox report on the Pentagon preparing bases to run ninety days without outside support. He also noted that debt for AI buildouts now costs double digits, eight or nine percent even for good companies.
+
+On engagement: Phil Heath, the seven-time Mister Olympia, replied to Cernovich's prepare post. Dylan Madden, with a hundred and twenty-six thousand followers, backed BowTiedBull's skepticism. No government accounts showed up in the samples. One caveat: I only have one prior day to compare against.
+
+Okay. Switching now from facts to my analysis. This part is my inference, not fact.
+
+First, the doom posts got reach, not agreement. They drew a quarter of Cernovich's views but less than a third of his usual like rate, and most sampled replies mocked them. That looks like a trending topic pulling in outside viewers, not his base nodding along.
+
+Second, the Green Beret post was his real hit, with a ten percent like rate and very few replies, which signals agreement. But a caution: the best-matching documented case, Sergeant Charles Martland, involved a reprimand and planned discharge that the Army reversed in twenty sixteen. Not prison.
+
+Third, something is coming worked like a blank screen. People read in elections, war, or AI, which is why it got more replies than anything else he posted.
+
+And finally, BowTiedBull is your counter-signal. He's watching AI credit get expensive, so to him, sudden doom headlines look like something that moves markets.
+
+That's your briefing. See you tomorrow.
