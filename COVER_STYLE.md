@@ -1,39 +1,45 @@
 # Cover art series style (Angel's private podcasts)
 
-Generator: `tools/make_cover.py`. Each show sets its own cover filename with `cover_file` in
-`/workspace/x-briefing/feed_config.json`. The publisher writes that name into `itunes:image`
-and `<image>`. Apps cache artwork by URL, so **every redesign gets a new filename** (v3, v4, ...).
+The two shows share one look: a cinematic generated scene, a darkened bottom third, a big white
+Barlow Condensed Black title, a thin accent rule, and a colored subtitle. Each show gets its own
+scene and accent color so they read as a set but stay distinct.
+
+Generator: `tools/make_cover.py` (PIL). Each show names its cover file with `cover_file` in
+`/workspace/x-briefing/feed_config.json` (the default is `cover.jpg`). The publisher writes that
+name into `<itunes:image>` and `<image>`. Podcast apps cache artwork by URL, so **every redesign
+needs a new filename** (v3, v4, ...).
 
 ## Canvas
 - 3000x3000 RGB JPEG, progressive. Quality starts at 90 and steps down until the file is under 1 MB.
-- Background: a generated abstract image (no text, no logos, no faces), center-cropped and darkened to 85% brightness.
-  The bottom 45% fades to base `#060A14` so the title reads cleanly. With no image, the background is solid `#060A14`.
+- Scene: a generated 1:1 cinematic image with no text, logos, real people or faces. It is
+  center-cropped and resized to 3000.
+- Darkened bottom third: base `#060A14` is overlaid starting at y=58% and ramps to ~92% opacity by
+  y=74%, then holds to the bottom edge.
 
 ## Layout (px on the 3000 canvas)
 | Element | Font | Position / size | Color |
 |---|---|---|---|
-| Frame | — | 24 px stroke, inset 60 px | accent |
-| Kicker pill (`--subtitle`, letter-spaced caps) | Barlow Condensed Black 230 | top-left at (170,170), 70/40 padding, 30 radius | pill = accent, text = `#060A14` |
-| Mark (`--mark`, 1-3 chars) | Anton 400 (Regular) | auto-fit within 2300x1400, centered at y=1160 | `#FFFFFF` face, accent hard shadow offset +40/+40, accent glow (blur 70, x2) |
-| Title (`--title`, one word) | Anton | auto-fit within 2600x620, centered at y=2290 | `#FFFFFF` |
-| Rule | — | 1400x30 bar centered, y=2650-2680 | accent |
-| Byline (`--byline`, letter-spaced caps) | Barlow Condensed Black 150 | centered at y=2800 | `#D2DCEB` |
+| Title (caps, 1-2 words) | Barlow Condensed Black | auto-fit to 2650 wide (max 520 pt), centered at y=2350 | `#FFFFFF` |
+| Rule | — | x 175 to 2825, y 2570 to 2592 (22 px) | show accent |
+| Subtitle (caps, short, separated by `·`) | Barlow Condensed SemiBold | auto-fit to 2650 wide (max 200 pt), centered at y=2735 | show subtitle color |
 
-Fonts: `/usr/share/fonts/truetype/sand-box/google/Anton/Anton-Regular.ttf`,
-`/usr/share/fonts/truetype/sand-box/google/Barlow Condensed/BarlowCondensed-Black.ttf`.
+Fonts are in `/usr/share/fonts/truetype/sand-box/google/Barlow Condensed/`
+(`BarlowCondensed-Black.ttf`, `BarlowCondensed-SemiBold.ttf`).
 
 ## Per-show values
-| Show | mark | title | subtitle | byline | accent | bg |
+| Show | File | Title | Subtitle | Rule accent | Subtitle color | Scene |
 |---|---|---|---|---|---|---|
-| Daily X Briefing (`e3be17b285832ee8cf1c74da`) | `X` | `BRIEFING` | `DAILY` | `MR. X` | `#1FA2FF` electric blue | `tools/art/x-briefing-bg.jpg` (radiating signal rings) |
-| Market Analyst | (its choice; a different accent such as `#00E08A` green or `#FFB020` amber keeps the series distinct) | | | | | |
+| Daily X Briefing (`e3be17b285832ee8cf1c74da`) | `x-briefing-cover-v3.jpg` | `X BRIEFING` | `DAILY  ·  BY MR. X` | `#FF2D55` on-air red | `#FFB3C1` pale red | `tools/art/x-briefing-scene.jpg`: a night broadcast tower over a city skyline with blue signal rings and a red beacon |
+| Market Analyst (`6a43a82a2a28f2f3d3a26f1e`) | `cover-v2.jpg` (owned by the Market Analyst bot) | `MARKET ANALYST` | `SPACE · AI · MADE IN AMERICA` | orange | cyan | a rocket launch over an industrial skyline at sunset |
+
+For a new show, pick an accent that isn't red/pink or orange/cyan, such as `#00E08A` green or `#B36BFF` violet.
 
 ## Command
 ```
 cd /workspace/pods-site
-python3 tools/make_cover.py --mark X --title BRIEFING --subtitle DAILY --byline "MR. X" \
-  --accent "#1FA2FF" --bg tools/art/x-briefing-bg.jpg \
-  --out e3be17b285832ee8cf1c74da/x-briefing-cover-v2.jpg
+python3 tools/make_cover.py --title "X BRIEFING" --subtitle "DAILY  ·  BY MR. X" \
+  --accent "#FF2D55" --subcolor "#FFB3C1" --bg tools/art/x-briefing-scene.jpg \
+  --out e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg
 ```
-Then set `cover_file` in the config and run `python3 /workspace/x-briefing/publish_episode.py --rebuild --show <key>`.
-Always check a 300 px and a 150 px downscale for legibility.
+Next, set `cover_file` in the config and run `python3 /workspace/x-briefing/publish_episode.py --rebuild --show <key>`.
+Before publishing, check 300 px and 150 px downscales to make sure the title is still legible.
