@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/feed.xml" rel="self" type="application/rss+xml"/>
     <description>Angel's private industry and market briefings from the Market Analyst bot. Unlisted feed for personal use.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 28 Oct 2026 11:50:43 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 12:39:20 -0700</lastBuildDate>
     <itunes:author>Market Analyst</itunes:author>
     <itunes:owner><itunes:name>Market Analyst</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/cover-v2.jpg"/>
@@ -27,13 +27,13 @@
       <itunes:explicit>false</itunes:explicit>
     </item>
     <item>
-      <title>Abundance Tracker baseline: Space, AI &amp; US manufacturing</title>
-      <description>Hi. This is your companion briefing for the Abundance Tracker, the edition for the week ending Friday, October twenty-third, twenty twenty-six. It covers space, A I, and American manufacturing. Over about ten minutes I'll walk through the five things that mattered this week, why each one happened, what to watch next, and what it means for investing and for your job search. I'll also tell you…</description>
-      <itunes:summary>Hi. This is your companion briefing for the Abundance Tracker, the edition for the week ending Friday, October twenty-third, twenty twenty-six. It covers space, A I, and American manufacturing. Over about ten minutes I'll walk through the five things that mattered this week, why each one happened, what to watch next, and what it means for investing and for your job search. I'll also tell you…</itunes:summary>
-      <enclosure url="https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/episodes/market-analyst-2026-10-23.mp3" length="4122576" type="audio/mpeg"/>
+      <title>Can You Pay for Your Own Growth? SpaceX, Meta and the Cost of A.I.</title>
+      <description>The A I boom doesn't have a demand problem. It has a paying-for-it problem. SpaceX reveals that A I is now its biggest business, Meta's cash flow turns negative, and power-equipment stocks tumble as rates sit near five percent. Plus: why electricity is the new A I bottleneck, what Anthropic's coming I P O could reset, and where the factory jobs are.</description>
+      <itunes:summary>The A I boom doesn't have a demand problem. It has a paying-for-it problem. SpaceX reveals that A I is now its biggest business, Meta's cash flow turns negative, and power-equipment stocks tumble as rates sit near five percent. Plus: why electricity is the new A I bottleneck, what Anthropic's coming I P O could reset, and where the factory jobs are.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/episodes/market-analyst-2026-10-23.mp3" length="3887804" type="audio/mpeg"/>
       <guid isPermaLink="false">market-analyst-2026-10-23</guid>
       <pubDate>Fri, 23 Oct 2026 06:00:00 -0700</pubDate>
-      <itunes:duration>00:11:27</itunes:duration>
+      <itunes:duration>00:10:48</itunes:duration>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>false</itunes:explicit>
     </item>
