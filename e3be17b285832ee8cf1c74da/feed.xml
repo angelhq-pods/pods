@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Oct 2026 05:25:38 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 05:32:10 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Oct 30, 2026</title>
+      <description>A record crypto-exchange theft, a hijacked web script that briefly froze a prediction market, and the worst day ever for a tech giant's stock. Also: talk of "AI psychosis," war and midterm turnout, a backlash against gambling sponsorships, and what the tech selloff says about AI spending. Facts first, then clearly labeled analysis, forecasts and business angles.</description>
+      <itunes:summary>A record crypto-exchange theft, a hijacked web script that briefly froze a prediction market, and the worst day ever for a tech giant's stock. Also: talk of "AI psychosis," war and midterm turnout, a backlash against gambling sponsorships, and what the tech selloff says about AI spending. Facts first, then clearly labeled analysis, forecasts and business angles.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-10-30.mp3" length="4279436" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-10-30</guid>
+      <pubDate>Fri, 30 Oct 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:05:57</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Oct 29, 2026</title>
       <description>A viral clip of a struggling worker becomes a flashpoint for working-class money stress, alongside a white-collar story about laid-off high earners in their 40s. Also: felony charges over hidden-camera election videos and the midterm turnout debate, a fact check on a federal judge's misconduct case, AI eating back-office jobs, and the buy-borrow-die wealth strategy. Ends with labeled analysis, two new forecasts, and speculative business angles.</description>
