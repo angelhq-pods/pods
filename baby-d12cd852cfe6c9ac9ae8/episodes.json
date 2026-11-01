@@ -68,6 +68,64 @@
      "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
     }
    ]
+  },
+  {
+   "id": "week-1",
+   "stage": "newborn",
+   "title": "Week 1: Finding Your Rhythm",
+   "subtitle": "Days 7–14",
+   "date": "2026-11-01",
+   "order": 1,
+   "audio": "episodes/week-1.mp3",
+   "cover": "covers/week-1-v1-600.jpg",
+   "duration": 143,
+   "transcript": "Your baby is one week old. You made it through the first seven days, and that's a big deal. Let's talk about what week two, days seven to fourteen, usually looks like.\n\nFirst, diapers. By now, expect about six or more wet diapers a day, with pale yellow pee. Breastfed babies often have several soft, seedy, mustard-yellow poops a day at this age, sometimes after nearly every feed. Formula-fed babies tend to have fewer, firmer ones, more tan or yellow. Lots of variation is normal, so keep a rough tally and bring it to your next checkup.\n\nFeeding is still frequent. Breastfed babies usually nurse eight to twelve times a day. Formula-fed babies often take about two to three ounces per feed, every three to four hours. One big milestone this week: most babies are back to their birth weight by around ten to fourteen days old. Your pediatrician will track that, so check with them about how feeding is going.\n\nYour baby's world is still close up. They see best about eight to twelve inches away, and they love bold, high-contrast patterns and your face. Try a little supervised tummy time while they're awake, just a few minutes at a time. It builds neck and shoulder strength.\n\nSleep is still around sixteen hours a day, in short stretches. Keep up the ABCs: Alone, on their Back, in a Crib or bassinet. Room sharing, without bed sharing, is recommended. Any sleep worries, ask your pediatrician.\n\nSomething else this week: the umbilical cord stump usually falls off somewhere between one and three weeks. Keep it clean and dry, and call if you notice redness, swelling, or a bad smell.\n\nFun fact: put your finger in your baby's palm and watch them grip it. That's the grasp reflex, and it's surprisingly strong.\n\nHeads-up for what's next: the two-to-three-week growth spurt. Expect cluster feeding, fussier evenings, and a baby who seems hungry all the time. It's temporary. Feed on demand, rest when you can, and tag-team with each other.\n\nAnd as always, fever in a baby this young is a reason to call your pediatrician right away. See you next week.",
+   "sources": [
+    {
+     "label": "HealthyChildren.org (AAP): Umbilical Cord Care",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/bathing-skin-care/Pages/Umbilical-Cord-Care.aspx"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): Back to Sleep, Tummy to Play",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/Back-to-Sleep-Tummy-to-Play.aspx"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): Newborn reflexes (grasp)",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/Pages/Newborn-Reflexes.aspx"
+    },
+    {
+     "label": "* Regain birth weight by ~10–14 days: AAP guidance; confirm with your pediatrician.",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/Pages/default.aspx"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): How Often and How Much Should Your Baby Eat?",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/How-Often-and-How-Much-Should-Your-Baby-Eat.aspx"
+    },
+    {
+     "label": "CDC: How Much and How Often to Feed Infant Formula",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Breastfeed",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): Baby's Vision Development",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/Pages/Babys-Vision-Development.aspx"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): How to Keep Your Sleeping Baby Safe (ABCs)",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "NHS: Breastfeeding – is my baby getting enough milk? (nappies)",
+     "url": "https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding/enough-milk/"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ]
   }
  ]
 }
