@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2026 05:24:56 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 07:11:35 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>Weekly X Recap — Nov 1, 2026</title>
+      <description>A weekly recap of the week before the midterms: AI and white-collar job anxiety, record crypto and prediction-market hacks, foreign political crises used as turnout arguments, and the Iran war's return to the headlines. Covers which themes audiences endorsed versus merely viewed, how a set of commentators interacted, and the week's market calls. Facts first, then clearly labeled analysis, forecasts and speculative business angles.</description>
+      <itunes:summary>A weekly recap of the week before the midterms: AI and white-collar job anxiety, record crypto and prediction-market hacks, foreign political crises used as turnout arguments, and the Iran war's return to the headlines. Covers which themes audiences endorsed versus merely viewed, how a set of commentators interacted, and the week's market calls. Facts first, then clearly labeled analysis, forecasts and speculative business angles.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-weekly-2026-11-01.mp3" length="4770476" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-weekly-2026-11-01</guid>
+      <pubDate>Sun, 01 Nov 2026 07:30:00 -0700</pubDate>
+      <itunes:duration>00:06:38</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 1, 2026</title>
       <description>New reporting on Iranian strike damage to U.S. bases in the Middle East and the delayed release of satellite imagery, plus a debate on the right over whether Poland's constitutional-court standoff matters to "America First." Also: buy-the-dip and holiday-rally market calls, AI regulation, and online businesses as a path to more family time. Facts first, then clearly labeled analysis, a forecast and business angles.</description>
