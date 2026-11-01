@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Oct 2026 05:22:57 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 05:24:56 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 1, 2026</title>
+      <description>New reporting on Iranian strike damage to U.S. bases in the Middle East and the delayed release of satellite imagery, plus a debate on the right over whether Poland's constitutional-court standoff matters to "America First." Also: buy-the-dip and holiday-rally market calls, AI regulation, and online businesses as a path to more family time. Facts first, then clearly labeled analysis, a forecast and business angles.</description>
+      <itunes:summary>New reporting on Iranian strike damage to U.S. bases in the Middle East and the delayed release of satellite imagery, plus a debate on the right over whether Poland's constitutional-court standoff matters to "America First." Also: buy-the-dip and holiday-rally market calls, AI regulation, and online businesses as a path to more family time. Facts first, then clearly labeled analysis, a forecast and business angles.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-01.mp3" length="4124780" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-01</guid>
+      <pubDate>Sun, 01 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:05:44</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Oct 31, 2026</title>
       <description>An undercover report on alleged no-show Medicaid home-care billing and the wider fraud crackdown, a constitutional-court standoff in Poland and how it's being framed ahead of the U.S. midterms, and a sharp tech-led market selloff met with buy-the-dip calls. Also: GLP-1 drugs and the rise of "functional food." Facts first, then clearly labeled analysis, forecasts and business angles.</description>
