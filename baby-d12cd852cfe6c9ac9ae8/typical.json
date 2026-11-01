@@ -1,0 +1,5 @@
+{"note":"Typical ranges from the Little Steps episodes (AAP/HealthyChildren, CDC). Every baby is different — check with your pediatrician about feeding, sleep and diapers.",
+"ranges":[
+{"from":0,"to":6,"episode":"Week 0–1","feeds":[8,12],"wet":"1–2 a day at first, rising to 6+ by day 5–6","wetMin":null,"bottleOz":[1,2],"sleepH":16},
+{"from":7,"to":13,"episode":"Week 1","feeds":[8,12],"wet":"6+ a day","wetMin":6,"bottleOz":[2,3],"sleepH":16}
+]}

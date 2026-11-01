@@ -17,12 +17,17 @@ h2{font:22px BCS;text-transform:uppercase;letter-spacing:1px;color:#D9B8FF;margi
 #pl .t{font:18px BCS;margin-bottom:6px}#pl audio{width:100%}
 .d{margin:0 18px}.d details{background:#16112E;border-radius:12px;padding:10px 14px;margin:8px 0}.d summary{font-weight:600;cursor:pointer}
 .d p{white-space:pre-wrap;color:#D8D0F5}.d a{color:#D9B8FF;word-break:break-word}.note{font-size:13px;color:#A99CD6;margin:14px 18px}
-</style></head><body>
-<header><i></i><h1>LITTLE STEPS</h1></header>
+#tabs{position:fixed;left:0;right:0;bottom:0;display:flex;background:rgba(14,10,32,.98);border-top:1px solid #2A2150;padding-bottom:env(safe-area-inset-bottom);z-index:20}
+#tabs button{flex:1;background:none;border:0;color:#7E73A8;font:600 12px -apple-system,system-ui,sans-serif;padding:7px 0 6px;display:flex;flex-direction:column;align-items:center;gap:1px}#tabs button span{font-size:22px;filter:grayscale(1) opacity(.6)}
+#tabs button.on{color:#D9B8FF}#tabs button.on span{filter:none}#pl{bottom:calc(56px + env(safe-area-inset-bottom));padding-bottom:12px}body{padding-bottom:calc(210px + env(safe-area-inset-bottom))}
+</style><link rel="stylesheet" href="log.css"></head><body>
+<section id="listen"><header><i></i><h1>LITTLE STEPS</h1></header>
 <div class="hero"><img id="hero" alt="Episode cover"></div>
 <div class="d" id="detail"></div><div id="list"></div>
 <p class="note">General information from AAP/HealthyChildren, CDC, WHO and NHS. Not medical advice — check with your pediatrician about feeding, sleep and health. * = not yet verified.</p>
-<div id="pl"><div class="t" id="pt">Pick an episode</div><audio id="a" controls preload="none" playsinline></audio></div>
+<div id="pl"><div class="t" id="pt">Pick an episode</div><audio id="a" controls preload="none" playsinline></audio></div></section>
+<section id="log" hidden></section>
+<nav id="tabs"><button data-t="listen" class="on"><span>🎧</span>Listen</button><button data-t="log"><span>📝</span>Log</button></nav>
 <script>
 const $=s=>document.querySelector(s),esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let D;const fmt=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
@@ -34,5 +39,7 @@ fetch('episodes.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;$('#lis
 return `<h2>${st.label}</h2>`+(es.length?es.map(e=>`<div class="ep" data-id="${e.id}"><img src="${e.cover}" alt="" loading="lazy"><div><b>${esc(e.title)}</b><small>${esc(e.subtitle)} · ${fmt(e.duration)}</small></div></div>`).join(''):'<p class="empty">Coming soon</p>')}).join('');
 document.querySelectorAll('.ep').forEach(x=>x.onclick=()=>sel(D.episodes.find(e=>e.id==x.dataset.id),true));
 const h=location.hash.slice(1),cur=d.episodes.find(e=>e.id==h)||d.episodes[d.episodes.length-1];if(cur)sel(cur,false)});
+function tab(t){document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t==t));$('#listen').hidden=t!='listen';$('#log').hidden=t!='log';localStorage['ls-tab']=t;scrollTo(0,0);if(t=='log'&&window.LSLog)LSLog.show()}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>tab(b.dataset.t));if(localStorage['ls-tab']=='log')tab('log');
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
-</script></body></html>
+</script><script src="log-config.js"></script><script src="supabase.js" defer></script><script src="log.js" defer></script></body></html>
