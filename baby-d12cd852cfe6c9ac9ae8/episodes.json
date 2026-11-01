@@ -1,0 +1,73 @@
+{
+ "app": "Little Steps",
+ "stages": [
+  {
+   "id": "pregnancy",
+   "label": "Pregnancy"
+  },
+  {
+   "id": "newborn",
+   "label": "Newborn · Weekly"
+  },
+  {
+   "id": "monthly",
+   "label": "Monthly"
+  }
+ ],
+ "episodes": [
+  {
+   "id": "week-0-1",
+   "stage": "newborn",
+   "title": "Week 0–1: Hello, World",
+   "subtitle": "Birth to day 7",
+   "date": "2026-11-01",
+   "order": 0,
+   "audio": "episodes/week-0-1.mp3",
+   "cover": "covers/week-0-1-v1-600.jpg",
+   "duration": 137,
+   "transcript": "Welcome to your very first week together. Grab a glass of water, sit back, and let's talk about what's normal right now, from the first hours through day seven.\n\nLet's start with diapers, because they are your best clue that feeding is going well. In the first day or two, expect just one or two wet diapers a day, and those first poops are sticky, dark, almost tar-like. That's meconium, and it's completely normal. Each day the count climbs, and by around day five or six you'll want to see about six or more wet diapers a day. The poop changes too, from dark green to a mustardy yellow if your baby is breastfed.\n\nNow, feeding. A newborn's tummy is tiny, so feeds are small and frequent. Breastfed babies usually eat eight to twelve times in twenty-four hours, roughly every two to three hours, day and night. If you're using formula, many newborns take about one to two ounces per feed in the first days, every two to three hours. Follow hunger cues, like rooting and hands to the mouth, more than the clock. And check with your pediatrician about how feeding is going, especially weight.\n\nWhat can your baby see? Things about eight to twelve inches away, which happens to be just about the distance to your face during a feed. Bold, high-contrast shapes, like black and white, are easiest to see.\n\nSleep comes in short stretches, adding up to around sixteen hours a day. Every single time, remember the ABCs: Alone, on their Back, in a Crib or bassinet with a firm, flat surface, and nothing else in it. Your pediatrician can help with any sleep questions.\n\nHere's a fun fact: newborns already prefer looking at faces over almost anything else. You are their favorite show.\n\nComing up: around two to three weeks, many babies hit a growth spurt and want to cluster feed, eating again and again in a short window. It's normal, and it passes.\n\nOne last thing. Fever, trouble breathing, too few wet diapers, or yellow skin are reasons to call your pediatrician right away. You're doing great. See you next week.",
+   "sources": [
+    {
+     "label": "HealthyChildren.org (AAP): Newborn sleep patterns",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/Sleep-and-Your-Newborn.aspx"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): Cluster feeding & growth spurts",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/breastfeeding/Pages/default.aspx"
+    },
+    {
+     "label": "* Unverified on a listed site: 'newborns prefer faces' is widely reported in developmental research; HealthyChildren notes babies focus on faces/high contrast.",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/Pages/Babys-Vision-Development.aspx"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): How Often and How Much Should Your Baby Eat?",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/feeding-nutrition/Pages/How-Often-and-How-Much-Should-Your-Baby-Eat.aspx"
+    },
+    {
+     "label": "CDC: How Much and How Often to Feed Infant Formula",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Breastfeed",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): Baby's Vision Development",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/Pages/Babys-Vision-Development.aspx"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): How to Keep Your Sleeping Baby Safe (ABCs)",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "NHS: Breastfeeding – is my baby getting enough milk? (nappies)",
+     "url": "https://www.nhs.uk/baby/breastfeeding-and-bottle-feeding/breastfeeding/enough-milk/"
+    },
+    {
+     "label": "HealthyChildren.org (AAP): Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0B0820"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Little Steps"><meta name="referrer" content="no-referrer">
+<title>Little Steps</title><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png"><link rel="icon" href="icons/favicon-32.png">
+<style>
+@font-face{font-family:BC;src:url(fonts/BarlowCondensed-Black.ttf)}@font-face{font-family:BCS;src:url(fonts/BarlowCondensed-SemiBold.ttf)}
+*{box-sizing:border-box}body{margin:0;background:#0B0820;color:#EEE9FF;font:16px/1.5 -apple-system,system-ui,sans-serif;padding:env(safe-area-inset-top) 0 calc(150px + env(safe-area-inset-bottom))}
+header{padding:18px 18px 6px;display:flex;align-items:center;gap:10px}header h1{font:44px BC;letter-spacing:.5px;margin:0}header i{width:12px;height:12px;border-radius:50%;background:#B36BFF;box-shadow:0 0 14px #B36BFF}
+.hero{margin:8px 18px 18px;border-radius:18px;overflow:hidden;position:relative}.hero img{width:100%;display:block}
+h2{font:22px BCS;text-transform:uppercase;letter-spacing:1px;color:#D9B8FF;margin:22px 18px 8px}
+.ep{display:flex;gap:12px;margin:0 14px 10px;padding:10px;background:#16112E;border-radius:14px;cursor:pointer;border:1px solid #2A2150}
+.ep.on{border-color:#B36BFF}.ep img{width:84px;height:84px;border-radius:10px}.ep b{display:block;font:20px BCS}.ep small{color:#A99CD6}
+.empty{margin:0 18px;color:#7E73A8;font-size:14px}
+#pl{position:fixed;left:0;right:0;bottom:0;background:rgba(18,13,40,.97);backdrop-filter:blur(12px);padding:12px 16px calc(12px + env(safe-area-inset-bottom));border-top:1px solid #2A2150}
+#pl .t{font:18px BCS;margin-bottom:6px}#pl audio{width:100%}
+.d{margin:0 18px}.d details{background:#16112E;border-radius:12px;padding:10px 14px;margin:8px 0}.d summary{font-weight:600;cursor:pointer}
+.d p{white-space:pre-wrap;color:#D8D0F5}.d a{color:#D9B8FF;word-break:break-word}.note{font-size:13px;color:#A99CD6;margin:14px 18px}
+</style></head><body>
+<header><i></i><h1>LITTLE STEPS</h1></header>
+<div class="hero"><img id="hero" alt="Episode cover"></div>
+<div class="d" id="detail"></div><div id="list"></div>
+<p class="note">General information from AAP/HealthyChildren, CDC, WHO and NHS. Not medical advice — check with your pediatrician about feeding, sleep and health. * = not yet verified.</p>
+<div id="pl"><div class="t" id="pt">Pick an episode</div><audio id="a" controls preload="none" playsinline></audio></div>
+<script>
+const $=s=>document.querySelector(s),esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let D;const fmt=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
+function sel(e,play){$('#hero').src=e.cover.replace('-600','');$('#pt').textContent=e.title;const a=$('#a');if(!a.src.endsWith(e.audio)){a.src=e.audio}
+if(play)a.play().catch(()=>{});document.querySelectorAll('.ep').forEach(x=>x.classList.toggle('on',x.dataset.id==e.id));
+$('#detail').innerHTML=`<details><summary>Transcript</summary><p>${esc(e.transcript)}</p></details><details><summary>Sources</summary><ul>${e.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a></li>`).join('')}</ul></details>`;
+location.hash=e.id;if('mediaSession'in navigator)navigator.mediaSession.metadata=new MediaMetadata({title:e.title,artist:'Little Steps',artwork:[{src:e.cover,sizes:'600x600',type:'image/jpeg'}]})}
+fetch('episodes.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;$('#list').innerHTML=d.stages.map(st=>{const es=d.episodes.filter(e=>e.stage==st.id).reverse();
+return `<h2>${st.label}</h2>`+(es.length?es.map(e=>`<div class="ep" data-id="${e.id}"><img src="${e.cover}" alt="" loading="lazy"><div><b>${esc(e.title)}</b><small>${esc(e.subtitle)} · ${fmt(e.duration)}</small></div></div>`).join(''):'<p class="empty">Coming soon</p>')}).join('');
+document.querySelectorAll('.ep').forEach(x=>x.onclick=()=>sel(D.episodes.find(e=>e.id==x.dataset.id),true));
+const h=location.hash.slice(1),cur=d.episodes.find(e=>e.id==h)||d.episodes[d.episodes.length-1];if(cur)sel(cur,false)});
+if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js');
+</script></body></html>
