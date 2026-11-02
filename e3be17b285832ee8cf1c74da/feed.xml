@@ -13,7 +13,7 @@
     <image><url>https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg</url><title>Mr. X — Daily X Briefing</title><link>https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/</link></image>
     <itunes:category text="News"/>
     <itunes:explicit>false</itunes:explicit>
-    <itunes:type>episodic</itunes:type>
+    <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
     <item>
       <title>Weekly X Recap — Nov 1, 2026</title>
