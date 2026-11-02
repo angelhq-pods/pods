@@ -59,6 +59,7 @@ const LIVE={clock,dur,durS};
 const live=(f,from,to)=>`<span data-live="${f}" data-from="${esc(from)}"${to?` data-to="${esc(to)}"`:''}>${LIVE[f]((to?Date.parse(to):Date.now())-Date.parse(from))}</span>`;
 function liveUpdate(){document.querySelectorAll('#log [data-live]').forEach(x=>{const t=x.dataset.to?Date.parse(x.dataset.to):Date.now();const v=LIVE[x.dataset.live](t-Date.parse(x.dataset.from));if(x.textContent!==v)x.textContent=v})}
 const oz=ml=>(ml/OZ).toFixed(1).replace(/\.0$/,''),mlFmt=ml=>Math.round(ml);
+const MILK={formula:'Formula',breastmilk:'Breast milk'},milkOf=e=>e.milk=='breastmilk'?'breastmilk':'formula';
 const amt=e=>e.unit=='ml'?`${mlFmt(e.amount_ml)} mL (${oz(e.amount_ml)} oz)`:`${oz(e.amount_ml)} oz (${mlFmt(e.amount_ml)} mL)`;
 const toLocalInput=t=>{const d=new Date(t);d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,19)};
 const ageDays=()=>hh?.birth_date?Math.floor((startOfDay(day)-startOfDay(Date.parse(hh.birth_date+'T00:00')))/DAY):null;
@@ -71,7 +72,7 @@ function status(){const r=running('sleep');if(r)return{asleep:true,since:r.start
 function toggleSleep(){const r=running('sleep');if(r)put({...r,ended_at:now()});else put({id:uid(),kind:'sleep',started_at:now(),ended_at:null})}
 function tapSide(side){const r=running('breast');if(r){put({...r,ended_at:now()});if(r.side==side)return}put({id:uid(),kind:'breast',side,started_at:now(),ended_at:null})}
 function diaper(t,when){put({id:uid(),kind:'diaper',diaper:t,started_at:when||now(),ended_at:null});closeSheet();toast(`${ICON.diaper} ${t=='both'?'Pee + poo':t[0].toUpperCase()+t.slice(1)} logged`)}
-function bottle(v,unit,when){const ml=unit=='oz'?v*OZ:v;if(!(ml>0))return;S.unit=unit;put({id:uid(),kind:'bottle',amount_ml:Math.round(ml*10)/10,unit,started_at:when||now(),ended_at:null});closeSheet();toast(`${ICON.bottle} ${unit=='oz'?v+' oz':v+' mL'} logged`)}
+function bottle(v,unit,when,milk='formula'){const ml=unit=='oz'?v*OZ:v;if(!(ml>0))return;S.unit=unit;put({id:uid(),kind:'bottle',milk,amount_ml:Math.round(ml*10)/10,unit,started_at:when||now(),ended_at:null});closeSheet();toast(`${ICON.bottle} ${MILK[milk]} ${unit=='oz'?v+' oz':v+' mL'} logged`)}
 function toast(t){const d=document.createElement('div');d.className='lg-toast';d.textContent=t;document.body.append(d);setTimeout(()=>d.remove(),1800)}
 
 /* ---------- summary ---------- */
@@ -80,17 +81,17 @@ function summary(){const a=day,b=day+DAY,inDay=e=>{const t=Date.parse(e.started_
  const br=all.filter(e=>e.kind=='breast'&&inDay(e)),bo=all.filter(e=>e.kind=='bottle'&&inDay(e)),di=all.filter(e=>e.kind=='diaper'&&inDay(e));
  // breast segments within 30 min of each other = one feed
  const brs=[...br].sort((x,y)=>x.started_at<y.started_at?-1:1);let feedsBr=0,lastEnd=0;for(const e of brs){const s=Date.parse(e.started_at);if(s-lastEnd>30*MIN)feedsBr++;lastEnd=Date.parse(e.ended_at||now())}
- const side=k=>br.filter(e=>e.side==k).reduce((s,e)=>s+ms(e),0),ml=bo.reduce((s,e)=>s+ +e.amount_ml,0);
+ const side=k=>br.filter(e=>e.side==k).reduce((s,e)=>s+ms(e),0),ml=bo.reduce((s,e)=>s+ +e.amount_ml,0),fo=bo.filter(e=>milkOf(e)=='formula'),bm=bo.filter(e=>milkOf(e)=='breastmilk'),fml=fo.reduce((s,e)=>s+ +e.amount_ml,0),bml=bm.reduce((s,e)=>s+ +e.amount_ml,0);
  const wet=di.filter(e=>e.diaper!='poo').length,dirty=di.filter(e=>e.diaper!='pee').length;
  const ww=wakeWindows().filter(w=>{const t=Date.parse(w.to);return t>=a&&t<b}).map(w=>Date.parse(w.to)-Date.parse(w.from));
- return{sleepMs,naps:sleeps.length,longest,feeds:feedsBr+bo.length,feedsBr,L:side('L'),R:side('R'),bottles:bo.length,ml,wet,dirty,diapers:di.length,ww,avgBottleOz:bo.length?ml/bo.length/OZ:0}}
+ return{sleepMs,naps:sleeps.length,longest,feeds:feedsBr+bo.length,feedsBr,L:side('L'),R:side('R'),bottles:bo.length,ml,wet,dirty,diapers:di.length,ww,avgBottleOz:bo.length?ml/bo.length/OZ:0,fml,bml,nf:fo.length,nb:bm.length}}
 function compare(s){const d=ageDays();if(d==null||!typ)return'';const r=typ.ranges.find(r=>d>=r.from&&d<=r.to);
  if(!r)return`<div class="lg-cmp"><b>Typical for day ${d+1}</b><p class="lg-muted">Ranges for this age arrive with the next episode.</p></div>`;
  const isToday=day==startOfDay(Date.now()),row=(l,v,t,ok)=>`<tr><td>${l}</td><td>${v}</td><td>${t}</td><td>${ok==null||isToday?'':ok?'✓':'•'}</td></tr>`;
  return`<div class="lg-cmp"><b>Compared with typical · ${esc(r.episode)}</b><table><tr><th></th><th>${isToday?'So far':'Day'}</th><th>Typical</th><th></th></tr>
  ${row('Feeds',s.feeds,r.feeds.join('–')+' / day',s.feeds>=r.feeds[0]&&s.feeds<=r.feeds[1])}
  ${row('Wet diapers',s.wet,esc(r.wet),r.wetMin==null?null:s.wet>=r.wetMin)}
- ${s.bottles?row('Formula / feed',s.avgBottleOz.toFixed(1)+' oz',r.bottleOz.join('–')+' oz',null):''}
+ ${s.bottles?row('Bottle / feed',s.avgBottleOz.toFixed(1)+' oz',r.bottleOz.join('–')+' oz',null):''}
  ${row('Sleep',dur(s.sleepMs),'~'+r.sleepH+'h / day',null)}</table>
  <p class="lg-muted">${esc(typ.note)} These are rough guides, not targets — call your pediatrician for fever, trouble breathing, too few wet diapers or yellow skin.</p></div>`}
 
@@ -108,7 +109,7 @@ function render(){if(!root)return;const keepW=document.getElementById('lg-sheetw
  <div class="lg-grid">
   <button class="lg-big sleep ${st.asleep?'run':''}" data-a="sleep"><i>${ICON.sleep}</i><b>${st.asleep?'Wake up':'Sleep'}</b><small>${st.asleep?live('clock',st.since):'Tap to start'}</small></button>
   <button class="lg-big breast ${rb?'run':''}" data-a="breast"><i>${ICON.breast}</i><b>Breast</b><small>${rb?(rb.side=='L'?'Left ':'Right ')+live('clock',rb.started_at):'Left · Right timer'}</small></button>
-  <button class="lg-big bottle" data-a="bottle"><i>${ICON.bottle}</i><b>Bottle</b><small>Formula · mL / oz</small></button>
+  <button class="lg-big bottle" data-a="bottle"><i>${ICON.bottle}</i><b>Bottle</b><small>Formula · Breast milk</small></button>
   <button class="lg-big diaper" data-a="diaper"><i>${ICON.diaper}</i><b>Diaper</b><small>Pee · Poo · Both</small></button>
  </div>
  <div class="lg-card"><div class="lg-dayhd"><button data-a="prev" aria-label="Previous day">‹</button><h3>${dLabel}</h3><button data-a="next" ${isToday?'disabled':''} aria-label="Next day">›</button></div>
@@ -116,7 +117,7 @@ function render(){if(!root)return;const keepW=document.getElementById('lg-sheetw
    <div><i>${ICON.sleep}</i><b>${dur(s.sleepMs)}</b><small>sleep · ${s.naps} stretch${s.naps==1?'':'es'}${s.longest?' · longest '+dur(s.longest):''}</small></div>
    <div><i>☀️</i><b>${s.ww.length?dur(s.ww.reduce((a,b)=>a+b,0)/s.ww.length):'—'}</b><small>avg wake window${s.ww.length?' · '+s.ww.length:''}</small></div>
    <div><i>${ICON.breast}</i><b>${s.feeds}</b><small>feeds · L ${dur(s.L)} · R ${dur(s.R)}</small></div>
-   <div><i>${ICON.bottle}</i><b>${S.unit=='ml'?mlFmt(s.ml)+' mL':oz(s.ml)+' oz'}</b><small>formula · ${s.bottles} bottle${s.bottles==1?'':'s'} · ${S.unit=='ml'?oz(s.ml)+' oz':mlFmt(s.ml)+' mL'}</small></div>
+   <div><i>${ICON.bottle}</i><b>${S.unit=='ml'?mlFmt(s.ml)+' mL':oz(s.ml)+' oz'}</b><small>bottles · ${s.bottles}<br>Formula ${oz(s.fml)} oz / ${mlFmt(s.fml)} mL<br>Breast milk ${oz(s.bml)} oz / ${mlFmt(s.bml)} mL</small></div>
    <div><i>💧</i><b>${s.wet}</b><small>wet diapers</small></div>
    <div><i>💩</i><b>${s.dirty}</b><small>dirty diapers</small></div>
   </div>${compare(s)}</div>
@@ -128,7 +129,7 @@ function render(){if(!root)return;const keepW=document.getElementById('lg-sheetw
  if(w.dataset.h!==sh){w.classList.toggle('noanim',!!w.dataset.h&&!!sh);w.innerHTML=sh;w.dataset.h=sh}
  bind();liveUpdate()}
 setInterval(()=>{liveUpdate();if(follow&&S.user&&hh&&day!=startOfDay(Date.now())){day=startOfDay(Date.now());render()}},1e3);
-function label(e){return e.kind=='sleep'?'Sleep':e.kind=='breast'?`Breast · ${e.side=='L'?'Left':'Right'}`:e.kind=='bottle'?'Formula · '+amt(e):'Diaper · '+(e.diaper=='both'?'Pee + poo':e.diaper[0].toUpperCase()+e.diaper.slice(1))}
+function label(e){return e.kind=='sleep'?'Sleep':e.kind=='breast'?`Breast · ${e.side=='L'?'Left':'Right'}`:e.kind=='bottle'?MILK[milkOf(e)]+' bottle · '+amt(e):'Diaper · '+(e.diaper=='both'?'Pee + poo':e.diaper[0].toUpperCase()+e.diaper.slice(1))}
 const IOS=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform=='MacIntel'&&navigator.maxTouchPoints>1),PWA=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
 function signin(){return`<div class="lg-card lg-center"><h3>Family log</h3><p class="lg-muted">Private to your household.</p>
  <input id="lg-email" type="email" autocomplete="username" placeholder="you@example.com" value="${esc(S.lastEmail||'')}">
@@ -141,7 +142,7 @@ function signin(){return`<div class="lg-card lg-center"><h3>Family log</h3><p cl
  <p class="lg-err" id="lg-err">${esc(syncErr)}</p></div>`}
 function sheetHtml(){const k=sheet.k;let b='';
  if(k=='diaper')b=`<h3>Diaper</h3><div class="lg-tri"><button data-d="pee">💧<b>Pee</b></button><button data-d="poo">💩<b>Poo</b></button><button data-d="both">💧💩<b>Both</b></button></div>${whenField()}`;
- if(k=='bottle'){const u=sheet.unit||S.unit,v=sheet.v??(u=='oz'?2:60);b=`<h3>Formula</h3><div class="lg-seg"><button data-u="oz" class="${u=='oz'?'on':''}">oz</button><button data-u="ml" class="${u=='ml'?'on':''}">mL</button></div>
+ if(k=='bottle'){const u=sheet.unit||S.unit,v=sheet.v??(u=='oz'?2:60);const mk=sheet.milk||S.milk||'formula';b=`<h3>Bottle</h3><div class="lg-seg lg-milk"><button data-milk="formula" class="${mk=='formula'?'on':''}">Formula</button><button data-milk="breastmilk" class="${mk=='breastmilk'?'on':''}">Breast milk</button></div><div class="lg-seg"><button data-u="oz" class="${u=='oz'?'on':''}">oz</button><button data-u="ml" class="${u=='ml'?'on':''}">mL</button></div>
   <div class="lg-amt"><button data-step="-1">−</button><input id="lg-v" type="number" inputmode="decimal" step="${u=='oz'?.5:5}" value="${v}"><button data-step="1">+</button></div>
   <p class="lg-conv" id="lg-conv">${conv(v,u)}</p>${whenField()}<button class="lg-btn" data-a="savebottle">Log bottle</button>`}
  if(k=='breast'){const r=running('breast');const last=evs().find(e=>e.kind=='breast'&&e.ended_at);b=`<h3>Breastfeeding</h3>${!r&&last?`<p class="lg-muted">Last side: ${last.side=='L'?'Left':'Right'} at ${hm(last.started_at)} — try ${last.side=='L'?'Right':'Left'}</p>`:''}
@@ -153,6 +154,7 @@ function sheetHtml(){const k=sheet.k;let b='';
   ${e.kind=='sleep'||e.kind=='breast'?(e.ended_at||k=='add'?`<label class="lg-f">End<input type="datetime-local" step="1" id="lg-e" value="${e.ended_at?toLocalInput(e.ended_at):''}"><small class="lg-muted" id="lg-e-txt">${e.ended_at?dt(e.ended_at):''}</small></label>`
    :`<div class="lg-f">End<div class="lg-inprog"><b>In progress</b><button class="lg-btn" data-a="stopedit">Stop now</button></div></div>`)
    +`<p class="lg-total">Total <b id="lg-total">${e.ended_at?durS(Date.parse(e.ended_at)-Date.parse(e.started_at)):live('durS',e.started_at)}</b></p>`:''}
+  ${e.kind=='bottle'?`<div class="lg-seg lg-milk"><button data-emilk="formula" class="${milkOf(e)=='formula'?'on':''}">Formula</button><button data-emilk="breastmilk" class="${milkOf(e)=='breastmilk'?'on':''}">Breast milk</button></div>`:''}
   ${e.kind=='bottle'?`<label class="lg-f">Amount (${e.unit||'oz'})<input type="number" id="lg-amt" inputmode="decimal" value="${e.unit=='ml'?mlFmt(e.amount_ml):oz(e.amount_ml)}"></label>`:''}
   ${e.kind=='diaper'?`<div class="lg-seg">${['pee','poo','both'].map(d=>`<button data-dk="${d}" class="${e.diaper==d?'on':''}">${d}</button>`).join('')}</div>`:''}
   <button class="lg-btn" data-a="saveedit">Save</button>${k=='edit'?'<button class="lg-btn danger" data-a="delete">Delete</button>':''}<p class="lg-err" id="lg-err"></p>`}
@@ -165,6 +167,8 @@ function bind(){root.querySelectorAll('[data-a]').forEach(x=>x.onclick=ev=>{ev.p
  root.querySelectorAll('[data-edit]').forEach(x=>x.onclick=()=>{sheet={k:'edit',e:{...S.ev[x.dataset.edit]}};render()});
  root.querySelectorAll('[data-d]').forEach(x=>x.onclick=()=>diaper(x.dataset.d,whenVal()));
  root.querySelectorAll('[data-side]').forEach(x=>x.onclick=()=>{tapSide(x.dataset.side)});
+ root.querySelectorAll('[data-milk]').forEach(x=>x.onclick=()=>{const v=$('#lg-v');if(v){sheet.v=+v.value;sheet.unit=sheet.unit||S.unit}sheet.milk=x.dataset.milk;render()});
+ root.querySelectorAll('[data-emilk]').forEach(x=>x.onclick=()=>{const a=$('#lg-amt');if(a&&+a.value>0)sheet.e.amount_ml=Math.round((sheet.e.unit=='ml'?+a.value:+a.value*OZ)*10)/10;sheet.e.milk=x.dataset.emilk;keepEdit();render()});
  root.querySelectorAll('[data-dk]').forEach(x=>x.onclick=()=>{sheet.e.diaper=x.dataset.dk;keepEdit();render()});
  root.querySelectorAll('[data-kind]').forEach(x=>x.onclick=()=>{sheet.kind=x.dataset.kind;sheet.e.kind=x.dataset.kind=='sleep'?'sleep':'breast';sheet.e.side=x.dataset.kind.slice(6)||null;keepEdit();render()});
  root.querySelectorAll('[data-u]').forEach(x=>x.onclick=()=>{const v=+$('#lg-v').value,u=x.dataset.u,old=sheet.unit||S.unit;if(u==old)return;sheet.unit=u;sheet.v=u=='ml'?Math.round(v*OZ/5)*5:Math.round(v/OZ*2)/2;render()});
@@ -180,7 +184,7 @@ async function act(a){const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
  if(a=='diaper'){sheet={k:'diaper'};render()}
  if(a=='close')closeSheet();
  if(a=='stopbreast'){const r=running('breast');r&&put({...r,ended_at:now()});closeSheet();toast('🤱 Feed saved')}
- if(a=='savebottle')bottle(+$('#lg-v').value,sheet.unit||S.unit,whenVal());
+ if(a=='savebottle'){S.milk=sheet.milk||S.milk||'formula';bottle(+$('#lg-v').value,sheet.unit||S.unit,whenVal(),S.milk)}
  if(a=='prev'){day=startOfDay(day-DAY/2);follow=false;render()}
  if(a=='next'){day=Math.min(startOfDay(day+DAY*1.5),startOfDay(Date.now()));follow=day==startOfDay(Date.now());render()}
  if(a=='add'){const t=Date.now();sheet={k:'add',kind:'sleep',e:{id:uid(),kind:'sleep',started_at:new Date(t-H).toISOString(),ended_at:new Date(t).toISOString()}};render()}
