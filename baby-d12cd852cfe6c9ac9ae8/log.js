@@ -186,7 +186,7 @@ async function act(a){const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
  if(a=='out'&&confirm('Sign out of the family log on this phone?')){await B.signOut();S={ev:{},q:[],unit:S.unit};hh=null;persist();render()}}
 function bindSignin(){bind();const p=$('#lg-pw');p&&(p.onkeydown=e=>{if(e.key=='Enter')act('pwin')});const c=$('#lg-code');c&&(c.onkeydown=e=>{if(e.key=='Enter')act('verify')})}
 
-async function boot(){if(!B)return render();try{await B.fromLink?.()}catch(x){syncErr='Sign-in link expired or already used — request a new one.'}const u=await B.user();S.user=u?.email||null;persist();
+async function boot(){if(!B)return render();try{await B.fromLink?.()}catch(x){syncErr='That sign-in link was already used (each link works once). Sign in with your email and family password below instead.'}const u=await B.user();S.user=u?.email||null;persist();
  if(!u){hh=null;return render()}
  try{hh=await B.household();S.hh=hh;persist()}catch(e){hh=S.hh||null;syncErr='Offline — showing saved data'}
  render();if(hh){B.subscribe((t,row)=>{if(t=='DELETE')delete S.ev[row.id];else if(!S.ev[row.id]||S.ev[row.id].updated_at<=row.updated_at)S.ev[row.id]=row;persist();render()});await pull();flush()}}
