@@ -49,12 +49,18 @@ async function pull(){if(!B||!hh)return;try{const from=new Date(startOfDay(Date.
 
 /* ---------- helpers ---------- */
 const now=()=>new Date().toISOString(),ms=e=>(e.ended_at?Date.parse(e.ended_at):Date.now())-Date.parse(e.started_at);
-const dur=m=>{m=Math.max(0,Math.round(m/MIN));return m<60?m+'m':Math.floor(m/60)+'h '+String(m%60).padStart(2,'0')+'m'};
+const dur=m=>{if(m<MIN)return Math.max(0,Math.floor(m/1e3))+'s';m=Math.max(0,Math.floor(m/MIN));return m<60?m+'m':Math.floor(m/60)+'h '+String(m%60).padStart(2,'0')+'m'};
 const clock=m=>{const s=Math.max(0,Math.floor(m/1e3));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
 const hm=t=>new Date(t).toLocaleTimeString([],{hour:'numeric',minute:'2-digit'});
+const hms=t=>new Date(t).toLocaleTimeString([],{hour:'numeric',minute:'2-digit',second:'2-digit'});
+const dt=t=>new Date(t).toLocaleString([],{month:'short',day:'numeric',hour:'numeric',minute:'2-digit',second:'2-digit'});
+const durS=m=>{const s=Math.max(0,Math.floor(m/1e3)),h=Math.floor(s/3600),mi=Math.floor(s%3600/60),se=s%60;return(h?h+'h ':'')+(h||mi?String(mi).padStart(h?2:1,'0')+'m ':'')+String(se).padStart(2,'0')+'s'};
+const LIVE={clock,dur,durS};
+const live=(f,from,to)=>`<span data-live="${f}" data-from="${esc(from)}"${to?` data-to="${esc(to)}"`:''}>${LIVE[f]((to?Date.parse(to):Date.now())-Date.parse(from))}</span>`;
+function liveUpdate(){document.querySelectorAll('#log [data-live]').forEach(x=>{const t=x.dataset.to?Date.parse(x.dataset.to):Date.now();const v=LIVE[x.dataset.live](t-Date.parse(x.dataset.from));if(x.textContent!==v)x.textContent=v})}
 const oz=ml=>(ml/OZ).toFixed(1).replace(/\.0$/,''),mlFmt=ml=>Math.round(ml);
 const amt=e=>e.unit=='ml'?`${mlFmt(e.amount_ml)} mL (${oz(e.amount_ml)} oz)`:`${oz(e.amount_ml)} oz (${mlFmt(e.amount_ml)} mL)`;
-const toLocalInput=t=>{const d=new Date(t);d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,16)};
+const toLocalInput=t=>{const d=new Date(t);d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,19)};
 const ageDays=()=>hh?.birth_date?Math.floor((startOfDay(day)-startOfDay(Date.parse(hh.birth_date+'T00:00')))/DAY):null;
 const ICON={sleep:'🌙',breast:'🤱',bottle:'🍼',diaper:'🧷'};
 function overlap(e,a,b){const s=Date.parse(e.started_at),f=e.ended_at?Date.parse(e.ended_at):Date.now();return Math.max(0,Math.min(f,b)-Math.max(s,a))}
@@ -90,18 +96,18 @@ function compare(s){const d=ageDays();if(d==null||!typ)return'';const r=typ.rang
 
 /* ---------- render ---------- */
 let tick;
-function render(){if(!root)return;clearTimeout(tick);
+function render(){if(!root)return;const keepW=document.getElementById('lg-sheetwrap');keepW&&keepW.remove();
  if(!B){root.innerHTML=`<div class="lg-card lg-center"><h3>Log is almost ready</h3><p class="lg-muted">Shared sync hasn't been connected yet. It will appear here once it's set up.</p></div>`;return}
  if(!S.user){root.innerHTML=signin();bindSignin();return}
  if(!hh){root.innerHTML=`<div class="lg-card lg-center"><h3>Not linked yet</h3><p class="lg-muted">Signed in as ${esc(S.user)}, but this account isn't linked to the family log yet.</p><button class="lg-btn ghost" data-a="out">Sign out</button></div>`;bind();return}
  const st=status(),rb=running('breast'),s=summary(),isToday=day==startOfDay(Date.now()),dLabel=isToday?'Today':new Date(day).toLocaleDateString([],{weekday:'short',month:'short',day:'numeric'});
  const items=evs().filter(e=>{const t=Date.parse(e.started_at);return(t>=day&&t<day+DAY)||(e.kind=='sleep'&&overlap(e,day,day+DAY)>0)});
  root.innerHTML=`
- <div class="lg-status ${st.asleep?'asleep':''}"><span>${st.asleep?'Asleep':'Awake'}</span><b>${st.since?dur(Date.now()-Date.parse(st.since)):'—'}</b><small>${st.since?(st.asleep?'since ':'wake window · since ')+hm(st.since):'Log a sleep to track wake windows'}</small></div>
+ <div class="lg-status ${st.asleep?'asleep':''}"><span>${st.asleep?'Asleep':'Awake'}</span><b>${st.since?live('durS',st.since):'—'}</b><small>${st.since?(st.asleep?'since ':'wake window · since ')+hm(st.since):'Log a sleep to track wake windows'}</small></div>
  ${S.q.length||syncErr?`<div class="lg-sync">${esc(syncErr||'Syncing…')}</div>`:''}
  <div class="lg-grid">
-  <button class="lg-big sleep ${st.asleep?'run':''}" data-a="sleep"><i>${ICON.sleep}</i><b>${st.asleep?'Wake up':'Sleep'}</b><small>${st.asleep?clock(Date.now()-Date.parse(st.since)):'Tap to start'}</small></button>
-  <button class="lg-big breast ${rb?'run':''}" data-a="breast"><i>${ICON.breast}</i><b>Breast</b><small>${rb?(rb.side=='L'?'Left ':'Right ')+clock(ms(rb)):'Left · Right timer'}</small></button>
+  <button class="lg-big sleep ${st.asleep?'run':''}" data-a="sleep"><i>${ICON.sleep}</i><b>${st.asleep?'Wake up':'Sleep'}</b><small>${st.asleep?live('clock',st.since):'Tap to start'}</small></button>
+  <button class="lg-big breast ${rb?'run':''}" data-a="breast"><i>${ICON.breast}</i><b>Breast</b><small>${rb?(rb.side=='L'?'Left ':'Right ')+live('clock',rb.started_at):'Left · Right timer'}</small></button>
   <button class="lg-big bottle" data-a="bottle"><i>${ICON.bottle}</i><b>Bottle</b><small>Formula · mL / oz</small></button>
   <button class="lg-big diaper" data-a="diaper"><i>${ICON.diaper}</i><b>Diaper</b><small>Pee · Poo · Both</small></button>
  </div>
@@ -114,11 +120,14 @@ function render(){if(!root)return;clearTimeout(tick);
    <div><i>💧</i><b>${s.wet}</b><small>wet diapers</small></div>
    <div><i>💩</i><b>${s.dirty}</b><small>dirty diapers</small></div>
   </div>${compare(s)}</div>
- <div class="lg-card"><h3>Timeline</h3>${items.length?items.map(e=>`<button class="lg-row" data-edit="${e.id}"><i>${ICON[e.kind]}</i><span><b>${label(e)}</b><small>${hm(e.started_at)}${e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'?' – '+hm(e.ended_at):''}${!e.ended_at&&(e.kind=='sleep'||e.kind=='breast')?' · running':''}</small></span><em>${e.kind=='sleep'||e.kind=='breast'?dur(ms(e)):''}</em></button>`).join(''):'<p class="lg-muted">Nothing logged yet. Tap a button above.</p>'}
+ <div class="lg-card"><h3>Timeline</h3>${items.length?items.map(e=>`<button class="lg-row" data-edit="${e.id}"><i>${ICON[e.kind]}</i><span><b>${label(e)}</b><small>${hm(e.started_at)}${e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'?' – '+hm(e.ended_at):''}${!e.ended_at&&(e.kind=='sleep'||e.kind=='breast')?' · running':''}</small></span><em>${e.kind=='sleep'||e.kind=='breast'?live('dur',e.started_at,e.ended_at):''}</em></button>`).join(''):'<p class="lg-muted">Nothing logged yet. Tap a button above.</p>'}
   <button class="lg-btn ghost" data-a="add">+ Add a past sleep or feed</button></div>
  <p class="lg-muted lg-foot">Shared with your partner in real time · ${esc(S.user)} · <a href="#" data-a="out">Sign out</a></p><details class="lg-card"><summary><b>${S.pw?'Family password is set ✓':'Set a family password'}</b> <span class="lg-muted">— sign in on any phone or the Home Screen app without email</span></summary><input id="lg-p1" type="password" autocomplete="new-password" placeholder="New password (8+ characters)"><input id="lg-p2" type="password" autocomplete="new-password" placeholder="Repeat password"><button class="lg-btn" data-a="setpw">Save password</button><p class="lg-err" id="lg-err"></p></details>
- ${sheet?sheetHtml():''}`;
- bind();if(running('sleep')||rb||sheet?.k=='breast')tick=setTimeout(()=>{if(!document.activeElement?.matches('input'))render();else tick=setTimeout(render,1e3)},1e3)}
+ `;
+ const sh=sheet?sheetHtml():'';let w=document.getElementById('lg-sheetwrap');if(!w){w=document.createElement('div');w.id='lg-sheetwrap'}root.append(w);
+ if(w.dataset.h!==sh){w.classList.toggle('noanim',!!w.dataset.h&&!!sh);w.innerHTML=sh;w.dataset.h=sh}
+ bind();liveUpdate()}
+setInterval(()=>{liveUpdate();if(follow&&S.user&&hh&&day!=startOfDay(Date.now())){day=startOfDay(Date.now());render()}},1e3);
 function label(e){return e.kind=='sleep'?'Sleep':e.kind=='breast'?`Breast · ${e.side=='L'?'Left':'Right'}`:e.kind=='bottle'?'Formula · '+amt(e):'Diaper · '+(e.diaper=='both'?'Pee + poo':e.diaper[0].toUpperCase()+e.diaper.slice(1))}
 const IOS=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform=='MacIntel'&&navigator.maxTouchPoints>1),PWA=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
 function signin(){return`<div class="lg-card lg-center"><h3>Family log</h3><p class="lg-muted">Private to your household.</p>
@@ -136,12 +145,14 @@ function sheetHtml(){const k=sheet.k;let b='';
   <div class="lg-amt"><button data-step="-1">−</button><input id="lg-v" type="number" inputmode="decimal" step="${u=='oz'?.5:5}" value="${v}"><button data-step="1">+</button></div>
   <p class="lg-conv" id="lg-conv">${conv(v,u)}</p>${whenField()}<button class="lg-btn" data-a="savebottle">Log bottle</button>`}
  if(k=='breast'){const r=running('breast');const last=evs().find(e=>e.kind=='breast'&&e.ended_at);b=`<h3>Breastfeeding</h3>${!r&&last?`<p class="lg-muted">Last side: ${last.side=='L'?'Left':'Right'} at ${hm(last.started_at)} — try ${last.side=='L'?'Right':'Left'}</p>`:''}
-  <div class="lg-sides">${['L','R'].map(sd=>{const on=r?.side==sd,tot=evs().filter(e=>e.kind=='breast'&&e.side==sd&&Date.parse(e.started_at)>Date.now()-H).reduce((a,e)=>a+ms(e),0);return`<button data-side="${sd}" class="${on?'run':''}"><small>${sd=='L'?'LEFT':'RIGHT'}</small><b>${on?clock(ms(r)):'▶'}</b><small>${on?'tap to pause':tot?'this feed '+dur(tot):'tap to start'}</small></button>`}).join('')}</div>
+  <div class="lg-sides">${['L','R'].map(sd=>{const on=r?.side==sd,tot=evs().filter(e=>e.kind=='breast'&&e.side==sd&&Date.parse(e.started_at)>Date.now()-H).reduce((a,e)=>a+ms(e),0);return`<button data-side="${sd}" class="${on?'run':''}"><small>${sd=='L'?'LEFT':'RIGHT'}</small><b>${on?live('clock',r.started_at):'▶'}</b><small>${on?'tap to pause':tot?'this feed '+dur(tot):'tap to start'}</small></button>`}).join('')}</div>
   ${r?'<button class="lg-btn" data-a="stopbreast">Done</button>':''}`}
  if(k=='edit'||k=='add'){const e=sheet.e;b=`<h3>${k=='add'?'Add entry':label(e)}</h3>
   ${k=='add'?`<div class="lg-seg">${[['sleep','Sleep'],['breastL','Left'],['breastR','Right']].map(([v,l])=>`<button data-kind="${v}" class="${sheet.kind==v?'on':''}">${l}</button>`).join('')}</div>`:''}
-  <label class="lg-f">${e.kind=='diaper'||e.kind=='bottle'?'Time':'Start'}<input type="datetime-local" id="lg-s" value="${toLocalInput(e.started_at)}"></label>
-  ${e.kind=='sleep'||e.kind=='breast'?`<label class="lg-f">End<input type="datetime-local" id="lg-e" value="${e.ended_at?toLocalInput(e.ended_at):''}"></label>`:''}
+  <label class="lg-f">${e.kind=='diaper'||e.kind=='bottle'?'Time':'Start'}<input type="datetime-local" step="1" id="lg-s" value="${toLocalInput(e.started_at)}"><small class="lg-muted" id="lg-s-txt">${dt(e.started_at)}</small></label>
+  ${e.kind=='sleep'||e.kind=='breast'?(e.ended_at||k=='add'?`<label class="lg-f">End<input type="datetime-local" step="1" id="lg-e" value="${e.ended_at?toLocalInput(e.ended_at):''}"><small class="lg-muted" id="lg-e-txt">${e.ended_at?dt(e.ended_at):''}</small></label>`
+   :`<div class="lg-f">End<div class="lg-inprog"><b>In progress</b><button class="lg-btn" data-a="stopedit">Stop now</button></div></div>`)
+   +`<p class="lg-total">Total <b id="lg-total">${e.ended_at?durS(Date.parse(e.ended_at)-Date.parse(e.started_at)):live('durS',e.started_at)}</b></p>`:''}
   ${e.kind=='bottle'?`<label class="lg-f">Amount (${e.unit||'oz'})<input type="number" id="lg-amt" inputmode="decimal" value="${e.unit=='ml'?mlFmt(e.amount_ml):oz(e.amount_ml)}"></label>`:''}
   ${e.kind=='diaper'?`<div class="lg-seg">${['pee','poo','both'].map(d=>`<button data-dk="${d}" class="${e.diaper==d?'on':''}">${d}</button>`).join('')}</div>`:''}
   <button class="lg-btn" data-a="saveedit">Save</button>${k=='edit'?'<button class="lg-btn danger" data-a="delete">Delete</button>':''}<p class="lg-err" id="lg-err"></p>`}
@@ -158,6 +169,8 @@ function bind(){root.querySelectorAll('[data-a]').forEach(x=>x.onclick=ev=>{ev.p
  root.querySelectorAll('[data-kind]').forEach(x=>x.onclick=()=>{sheet.kind=x.dataset.kind;sheet.e.kind=x.dataset.kind=='sleep'?'sleep':'breast';sheet.e.side=x.dataset.kind.slice(6)||null;keepEdit();render()});
  root.querySelectorAll('[data-u]').forEach(x=>x.onclick=()=>{const v=+$('#lg-v').value,u=x.dataset.u,old=sheet.unit||S.unit;if(u==old)return;sheet.unit=u;sheet.v=u=='ml'?Math.round(v*OZ/5)*5:Math.round(v/OZ*2)/2;render()});
  root.querySelectorAll('[data-step]').forEach(x=>x.onclick=()=>{const i=$('#lg-v'),u=sheet.unit||S.unit;sheet.v=Math.max(0,+i.value+x.dataset.step*(u=='oz'?.5:5));sheet.unit=u;render()});
+ const si=$('#lg-s'),ei=$('#lg-e'),upd=()=>{const sv=si?.value,ev=ei?.value;if(sv)$('#lg-s-txt').textContent=dt(new Date(sv));if(ei)$('#lg-e-txt').textContent=ev?dt(new Date(ev)):'';const tot=$('#lg-total');if(tot&&sv&&ev)tot.textContent=durS(new Date(ev)-new Date(sv))};
+ si&&(si.oninput=upd);ei&&(ei.oninput=upd);
  const v=$('#lg-v');if(v)v.oninput=()=>{sheet.v=+v.value;$('#lg-conv').textContent=conv(+v.value,sheet.unit||S.unit)}}
 function keepEdit(){const s=$('#lg-s')?.value,e=$('#lg-e')?.value;if(s)sheet.e.started_at=new Date(s).toISOString();if(e!=null)sheet.e.ended_at=e?new Date(e).toISOString():null}
 async function act(a){const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
@@ -171,6 +184,7 @@ async function act(a){const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
  if(a=='prev'){day=startOfDay(day-DAY/2);follow=false;render()}
  if(a=='next'){day=Math.min(startOfDay(day+DAY*1.5),startOfDay(Date.now()));follow=day==startOfDay(Date.now());render()}
  if(a=='add'){const t=Date.now();sheet={k:'add',kind:'sleep',e:{id:uid(),kind:'sleep',started_at:new Date(t-H).toISOString(),ended_at:new Date(t).toISOString()}};render()}
+ if(a=='stopedit'){keepEdit();sheet.e.ended_at=now();put({...sheet.e});closeSheet();toast('🌙 Stopped')}
  if(a=='saveedit'){keepEdit();const e=sheet.e;if(e.ended_at&&e.ended_at<e.started_at)return err('End is before start');if(Date.parse(e.started_at)>Date.now()+MIN)return err('Start is in the future');
   if(e.kind=='bottle'){const v=+$('#lg-amt').value;if(!(v>0))return err('Enter an amount');e.amount_ml=Math.round((e.unit=='ml'?v:v*OZ)*10)/10}
   if(e.kind=='sleep'||e.kind=='diaper')e.side=null;put(e);closeSheet()}

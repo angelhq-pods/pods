@@ -34,3 +34,8 @@
 .lg-amt input{flex:1;min-width:0;text-align:center;font:44px BC;background:none;border:0;color:#EEE9FF}.lg-conv{text-align:center;color:#A99CD6;margin:4px 0 8px}
 .lg-f{display:block;color:#A99CD6;font-size:13px;margin:10px 0}.lg-f input{display:block;width:100%;margin-top:4px;padding:11px;border-radius:12px;border:1px solid #2A2150;background:#0B0820;color:#EEE9FF;font-size:16px}
 .lg-toast{position:fixed;left:50%;top:calc(14px + env(safe-area-inset-top));transform:translateX(-50%);background:#EEE9FF;color:#160B2E;padding:10px 18px;border-radius:20px;font-weight:600;z-index:60;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.noanim .lg-sheet{animation:none}
+.lg-f small{display:block;margin-top:4px;font-size:13px}
+.lg-inprog{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}.lg-inprog b{color:#D9B8FF}.lg-inprog .lg-btn{width:auto;margin:0;padding:10px 16px}
+.lg-total{font-size:15px;margin:6px 0 10px}.lg-total b{font-variant-numeric:tabular-nums;color:#FFD86B}
+.lg-cmp td:nth-child(2){white-space:nowrap}.lg-status b{font-variant-numeric:tabular-nums}
