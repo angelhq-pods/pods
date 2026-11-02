@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Nov 2026 07:11:35 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 05:30:52 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 2, 2026</title>
+      <description>A viral post on nuclear-war fatalism, final-weekend midterm nerves, and a late endorsement that upended a key Senate race. Also: a deadly business-jet crash and what investigators know so far, the cost of health insurance for self-employed families, and why learning sales early pays. Facts first, then clearly labeled analysis, two forecasts and a business angle.</description>
+      <itunes:summary>A viral post on nuclear-war fatalism, final-weekend midterm nerves, and a late endorsement that upended a key Senate race. Also: a deadly business-jet crash and what investigators know so far, the cost of health insurance for self-employed families, and why learning sales early pays. Facts first, then clearly labeled analysis, two forecasts and a business angle.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-02.mp3" length="3706604" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-02</guid>
+      <pubDate>Mon, 02 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:05:09</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Weekly X Recap — Nov 1, 2026</title>
       <description>A weekly recap of the week before the midterms: AI and white-collar job anxiety, record crypto and prediction-market hacks, foreign political crises used as turnout arguments, and the Iran war's return to the headlines. Covers which themes audiences endorsed versus merely viewed, how a set of commentators interacted, and the week's market calls. Facts first, then clearly labeled analysis, forecasts and speculative business angles.</description>
