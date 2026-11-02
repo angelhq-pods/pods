@@ -6,11 +6,16 @@ const cfg=window.LS_LOG||{},local=/^(localhost|127\.0\.0\.1)$/.test(location.hos
 const uid=()=>crypto.randomUUID?crypto.randomUUID():'10000000-1000-4000-8000-100000000000'.replace(/[018]/g,c=>(c^crypto.getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16));
 
 /* ---------- backends ---------- */
-function supa(){const sb=supabase.createClient(cfg.url,cfg.anonKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false,storageKey:'ls-auth'}});
+function supa(){const sb=supabase.createClient(cfg.url,cfg.anonKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:false,flowType:'implicit',storageKey:'ls-auth'}});
  const T=()=>sb.from('events');const chk=r=>{if(r.error)throw r.error;return r.data};
  return{name:'supabase',
+  async fromLink(){const h=sessionStorage['ls-auth-hash'];if(!h)return;delete sessionStorage['ls-auth-hash'];const q=new URLSearchParams(h);
+   if(q.get('error_description'))throw Error(q.get('error_description'));if(q.get('access_token'))chk(await sb.auth.setSession({access_token:q.get('access_token'),refresh_token:q.get('refresh_token')}))},
+  key:async()=>(await sb.auth.getSession()).data.session?.refresh_token||'',
+  useKey:async k=>chk(await sb.auth.refreshSession({refresh_token:k})),
+  localOut:()=>sb.auth.signOut({scope:'local'}),
   user:async()=>(await sb.auth.getSession()).data.session?.user||null,
-  sendCode:async e=>chk(await sb.auth.signInWithOtp({email:e,options:{shouldCreateUser:false}})),
+  sendCode:async e=>chk(await sb.auth.signInWithOtp({email:e,options:{shouldCreateUser:false,emailRedirectTo:cfg.redirect||location.origin+location.pathname}})),
   verify:async(e,c)=>chk(await sb.auth.verifyOtp({email:e,token:c,type:'email'})),
   signOut:()=>sb.auth.signOut(),
   household:async()=>chk(await sb.from('households').select('id,birth_date').maybeSingle()),
@@ -21,7 +26,7 @@ function supa(){const sb=supabase.createClient(cfg.url,cfg.anonKey,{auth:{persis
   subscribe(cb){this.ch&&sb.removeChannel(this.ch);this.ch=sb.channel('ev').on('postgres_changes',{event:'*',schema:'public',table:'events'},p=>cb(p.eventType,p.eventType=='DELETE'?p.old:p.new)).subscribe()}}}
 function mock(){ // localhost-only test double: localStorage "server" + BroadcastChannel as realtime
  const K='ls-mock-db',db=()=>JSON.parse(localStorage[K]||'[]'),save=d=>localStorage[K]=JSON.stringify(d),bc=new BroadcastChannel('ls-mock');let me=sessionStorage['ls-mock-user']||null;
- return{name:'mock',user:async()=>me&&{email:me},sendCode:async()=>{},verify:async(e,c)=>{if(c!='123456')throw Error('Invalid code');me=e;sessionStorage['ls-mock-user']=e},
+ return{name:'mock',fromLink:async()=>{},key:async()=>'mock-key',useKey:async k=>{if(k!='mock-key')throw Error('bad');me='paste@test';sessionStorage['ls-mock-user']=me},localOut:async()=>{me=null;delete sessionStorage['ls-mock-user']},user:async()=>me&&{email:me},sendCode:async()=>{},verify:async(e,c)=>{if(c!='123456')throw Error('Invalid code');me=e;sessionStorage['ls-mock-user']=e},
   signOut:async()=>{me=null;delete sessionStorage['ls-mock-user']},household:async()=>({id:'h1',birth_date:localStorage['ls-mock-bd']||null}),
   list:async f=>db().filter(e=>e.started_at>=f),running:async()=>db().filter(e=>!e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'),
   upsert:async ev=>{const d=db().filter(e=>e.id!=ev.id);d.push(ev);save(d);bc.postMessage(['UPDATE',ev])},
@@ -112,13 +117,17 @@ function render(){if(!root)return;clearTimeout(tick);
   </div>${compare(s)}</div>
  <div class="lg-card"><h3>Timeline</h3>${items.length?items.map(e=>`<button class="lg-row" data-edit="${e.id}"><i>${ICON[e.kind]}</i><span><b>${label(e)}</b><small>${hm(e.started_at)}${e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'?' – '+hm(e.ended_at):''}${!e.ended_at&&(e.kind=='sleep'||e.kind=='breast')?' · running':''}</small></span><em>${e.kind=='sleep'||e.kind=='breast'?dur(ms(e)):''}</em></button>`).join(''):'<p class="lg-muted">Nothing logged yet. Tap a button above.</p>'}
   <button class="lg-btn ghost" data-a="add">+ Add a past sleep or feed</button></div>
- <p class="lg-muted lg-foot">Shared with your partner in real time · ${esc(S.user)} · <a href="#" data-a="out">Sign out</a></p>
+ <p class="lg-muted lg-foot">Shared with your partner in real time · ${esc(S.user)} · <a href="#" data-a="out">Sign out</a></p>${IOS&&!PWA?`<div class="lg-card"><p class="lg-muted">Using Little Steps from your Home Screen? Tap below, then open the app → Log → paste. (This signs Safari out.)</p><button class="lg-btn ghost" data-a="copykey">Copy sign-in for Home Screen app</button></div>`:''}
  ${sheet?sheetHtml():''}`;
  bind();if(running('sleep')||rb||sheet?.k=='breast')tick=setTimeout(()=>{if(!document.activeElement?.matches('input'))render();else tick=setTimeout(render,1e3)},1e3)}
 function label(e){return e.kind=='sleep'?'Sleep':e.kind=='breast'?`Breast · ${e.side=='L'?'Left':'Right'}`:e.kind=='bottle'?'Formula · '+amt(e):'Diaper · '+(e.diaper=='both'?'Pee + poo':e.diaper[0].toUpperCase()+e.diaper.slice(1))}
-function signin(){return`<div class="lg-card lg-center"><h3>Family log</h3><p class="lg-muted">Private to your household. Sign in with the email you were invited with — we'll email you a 6-digit code.</p>
- ${S.pendingEmail?`<input id="lg-code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6-digit code"><button class="lg-btn" data-a="verify">Sign in</button><a href="#" data-a="reset" class="lg-muted">Use a different email</a>`
- :`<input id="lg-email" type="email" autocomplete="email" placeholder="you@example.com"><button class="lg-btn" data-a="send">Email me a code</button>`}<p class="lg-err" id="lg-err"></p></div>`}
+const IOS=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform=='MacIntel'&&navigator.maxTouchPoints>1),PWA=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
+function pasteBox(){return`<details class="lg-muted" ${PWA?'open':''}><summary>Signed in on Safari? Move it here</summary><p>In Safari, open Little Steps → Log → “Copy sign-in for Home Screen app”, then paste it here.</p><input id="lg-key" autocomplete="off" placeholder="Paste sign-in"><button class="lg-btn ghost" data-a="usekey">Use pasted sign-in</button></details>`}
+function signin(){return`<div class="lg-card lg-center"><h3>Family log</h3><p class="lg-muted">Private to your household. Enter the email you were invited with and we'll email you a sign-in link.</p>
+ ${S.pendingEmail?`<p>Check <b>${esc(S.pendingEmail)}</b> and tap <b>Log In</b> in the email.${IOS&&PWA?' On iPhone it opens in Safari — you’ll be signed in there; then use the box below to bring it into this app.':''}</p>
+ <details class="lg-muted"><summary>Got a 6-digit code instead?</summary><input id="lg-code" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6-digit code"><button class="lg-btn" data-a="verify">Sign in</button></details>
+ <button class="lg-btn ghost" data-a="send2">Resend link</button><a href="#" data-a="reset" class="lg-muted">Use a different email</a>`
+ :`<input id="lg-email" type="email" autocomplete="email" placeholder="you@example.com"><button class="lg-btn" data-a="send">Email me a sign-in link</button>`}${pasteBox()}<p class="lg-err" id="lg-err">${esc(syncErr)}</p></div>`}
 function sheetHtml(){const k=sheet.k;let b='';
  if(k=='diaper')b=`<h3>Diaper</h3><div class="lg-tri"><button data-d="pee">💧<b>Pee</b></button><button data-d="poo">💩<b>Poo</b></button><button data-d="both">💧💩<b>Both</b></button></div>${whenField()}`;
  if(k=='bottle'){const u=sheet.unit||S.unit,v=sheet.v??(u=='oz'?2:60);b=`<h3>Formula</h3><div class="lg-seg"><button data-u="oz" class="${u=='oz'?'on':''}">oz</button><button data-u="ml" class="${u=='ml'?'on':''}">mL</button></div>
@@ -166,11 +175,14 @@ async function act(a){const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
  if(a=='delete'&&confirm('Delete this entry?')){del(sheet.e.id);closeSheet()}
  if(a=='send'){const e=$('#lg-email').value.trim().toLowerCase();if(!/^\S+@\S+\.\S+$/.test(e))return err('Enter your email');try{await B.sendCode(e);S.pendingEmail=e;persist();render()}catch(x){err(/signups|not allowed|not found/i.test(x.message)?'That email isn’t on the family list.':x.message)}}
  if(a=='verify'){const c=$('#lg-code').value.trim();try{await B.verify(S.pendingEmail,c);S.pendingEmail=null;await boot()}catch(x){err('That code didn’t work — check it or request a new one.')}}
+ if(a=='send2'){try{await B.sendCode(S.pendingEmail);toast('📧 New link sent')}catch(x){err(x.message)}}
+ if(a=='usekey'){const k=($('#lg-key').value||'').trim();if(!k)return err('Paste the sign-in first');try{await B.useKey(k);S.pendingEmail=null;persist();await boot()}catch(x){err('That sign-in didn’t work — copy a fresh one from Safari.')}}
+ if(a=='copykey'){const k=await B.key();if(!k)return;try{await navigator.clipboard.writeText(k)}catch(x){prompt('Copy this',k)}await B.localOut();S={ev:{},q:[],unit:S.unit};hh=null;persist();render();toast('Copied — now open the Home Screen app → Log → paste')}
  if(a=='reset'){S.pendingEmail=null;persist();render()}
  if(a=='out'&&confirm('Sign out of the family log on this phone?')){await B.signOut();S={ev:{},q:[],unit:S.unit};hh=null;persist();render()}}
 function bindSignin(){bind();const i=$('#lg-email')||$('#lg-code');i&&(i.onkeydown=e=>{if(e.key=='Enter')act($('#lg-email')?'send':'verify')})}
 
-async function boot(){if(!B)return render();const u=await B.user();S.user=u?.email||null;persist();
+async function boot(){if(!B)return render();try{await B.fromLink?.()}catch(x){syncErr='Sign-in link expired or already used — request a new one.'}const u=await B.user();S.user=u?.email||null;persist();
  if(!u){hh=null;return render()}
  try{hh=await B.household();S.hh=hh;persist()}catch(e){hh=S.hh||null;syncErr='Offline — showing saved data'}
  render();if(hh){B.subscribe((t,row)=>{if(t=='DELETE')delete S.ev[row.id];else if(!S.ev[row.id]||S.ev[row.id].updated_at<=row.updated_at)S.ev[row.id]=row;persist();render()});await pull();flush()}}
