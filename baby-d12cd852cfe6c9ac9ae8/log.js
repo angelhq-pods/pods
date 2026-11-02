@@ -73,6 +73,9 @@ function toggleSleep(){const r=running('sleep');if(r)put({...r,ended_at:now()});
 function tapSide(side){const r=running('breast');if(r){put({...r,ended_at:now()});if(r.side==side)return}put({id:uid(),kind:'breast',side,started_at:now(),ended_at:null})}
 function diaper(t,when){put({id:uid(),kind:'diaper',diaper:t,started_at:when||now(),ended_at:null});closeSheet();toast(`${ICON.diaper} ${t=='both'?'Pee + poo':t[0].toUpperCase()+t.slice(1)} logged`)}
 function bottle(v,unit,when,milk='formula'){const ml=unit=='oz'?v*OZ:v;if(!(ml>0))return;S.unit=unit;put({id:uid(),kind:'bottle',milk,amount_ml:Math.round(ml*10)/10,unit,started_at:when||now(),ended_at:null});closeSheet();toast(`${ICON.bottle} ${MILK[milk]} ${unit=='oz'?v+' oz':v+' mL'} logged`)}
+function delUndo(id){const e=S.ev[id];if(!e)return;const saved={...e};del(id);
+ document.querySelectorAll('.lg-toast.undo').forEach(x=>x.remove());const d=document.createElement('div');d.className='lg-toast undo';d.innerHTML=`Deleted ${esc(label(saved))} <button>Undo</button>`;document.body.append(d);
+ const t=setTimeout(()=>d.remove(),5000);d.querySelector('button').onclick=()=>{clearTimeout(t);d.remove();put({...saved})}}
 function toast(t){const d=document.createElement('div');d.className='lg-toast';d.textContent=t;document.body.append(d);setTimeout(()=>d.remove(),1800)}
 
 /* ---------- summary ---------- */
@@ -97,13 +100,15 @@ function compare(s){const d=ageDays();if(d==null||!typ)return'';const r=typ.rang
 
 /* ---------- render ---------- */
 let tick;
-function render(){if(!root)return;const keepW=document.getElementById('lg-sheetwrap');keepW&&keepW.remove();
- if(!B){root.innerHTML=`<div class="lg-card lg-center"><h3>Log is almost ready</h3><p class="lg-muted">Shared sync hasn't been connected yet. It will appear here once it's set up.</p></div>`;return}
- if(!S.user){root.innerHTML=signin();bindSignin();return}
- if(!hh){root.innerHTML=`<div class="lg-card lg-center"><h3>Not linked yet</h3><p class="lg-muted">Signed in as ${esc(S.user)}, but this account isn't linked to the family log yet.</p><button class="lg-btn ghost" data-a="out">Sign out</button></div>`;bind();return}
+function shell(){let m=document.getElementById('lg-main'),w=document.getElementById('lg-sheetwrap');if(!m){root.innerHTML='';m=document.createElement('div');m.id='lg-main';w=document.createElement('div');w.id='lg-sheetwrap';root.append(m,w);w.addEventListener('animationend',()=>w.classList.add('noanim'))}return[m,w]}
+function setSheet(sh){const w=shell()[1];if(w.dataset.h===sh)return;if(!w.dataset.h&&sh)w.classList.remove('noanim');else w.classList.add('noanim');w.innerHTML=sh;w.dataset.h=sh}
+function render(){if(!root)return;const[main]=shell();
+ if(!B){setSheet('');main.innerHTML=`<div class="lg-card lg-center"><h3>Log is almost ready</h3><p class="lg-muted">Shared sync hasn't been connected yet. It will appear here once it's set up.</p></div>`;return}
+ if(!S.user){setSheet('');main.innerHTML=signin();bindSignin();return}
+ if(!hh){setSheet('');main.innerHTML=`<div class="lg-card lg-center"><h3>Not linked yet</h3><p class="lg-muted">Signed in as ${esc(S.user)}, but this account isn't linked to the family log yet.</p><button class="lg-btn ghost" data-a="out">Sign out</button></div>`;bind();return}
  const st=status(),rb=running('breast'),s=summary(),isToday=day==startOfDay(Date.now()),dLabel=isToday?'Today':new Date(day).toLocaleDateString([],{weekday:'short',month:'short',day:'numeric'});
  const items=evs().filter(e=>{const t=Date.parse(e.started_at);return(t>=day&&t<day+DAY)||(e.kind=='sleep'&&overlap(e,day,day+DAY)>0)});
- root.innerHTML=`
+ main.innerHTML=`
  <div class="lg-status ${st.asleep?'asleep':''}"><span>${st.asleep?'Asleep':'Awake'}</span><b>${st.since?live('durS',st.since):'—'}</b><small>${st.since?(st.asleep?'since ':'wake window · since ')+hm(st.since):'Log a sleep to track wake windows'}</small></div>
  ${S.q.length||syncErr?`<div class="lg-sync">${esc(syncErr||'Syncing…')}</div>`:''}
  <div class="lg-grid">
@@ -121,12 +126,11 @@ function render(){if(!root)return;const keepW=document.getElementById('lg-sheetw
    <div><i>💧</i><b>${s.wet}</b><small>wet diapers</small></div>
    <div><i>💩</i><b>${s.dirty}</b><small>dirty diapers</small></div>
   </div>${compare(s)}</div>
- <div class="lg-card"><h3>Timeline</h3>${items.length?items.map(e=>`<button class="lg-row" data-edit="${e.id}"><i>${ICON[e.kind]}</i><span><b>${label(e)}</b><small>${hm(e.started_at)}${e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'?' – '+hm(e.ended_at):''}${!e.ended_at&&(e.kind=='sleep'||e.kind=='breast')?' · running':''}</small></span><em>${e.kind=='sleep'||e.kind=='breast'?live('dur',e.started_at,e.ended_at):''}</em></button>`).join(''):'<p class="lg-muted">Nothing logged yet. Tap a button above.</p>'}
+ <div class="lg-card"><h3>Timeline</h3>${items.length?items.map(e=>`<div class="lg-row" data-edit="${e.id}" role="button" tabindex="0"><i>${ICON[e.kind]}</i><span><b>${label(e)}</b><small>${hm(e.started_at)}${e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'?' – '+hm(e.ended_at):''}${!e.ended_at&&(e.kind=='sleep'||e.kind=='breast')?' · running':''}</small></span><em>${e.kind=='sleep'||e.kind=='breast'?live('dur',e.started_at,e.ended_at):''}</em><button class="lg-act" data-editbtn="${e.id}" aria-label="Edit">✏️</button><button class="lg-act del" data-del="${e.id}" aria-label="Delete">🗑️</button></div>`).join(''):'<p class="lg-muted">Nothing logged yet. Tap a button above.</p>'}
   <button class="lg-btn ghost" data-a="add">+ Add a past sleep or feed</button></div>
  <p class="lg-muted lg-foot">Shared with your partner in real time · ${esc(S.user)} · <a href="#" data-a="out">Sign out</a></p><details class="lg-card"><summary><b>${S.pw?'Family password is set ✓':'Set a family password'}</b> <span class="lg-muted">— sign in on any phone or the Home Screen app without email</span></summary><input id="lg-p1" type="password" autocomplete="new-password" placeholder="New password (8+ characters)"><input id="lg-p2" type="password" autocomplete="new-password" placeholder="Repeat password"><button class="lg-btn" data-a="setpw">Save password</button><p class="lg-err" id="lg-err"></p></details>
  `;
- const sh=sheet?sheetHtml():'';let w=document.getElementById('lg-sheetwrap');if(!w){w=document.createElement('div');w.id='lg-sheetwrap'}root.append(w);
- if(w.dataset.h!==sh){w.classList.toggle('noanim',!!w.dataset.h&&!!sh);w.innerHTML=sh;w.dataset.h=sh}
+ setSheet(sheet?sheetHtml():'');
  bind();liveUpdate()}
 setInterval(()=>{liveUpdate();if(follow&&S.user&&hh&&day!=startOfDay(Date.now())){day=startOfDay(Date.now());render()}},1e3);
 function label(e){return e.kind=='sleep'?'Sleep':e.kind=='breast'?`Breast · ${e.side=='L'?'Left':'Right'}`:e.kind=='bottle'?MILK[milkOf(e)]+' bottle · '+amt(e):'Diaper · '+(e.diaper=='both'?'Pee + poo':e.diaper[0].toUpperCase()+e.diaper.slice(1))}
@@ -164,7 +168,9 @@ const conv=(v,u)=>!(v>0)?'':u=='oz'?`= ${mlFmt(v*OZ)} mL`:`= ${oz(v)} oz`;
 const whenVal=()=>{const v=$('#lg-when')?.value;if(!v)return now();const t=new Date(v);return Math.abs(t-Date.now())<2*MIN?now():t.toISOString()};
 function closeSheet(){sheet=null;render()}
 function bind(){root.querySelectorAll('[data-a]').forEach(x=>x.onclick=ev=>{ev.preventDefault();act(x.dataset.a)});
- root.querySelectorAll('[data-edit]').forEach(x=>x.onclick=()=>{sheet={k:'edit',e:{...S.ev[x.dataset.edit]}};render()});
+ root.querySelectorAll('[data-edit]').forEach(x=>x.onclick=ev=>{if(ev.target.closest('.lg-act'))return;sheet={k:'edit',e:{...S.ev[x.dataset.edit]}};render()});
+ root.querySelectorAll('[data-editbtn]').forEach(x=>x.onclick=ev=>{ev.stopPropagation();sheet={k:'edit',e:{...S.ev[x.dataset.editbtn]}};render()});
+ root.querySelectorAll('[data-del]').forEach(x=>x.onclick=ev=>{ev.stopPropagation();delUndo(x.dataset.del)});
  root.querySelectorAll('[data-d]').forEach(x=>x.onclick=()=>diaper(x.dataset.d,whenVal()));
  root.querySelectorAll('[data-side]').forEach(x=>x.onclick=()=>{tapSide(x.dataset.side)});
  root.querySelectorAll('[data-milk]').forEach(x=>x.onclick=()=>{const v=$('#lg-v');if(v){sheet.v=+v.value;sheet.unit=sheet.unit||S.unit}sheet.milk=x.dataset.milk;render()});
@@ -192,7 +198,7 @@ async function act(a){const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
  if(a=='saveedit'){keepEdit();const e=sheet.e;if(e.ended_at&&e.ended_at<e.started_at)return err('End is before start');if(Date.parse(e.started_at)>Date.now()+MIN)return err('Start is in the future');
   if(e.kind=='bottle'){const v=+$('#lg-amt').value;if(!(v>0))return err('Enter an amount');e.amount_ml=Math.round((e.unit=='ml'?v:v*OZ)*10)/10}
   if(e.kind=='sleep'||e.kind=='diaper')e.side=null;put(e);closeSheet()}
- if(a=='delete'&&confirm('Delete this entry?')){del(sheet.e.id);closeSheet()}
+ if(a=='delete'){const id=sheet.e.id;closeSheet();delUndo(id)}
  const mailErr=x=>/rate limit|429/i.test(x.message||'')?'Email limit reached — Supabase only sends a couple of sign-in emails per hour. Use your family password, or try again in an hour.':/signups|not allowed|not found/i.test(x.message)?'That email isn’t on the family list.':(x.message||'Something went wrong');
  if(a=='send'){const e=($('#lg-email').value||S.pendingEmail||'').trim().toLowerCase();if(!/^\S+@\S+\.\S+$/.test(e))return err('Enter your email');S.lastEmail=e;try{await B.sendCode(e);S.pendingEmail=e;persist();render();toast('📧 Link sent')}catch(x){err(mailErr(x))}}
  if(a=='pwin'){const e=$('#lg-email').value.trim().toLowerCase(),p=$('#lg-pw').value;if(!/^\S+@\S+\.\S+$/.test(e))return err('Enter your email');if(!p)return err('Enter the family password');S.lastEmail=e;

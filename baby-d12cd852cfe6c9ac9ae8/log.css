@@ -39,3 +39,8 @@
 .lg-inprog{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}.lg-inprog b{color:#D9B8FF}.lg-inprog .lg-btn{width:auto;margin:0;padding:10px 16px}
 .lg-total{font-size:15px;margin:6px 0 10px}.lg-total b{font-variant-numeric:tabular-nums;color:#FFD86B}
 .lg-cmp td:nth-child(2){white-space:nowrap}.lg-status b{font-variant-numeric:tabular-nums}
+.lg-row{cursor:pointer}.lg-row em{margin-right:2px}
+.lg-act{flex:none;width:44px;height:44px;border:0;border-radius:12px;background:#221A44;font-size:18px;display:grid;place-items:center;margin-left:4px}
+.lg-act.del{background:#3A1730}
+.lg-toast.undo{display:flex;align-items:center;gap:12px;white-space:nowrap;max-width:92vw;overflow:hidden;text-overflow:ellipsis}
+.lg-toast.undo button{border:0;background:#B36BFF;color:#160B2E;font-weight:700;border-radius:14px;padding:8px 14px;min-height:36px}
