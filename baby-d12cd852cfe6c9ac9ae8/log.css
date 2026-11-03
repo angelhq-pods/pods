@@ -67,3 +67,5 @@
 .lg-method .lg-warn{background:#2A1730;border-radius:10px;padding:10px 12px;color:#F6D9E8}
 .lg-row span{min-width:0}.lg-row .lg-note{max-width:100%}
 .lg-row>i,.lg-row>em,.lg-row>.lg-act{flex:none}.lg-row>span{flex:1 1 0;overflow:hidden}
+
+.lg-amt button{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;touch-action:none}

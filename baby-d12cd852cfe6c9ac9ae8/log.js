@@ -134,7 +134,7 @@ function render(){if(!root)return;const[main]=shell();
   </div>${compare(s)}</div>
  ${trendsHtml()}
  <div class="lg-card"><h3>Timeline</h3>${items.length?items.map(e=>`<div class="lg-row" data-edit="${e.id}" role="button" tabindex="0"><i>${ICON[e.kind]}</i><span><b>${label(e)}</b>${e.note?`<small class="lg-note">📝 ${esc(e.note.length>70?e.note.slice(0,70)+'…':e.note)}</small>`:''}<small>${hm(e.started_at)}${e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'?' – '+hm(e.ended_at):''}${!e.ended_at&&(e.kind=='sleep'||e.kind=='breast')?' · running':''}</small></span><em>${e.kind=='sleep'||e.kind=='breast'?live('dur',e.started_at,e.ended_at):''}</em><button class="lg-act del" data-del="${e.id}" aria-label="Delete">🗑️</button></div>`).join(''):'<p class="lg-muted">Nothing logged yet. Tap a button above.</p>'}
-  <button class="lg-btn ghost" data-a="add">+ Add a past sleep or feed</button></div>
+  <button class="lg-btn ghost" data-a="add">+ Add a past entry</button></div>
  <p class="lg-muted lg-foot">Shared with your partner in real time · ${esc(S.user)} · <a href="#" data-a="out">Sign out</a></p><details class="lg-card"><summary><b>${S.pw?'Family password is set ✓':'Set a family password'}</b> <span class="lg-muted">— sign in on any phone or the Home Screen app without email</span></summary><input id="lg-p1" type="password" autocomplete="new-password" placeholder="New password (8+ characters)"><input id="lg-p2" type="password" autocomplete="new-password" placeholder="Repeat password"><button class="lg-btn" data-a="setpw">Save password</button><p class="lg-err" id="lg-err"></p></details>
  `;
  setSheet(sheet?sheetHtml():'');
@@ -260,13 +260,13 @@ function sheetHtml(){const k=sheet.k;let b='';if(sheet.nInit===undefined)sheet.n
  if(k=='noteadd'){b=`<h3>Note</h3><p class="lg-muted">Anything worth remembering: awake time, mood, symptoms, questions for the pediatrician.</p>${whenField()}${noteField(sheet.nInit)}<button class="lg-btn" data-a="savenote">Save note</button><p class="lg-err" id="lg-err"></p>`}
  if(k=='method')b=methodHtml();
  if(k=='edit'||k=='add'){const e=sheet.e;b=`<h3>${k=='add'?'Add entry':label(e)}</h3>
-  ${k=='add'?`<div class="lg-seg">${[['sleep','Sleep'],['breastL','Left'],['breastR','Right']].map(([v,l])=>`<button data-kind="${v}" class="${sheet.kind==v?'on':''}">${l}</button>`).join('')}</div>`:''}
+  ${k=='add'?`<div class="lg-seg">${[['sleep','Sleep'],['breastL','Left'],['breastR','Right'],['bottle','Bottle'],['diaper','Diaper']].map(([v,l])=>`<button data-kind="${v}" class="${sheet.kind==v?'on':''}">${l}</button>`).join('')}</div>`:''}
   <label class="lg-f">${['diaper','bottle','weight','note'].includes(e.kind)?'Time':'Start'}<input type="datetime-local" step="1" id="lg-s" value="${toLocalInput(e.started_at)}"><small class="lg-muted" id="lg-s-txt">${dt(e.started_at)}</small></label>
   ${e.kind=='sleep'||e.kind=='breast'?(e.ended_at||k=='add'?`<label class="lg-f">End<input type="datetime-local" step="1" id="lg-e" value="${e.ended_at?toLocalInput(e.ended_at):''}"><small class="lg-muted" id="lg-e-txt">${e.ended_at?dt(e.ended_at):''}</small></label>`
    :`<div class="lg-f">End<div class="lg-inprog"><b>In progress</b><button class="lg-btn" data-a="stopedit">Stop now</button></div></div>`)
    +`<p class="lg-total">Total <b id="lg-total">${e.ended_at?durS(Date.parse(e.ended_at)-Date.parse(e.started_at)):live('durS',e.started_at)}</b></p>`:''}
   ${e.kind=='bottle'?`<div class="lg-seg lg-milk"><button data-emilk="formula" class="${milkOf(e)=='formula'?'on':''}">Formula</button><button data-emilk="breastmilk" class="${milkOf(e)=='breastmilk'?'on':''}">Breast milk</button></div>`:''}
-  ${e.kind=='bottle'?`<label class="lg-f">Amount (${e.unit||'oz'})<input type="number" id="lg-amt" inputmode="decimal" step="0.1" min="0" value="${e.unit=='ml'?mlFmt(e.amount_ml):oz(e.amount_ml)}"></label>`:''}
+  ${e.kind=='bottle'?`<div class="lg-f">Amount (${e.unit=='ml'?'mL':'oz'})<div class="lg-amt"><button data-estep="-1" aria-label="Less">−</button><input type="number" id="lg-amt" inputmode="decimal" step="0.1" min="0" value="${e.unit=='ml'?mlFmt(e.amount_ml):oz(e.amount_ml)}"><button data-estep="1" aria-label="More">+</button></div></div>`:''}
   ${e.kind=='diaper'?`<div class="lg-seg">${['pee','poo','both'].map(d=>`<button data-dk="${d}" class="${e.diaper==d?'on':''}">${d}</button>`).join('')}</div>`:''}
   ${e.kind=='weight'?`<div class="lg-two"><label class="lg-f">lb<input id="lg-elb" type="number" inputmode="numeric" value="${gToLbOz(e.weight_g)[0]}"></label><label class="lg-f">oz<input id="lg-eoz" type="number" inputmode="decimal" step="0.1" value="${gToLbOz(e.weight_g)[1]}"></label></div><div class="lg-seg">${Object.entries(SRC).map(([v,l])=>`<button data-esrc="${v}" class="${e.weight_src==v?'on':''}">${l}</button>`).join('')}</div>`:''}
   ${noteField(sheet.nInit)}
@@ -291,12 +291,18 @@ function bind(){root.querySelectorAll('[data-a]').forEach(x=>x.onclick=ev=>{ev.p
  root.querySelectorAll('[data-trtab]').forEach(x=>x.onclick=()=>{S.tr={...trS(),tab:x.dataset.trtab};persist();render()});
  root.querySelectorAll('[data-trrange]').forEach(x=>x.onclick=()=>{S.tr={...trS(),range:+x.dataset.trrange};persist();render()});
  root.querySelectorAll('[data-dk]').forEach(x=>x.onclick=()=>{sheet.e.diaper=x.dataset.dk;keepEdit();render()});
- root.querySelectorAll('[data-kind]').forEach(x=>x.onclick=()=>{sheet.kind=x.dataset.kind;sheet.e.kind=x.dataset.kind=='sleep'?'sleep':'breast';sheet.e.side=x.dataset.kind.slice(6)||null;keepEdit();render()});
+ root.querySelectorAll('[data-kind]').forEach(x=>x.onclick=()=>{sheet.kind=x.dataset.kind;const kd=x.dataset.kind,E=sheet.e;keepEdit();E.kind=kd.startsWith('breast')?'breast':kd;E.side=kd.startsWith('breast')?kd.slice(6):null;if(kd=='bottle'||kd=='diaper'){if(E.ended_at&&!E._end)E._end=E.ended_at;E.started_at=E._end||E.started_at;E.ended_at=null}else if(!E.ended_at)E.ended_at=E._end||new Date(Date.parse(E.started_at)+H).toISOString(),E.started_at=new Date(Date.parse(E.ended_at)-H).toISOString();if(kd=='bottle'){E.unit=E.unit||S.unit||'oz';E.milk=E.milk||S.milk||'formula';E.amount_ml=E.amount_ml||(E.unit=='ml'?60:2*OZ)}if(kd=='diaper')E.diaper=E.diaper||'pee';sheet.nInit=noteVal();render();return;keepEdit();render()});
  root.querySelectorAll('[data-u]').forEach(x=>x.onclick=()=>{const v=+$('#lg-v').value,u=x.dataset.u,old=sheet.unit||S.unit;if(u==old)return;sheet.unit=u;sheet.v=u=='ml'?Math.round(v*OZ*10)/10:Math.round(v/OZ*10)/10;render()});
- root.querySelectorAll('[data-step]').forEach(x=>x.onclick=()=>{const i=$('#lg-v'),u=sheet.unit||S.unit;sheet.v=Math.max(0,Math.round((+i.value+x.dataset.step*0.1)*10)/10);sheet.unit=u;render()});
+ root.querySelectorAll('[data-step],[data-estep]').forEach(holdStep);
  const si=$('#lg-s'),ei=$('#lg-e'),upd=()=>{const sv=si?.value,ev=ei?.value;if(sv)$('#lg-s-txt').textContent=dt(new Date(sv));if(ei)$('#lg-e-txt').textContent=ev?dt(new Date(ev)):'';const tot=$('#lg-total');if(tot&&sv&&ev)tot.textContent=durS(new Date(ev)-new Date(sv))};
  si&&(si.oninput=upd);ei&&(ei.oninput=upd);
  const v=$('#lg-v');if(v)v.oninput=()=>{sheet.v=+v.value;$('#lg-conv').textContent=conv(+v.value,sheet.unit||S.unit)}}
+function holdStep(x){const ed='estep' in x.dataset,dir=+(x.dataset.step||x.dataset.estep),inp=()=>$(ed?'#lg-amt':'#lg-v');let t=null,n=0;
+ const bump=d=>{const i=inp();if(!i)return;let v=+i.value||0;v=dir>0?Math.floor((v+1e-9)/d)*d+d:Math.ceil((v-1e-9)/d)*d-d;v=Math.max(0,Math.round(v*10)/10);i.value=String(v);if(!ed){sheet.v=v;sheet.unit=sheet.unit||S.unit;const c=$('#lg-conv');if(c)c.textContent=conv(v,sheet.unit)}};
+ const stop=()=>{clearTimeout(t);t=null};const tick=()=>{n++;bump(n<10?.1:n<25?.5:1);t=setTimeout(tick,n<10?120:90)};
+ x.onpointerdown=ev=>{ev.preventDefault();try{x.setPointerCapture(ev.pointerId)}catch(_){};n=0;bump(.1);stop();t=setTimeout(tick,400)};
+ ['pointerup','pointercancel','lostpointercapture'].forEach(k=>x.addEventListener(k,stop));x.oncontextmenu=ev=>ev.preventDefault();
+ x.onclick=ev=>{if(ev.detail===0)bump(.1)}}
 function keepEdit(){const s=$('#lg-s')?.value,e=$('#lg-e')?.value;if(s)sheet.e.started_at=new Date(s).toISOString();if(e!=null)sheet.e.ended_at=e?new Date(e).toISOString():null}
 async function act(a){const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
  if(a=='sleep')toggleSleep();
@@ -316,7 +322,7 @@ async function act(a){const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
  if(a=='saveweight'){const u=S.wunit||'lb';let g=u=='lb'?((+$('#lg-wlb').value||0)*16+(+$('#lg-woz').value||0))/16*LB:(+$('#lg-wkg').value||0)*1000;if(!(g>500&&g<30000))return err('Enter a weight');
   put({id:uid(),kind:'weight',weight_g:Math.round(g),weight_src:sheet.src||'home',started_at:whenVal(),ended_at:null,note:noteVal()});closeSheet();toast('⚖️ Weight saved')}
  if(a=='savenote'){const n=noteVal();if(!n)return err('Write a note first');put({id:uid(),kind:'note',started_at:whenVal(),ended_at:null,note:n});closeSheet();toast('📝 Note saved')}
- if(a=='saveedit'){keepEdit();const e=sheet.e;e.note=noteVal();if(e.kind=='weight'){const g=(+$('#lg-elb').value*16+ +$('#lg-eoz').value)/16*LB;if(!(g>500&&g<30000))return err('Enter a weight');e.weight_g=Math.round(g)}if(e.ended_at&&e.ended_at<e.started_at)return err('End is before start');if(Date.parse(e.started_at)>Date.now()+MIN)return err('Start is in the future');
+ if(a=='saveedit'){keepEdit();const e=sheet.e;delete e._end;e.note=noteVal();if(e.kind=='weight'){const g=(+$('#lg-elb').value*16+ +$('#lg-eoz').value)/16*LB;if(!(g>500&&g<30000))return err('Enter a weight');e.weight_g=Math.round(g)}if(e.ended_at&&e.ended_at<e.started_at)return err('End is before start');if(Date.parse(e.started_at)>Date.now()+MIN)return err('Start is in the future');
   if(e.kind=='bottle'){const v=+$('#lg-amt').value;if(!(v>0))return err('Enter an amount');e.amount_ml=Math.round((e.unit=='ml'?v:v*OZ)*10)/10}
   if(e.kind=='sleep'||e.kind=='diaper')e.side=null;put(e);closeSheet()}
  if(a=='delete'){const id=sheet.e.id;closeSheet();delUndo(id)}
