@@ -59,7 +59,7 @@ const durS=m=>{const s=Math.max(0,Math.floor(m/1e3)),h=Math.floor(s/3600),mi=Mat
 const LIVE={clock,dur,durS};
 const live=(f,from,to)=>`<span data-live="${f}" data-from="${esc(from)}"${to?` data-to="${esc(to)}"`:''}>${LIVE[f]((to?Date.parse(to):Date.now())-Date.parse(from))}</span>`;
 function liveUpdate(){document.querySelectorAll('#log [data-live]').forEach(x=>{const t=x.dataset.to?Date.parse(x.dataset.to):Date.now();const v=LIVE[x.dataset.live](t-Date.parse(x.dataset.from));if(x.textContent!==v)x.textContent=v})}
-const oz=ml=>(ml/OZ).toFixed(1).replace(/\.0$/,''),mlFmt=ml=>Math.round(ml);
+const oz=ml=>(Math.round(ml/OZ*10)/10).toFixed(1).replace(/\.0$/,''),mlFmt=ml=>(Math.round(ml*10)/10).toFixed(1).replace(/\.0$/,'');
 const MILK={formula:'Formula',breastmilk:'Breast milk'},milkOf=e=>e.milk=='breastmilk'?'breastmilk':'formula';
 const amt=e=>e.unit=='ml'?`${mlFmt(e.amount_ml)} mL (${oz(e.amount_ml)} oz)`:`${oz(e.amount_ml)} oz (${mlFmt(e.amount_ml)} mL)`;
 const toLocalInput=t=>{const d=new Date(t);d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,19)};
@@ -133,7 +133,7 @@ function render(){if(!root)return;const[main]=shell();
    <div><i>💩</i><b>${s.dirty}</b><small>dirty diapers</small></div>
   </div>${compare(s)}</div>
  ${trendsHtml()}
- <div class="lg-card"><h3>Timeline</h3>${items.length?items.map(e=>`<div class="lg-row" data-edit="${e.id}" role="button" tabindex="0"><i>${ICON[e.kind]}</i><span><b>${label(e)}</b>${e.note?`<small class="lg-note">📝 ${esc(e.note.length>70?e.note.slice(0,70)+'…':e.note)}</small>`:''}<small>${hm(e.started_at)}${e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'?' – '+hm(e.ended_at):''}${!e.ended_at&&(e.kind=='sleep'||e.kind=='breast')?' · running':''}</small></span><em>${e.kind=='sleep'||e.kind=='breast'?live('dur',e.started_at,e.ended_at):''}</em><button class="lg-act" data-editbtn="${e.id}" aria-label="Edit">✏️</button><button class="lg-act del" data-del="${e.id}" aria-label="Delete">🗑️</button></div>`).join(''):'<p class="lg-muted">Nothing logged yet. Tap a button above.</p>'}
+ <div class="lg-card"><h3>Timeline</h3>${items.length?items.map(e=>`<div class="lg-row" data-edit="${e.id}" role="button" tabindex="0"><i>${ICON[e.kind]}</i><span><b>${label(e)}</b>${e.note?`<small class="lg-note">📝 ${esc(e.note.length>70?e.note.slice(0,70)+'…':e.note)}</small>`:''}<small>${hm(e.started_at)}${e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'?' – '+hm(e.ended_at):''}${!e.ended_at&&(e.kind=='sleep'||e.kind=='breast')?' · running':''}</small></span><em>${e.kind=='sleep'||e.kind=='breast'?live('dur',e.started_at,e.ended_at):''}</em><button class="lg-act del" data-del="${e.id}" aria-label="Delete">🗑️</button></div>`).join(''):'<p class="lg-muted">Nothing logged yet. Tap a button above.</p>'}
   <button class="lg-btn ghost" data-a="add">+ Add a past sleep or feed</button></div>
  <p class="lg-muted lg-foot">Shared with your partner in real time · ${esc(S.user)} · <a href="#" data-a="out">Sign out</a></p><details class="lg-card"><summary><b>${S.pw?'Family password is set ✓':'Set a family password'}</b> <span class="lg-muted">— sign in on any phone or the Home Screen app without email</span></summary><input id="lg-p1" type="password" autocomplete="new-password" placeholder="New password (8+ characters)"><input id="lg-p2" type="password" autocomplete="new-password" placeholder="Repeat password"><button class="lg-btn" data-a="setpw">Save password</button><p class="lg-err" id="lg-err"></p></details>
  `;
@@ -249,7 +249,7 @@ function methodHtml(){const A=(u,t)=>`<a href="${u}" target="_blank" rel="noopen
 function sheetHtml(){const k=sheet.k;let b='';if(sheet.nInit===undefined)sheet.nInit=sheet.e?.note||'';
  if(k=='diaper')b=`<h3>Diaper</h3><div class="lg-tri"><button data-d="pee">💧<b>Pee</b></button><button data-d="poo">💩<b>Poo</b></button><button data-d="both">💧💩<b>Both</b></button></div>${whenField()}${noteField(sheet.nInit)}`;
  if(k=='bottle'){const u=sheet.unit||S.unit,v=sheet.v??(u=='oz'?2:60);const mk=sheet.milk||S.milk||'formula';b=`<h3>Bottle</h3><div class="lg-seg lg-milk"><button data-milk="formula" class="${mk=='formula'?'on':''}">Formula</button><button data-milk="breastmilk" class="${mk=='breastmilk'?'on':''}">Breast milk</button></div><div class="lg-seg"><button data-u="oz" class="${u=='oz'?'on':''}">oz</button><button data-u="ml" class="${u=='ml'?'on':''}">mL</button></div>
-  <div class="lg-amt"><button data-step="-1">−</button><input id="lg-v" type="number" inputmode="decimal" step="${u=='oz'?.5:5}" value="${v}"><button data-step="1">+</button></div>
+  <div class="lg-amt"><button data-step="-1">−</button><input id="lg-v" type="number" inputmode="decimal" step="0.1" min="0" value="${v}"><button data-step="1">+</button></div>
   <p class="lg-conv" id="lg-conv">${conv(v,u)}</p>${whenField()}${noteField(sheet.nInit)}<button class="lg-btn" data-a="savebottle">Log bottle</button>`}
  if(k=='breast'){const r=running('breast');const last=evs().find(e=>e.kind=='breast'&&e.ended_at);b=`<h3>Breastfeeding</h3>${!r&&last?`<p class="lg-muted">Last side: ${last.side=='L'?'Left':'Right'} at ${hm(last.started_at)} — try ${last.side=='L'?'Right':'Left'}</p>`:''}
   <div class="lg-sides">${['L','R'].map(sd=>{const on=r?.side==sd,tot=evs().filter(e=>e.kind=='breast'&&e.side==sd&&Date.parse(e.started_at)>Date.now()-H).reduce((a,e)=>a+ms(e),0);return`<button data-side="${sd}" class="${on?'run':''}"><small>${sd=='L'?'LEFT':'RIGHT'}</small><b>${on?live('clock',r.started_at):'▶'}</b><small>${on?'tap to pause':tot?'this feed '+dur(tot):'tap to start'}</small></button>`}).join('')}</div>
@@ -266,7 +266,7 @@ function sheetHtml(){const k=sheet.k;let b='';if(sheet.nInit===undefined)sheet.n
    :`<div class="lg-f">End<div class="lg-inprog"><b>In progress</b><button class="lg-btn" data-a="stopedit">Stop now</button></div></div>`)
    +`<p class="lg-total">Total <b id="lg-total">${e.ended_at?durS(Date.parse(e.ended_at)-Date.parse(e.started_at)):live('durS',e.started_at)}</b></p>`:''}
   ${e.kind=='bottle'?`<div class="lg-seg lg-milk"><button data-emilk="formula" class="${milkOf(e)=='formula'?'on':''}">Formula</button><button data-emilk="breastmilk" class="${milkOf(e)=='breastmilk'?'on':''}">Breast milk</button></div>`:''}
-  ${e.kind=='bottle'?`<label class="lg-f">Amount (${e.unit||'oz'})<input type="number" id="lg-amt" inputmode="decimal" value="${e.unit=='ml'?mlFmt(e.amount_ml):oz(e.amount_ml)}"></label>`:''}
+  ${e.kind=='bottle'?`<label class="lg-f">Amount (${e.unit||'oz'})<input type="number" id="lg-amt" inputmode="decimal" step="0.1" min="0" value="${e.unit=='ml'?mlFmt(e.amount_ml):oz(e.amount_ml)}"></label>`:''}
   ${e.kind=='diaper'?`<div class="lg-seg">${['pee','poo','both'].map(d=>`<button data-dk="${d}" class="${e.diaper==d?'on':''}">${d}</button>`).join('')}</div>`:''}
   ${e.kind=='weight'?`<div class="lg-two"><label class="lg-f">lb<input id="lg-elb" type="number" inputmode="numeric" value="${gToLbOz(e.weight_g)[0]}"></label><label class="lg-f">oz<input id="lg-eoz" type="number" inputmode="decimal" step="0.1" value="${gToLbOz(e.weight_g)[1]}"></label></div><div class="lg-seg">${Object.entries(SRC).map(([v,l])=>`<button data-esrc="${v}" class="${e.weight_src==v?'on':''}">${l}</button>`).join('')}</div>`:''}
   ${noteField(sheet.nInit)}
@@ -278,8 +278,7 @@ const whenVal=()=>{const v=$('#lg-when')?.value;if(!v)return now();const t=new D
 function closeSheet(){sheet=null;render()}
 function bind(){root.querySelectorAll('[data-a]').forEach(x=>x.onclick=ev=>{ev.preventDefault();act(x.dataset.a)});
  root.querySelectorAll('[data-edit]').forEach(x=>x.onclick=ev=>{if(ev.target.closest('.lg-act'))return;sheet={k:'edit',e:{...S.ev[x.dataset.edit]}};render()});
- root.querySelectorAll('[data-editbtn]').forEach(x=>x.onclick=ev=>{ev.stopPropagation();sheet={k:'edit',e:{...S.ev[x.dataset.editbtn]}};render()});
- root.querySelectorAll('[data-del]').forEach(x=>x.onclick=ev=>{ev.stopPropagation();delUndo(x.dataset.del)});
+  root.querySelectorAll('[data-del]').forEach(x=>x.onclick=ev=>{ev.stopPropagation();delUndo(x.dataset.del)});
  root.querySelectorAll('[data-d]').forEach(x=>x.onclick=()=>diaper(x.dataset.d,whenVal()));
  root.querySelectorAll('[data-side]').forEach(x=>x.onclick=()=>{tapSide(x.dataset.side)});
  root.querySelectorAll('[data-milk]').forEach(x=>x.onclick=()=>{const v=$('#lg-v');if(v){sheet.v=+v.value;sheet.unit=sheet.unit||S.unit}sheet.milk=x.dataset.milk;render()});
@@ -293,8 +292,8 @@ function bind(){root.querySelectorAll('[data-a]').forEach(x=>x.onclick=ev=>{ev.p
  root.querySelectorAll('[data-trrange]').forEach(x=>x.onclick=()=>{S.tr={...trS(),range:+x.dataset.trrange};persist();render()});
  root.querySelectorAll('[data-dk]').forEach(x=>x.onclick=()=>{sheet.e.diaper=x.dataset.dk;keepEdit();render()});
  root.querySelectorAll('[data-kind]').forEach(x=>x.onclick=()=>{sheet.kind=x.dataset.kind;sheet.e.kind=x.dataset.kind=='sleep'?'sleep':'breast';sheet.e.side=x.dataset.kind.slice(6)||null;keepEdit();render()});
- root.querySelectorAll('[data-u]').forEach(x=>x.onclick=()=>{const v=+$('#lg-v').value,u=x.dataset.u,old=sheet.unit||S.unit;if(u==old)return;sheet.unit=u;sheet.v=u=='ml'?Math.round(v*OZ/5)*5:Math.round(v/OZ*2)/2;render()});
- root.querySelectorAll('[data-step]').forEach(x=>x.onclick=()=>{const i=$('#lg-v'),u=sheet.unit||S.unit;sheet.v=Math.max(0,+i.value+x.dataset.step*(u=='oz'?.5:5));sheet.unit=u;render()});
+ root.querySelectorAll('[data-u]').forEach(x=>x.onclick=()=>{const v=+$('#lg-v').value,u=x.dataset.u,old=sheet.unit||S.unit;if(u==old)return;sheet.unit=u;sheet.v=u=='ml'?Math.round(v*OZ*10)/10:Math.round(v/OZ*10)/10;render()});
+ root.querySelectorAll('[data-step]').forEach(x=>x.onclick=()=>{const i=$('#lg-v'),u=sheet.unit||S.unit;sheet.v=Math.max(0,Math.round((+i.value+x.dataset.step*0.1)*10)/10);sheet.unit=u;render()});
  const si=$('#lg-s'),ei=$('#lg-e'),upd=()=>{const sv=si?.value,ev=ei?.value;if(sv)$('#lg-s-txt').textContent=dt(new Date(sv));if(ei)$('#lg-e-txt').textContent=ev?dt(new Date(ev)):'';const tot=$('#lg-total');if(tot&&sv&&ev)tot.textContent=durS(new Date(ev)-new Date(sv))};
  si&&(si.oninput=upd);ei&&(ei.oninput=upd);
  const v=$('#lg-v');if(v)v.oninput=()=>{sheet.v=+v.value;$('#lg-conv').textContent=conv(+v.value,sheet.unit||S.unit)}}
