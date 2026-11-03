@@ -135,7 +135,7 @@ function render(){if(!root)return;const[main]=shell();
  ${trendsHtml()}
  <div class="lg-card"><h3>Timeline</h3>${items.length?items.map(e=>`<div class="lg-row" data-edit="${e.id}" role="button" tabindex="0"><i>${ICON[e.kind]}</i><span><b>${label(e)}</b>${e.note?`<small class="lg-note">📝 ${esc(e.note.length>70?e.note.slice(0,70)+'…':e.note)}</small>`:''}<small>${hm(e.started_at)}${e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'?' – '+hm(e.ended_at):''}${!e.ended_at&&(e.kind=='sleep'||e.kind=='breast')?' · running':''}</small></span><em>${e.kind=='sleep'||e.kind=='breast'?live('dur',e.started_at,e.ended_at):''}</em><button class="lg-act del" data-del="${e.id}" aria-label="Delete">🗑️</button></div>`).join(''):'<p class="lg-muted">Nothing logged yet. Tap a button above.</p>'}
   <button class="lg-btn ghost" data-a="add">+ Add a past entry</button></div>
- <p class="lg-muted lg-foot">Shared with your partner in real time · ${esc(S.user)} · <a href="#" data-a="out">Sign out</a></p><details class="lg-card"><summary><b>${S.pw?'Family password is set ✓':'Set a family password'}</b> <span class="lg-muted">— sign in on any phone or the Home Screen app without email</span></summary><input id="lg-p1" type="password" autocomplete="new-password" placeholder="New password (8+ characters)"><input id="lg-p2" type="password" autocomplete="new-password" placeholder="Repeat password"><button class="lg-btn" data-a="setpw">Save password</button><p class="lg-err" id="lg-err"></p></details>
+ ${window.LSTheme?LSTheme.html():''}<p class="lg-muted lg-foot">Shared with your partner in real time · ${esc(S.user)} · <a href="#" data-a="out">Sign out</a></p><details class="lg-card"><summary><b>${S.pw?'Family password is set ✓':'Set a family password'}</b> <span class="lg-muted">— sign in on any phone or the Home Screen app without email</span></summary><input id="lg-p1" type="password" autocomplete="new-password" placeholder="New password (8+ characters)"><input id="lg-p2" type="password" autocomplete="new-password" placeholder="Repeat password"><button class="lg-btn" data-a="setpw">Save password</button><p class="lg-err" id="lg-err"></p></details>
  `;
  setSheet(sheet?sheetHtml():'');
  bind();liveUpdate()}
@@ -191,21 +191,21 @@ function chart(o){const W=360,Hh=190,L=34,R=8,T=10,Bm=24,x0=o.x0,x1=o.x1,xs=d=>L
 function trendsHtml(){if(!hh?.birth_date)return'';const st=trS(),today=ageOf(Date.now()),N=st.range,F=N>=30?14:7,x0=Math.max(0,today-N+1),x1=today+F,birth=Date.parse(hh.birth_date+'T00:00');
  const days=[];for(let d=x0;d<=today;d++){const a=startOfDay(birth+d*DAY+3*H);days.push([d,dayAgg(a)])}
  const P=(f)=>days.map(([d,a])=>[d,a?f(a):null,d==today]);
- const C={feeds:'#B36BFF',wet:'#5EC8FF',dirty:'#E2A86A',sleep:'#8E9BFF',longest:'#D9B8FF',fo:'#FFD86B',bm:'#FF8FC8',tot:'#FFFFFF',w:'#7CE0A3'};
+ const LT=document.documentElement.dataset.theme=='light',T=(d,l)=>LT?l:d;const C=LT?{feeds:'#8E4FE6',wet:'#1C8FD0',dirty:'#B86E1C',sleep:'#4F5FD6',longest:'#C04F9E',fo:'#B98800',bm:'#D6408F',tot:'#241B3D',w:'#1E9356'}:{feeds:'#B36BFF',wet:'#5EC8FF',dirty:'#E2A86A',sleep:'#8E9BFF',longest:'#D9B8FF',fo:'#FFD86B',bm:'#FF8FC8',tot:'#FFFFFF',w:'#7CE0A3'};
  const fc=(k,c)=>({color:c,dash:true,nodots:true,pts:[]});
  let html='',out=[],leg='';
  const chk=(k,f,lbl)=>{for(const[d,a]of days){if(!a||d==today)continue;const b=band(k,d);if(!b)continue;const v=f(a);if(v<b[0]||(b[1]!=null&&v>b[1]))out.push(`${lbl} on day ${d}`)}};
  if(st.tab=='feeds'){chk('feeds',a=>a.feeds,'Feeds');const ys=Math.max(14,...days.map(([,a])=>a?a.feeds:0))+2;
-  html=chart({title:'Feeds per day',x0,x1,today,ymax:ys,ystep:4,bands:[{fn:d=>band('feeds',d),color:'rgba(179,107,255,.18)'}],series:[{color:C.feeds,pts:P(a=>a.feeds)}]});
+  html=chart({title:'Feeds per day',x0,x1,today,ymax:ys,ystep:4,bands:[{fn:d=>band('feeds',d),color:T('rgba(179,107,255,.18)','rgba(142,79,230,.14)')}],series:[{color:C.feeds,pts:P(a=>a.feeds)}]});
   leg=`<span><i style="background:${C.feeds}"></i>Feeds (breast + bottle)</span>`}
  if(st.tab=='diapers'){chk('wet',a=>a.wet,'Wet diapers');chk('dirty',a=>a.dirty,'Dirty diapers');const ys=Math.max(10,...days.map(([,a])=>a?Math.max(a.wet,a.dirty):0))+1;
-  html=chart({title:'Diapers per day',x0,x1,today,ymax:ys,ystep:2,bands:[{fn:d=>band('wet',d),color:'rgba(94,200,255,.13)'},{fn:d=>band('dirty',d),color:'rgba(226,168,106,.13)'}],series:[{color:C.wet,pts:P(a=>a.wet)},{color:C.dirty,pts:P(a=>a.dirty)}]});
+  html=chart({title:'Diapers per day',x0,x1,today,ymax:ys,ystep:2,bands:[{fn:d=>band('wet',d),color:T('rgba(94,200,255,.13)','rgba(28,143,208,.13)')},{fn:d=>band('dirty',d),color:T('rgba(226,168,106,.13)','rgba(184,110,28,.13)')}],series:[{color:C.wet,pts:P(a=>a.wet)},{color:C.dirty,pts:P(a=>a.dirty)}]});
   leg=`<span><i style="background:${C.wet}"></i>Wet</span><span><i style="background:${C.dirty}"></i>Dirty</span>`}
  if(st.tab=='sleep'){chk('sleep',a=>a.sleep,'Sleep');
-  html=chart({title:'Sleep per day',x0,x1,today,ymax:20,ystep:4,yfmt:v=>v+'h',bands:[{fn:d=>band('sleep',d),color:'rgba(142,155,255,.18)'}],series:[{color:C.sleep,pts:P(a=>a.sleep)},{color:C.longest,pts:P(a=>a.longest)}]});
+  html=chart({title:'Sleep per day',x0,x1,today,ymax:20,ystep:4,yfmt:v=>v+'h',bands:[{fn:d=>band('sleep',d),color:T('rgba(142,155,255,.18)','rgba(79,95,214,.13)')}],series:[{color:C.sleep,pts:P(a=>a.sleep)},{color:C.longest,pts:P(a=>a.longest)}]});
   leg=`<span><i style="background:${C.sleep}"></i>Total sleep</span><span><i style="background:${C.longest}"></i>Longest stretch</span>`}
  if(st.tab=='bottles'){const ys=Math.max(32,...days.map(([,a])=>a?a.tot:0))+2;
-  html=chart({title:'Bottle volume per day',x0,x1,today,ymax:ys,ystep:8,yfmt:v=>v+'oz',bands:[{fn:d=>band('bottle',d),color:'rgba(255,255,255,.09)'}],series:[{color:C.tot,pts:P(a=>a.tot)},{color:C.fo,pts:P(a=>a.fo)},{color:C.bm,pts:P(a=>a.bm)}]});
+  html=chart({title:'Bottle volume per day',x0,x1,today,ymax:ys,ystep:8,yfmt:v=>v+'oz',bands:[{fn:d=>band('bottle',d),color:T('rgba(255,255,255,.09)','rgba(36,27,61,.08)')}],series:[{color:C.tot,pts:P(a=>a.tot)},{color:C.fo,pts:P(a=>a.fo)},{color:C.bm,pts:P(a=>a.bm)}]});
   leg=`<span><i style="background:${C.tot}"></i>Total</span><span><i style="background:${C.fo}"></i>Formula</span><span><i style="background:${C.bm}"></i>Breast milk</span>`;
   out=[]}
  if(st.tab=='weight'){const ws=evs().filter(e=>e.kind=='weight').map(e=>[(Date.parse(e.started_at)-birth)/DAY,e.weight_g]).sort((a,b)=>a[0]-b[0]),bw=birthWeight();
@@ -214,7 +214,7 @@ function trendsHtml(){if(!hh?.birth_date)return'';const st=trS(),today=ageOf(Dat
    const fpts=last[0]>=5?[[last[0],toLb(last[1])],[last[0]+F,toLb(last[1]+30*F)]]:[];
    for(const[d,g]of ws.slice(0,-1).concat([last]))if(bw){const b=band('weight',Math.floor(d),bw);if(b&&(g<b[0]-1||g>b[1]+1)&&d<today)out.push('Weight on day '+Math.floor(d))}
    const wx0=Math.min(x0,Math.floor(ws[0][0]));
-   html=chart({title:'Weight',x0:wx0,x1,today,ymin:Math.floor(toLb(lo)*2)/2,ymax:Math.ceil(toLb(hi)*2)/2,ystep:.5,yfmt:v=>v.toFixed(1),bands:bw?[{fn:d=>{const b=band('weight',d,bw);return b&&[toLb(b[0]),toLb(b[1])]},color:'rgba(124,224,163,.15)'}]:[],
+   html=chart({title:'Weight',x0:wx0,x1,today,ymin:Math.floor(toLb(lo)*2)/2,ymax:Math.ceil(toLb(hi)*2)/2,ystep:.5,yfmt:v=>v.toFixed(1),bands:bw?[{fn:d=>{const b=band('weight',d,bw);return b&&[toLb(b[0]),toLb(b[1])]},color:T('rgba(124,224,163,.15)','rgba(30,147,86,.13)')}]:[],
     series:[{color:C.w,pts:ws.map(([d,g])=>[d,toLb(g),false])},...(fpts.length?[{color:C.w,dash:true,nodots:true,pts:fpts}]:[])]})
    leg=`<span><i style="background:${C.w}"></i>Weight (lb)${bw?' · birth '+wFmt(bw).split(' (')[0]:''}</span>${fpts.length?'<span><i class="dash" style="border-color:'+C.w+'"></i>Forecast (+30 g/day)</span>':''}${bw?'':'<span class="lg-muted">Add a Birth weight to see the typical range</span>'}`}}
  const tabs=[['feeds','Feeds'],['diapers','Diapers'],['sleep','Sleep'],['bottles','Bottles'],['weight','Weight']];
@@ -344,6 +344,6 @@ async function boot(){if(!B)return render();try{await B.fromLink?.()}catch(x){sy
 fetch('typical.json').then(r=>r.json()).then(j=>{typ=j;render()}).catch(()=>{});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&S.user){if(follow)day=startOfDay(Date.now());pull().then(flush)}});
 addEventListener('online',flush);
-window.LSLog={show:()=>{render()},state:()=>S,band:(k,d,bw)=>band(k,d,bw)};
+window.LSLog={rerender:()=>{if(!document.querySelector('#log').hidden)render()},show:()=>{render()},state:()=>S,band:(k,d,bw)=>band(k,d,bw)};
 if(S.hh)hh=S.hh;render();boot();
 })();
