@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Nov 2026 05:36:54 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 04 Nov 2026 05:34:54 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 4, 2026</title>
+      <description>The morning after the midterms: Democrats take both chambers of Congress, including upsets in Texas, and the right turns its anger inward at party leadership and the Iran war rather than claiming fraud. Also: how stock futures swung overnight on fears of AI and data-center regulation, a scorecard on election-night predictions, and the ballot measure results. Facts first, then clearly labeled analysis, two forecasts and two business angles.</description>
+      <itunes:summary>The morning after the midterms: Democrats take both chambers of Congress, including upsets in Texas, and the right turns its anger inward at party leadership and the Iran war rather than claiming fraud. Also: how stock futures swung overnight on fears of AI and data-center regulation, a scorecard on election-night predictions, and the ballot measure results. Facts first, then clearly labeled analysis, two forecasts and two business angles.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-04.mp3" length="4173452" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-04</guid>
+      <pubDate>Wed, 04 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:05:48</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 3, 2026</title>
       <description>An Election Day briefing: a fatal business-jet crash that hit close to home for many online, a last-minute fight over abortion politics in a key Senate race, and the four abortion measures on state ballots today. Also: dueling midterm predictions, a second wave of cyberattacks on European supermarket freezers, and whether the AI-panic mood is justified. Facts first, then clearly labeled analysis, two forecasts and a business angle.</description>
