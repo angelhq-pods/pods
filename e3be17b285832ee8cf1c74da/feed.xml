@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Nov 2026 05:29:47 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 05:30:51 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 6, 2026</title>
+      <description>The worst stock-market day in nineteen months, led by AI and chip stocks, and how finance voices on X read it as a buying opportunity. Also: post-midterm blame shifting from party leadership to the president, California's mass death-row commutation, and a Texas data-center moratorium colliding with tech optimism. Facts first, then clearly labeled analysis, four forecasts and two speculative business angles.</description>
+      <itunes:summary>The worst stock-market day in nineteen months, led by AI and chip stocks, and how finance voices on X read it as a buying opportunity. Also: post-midterm blame shifting from party leadership to the president, California's mass death-row commutation, and a Texas data-center moratorium colliding with tech optimism. Facts first, then clearly labeled analysis, four forecasts and two speculative business angles.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-06.mp3" length="4179500" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-06</guid>
+      <pubDate>Fri, 06 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:05:48</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 5, 2026</title>
       <description>Day-after midterms: the right's anger moves from election-night shock to Senate procedure, immigration politics, and who takes the fall for the Iran war. Also: a lame-duck industrial-permits scramble in Texas, a quiet "I told you so" on media framing, and updates on the two uncalled Senate races. Facts first, then clearly labeled analysis, two forecasts and two business angles.</description>
