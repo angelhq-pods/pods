@@ -43,14 +43,18 @@ h2{font:22px BCS;text-transform:uppercase;letter-spacing:1px;color:var(--kD9B8FF
 <script>
 const $=s=>document.querySelector(s),esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let D;const fmt=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
-function sel(e,play){$('#hero').src=e.cover.replace('-600','');$('#pt').textContent=e.title;const a=$('#a');if(!a.src.endsWith(e.audio)){a.src=e.audio}
+function sel(e,play){$('#hero').src=e.cover.replace('-600','');$('#pt').textContent=e.title+(previewState(e)===true?' · Preview':'');const a=$('#a');if(!a.src.endsWith(e.audio)){a.src=e.audio}
 if(play)a.play().catch(()=>{});document.querySelectorAll('.ep').forEach(x=>x.classList.toggle('on',x.dataset.id==e.id));
 $('#detail').innerHTML=`<details><summary>Transcript</summary><p>${esc(e.transcript)}</p></details><details><summary>Sources</summary><ul>${e.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a></li>`).join('')}</ul></details>`;
 location.hash=e.id;if('mediaSession'in navigator)navigator.mediaSession.metadata=new MediaMetadata({title:e.title,artist:'Little Steps',artwork:[{src:e.cover,sizes:'600x600',type:'image/jpeg'}]})}
-fetch('episodes.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;$('#list').innerHTML=d.stages.map(st=>{const es=d.episodes.filter(e=>e.stage==st.id).reverse();
-return `<h2>${st.label}</h2>`+(es.length?es.map(e=>`<div class="ep" data-id="${e.id}"><img src="${e.cover}" alt="" loading="lazy"><div><b>${esc(e.title)}</b><small>${esc(e.subtitle)} · ${fmt(e.duration)}</small></div></div>`).join(''):'<p class="empty">Coming soon</p>')}).join('');
-document.querySelectorAll('.ep').forEach(x=>x.onclick=()=>sel(D.episodes.find(e=>e.id==x.dataset.id),true));
-const h=location.hash.slice(1),cur=d.episodes.find(e=>e.id==h)||d.episodes[d.episodes.length-1];if(cur)sel(cur,false)});
+const previewState=e=>(e.due_day==null&&e.months==null)?false:(window.LSLog?.preview?.(e)??null);
+const episodeCaption=e=>esc(e.subtitle)+' · '+fmt(e.duration)+(previewState(e)===true?' · <strong>Preview</strong>':previewState(e)===null?' · Listen-ahead (age not checked)':'');
+function updateAgeLabels(){if(!D)return;document.querySelectorAll('.ep').forEach(x=>{const e=D.episodes.find(e=>e.id==x.dataset.id);x.querySelector('small').innerHTML=episodeCaption(e)});const cur=D.episodes.find(e=>e.id==location.hash.slice(1));if(cur)$('#pt').textContent=cur.title+(previewState(cur)===true?' · Preview':'')}
+function renderLibrary(){const d=D;$('#list').innerHTML='<p class="note">All 23 first-year episodes are ready. Listen in any order. Preview marks a stage ahead of your baby’s age; sign in through Log to match stages to age. These are general guides, not predictions.</p>'+d.stages.filter(st=>st.id!='pregnancy').map(st=>{const es=d.episodes.filter(e=>e.stage==st.id).sort((a,b)=>a.order-b.order);
+return `<h2>${st.label}</h2>`+es.map(e=>`<div class="ep" data-id="${e.id}" role="button" tabindex="0"><img src="${e.cover}" alt="" loading="lazy"><div><b>${esc(e.title)}</b><small>${episodeCaption(e)}</small></div></div>`).join('')}).join('');
+document.querySelectorAll('.ep').forEach(x=>{x.onclick=()=>sel(D.episodes.find(e=>e.id==x.dataset.id),true);x.onkeydown=ev=>{if(ev.key=='Enter'||ev.key==' '){ev.preventDefault();x.click()}}})}
+fetch('episodes.json',{cache:'no-store'}).then(r=>r.json()).then(d=>{D=d;renderLibrary();const h=location.hash.slice(1),cur=d.episodes.find(e=>e.id==h)||d.episodes.filter(e=>previewState(e)===false).at(-1)||d.episodes[0];if(cur)sel(cur,false)});
+addEventListener('ls-listen-age',updateAgeLabels);document.addEventListener('visibilitychange',()=>{if(!document.hidden)updateAgeLabels()});setInterval(updateAgeLabels,60000);
 function tab(t){document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t==t));$('#listen').hidden=t!='listen';$('#log').hidden=t!='log';localStorage['ls-tab']=t;scrollTo(0,0);if(t=='log'&&window.LSLog)LSLog.show()}
 document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>tab(b.dataset.t));if(localStorage['ls-tab']=='log')tab('log');
 $('#ls-theme-listen').innerHTML=LSTheme.html();

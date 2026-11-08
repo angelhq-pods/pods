@@ -126,6 +126,616 @@
      "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
     }
    ]
+  },
+  {
+   "id": "week-2",
+   "stage": "newborn",
+   "title": "Week 2",
+   "order": 2,
+   "duration": 95,
+   "transcript": "Welcome to Little Steps. Week two: Follow the baby, not the stopwatch. This is a listen-ahead guide, not a prediction about any particular baby.\n\nPicture a late-night feed. The clock says it has barely been an hour, but a little mouth is searching again. Hunger cues deserve attention, even when the schedule looks untidy. Breastfed babies commonly feed eight to twelve times in twenty-four hours. Formula feeds often become more spaced out over the first weeks, but there is no universal timetable. Ask your clinician whether your baby still needs waking for feeds, especially if weight gain has been a concern.\n\nA nursing timer measures time, not milk swallowed. Bottle totals measure what was taken from bottles, not any additional milk transferred at the breast. Use the log to bring a clear story to your clinician, alongside measured weight and any change in feeding or diaper output. If feeds are persistently difficult, seek feeding support rather than stretching the interval to fit a graph.\n\nToday's small job: write down one feeding question for the next weight check. You are collecting clues, not trying to win a numbers game.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: How Much and How Often to Breastfeed",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Feed Infant Formula",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "AAP: Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ],
+   "subtitle": "Days 14–21",
+   "audio": "episodes/week-2.mp3",
+   "cover": "covers/week-2-v1-600.jpg",
+   "due_day": 14
+  },
+  {
+   "id": "week-3",
+   "stage": "newborn",
+   "title": "Week 3",
+   "order": 3,
+   "duration": 94,
+   "transcript": "Welcome to Little Steps. Week three: A softer landing for everyone. This is a listen-ahead guide, not a prediction about any particular baby.\n\nImagine the evening getting noisy. You have fed, changed, and cuddled the baby, and there is still crying. Start with a calm check for hunger and comfort, then try holding, gentle rocking, or a quiet song. Responding to a young baby does not spoil them. Your steady presence is part of how they learn to feel safe.\n\nIf you are getting overwhelmed, put the baby on their back in their empty, safe crib or bassinet and step away briefly to regain control. Ask another trusted adult to take over when possible. Never shake a baby. A difficult evening is a reason to get support, not proof you are doing this badly.\n\nMake the handoff simple: tell the next caregiver when the baby last fed and what you have already tried. If crying is unusual, your baby seems unwell, or you are worried, call the clinician rather than assuming this is ordinary fussiness. Tonight's goal is not silence at any cost. It is a safe baby and a supported caregiver.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 2 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/2-months.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "AAP: Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ],
+   "subtitle": "Days 21–28",
+   "audio": "episodes/week-3.mp3",
+   "cover": "covers/week-3-v1-600.jpg",
+   "due_day": 21
+  },
+  {
+   "id": "week-4",
+   "stage": "newborn",
+   "title": "Week 4",
+   "order": 4,
+   "duration": 93,
+   "transcript": "Welcome to Little Steps. Week four: Small moments of play. This is a listen-ahead guide, not a prediction about any particular baby.\n\nYou do not need a shelf full of toys to make this week interesting. Your face, your voice, and a few minutes together are plenty. When your baby is awake and comfortable, get close, talk gently, and pause. Notice whether they look toward you or seem ready for a break. Turning away or fussing is a cue to slow down, not to try harder.\n\nTry a little supervised tummy time while the baby is awake. Stay right there, start briefly, and build up gradually as tolerated. The American Academy of Pediatrics suggests working toward a total of fifteen to thirty minutes a day by seven weeks. That is a gradual goal across short sessions, not a demand for one long workout. If this is difficult or there are medical concerns, ask for help adapting it.\n\nPlay on the tummy; sleep on the back. If the baby gets sleepy, move to the proper safe sleep space. Today's activity is one short, comfortable play session, stopped before it becomes a battle.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 2 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/2-months.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "AAP: Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ],
+   "subtitle": "Days 28–35",
+   "audio": "episodes/week-4.mp3",
+   "cover": "covers/week-4-v1-600.jpg",
+   "due_day": 28
+  },
+  {
+   "id": "week-5",
+   "stage": "newborn",
+   "title": "Week 5",
+   "order": 5,
+   "duration": 94,
+   "transcript": "Welcome to Little Steps. Week five: Protect the sleep space. This is a listen-ahead guide, not a prediction about any particular baby.\n\nThink of bedtime as a safety reset, even if bedtime happens six times today. Before each sleep, check the space: a firm, flat mattress in a safety-approved crib or bassinet, a fitted sheet, and nothing loose. Put your baby down on their back. Pillows, blankets, positioners, and weighted sleep products do not belong there.\n\nIf your baby falls asleep in a swing, stroller, or car seat, move them to a firm, flat sleep surface as soon as possible. A car seat is for safe travel, not a replacement crib at home. Keep the baby's sleep space in your room, but not in your bed; the AAP recommends room sharing for at least the first six months.\n\nThe hardest moment may be the feed when you are exhausted. Plan a caregiver handoff before you are nodding off, and avoid falling asleep with the baby on a sofa or armchair. Tonight's practical win is a clear sleep space and a realistic plan for the tired adult.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "CDC: Milestones by 2 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/2-months.html"
+    },
+    {
+     "label": "AAP: Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ],
+   "subtitle": "Days 35–42",
+   "audio": "episodes/week-5.mp3",
+   "cover": "covers/week-5-v1-600.jpg",
+   "due_day": 35
+  },
+  {
+   "id": "week-6",
+   "stage": "newborn",
+   "title": "Week 6",
+   "order": 6,
+   "duration": 94,
+   "transcript": "Welcome to Little Steps. Week six: Your first conversations. This is a listen-ahead guide, not a prediction about any particular baby.\n\nA conversation can start long before words. During a calm awake moment, look at your baby and say something simple, then wait. If there is a sound, a movement, or a look back, respond warmly. You are practicing taking turns, not testing performance.\n\nThe CDC's two-month checklist includes looking at faces, making sounds other than crying, and smiling when spoken to or smiled at. Those are reference points for the coming weeks, not a prediction that a particular skill must appear today. The checklists describe skills most children can do by the listed age; they do not diagnose a child.\n\nKeep the activity easy. Read a few lines, sing a familiar song, or describe the clean diaper you are putting on. If your baby looks away, yawns, or becomes fussy, offer a break. Your voice matters more than finishing the page. Today's little assignment: find one quiet moment for a back-and-forth exchange, and enjoy whatever response you get.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 2 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/2-months.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "AAP: Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ],
+   "subtitle": "Days 42–49",
+   "audio": "episodes/week-6.mp3",
+   "cover": "covers/week-6-v1-600.jpg",
+   "due_day": 42
+  },
+  {
+   "id": "week-7",
+   "stage": "newborn",
+   "title": "Week 7",
+   "order": 7,
+   "duration": 92,
+   "transcript": "Welcome to Little Steps. Week seven: Move a little, rest a little. This is a listen-ahead guide, not a prediction about any particular baby.\n\nImagine the floor as a tiny practice studio. A safe play surface, an awake baby, and an attentive adult are the essentials. Short tummy-time sessions give opportunities to work on lifting the head and looking around. The AAP's gradual goal by this age is fifteen to thirty minutes total across the day, adjusted to what your baby can tolerate.\n\nPut your face or an age-appropriate toy at eye level and stay beside the baby. You are offering an invitation, not pushing through distress. If movement seems uncomfortable or one-sided, bring that observation to the clinician. A short video of what worries you can help explain the concern.\n\nKeep sleep separate from exercise. Always start sleep on the back in an empty, firm, flat sleep space. If you swaddle, stop as soon as there are signs of trying to roll; do not wait for a certain birthday. This week's win is gentle practice with plenty of breaks, not hitting a personal record.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "CDC: Milestones by 2 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/2-months.html"
+    },
+    {
+     "label": "AAP: Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ],
+   "subtitle": "Days 49–56",
+   "audio": "episodes/week-7.mp3",
+   "cover": "covers/week-7-v1-600.jpg",
+   "due_day": 49
+  },
+  {
+   "id": "week-8",
+   "stage": "newborn",
+   "title": "Week 8",
+   "order": 8,
+   "duration": 96,
+   "transcript": "Welcome to Little Steps. Week eight: Make the checkup useful. This is a listen-ahead guide, not a prediction about any particular baby.\n\nThe two-month visit can feel like a lot to remember. Make it easier before you arrive: choose a few questions about feeding, growth, sleep, or development. Bring the feeding log as context, not as a report card. A clinician can interpret it alongside the baby's growth and examination.\n\nThe CDC's two-month checklist includes looking at your face, reacting to loud sounds, moving both arms and legs, and holding the head up during tummy time. Notice what you see, and mention anything that concerns you. If a skill has been lost, do not wait for the next routine visit to speak up.\n\nAsk the care team which immunizations are due and what to expect afterward. Also ask about vitamin D: breastfed babies and babies drinking less than about thirty-two ounces of formula daily generally need a supplement. Have the clinician confirm the product and dose rather than guessing from a dropper. Your practical task today is a short question list. The appointment is a partnership, not an exam you need to pass.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 2 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/2-months.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Breastfeed",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Feed Infant Formula",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "AAP: Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ],
+   "subtitle": "Days 56–63",
+   "audio": "episodes/week-8.mp3",
+   "cover": "covers/week-8-v1-600.jpg",
+   "due_day": 56
+  },
+  {
+   "id": "week-9",
+   "stage": "newborn",
+   "title": "Week 9",
+   "order": 9,
+   "duration": 93,
+   "transcript": "Welcome to Little Steps. Week nine: Less stimulation, more connection. This is a listen-ahead guide, not a prediction about any particular baby.\n\nSometimes the best baby activity is doing less. If you have a few awake minutes, try one simple thing: a face, a song, or a safe toy to watch. Then pause and see whether your baby wants more. Looking away or becoming fussy can mean it is time for a break.\n\nThe next developmental reference point is the CDC's four-month checklist. It includes cooing, turning toward a familiar voice, and bringing hands to the mouth. Those are skills to watch for over the coming weeks, not requirements for week nine. Avoid comparing today's performance with a video of somebody else's baby.\n\nFor play, put away your own screen when possible and narrate the ordinary things you are doing. Babies learn through people responding to them; they do not need a learning video. Keep offering supervised floor time during waking hours, and use the proper safe space for every sleep. This week's takeaway: a few responsive moments are more useful than a packed activity schedule.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 2 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/2-months.html"
+    },
+    {
+     "label": "CDC: Milestones by 4 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/4-months.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "AAP: Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ],
+   "subtitle": "Days 63–70",
+   "audio": "episodes/week-9.mp3",
+   "cover": "covers/week-9-v1-600.jpg",
+   "due_day": 63
+  },
+  {
+   "id": "week-10",
+   "stage": "newborn",
+   "title": "Week 10",
+   "order": 10,
+   "duration": 95,
+   "transcript": "Welcome to Little Steps. Week ten: Feeding without a contest. This is a listen-ahead guide, not a prediction about any particular baby.\n\nHere is a common trap: the bottle still has milk in it, so it feels unfinished. But a baby closing their mouth or turning away may be telling you they are full. Notice hunger cues and fullness cues rather than treating the container as the goal.\n\nFeeds vary in length and spacing, and direct nursing cannot be converted into ounces just by timing it. With mixed feeding, bottle volume is only the measured part of intake. If the log raises a worry, pair that information with a conversation about growth and feeding effectiveness instead of automatically adding a bigger feed.\n\nThis is still the milk-feeding stage: breast milk or infant formula, not early solids or water to stretch between feeds. Ask the clinician if there is any concern about intake or growth. Today's practical action is to watch one feed without multitasking. Notice how hunger starts, how swallowing sounds, and how the baby signals they are done. Those observations can be useful at your next visit.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: How Much and How Often to Breastfeed",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Feed Infant Formula",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "CDC: Milestones by 2 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/2-months.html"
+    },
+    {
+     "label": "AAP: Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ],
+   "subtitle": "Days 70–77",
+   "audio": "episodes/week-10.mp3",
+   "cover": "covers/week-10-v1-600.jpg",
+   "due_day": 70
+  },
+  {
+   "id": "week-11",
+   "stage": "newborn",
+   "title": "Week 11",
+   "order": 11,
+   "duration": 91,
+   "transcript": "Welcome to Little Steps. Week eleven: Before the first roll. This is a listen-ahead guide, not a prediction about any particular baby.\n\nA new movement can arrive without much warning. Prepare now rather than waiting until a roll has already happened. If your baby shows signs of trying to roll, stop swaddling immediately. Use suitable non-weighted sleep clothing instead. The trigger is the baby's movement, not a calendar date.\n\nAlways start sleep on the back. Later, when a baby can comfortably roll both ways, the AAP says you do not need to keep turning them back, but the sleep space must remain empty. Do not use wedges, pillows, or positioners to hold a baby still.\n\nDuring awake time, keep play on a safe floor surface with supervision. The four-month reference points ahead include holding the head steady when held and pushing onto forearms during tummy time. There is no need to force those skills today. Your practical task is a quick review of every sleep space and a chat with every caregiver about stopping swaddling at the first signs of rolling.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "CDC: Milestones by 4 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/4-months.html"
+    },
+    {
+     "label": "AAP: Fever and Your Baby",
+     "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
+    }
+   ],
+   "subtitle": "Days 77–84",
+   "audio": "episodes/week-11.mp3",
+   "cover": "covers/week-11-v1-600.jpg",
+   "due_day": 77
+  },
+  {
+   "id": "week-12",
+   "stage": "newborn",
+   "title": "Week 12",
+   "order": 12,
+   "duration": 98,
+   "transcript": "Welcome to Little Steps. Week twelve: A bridge, not a deadline. This is a listen-ahead guide, not a prediction about any particular baby.\n\nThe weekly chapter is ending, and the monthly chapter is about to begin. There is no magical switch at twelve weeks. Feeding, sleep, and development still change in uneven little steps. This episode is a chance to notice patterns without demanding a perfect routine.\n\nLook ahead to the four-month CDC checklist: cooing, responding with sounds, holding a toy placed in the hand, and bringing hands to the mouth are useful examples. Offer opportunities through talking and supervised play. Do not drill, and do not wait to ask for help if you are concerned or a skill disappears.\n\nContinue breast milk or formula, respond to feeding cues, and use the safe sleep setup every time. A calm sequence before sleep can be simple: feed as needed, a quiet voice, then the crib. A routine is a familiar order of events, not a guarantee of sleeping through the night. Your task this week is to keep what helps and drop one unnecessary pressure. Next, the library follows development month by month.\n\nOne safety reminder: at three months or younger, a rectal temperature of one hundred point four degrees Fahrenheit, or thirty-eight Celsius, needs an immediate call to the pediatrician. This is general guidance, not a replacement for your baby's care plan. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 4 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/4-months.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Breastfeed",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Feed Infant Formula",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    }
+   ],
+   "subtitle": "Days 84–91",
+   "audio": "episodes/week-12.mp3",
+   "cover": "covers/week-12-v1-600.jpg",
+   "due_day": 84
+  },
+  {
+   "id": "month-3",
+   "stage": "monthly",
+   "title": "Month 3",
+   "order": 13,
+   "duration": 96,
+   "transcript": "Welcome to Little Steps. Month three: Build a flexible rhythm. This is a listen-ahead guide, not a prediction about any particular baby.\n\nPicture a day with a little more predictability, but plenty of surprises. Rather than setting a rigid timetable, try repeating a few gentle cues: conversation during a diaper change, a short play session when alert, and quieter surroundings before sleep. Keep feeding responsive to hunger and fullness.\n\nYour baby's next CDC milestone checkpoint is four months. You may start watching for interest in hands, cooing, or attempts to keep your attention. These are possibilities to notice, not claims about what your baby is doing already. Respond to sounds, offer a safe easy-to-hold toy, and give supervised floor time.\n\nRolling preparation matters now. Stop swaddling at any sign of trying to roll, and always start sleep on the back. Breast milk or formula remains the food at this stage; being curious about your dinner does not by itself mean readiness for solids. Today's useful goal is one dependable calming routine and one enjoyable face-to-face moment. If development or feeding worries you, bring it up rather than waiting for an app to tell you everything is fine.\n\nThese are general ideas, not a substitute for your child's care plan. If feeding, growth, or development worries you, ask your clinician. Sources are included with this episode. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 4 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/4-months.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "CDC: How Much and How Often to Breastfeed",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/breastfeeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Feed Infant Formula",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/how-much-and-how-often.html"
+    }
+   ],
+   "subtitle": "3 months",
+   "audio": "episodes/month-3.mp3",
+   "cover": "covers/month-3-v1-600.jpg",
+   "months": 3
+  },
+  {
+   "id": "month-4",
+   "stage": "monthly",
+   "title": "Month 4",
+   "order": 14,
+   "duration": 94,
+   "transcript": "Welcome to Little Steps. Month four: Hands become an adventure. This is a listen-ahead guide, not a prediction about any particular baby.\n\nWatch those hands. The CDC's four-month checklist includes looking at hands with interest, bringing them to the mouth, and holding a toy placed in the hand. Offer a clean, age-appropriate toy that is not sharp, hot, or small enough to choke on. Stay involved and let the baby explore at their own pace.\n\nTalk back when your baby makes sounds. Read a picture book by naming what you see, even if you only make it through one page. During supervised tummy time, give space to push up and look around. If a milestone is missing or you have concerns, discuss it with the clinician; the checklist is a conversation starter, not a diagnosis.\n\nThis is also a good time to plan for solids, not rush them. General guidance is around six months when the baby is developmentally ready, and not before four months. Until then, breast milk or formula continues. Keep the sleep space empty, and stop swaddling with any rolling attempts. Today's job is one safe toy and a few minutes of shared exploration.\n\nThese are general ideas, not a substitute for your child's care plan. If feeding, growth, or development worries you, ask your clinician. Sources are included with this episode. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 4 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/4-months.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "CDC: When, What, and How to Introduce Solid Foods",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html"
+    }
+   ],
+   "subtitle": "4 months",
+   "audio": "episodes/month-4.mp3",
+   "cover": "covers/month-4-v1-600.jpg",
+   "months": 4
+  },
+  {
+   "id": "month-5",
+   "stage": "monthly",
+   "title": "Month 5",
+   "order": 15,
+   "duration": 96,
+   "transcript": "Welcome to Little Steps. Month five: Get ready, without rushing. This is a listen-ahead guide, not a prediction about any particular baby.\n\nThe family table may suddenly look fascinating. Watching you eat is a lovely social moment, but interest alone is not the green light for solids. Around six months, look for a collection of readiness signs: steady head and neck control, sitting with support or alone, opening the mouth for food, and swallowing rather than pushing everything back out.\n\nUse this month to talk with your clinician about first foods and choking prevention. If your baby has severe eczema or an egg allergy, ask specifically about safely introducing peanut-containing foods. There is no need to buy an elaborate feeding system to have this conversation.\n\nFor now, offer responsive milk feeds and supervised floor play. The next CDC checkpoint, at six months, includes reaching for a wanted toy, laughing, and taking turns making sounds. You can support those opportunities without making them homework. Put a safe toy nearby, respond to a squeal, and pause. Today's action is preparation: write down your questions about readiness and choose a calm, supervised place for future meals.\n\nThese are general ideas, not a substitute for your child's care plan. If feeding, growth, or development worries you, ask your clinician. Sources are included with this episode. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 6 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/6-months.html"
+    },
+    {
+     "label": "CDC: When, What, and How to Introduce Solid Foods",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    }
+   ],
+   "subtitle": "5 months",
+   "audio": "episodes/month-5.mp3",
+   "cover": "covers/month-5-v1-600.jpg",
+   "months": 5
+  },
+  {
+   "id": "month-6",
+   "stage": "monthly",
+   "title": "Month 6",
+   "order": 16,
+   "duration": 93,
+   "transcript": "Welcome to Little Steps. Month six: First tastes, safely. This is a listen-ahead guide, not a prediction about any particular baby.\n\nImagine a small spoonful, a puzzled expression, and most of it landing on the bib. Starting solids is practice, not a race to replace milk. Around six months, when readiness signs are present, begin developmentally suitable foods while continuing breast milk or formula as the main source of nutrition.\n\nStart with a small amount of a single-ingredient food. The CDC advises waiting three to five days between new foods initially so problems are easier to spot. Offer variety over time, including fortified infant cereal and other foods from different groups. Keep textures soft and appropriate, and stay right beside your baby for eating.\n\nPotential allergens belong in the introduction plan, not on an automatic delay list. Ask first about peanut introduction if there is severe eczema or egg allergy. Whole nuts and spoonfuls of thick nut butter are not safe serving forms. No honey before twelve months, and no cow's milk as the main drink before then. Today's goal is a safe, calm first experience, not a clean bowl.\n\nThese are general ideas, not a substitute for your child's care plan. If feeding, growth, or development worries you, ask your clinician. Sources are included with this episode. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 6 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/6-months.html"
+    },
+    {
+     "label": "CDC: When, What, and How to Introduce Solid Foods",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html"
+    },
+    {
+     "label": "CDC: Foods and Drinks to Avoid or Limit",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/foods-and-drinks-to-avoid-or-limit.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "CDC: Choking Hazards",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html"
+    }
+   ],
+   "subtitle": "6 months",
+   "audio": "episodes/month-6.mp3",
+   "cover": "covers/month-6-v1-600.jpg",
+   "months": 6
+  },
+  {
+   "id": "month-7",
+   "stage": "monthly",
+   "title": "Month 7",
+   "order": 17,
+   "duration": 94,
+   "transcript": "Welcome to Little Steps. Month seven: Let the menu grow. This is a listen-ahead guide, not a prediction about any particular baby.\n\nThe menu can begin to feel more like a tiny version of family food. By seven or eight months, many babies can explore foods from several food groups, prepared safely for their skills. Think soft vegetables, fruit, proteins, and a variety of fortified cereals, not one food expected to do every job.\n\nTexture changes should follow ability, with you watching closely. Mash or puree food as needed, cook hard foods until soft, and remove bones, pits, and other hazards. Never hand over a whole grape or a round slice of sausage. Eating happens seated and supervised, not while wandering or riding around.\n\nWatch for fullness: closing the mouth or turning away is information, not a challenge to overcome. Continue breast milk or formula, and let the clinician guide you if intake or growth is concerning. Your small task today is to offer one safe texture or flavor without pressure. A funny face does not prove a permanent dislike. You can offer the food again another day while keeping the experience calm.\n\nThese are general ideas, not a substitute for your child's care plan. If feeding, growth, or development worries you, ask your clinician. Sources are included with this episode. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: When, What, and How to Introduce Solid Foods",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html"
+    },
+    {
+     "label": "CDC: Foods and Drinks to Avoid or Limit",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/foods-and-drinks-to-avoid-or-limit.html"
+    },
+    {
+     "label": "CDC: Milestones by 6 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/6-months.html"
+    },
+    {
+     "label": "CDC: Milestones by 9 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/9-months.html"
+    },
+    {
+     "label": "CDC: Choking Hazards",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html"
+    }
+   ],
+   "subtitle": "7 months",
+   "audio": "episodes/month-7.mp3",
+   "cover": "covers/month-7-v1-600.jpg",
+   "months": 7
+  },
+  {
+   "id": "month-8",
+   "stage": "monthly",
+   "title": "Month 8",
+   "order": 18,
+   "duration": 91,
+   "transcript": "Welcome to Little Steps. Month eight: A safe place to explore. This is a listen-ahead guide, not a prediction about any particular baby.\n\nGet down to floor level for a moment and look around. What can little hands reach? As movement changes, a room that was safe last month may need another review. Move sharp and breakable things, lock away medicines and cleaning products, and remove small objects from the play area.\n\nOffer a safe toy a little out of reach and stay close while the baby works out how to approach it. There is no need to force crawling or compare one movement style with another. The nine-month CDC checklist ahead includes sitting without support, getting into sitting, and transferring things between hands. Ask about any concerns rather than turning one skill into the whole story.\n\nPlay can be delightfully ordinary: pass a toy back and forth, name a picture, or repeat a sound. Keep meals seated and supervised, with food prepared for the baby's current skills. Today's action is a floor-level safety sweep, then a few minutes of play together. Safe space plus your attention is more valuable than a complicated activity.\n\nThese are general ideas, not a substitute for your child's care plan. If feeding, growth, or development worries you, ask your clinician. Sources are included with this episode. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 9 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/9-months.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "CDC: When, What, and How to Introduce Solid Foods",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html"
+    },
+    {
+     "label": "CDC: Choking Hazards",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html"
+    }
+   ],
+   "subtitle": "8 months",
+   "audio": "episodes/month-8.mp3",
+   "cover": "covers/month-8-v1-600.jpg",
+   "months": 8
+  },
+  {
+   "id": "month-9",
+   "stage": "monthly",
+   "title": "Month 9",
+   "order": 19,
+   "duration": 90,
+   "transcript": "Welcome to Little Steps. Month nine: The disappearing spoon game. This is a listen-ahead guide, not a prediction about any particular baby.\n\nThe spoon drops. You pick it up. It drops again. This may feel repetitive, but looking for dropped objects is one of the skills on the CDC's nine-month checklist. A simple back-and-forth game gives you a way to share the discovery without needing a new toy.\n\nAt this checkpoint, notice sitting without support, varied babbling, looking when called by name, and moving objects between hands. These checklists describe what most babies can do by an age, and they are not diagnostic tests. Share concerns or lost skills with your clinician promptly, and ask about developmental screening.\n\nSome babies also react more strongly when a caregiver leaves. Try a short, cheerful goodbye rather than sneaking away, and greet them warmly when you return. Keep familiar routines and allow time to get used to another caregiver. Today's practical plan is one little turn-taking game and one predictable goodbye. Your baby does not need to handle every new situation happily for you to be supporting them well.\n\nThese are general ideas, not a substitute for your child's care plan. If feeding, growth, or development worries you, ask your clinician. Sources are included with this episode. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 9 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/9-months.html"
+    },
+    {
+     "label": "CDC: When, What, and How to Introduce Solid Foods",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "CDC: Choking Hazards",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html"
+    }
+   ],
+   "subtitle": "9 months",
+   "audio": "episodes/month-9.mp3",
+   "cover": "covers/month-9-v1-600.jpg",
+   "months": 9
+  },
+  {
+   "id": "month-10",
+   "stage": "monthly",
+   "title": "Month 10",
+   "order": 20,
+   "duration": 90,
+   "transcript": "Welcome to Little Steps. Month ten: Small hands, big experiments. This is a listen-ahead guide, not a prediction about any particular baby.\n\nA cup, a safe container, and a few large baby-safe toys can turn the floor into a discovery lab. Show putting a toy in and taking it out. Let your baby watch or join in, without requiring a particular result. The one-year CDC checkpoint ahead includes putting something into a container and finding a toy hidden in front of them.\n\nKeep talking through everyday moments. Name the cup, describe the ball, and respond to sounds or gestures. A shared picture book can be a conversation about pictures rather than a full reading of the words. Real back-and-forth matters more than a learning video.\n\nAt meals, continue safe textures and close supervision. Small foods must be prepared to avoid choking; small does not automatically mean safe. Keep honey and juice off the menu before the first birthday, and continue breast milk or formula. Today's small win is one simple container game and a check that every toy is age-appropriate, intact, and too large to choke on.\n\nThese are general ideas, not a substitute for your child's care plan. If feeding, growth, or development worries you, ask your clinician. Sources are included with this episode. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 9 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/9-months.html"
+    },
+    {
+     "label": "CDC: Milestones by 12 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/1-year.html"
+    },
+    {
+     "label": "CDC: When, What, and How to Introduce Solid Foods",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/when-what-and-how-to-introduce-solid-foods.html"
+    },
+    {
+     "label": "CDC: Foods and Drinks to Avoid or Limit",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/foods-and-drinks-to-avoid-or-limit.html"
+    },
+    {
+     "label": "CDC: Choking Hazards",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html"
+    }
+   ],
+   "subtitle": "10 months",
+   "audio": "episodes/month-10.mp3",
+   "cover": "covers/month-10-v1-600.jpg",
+   "months": 10
+  },
+  {
+   "id": "month-11",
+   "stage": "monthly",
+   "title": "Month 11",
+   "order": 21,
+   "duration": 94,
+   "transcript": "Welcome to Little Steps. Month eleven: Prepare for the next chapter. This is a listen-ahead guide, not a prediction about any particular baby.\n\nThe first birthday is coming, but independent walking is not a birthday entrance requirement. The CDC's one-year checklist includes pulling up to stand and walking while holding furniture. Offer a safe place to practice and stay close. Do not use a baby walker; safe floor exploration is a better choice.\n\nThis is a good month to plan the next checkup. Write down questions about development, meals, and the transition from formula after twelve months. The CDC says plain, unsweetened, pasteurized whole cow's milk can replace formula at that stage; discuss alternatives or individual needs with the clinician. Breastfeeding can continue if parent and child want it. There is no deadline to stop because a candle appears.\n\nKeep food preparation safe and the sleep space appropriate. Practice a cup with help during a calm meal, and expect spills. Today's task is planning, not rushing: a question list for the clinician and a safe bit of furniture for supported practice. Your baby's pace deserves attention, not a countdown.\n\nThese are general ideas, not a substitute for your child's care plan. If feeding, growth, or development worries you, ask your clinician. Sources are included with this episode. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 12 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/1-year.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Feed Infant Formula",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "CDC: Foods and Drinks to Avoid or Limit",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/foods-and-drinks-to-avoid-or-limit.html"
+    },
+    {
+     "label": "AAP: How to Keep Your Sleeping Baby Safe",
+     "url": "https://www.healthychildren.org/English/ages-stages/baby/sleep/Pages/A-Parents-Guide-to-Safe-Sleep.aspx"
+    },
+    {
+     "label": "CDC: Choking Hazards",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html"
+    }
+   ],
+   "subtitle": "11 months",
+   "audio": "episodes/month-11.mp3",
+   "cover": "covers/month-11-v1-600.jpg",
+   "months": 11
+  },
+  {
+   "id": "month-12",
+   "stage": "monthly",
+   "title": "Month 12: One Year!",
+   "order": 22,
+   "duration": 99,
+   "transcript": "Welcome to Little Steps. Month twelve: A year of little steps. This is a listen-ahead guide, not a prediction about any particular baby.\n\nWelcome to the first-birthday chapter. Whether you are listening ahead or arriving at this stage, take a breath. There is no single picture of a one-year-old. The CDC's reference points include waving goodbye, using a special name for a parent, pulling to stand, cruising along furniture, and picking up small bits of food between thumb and finger.\n\nLook at the whole picture and bring questions to the clinician. If a skill has been lost or something concerns you, ask for developmental screening rather than waiting. Celebrate attempts without turning the checklist into a score.\n\nFood and drink move into a new stage. After twelve months, many children can transition from formula to plain pasteurized whole milk, with the clinician helping tailor the plan. Breastfeeding may continue. Keep offering varied, safely prepared foods, help with a cup, and skip sugary drinks; juice is unnecessary. Use positive words and gentle redirection as curiosity grows. Today's celebration can be simple: share a book, a song, or a game together. The next chapter still starts with small, responsive moments.\n\nThese are general ideas, not a substitute for your child's care plan. If feeding, growth, or development worries you, ask your clinician. Sources are included with this episode. See you in the next chapter.",
+   "sources": [
+    {
+     "label": "CDC: Milestones by 12 Months",
+     "url": "https://www.cdc.gov/act-early/milestones/1-year.html"
+    },
+    {
+     "label": "CDC: How Much and How Often to Feed Infant Formula",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/formula-feeding/how-much-and-how-often.html"
+    },
+    {
+     "label": "CDC: Foods and Drinks to Avoid or Limit",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/foods-and-drinks-to-avoid-or-limit.html"
+    },
+    {
+     "label": "CDC: Choking Hazards",
+     "url": "https://www.cdc.gov/infant-toddler-nutrition/foods-and-drinks/choking-hazards.html"
+    }
+   ],
+   "subtitle": "First birthday",
+   "audio": "episodes/month-12.mp3",
+   "cover": "covers/month-12-v1-600.jpg",
+   "months": 12
   }
  ]
 }

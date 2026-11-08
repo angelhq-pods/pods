@@ -100,7 +100,7 @@ function compare(s){const d=ageDays(),t=Math.min(nd(day)-1,Date.now()),w=measure
 let tick;
 function shell(){let m=document.getElementById('lg-main'),w=document.getElementById('lg-sheetwrap');if(!m){root.innerHTML='';m=document.createElement('div');m.id='lg-main';w=document.createElement('div');w.id='lg-sheetwrap';root.append(m,w);w.addEventListener('animationend',()=>w.classList.add('noanim'))}return[m,w]}
 function setSheet(sh){const w=shell()[1];if(w.dataset.h===sh)return;if(!w.dataset.h&&sh)w.classList.remove('noanim');else w.classList.add('noanim');w.innerHTML=sh;w.dataset.h=sh;const t=document.getElementById('lg-note');if(t&&sheet){const v=sheet.e?sheet.e.note:sheet.note;if(v!=null)t.value=v}}
-function render(){if(!root)return;const[main]=shell();
+function render(){dispatchEvent(new Event('ls-listen-age'));if(!root)return;const[main]=shell();
  if(!B){setSheet('');main.innerHTML=`<div class="lg-card lg-center"><h3>Log is almost ready</h3><p class="lg-muted">Shared sync hasn't been connected yet. It will appear here once it's set up.</p></div>`;return}
  if(!S.user){setSheet('');main.innerHTML=signin();bindSignin();return}
  if(!hh){setSheet('');main.innerHTML=`<div class="lg-card lg-center"><h3>Not linked yet</h3><p class="lg-muted">Signed in as ${esc(S.user)}, but this account isn't linked to the family log yet.</p><button class="lg-btn ghost" data-a="out">Sign out</button></div>`;bind();return}
@@ -401,6 +401,6 @@ async function boot(){if(!B)return render();try{await B.fromLink?.()}catch(x){sy
 fetch('typical.json').then(r=>r.json()).then(j=>{typ=j;render()}).catch(()=>{});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&S.user){if(follow)day=startOfDay(Date.now());pull().then(flush)}});
 addEventListener('online',flush);
-window.LSLog={rerender:()=>{if(!document.querySelector('#log').hidden)render()},show:()=>{render()},state:()=>S,band:(k,d,bw)=>band(k,d,bw)};
+window.LSLog={preview:e=>{if(!S.user||!hh?.birth_date)return null;const b=new Date(hh.birth_date+'T00:00');if(e.months!=null){const day=b.getDate();b.setDate(1);b.setMonth(b.getMonth()+e.months);const last=new Date(b.getFullYear(),b.getMonth()+1,0).getDate();b.setDate(Math.min(day,last));return Date.now()<+b}return ageOf(Date.now())<e.due_day},rerender:()=>{if(!document.querySelector('#log').hidden)render()},show:()=>{render()},state:()=>S,band:(k,d,bw)=>band(k,d,bw)};
 if(S.hh)hh=S.hh;render();boot();
 })();
