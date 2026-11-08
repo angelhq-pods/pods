@@ -67,7 +67,8 @@
      "label": "HealthyChildren.org (AAP): Fever and Your Baby",
      "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
     }
-   ]
+   ],
+   "feeding_route_note": "Feeding terms: the 8–12 feeds/day guidance refers to direct nursing (at the breast), not a validated frequency or daily-ounce requirement for expressed breast milk by bottle. Milk type and feeding route are different. The human-milk stool description is not proof of a route-specific difference."
   },
   {
    "id": "week-1",
@@ -125,7 +126,8 @@
      "label": "HealthyChildren.org (AAP): Fever and Your Baby",
      "url": "https://www.healthychildren.org/English/health-issues/conditions/fever/Pages/Fever-and-Your-Baby.aspx"
     }
-   ]
+   ],
+   "feeding_route_note": "Feeding terms: “nurse 8–12 times” means direct nursing at the breast, not expressed breast milk by bottle. The spoken formula amounts/spacing are general, not a fixed newborn schedule; use current cues and your clinician’s plan, especially in the first days. Stool descriptions concern milk type, not a validated at-breast versus bottle difference."
   },
   {
    "id": "week-2",
@@ -151,7 +153,8 @@
    "subtitle": "Days 14–21",
    "audio": "episodes/week-2.mp3",
    "cover": "covers/week-2-v1-600.jpg",
-   "due_day": 14
+   "due_day": 14,
+   "feeding_route_note": "Feeding terms: the 8–12 frequency reference is for direct nursing (at the breast). Expressed breast milk (bottle) has a measured bottle amount, but no validated bottle-specific newborn daily requirement is claimed. No direct-nursing minutes are converted into ounces."
   },
   {
    "id": "week-3",
@@ -311,7 +314,8 @@
    "subtitle": "Days 56–63",
    "audio": "episodes/week-8.mp3",
    "cover": "covers/week-8-v1-600.jpg",
-   "due_day": 56
+   "due_day": 56,
+   "feeding_route_note": "Here “breastfed” in the vitamin D discussion includes babies receiving human milk directly at the breast or expressed in a bottle. It refers to milk type, not a route-specific intake benchmark; confirm the supplement plan with the clinician."
   },
   {
    "id": "week-9",
@@ -371,7 +375,8 @@
    "subtitle": "Days 70–77",
    "audio": "episodes/week-10.mp3",
    "cover": "covers/week-10-v1-600.jpg",
-   "due_day": 70
+   "due_day": 70,
+   "feeding_route_note": "Mixed feeding can mean direct nursing plus bottles, or formula and expressed breast milk in bottles. Bottle totals omit milk transferred during any direct nursing; a complete bottle-only record can measure total taken from bottles. A bottle containing both milks is different from a mixed feeding regimen."
   },
   {
    "id": "week-11",

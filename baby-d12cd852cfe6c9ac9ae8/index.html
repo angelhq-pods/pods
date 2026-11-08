@@ -45,7 +45,7 @@ const $=s=>document.querySelector(s),esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;'
 let D;const fmt=s=>Math.floor(s/60)+':'+String(s%60).padStart(2,'0');
 function sel(e,play){$('#hero').src=e.cover.replace('-600','');$('#pt').textContent=e.title+(previewState(e)===true?' · Preview':'');const a=$('#a');if(!a.src.endsWith(e.audio)){a.src=e.audio}
 if(play)a.play().catch(()=>{});document.querySelectorAll('.ep').forEach(x=>x.classList.toggle('on',x.dataset.id==e.id));
-$('#detail').innerHTML=`<details><summary>Transcript</summary><p>${esc(e.transcript)}</p></details><details><summary>Sources</summary><ul>${e.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a></li>`).join('')}</ul></details>`;
+$('#detail').innerHTML=`${e.feeding_route_note?`<div class="note feeding-route-note"><b>Feeding terms in this episode</b><p>${esc(e.feeding_route_note)}</p><small>Editorial clarification; the transcript below preserves the spoken recording.</small></div>`:''}<details><summary>Transcript</summary><p>${esc(e.transcript)}</p></details><details><summary>Sources</summary><ul>${e.sources.map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)}</a></li>`).join('')}</ul></details>`;
 location.hash=e.id;if('mediaSession'in navigator)navigator.mediaSession.metadata=new MediaMetadata({title:e.title,artist:'Little Steps',artwork:[{src:e.cover,sizes:'600x600',type:'image/jpeg'}]})}
 const previewState=e=>(e.due_day==null&&e.months==null)?false:(window.LSLog?.preview?.(e)??null);
 const episodeCaption=e=>esc(e.subtitle)+' · '+fmt(e.duration)+(previewState(e)===true?' · <strong>Preview</strong>':previewState(e)===null?' · Listen-ahead (age not checked)':'');
