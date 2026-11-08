@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 07 Nov 2026 05:30:13 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 05:23:35 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 8, 2026</title>
+      <description>Daily briefing for Sunday, November 8, 2026. The fallout from a widely discussed podcast interview alleging lobbying influence in the White House, post-midterm soul-searching on the right, a long-running baby-formula prosecution story, and a debate over energy drinks and heart risk in middle age. Includes engagement patterns, open forecast tracking, and two speculative business angles.</description>
+      <itunes:summary>Daily briefing for Sunday, November 8, 2026. The fallout from a widely discussed podcast interview alleging lobbying influence in the White House, post-midterm soul-searching on the right, a long-running baby-formula prosecution story, and a debate over energy drinks and heart risk in middle age. Includes engagement patterns, open forecast tracking, and two speculative business angles.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-08.mp3" length="4014188" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-08</guid>
+      <pubDate>Sun, 08 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:05:34</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 7, 2026</title>
       <description>Daily briefing for Saturday, November 7, 2026. White House chief-of-staff shake-up, a high-profile podcast interview on lobbying and health policy, Houston's new limits on police-ICE contact, and Friday's partial rebound in AI and chip stocks after Thursday's rout. Includes engagement patterns, open forecast tracking, and two speculative business angles.</description>
