@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Nov 2026 05:23:35 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 07:19:17 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>Weekly X Recap — Nov 8, 2026</title>
+      <description>A weekly recap of midterm week: a Democratic sweep and an internal fight over who to blame, Iran treated as the reason for the result, a sharp technology-stock selloff and bounce, and a White House staff shake-up that pulled a health-agenda interview into the conversation. Covers which themes audiences endorsed versus merely viewed, how a set of commentators interacted, and how earlier market and election calls fared. Facts first, then clearly labeled analysis, forecasts and speculative business angles.</description>
+      <itunes:summary>A weekly recap of midterm week: a Democratic sweep and an internal fight over who to blame, Iran treated as the reason for the result, a sharp technology-stock selloff and bounce, and a White House staff shake-up that pulled a health-agenda interview into the conversation. Covers which themes audiences endorsed versus merely viewed, how a set of commentators interacted, and how earlier market and election calls fared. Facts first, then clearly labeled analysis, forecasts and speculative business angles.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-weekly-2026-11-08.mp3" length="5509772" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-weekly-2026-11-08</guid>
+      <pubDate>Sun, 08 Nov 2026 07:30:00 -0700</pubDate>
+      <itunes:duration>00:07:39</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 8, 2026</title>
       <description>Daily briefing for Sunday, November 8, 2026. The fallout from a widely discussed podcast interview alleging lobbying influence in the White House, post-midterm soul-searching on the right, a long-running baby-formula prosecution story, and a debate over energy drinks and heart risk in middle age. Includes engagement patterns, open forecast tracking, and two speculative business angles.</description>
