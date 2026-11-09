@@ -25,6 +25,7 @@ h1{margin:0;font-size:32px;letter-spacing:.5px}
 input[type=range]{width:100%;height:44px;accent-color:var(--gold)}
 .times{display:flex;justify-content:space-between;color:var(--mute);font-size:18px;font-variant-numeric:tabular-nums}
 .speed{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px;font-size:18px;color:var(--mute)}
+.speed span{flex-basis:100%}.speed button{flex:1}
 .speed button,.feed button,.list .go{font:inherit;font-size:18px;border-radius:12px;border:1px solid var(--line);background:#2a2015;color:var(--ink);padding:8px 14px;cursor:pointer}
 .speed button.on{background:var(--green);color:#03140c;border-color:var(--green);font-weight:700}
 h2.section{font-size:24px;margin:22px 0 4px}
