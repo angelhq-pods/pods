@@ -1,0 +1,16 @@
+{
+  "name": "La Ventanita — Noticias de Cuba",
+  "short_name": "La Ventanita",
+  "description": "Noticias de Cuba, chisme y un chiste. Todos los días.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#120d08",
+  "theme_color": "#120d08",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}
