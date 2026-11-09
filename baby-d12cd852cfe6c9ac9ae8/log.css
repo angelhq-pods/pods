@@ -81,3 +81,31 @@
 .lg-chart .ref-e{stroke-dasharray:6 4;stroke-width:1.3}.lg-feed-context{background:var(--k0F0B24);border:1px solid var(--k2A2150);border-radius:12px;padding:10px;margin:10px 0;font-size:14px}.lg-feed-context summary{cursor:pointer;font-weight:600}.lg-feed-context select{display:block;width:100%;padding:12px;margin-top:6px;border-radius:10px;border:1px solid var(--k2A2150);background:var(--k16112E);color:var(--kEEE9FF);font:inherit}.lg-feed-context input[type=checkbox]{width:22px;height:22px;vertical-align:middle;accent-color:var(--kB36BFF)}
 .lg-intake-ref{background:var(--k0F0B24);border-left:3px solid #087F79;padding:10px 12px;border-radius:12px;font-size:13px;margin:10px 0}.lg-intake-ref p{margin:6px 0}.lg-intake-ref a{color:var(--kD9B8FF)}.lg-feed-notes{font-size:13px;margin:8px 0}.lg-evidence-grid{display:grid;gap:8px;margin:8px 0}.lg-evidence-grid span{font-size:13px}.lg-evidence-grid small{color:var(--kA99CD6)}.lg-chart .ref-line{stroke-dasharray:7 4;stroke-width:2}.lg-chart .ref-future{stroke-dasharray:2 5}.lg-chart .ref-sd{stroke:#64D5CA;stroke-width:1.5;fill:none;opacity:.65}.lg-chart .ref-point{fill:#64D5CA}[data-theme=light] .lg-chart .ref-sd{stroke:#087F79}[data-theme=light] .lg-chart .ref-point{fill:#087F79}
 .lg-plain-advice{margin:12px 0 18px;padding:12px 14px;background:var(--k0F0B24);border:1px solid var(--k2A2150);border-left:4px solid var(--kB36BFF);border-radius:12px;font-size:14px;line-height:1.5}.lg-plain-advice p,.lg-method .lg-plain-advice p{margin:0;color:var(--kEEE9FF);font-size:14px;line-height:1.5}.lg-plain-advice p+p,.lg-method .lg-plain-advice p+p{margin-top:10px}.lg-plain-advice strong{display:block;color:var(--kD9B8FF);font-size:12px;letter-spacing:.3px;text-transform:uppercase}.lg-read-comparison h4{font-size:14px;margin:16px 0 5px}.lg-read-comparison>p{font-size:13px}.lg-read-comparison summary{cursor:pointer}
+/* pumping */
+.lg-big.pump{background:linear-gradient(160deg,#2B2147,#1C2E3F)}[data-theme=light] .lg-big.pump{background:linear-gradient(160deg,#F1EAFB,#E3F1F7)}
+.lg-big .lg-pbar{margin-top:6px;height:6px}
+.lg-minis{display:flex;flex-direction:column;gap:10px}.lg-minis .lg-mini{flex:1;min-height:44px;border:1px solid var(--k2A2150);background:var(--k151033);color:var(--kD9D2FF);border-radius:14px;font:600 15px -apple-system,system-ui,sans-serif;padding:10px}
+.lg-pbar{height:10px;border-radius:6px;background:var(--k0F0B24);overflow:hidden;box-shadow:inset 0 0 0 1px var(--k2A2150)}.lg-pbar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,#7EE0A8,#5EC8FF);transition:width .4s ease}
+[data-theme=light] .lg-pbar i{background:linear-gradient(90deg,#1E9356,#1C8FD0)}
+.lg-phd{display:flex;align-items:center;justify-content:space-between;gap:8px}.lg-phd h3{margin:0}
+.lg-chip{border:1px solid var(--k2A2150);background:var(--k221A44);color:var(--kD9B8FF)!important;border-radius:16px;padding:7px 12px;font:600 13px -apple-system,system-ui,sans-serif!important;min-height:36px}
+.lg-ptot{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:10px 0 8px}.lg-ptot b{font:48px BC;line-height:1;font-variant-numeric:tabular-nums}.lg-ptot span{font:22px BCS;color:var(--kA99CD6)}.lg-ptot small{flex-basis:100%;color:var(--kA99CD6);font-size:13px}
+.lg-pleft{margin:6px 0 10px;font-size:14px;color:var(--k7EE0A8);font-weight:600}
+.lg-pstats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.lg-pstats div{background:var(--k0F0B24);border-radius:12px;padding:9px 10px}.lg-pstats b{display:block;font:24px BC;font-variant-numeric:tabular-nums}.lg-pstats small{color:var(--kA99CD6);font-size:12px;line-height:1.2;display:block}
+.lg-pgiven{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.lg-pgiven span{background:var(--k0F0B24);border-radius:12px;padding:9px 10px}.lg-pgiven b{display:block;font:19px BCS}.lg-pgiven small{color:var(--kA99CD6);font-size:12px}
+.lg-pweek{margin:16px 0 4px;padding-bottom:32px}.lg-pw-in{position:relative;display:grid;grid-template-columns:repeat(7,1fr);gap:6px;height:72px}
+.lg-pw-in>div{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}.lg-pweek i{display:block;width:70%;max-width:26px;border-radius:6px 6px 3px 3px;background:var(--k3A3166)}.lg-pweek i.hit{background:#7EE0A8}[data-theme=light] .lg-pweek i.hit{background:#1E9356}
+.lg-pweek small{position:absolute;bottom:-16px;font-size:10.5px;color:var(--kCFC4F5);font-variant-numeric:tabular-nums}.lg-pweek em{position:absolute;bottom:-30px;font-style:normal;font-size:11px;color:var(--k7E73A8)}
+.lg-pw-in>b{position:absolute;left:0;right:0;border-top:1.5px dashed var(--kFFD86B);height:0;pointer-events:none}.lg-pw-in>b span{position:absolute;right:0;top:-15px;font:600 10px -apple-system,system-ui,sans-serif;color:var(--kFFD86B)}[data-theme=light] .lg-pw-in>b{border-color:#9A6E00}
+.lg-pnote{margin:10px 0 0}
+.lg-psub{margin:-6px 0 12px}.lg-psub b{color:var(--kEEE9FF)}
+.lg-ptime{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 0 4px}.lg-ptime button{flex:1 0 auto}.lg-ptime span{font-size:13px;color:var(--kA99CD6);margin-right:2px}
+.lg-ptime button,.lg-pchips button{border:1px solid var(--k2A2150);background:var(--k221A44);border-radius:18px;padding:8px 11px;min-height:38px;font:600 14px -apple-system,system-ui,sans-serif!important;color:var(--kD9D2FF)!important}
+.lg-ptime button.on,.lg-pchips button.on{background:var(--kB36BFF);border-color:var(--kB36BFF);color:var(--k160B2E)!important}
+.lg-pwhen{margin:6px 0 12px}
+.lg-pchips{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:0 0 10px}.lg-pchips span{font-size:13px;color:var(--kA99CD6);margin-right:2px}.lg-pchips button{min-width:52px;font-variant-numeric:tabular-nums}
+.lg-plr{display:block;width:100%;text-align:left;border:0;background:none;padding:10px 2px;font-weight:600;color:var(--kD9B8FF)!important}.lg-plr small{color:var(--kA99CD6);font-weight:400}
+.lg-pnotes summary{cursor:pointer;color:var(--kA99CD6);font-size:14px;padding:6px 2px}
+#lg-pv[readonly]{color:var(--kD9B8FF)}
+[data-theme=light] .lg-ptime button.on,[data-theme=light] .lg-pchips button.on{color:#fff!important}
+.lg-seg button[data-pu]{text-transform:none}

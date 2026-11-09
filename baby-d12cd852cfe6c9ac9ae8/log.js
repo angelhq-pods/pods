@@ -22,12 +22,14 @@ function supa(){const sb=supabase.createClient(cfg.url,cfg.anonKey,{auth:{persis
   running:async()=>chk(await T().select('*').is('ended_at',null).in('kind',['sleep','breast'])),
   upsert:async ev=>chk(await T().upsert(ev)),
   del:async id=>chk(await T().delete().eq('id',id)),
-  subscribe(cb){this.ch&&sb.removeChannel(this.ch);this.ch=sb.channel('ev').on('postgres_changes',{event:'*',schema:'public',table:'events'},p=>cb(p.eventType,p.eventType=='DELETE'?p.old:p.new)).subscribe()}}}
+  settings:async()=>chk(await sb.from('household_settings').select('*').maybeSingle()),
+  setSettings:async v=>chk(await sb.from('household_settings').upsert(v)),
+  subscribe(cb){this.ch&&sb.removeChannel(this.ch);this.ch=sb.channel('ev').on('postgres_changes',{event:'*',schema:'public',table:'events'},p=>cb(p.eventType,p.eventType=='DELETE'?p.old:p.new)).on('postgres_changes',{event:'*',schema:'public',table:'household_settings'},p=>p.new&&cb('SETTINGS',p.new)).subscribe()}}}
 function mock(){ // localhost-only test double: localStorage "server" + BroadcastChannel as realtime
  const K='ls-mock-db',db=()=>JSON.parse(localStorage[K]||'[]'),save=d=>localStorage[K]=JSON.stringify(d),bc=new BroadcastChannel('ls-mock');let me=sessionStorage['ls-mock-user']||null;
  return{name:'mock',fromLink:async()=>{},pwIn:async(e,p)=>{if(p!=(localStorage['ls-mock-pw']||'\u0000'))throw Error('Invalid login credentials');me=e;sessionStorage['ls-mock-user']=e},setPw:async p=>{localStorage['ls-mock-pw']=p},user:async()=>me&&{email:me},sendCode:async()=>{},verify:async(e,c)=>{if(c!='123456')throw Error('Invalid code');me=e;sessionStorage['ls-mock-user']=e},
   signOut:async()=>{me=null;delete sessionStorage['ls-mock-user']},household:async()=>({id:'h1',birth_date:localStorage['ls-mock-bd']||null}),
-  list:async f=>db().filter(e=>e.started_at>=f),running:async()=>db().filter(e=>!e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'),
+  list:async f=>db().filter(e=>e.started_at>=f),running:async()=>db().filter(e=>!e.ended_at&&['sleep','breast'].includes(e.kind)),settings:async()=>JSON.parse(localStorage['ls-mock-settings']||'null')||{household_id:'h1',pump_goal_ml:473.18},setSettings:async v=>{localStorage['ls-mock-settings']=JSON.stringify(v);bc.postMessage(['SETTINGS',v])},
   upsert:async ev=>{const d=db().filter(e=>e.id!=ev.id);d.push(ev);save(d);bc.postMessage(['UPDATE',ev])},
   del:async id=>{save(db().filter(e=>e.id!=id));bc.postMessage(['DELETE',{id}])},subscribe(cb){bc.onmessage=m=>cb(...m.data)}}}
 const B=cfg.url&&cfg.anonKey&&window.supabase?supa():local?mock():null;
@@ -41,11 +43,11 @@ function startOfDay(t){const d=new Date(t);d.setHours(0,0,0,0);return+d}
 const nd=a=>startOfDay(a+DAY*1.5);
 const evs=()=>Object.values(S.ev).sort((a,b)=>a.started_at<b.started_at?1:-1);
 const running=k=>evs().find(e=>e.kind==k&&!e.ended_at);
-async function flush(){if(!B)return;while(S.q.length){const[op,v]=S.q[0];try{op=='del'?await B.del(v):await B.upsert(v);S.q.shift();persist();syncErr=''}catch(e){syncErr=navigator.onLine?(e.message||'Sync error'):'Offline — will sync';break}}render()}
+async function flush(){if(!B)return;while(S.q.length){const[op,v]=S.q[0];try{op=='del'?await B.del(v):op=='set'?await B.setSettings(v):await B.upsert(v);S.q.shift();persist();syncErr=''}catch(e){syncErr=navigator.onLine?(e.message||'Sync error'):'Offline — will sync';break}}render()}
 function put(ev){ev.updated_at=new Date().toISOString();if(hh)ev.household_id=hh.id;S.ev[ev.id]=ev;S.q.push(['up',{...ev}]);persist();render();flush()}
 function del(id){delete S.ev[id];S.q.push(['del',id]);persist();render();flush()}
 async function pull(){if(!B||!hh)return;try{const from=new Date(startOfDay(Date.now())-14*DAY).toISOString();const[rows,run]=await Promise.all([B.list(from),B.running()]);
- const pending=new Set(S.q.map(([o,v])=>o=='del'?v:v.id));const keep={};for(const e of Object.values(S.ev))if(pending.has(e.id))keep[e.id]=e;
+ const pending=new Set(S.q.map(([o,v])=>o=='del'?v:v.id));if(B.settings&&!S.q.some(([o])=>o=='set'))B.settings().then(r=>{if(r&&!S.q.some(([o])=>o=='set')){S.settings=r;persist();render()}}).catch(()=>{});const keep={};for(const e of Object.values(S.ev))if(pending.has(e.id))keep[e.id]=e;
  S.ev={};for(const e of[...rows,...run])S.ev[e.id]=e;Object.assign(S.ev,keep);for(const[o,v]of S.q)if(o=='del')delete S.ev[v];persist();render()}catch(e){syncErr=e.message||'Sync error';render()}}
 
 /* ---------- helpers ---------- */
@@ -64,7 +66,7 @@ const MILK={formula:'Formula bottle',breastmilk:'Expressed breast milk (bottle)'
 const amt=e=>e.unit=='ml'?`${mlFmt(e.amount_ml)} mL (${oz(e.amount_ml)} oz)`:`${oz(e.amount_ml)} oz (${mlFmt(e.amount_ml)} mL)`;
 const toLocalInput=t=>{const d=new Date(t);d.setMinutes(d.getMinutes()-d.getTimezoneOffset());return d.toISOString().slice(0,19)};
 const ageDays=()=>hh?.birth_date?Math.floor((startOfDay(day)-startOfDay(Date.parse(hh.birth_date+'T00:00')))/DAY):null;
-const ICON={sleep:'🌙',breast:'🤱',bottle:'🍼',diaper:'🧷',weight:'⚖️',note:'📝'};
+const ICON={sleep:'🌙',breast:'🤱',bottle:'🍼',diaper:'🧷',weight:'⚖️',note:'📝',pump:'🫙'};
 const LB=453.592,gToLbOz=g=>{const t=Math.round(g/LB*16*10)/10;let lb=Math.floor(t/16),o=Math.round((t-lb*16)*10)/10;if(o>=16){lb++;o-=16}return[lb,o]},wFmt=g=>{const[l,o]=gToLbOz(g);return`${l} lb ${o} oz (${(g/1000).toFixed(2)} kg)`};
 const SRC={birth:'Birth',home:'Home',pediatrician:'Pediatrician'};
 const noteVal=()=>{const v=($('#lg-note')?.value||'').trim();return v?v.slice(0,2000):null};
@@ -82,6 +84,37 @@ function delUndo(id){const e=S.ev[id];if(!e)return;const saved={...e};del(id);
  document.querySelectorAll('.lg-toast.undo').forEach(x=>x.remove());const d=document.createElement('div');d.className='lg-toast undo';d.innerHTML=`Deleted ${esc(label(saved))} <button>Undo</button>`;document.body.append(d);
  const t=setTimeout(()=>d.remove(),5000);d.querySelector('button').onclick=()=>{clearTimeout(t);d.remove();put({...saved})}}
 function toast(t){const d=document.createElement('div');d.className='lg-toast';d.textContent=t;document.body.append(d);setTimeout(()=>d.remove(),1800)}
+
+/* ---------- pumping (milk produced by the parent — never counted as baby intake) ---------- */
+const GOAL_DEFAULT=473.18,goalMl=()=>+S.settings?.pump_goal_ml>0?+S.settings.pump_goal_ml:GOAL_DEFAULT;
+const pu=()=>S.pumpUnit||S.unit||'oz',inU=(ml,u=pu())=>u=='ml'?String(Math.round(ml)):oz(ml),uL=(u=pu())=>u=='ml'?'mL':'oz';
+const toMl=(v,u=pu())=>u=='ml'?+v:+v*OZ,r1=v=>Math.round(v*10)/10;
+const both=ml=>pu()=='ml'?`${Math.round(ml)} mL · ${oz(ml)} oz`:`${oz(ml)} oz · ${Math.round(ml)} mL`;
+function pumpDay(a=startOfDay(Date.now())){const b=nd(a),inDay=e=>{const t=Date.parse(e.started_at);return t>=a&&t<b};const ps=evs().filter(e=>e.kind=='pump'&&inDay(e));
+ const ml=ps.reduce((s,e)=>s+(+e.amount_ml||0),0),given=evs().filter(e=>e.kind=='bottle'&&milkOf(e)=='breastmilk'&&inDay(e)).reduce((s,e)=>s+(+e.amount_ml||0),0);
+ return{ml,n:ps.length,last:ps[0]||null,given,goal:goalMl(),pct:Math.min(100,ml/goalMl()*100),avg:ps.length?ml/ps.length:0}}
+const lastPump=()=>evs().find(e=>e.kind=='pump');
+function recentPumpAmounts(u=pu()){const seen=[];for(const e of evs()){if(e.kind!='pump'||!(e.amount_ml>0))continue;const v=inU(e.amount_ml,u);if(!seen.includes(v))seen.push(v);if(seen.length>=4)break}return seen}
+function pumpSideTxt(e){return e.left_ml!=null||e.right_ml!=null?` · L ${inU(+e.left_ml||0,e.unit||'oz')} / R ${inU(+e.right_ml||0,e.unit||'oz')}`:''}
+function savePump(){const u=pu(),l=sheet.split?parseFloat(sheet.pl):NaN,r=sheet.split?parseFloat(sheet.pr):NaN,hasLR=l>0||r>0;
+ const v=hasLR?(l>0?l:0)+(r>0?r:0):parseFloat(sheet.pv);const ml=toMl(v,u);const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
+ if(!(ml>0))return err('Enter how much you pumped');if(ml>=1000)return err('That’s more than 1,000 mL — check the amount');
+ const when=sheet.when?new Date(sheet.when).toISOString():now();if(Date.parse(when)>Date.now()+MIN)return err('That time is in the future');
+ const ev={id:uid(),kind:'pump',amount_ml:r1(ml),unit:u,left_ml:hasLR?r1(toMl(l>0?l:0,u)):null,right_ml:hasLR?r1(toMl(r>0?r:0,u)):null,milk:null,side:null,diaper:null,started_at:when,ended_at:null,note:noteVal()};
+ put(ev);sheet=null;render();undoToast(`${ICON.pump} Pumped ${inU(ev.amount_ml,u)} ${uL(u)} · today ${inU(pumpDay().ml,u)}/${inU(goalMl(),u)} ${uL(u)}`,()=>del(ev.id))}
+function undoToast(msg,undo){document.querySelectorAll('.lg-toast.undo').forEach(x=>x.remove());const d=document.createElement('div');d.className='lg-toast undo';d.innerHTML=`<span>${esc(msg)}</span> <button>Undo</button>`;document.body.append(d);
+ const t=setTimeout(()=>d.remove(),5000);d.querySelector('button').onclick=()=>{clearTimeout(t);d.remove();undo()}}
+function setGoal(ml){if(!hh||!(ml>0&&ml<5000))return;const row={household_id:hh.id,pump_goal_ml:r1(ml),updated_at:now()};S.settings=row;S.q=S.q.filter(([o])=>o!='set');S.q.push(['set',row]);persist();render();flush()}
+function pumpBar(p,u=pu()){return`<div class="lg-pbar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(p.pct)}" aria-label="Pumped ${inU(p.ml,u)} of ${inU(p.goal,u)} ${uL(u)} personal goal"><i style="width:${p.pct.toFixed(1)}%"></i></div>`}
+function pumpCard(a=day){const p=pumpDay(a),u=pu(),isToday=a==startOfDay(Date.now()),left=p.goal-p.ml;
+ const week=[];for(let i=6;i>=0;i--){const d=new Date(a);d.setDate(d.getDate()-i);week.push([+d,pumpDay(+d)])}const wmax=Math.max(p.goal,...week.map(([,x])=>x.ml));
+ return`<div class="lg-card lg-pump"><div class="lg-phd"><h3>${ICON.pump} Pumping</h3><button class="lg-chip" data-a="pumpgoal" aria-label="Edit personal goal">Goal ${inU(p.goal,u)} ${uL(u)} ✎</button></div>
+ <div class="lg-ptot"><b>${inU(p.ml,u)}</b><span>/ ${inU(p.goal,u)} ${uL(u)}</span><small>${pu()=='ml'?oz(p.ml)+' oz':Math.round(p.ml)+' mL'} ${isToday?'today':'this day'}</small></div>
+ ${pumpBar(p,u)}<p class="lg-pleft">${p.ml>=p.goal?'Personal goal reached 🎉':`${inU(left,u)} ${uL(u)} to go`} · ${Math.round(p.ml/p.goal*100)}%</p>
+ <div class="lg-pstats"><div><b>${p.n}</b><small>session${p.n==1?'':'s'}</small></div><div><b>${p.n?inU(p.avg,u):'—'}</b><small>avg ${uL(u)} / session</small></div><div><b>${p.last?(isToday?live('dur',p.last.started_at):hm(p.last.started_at)):'—'}</b><small>${p.last?(isToday?'since last pump':'last pump'):'no pumps yet'}</small></div></div>
+ ${p.given>0?`<div class="lg-pgiven"><span><b>Pumped ${inU(p.ml,u)} ${uL(u)}</b><small>milk expressed this day</small></span><span><b>Given ${inU(p.given,u)} ${uL(u)}</b><small>expressed-milk bottles</small></span></div><p class="lg-muted">Two separate facts — bottles can use milk pumped on other days, so this isn’t a stash balance.</p>`:''}
+ <div class="lg-pweek" aria-label="Pumped per day, last 7 days"><div class="lg-pw-in">${week.map(([t,x])=>`<div title="${dateKey(t)}"><i style="height:${wmax?Math.max(x.ml?6:0,x.ml/wmax*100):0}%" class="${x.ml>=x.goal?'hit':''}"></i><small>${x.ml?inU(x.ml,u):''}</small><em>${new Date(t).toLocaleDateString([],{weekday:'narrow'})}</em></div>`).join('')}<b style="bottom:${(p.goal/wmax*100).toFixed(1)}%"><span>goal</span></b></div></div>
+ <p class="lg-muted lg-pnote">The goal is your own target, not a medical standard — pump output varies a lot by session, time of day and pump fit. For supply questions, check with a lactation consultant (IBCLC), your OB or midwife, or your pediatrician.</p></div>`}
 
 /* ---------- summary ---------- */
 function summary(a=day){const b=nd(a),inDay=e=>{const t=Date.parse(e.started_at);return t>=a&&t<b},all=evs();
@@ -114,7 +147,8 @@ function render(){dispatchEvent(new Event('ls-listen-age'));if(!root)return;cons
   <button class="lg-big breast ${rb?'run':''}" data-a="breast"><i>${ICON.breast}</i><b>Nursing</b><small>At the breast · ${rb?(rb.side=='L'?'Left ':'Right ')+live('clock',rb.started_at):'Left · Right timer'}</small></button>
   <button class="lg-big bottle" data-a="bottle"><i>${ICON.bottle}</i><b>Bottle</b><small>Formula · Expressed milk</small></button>
   <button class="lg-big diaper" data-a="diaper"><i>${ICON.diaper}</i><b>Diaper</b><small>Pee · Poo · Both</small></button>
-  <button class="lg-mini" data-a="weight">⚖️ Weight</button><button class="lg-mini" data-a="noteadd">📝 Note</button>
+  <button class="lg-big pump" data-a="pump"><i>${ICON.pump}</i><b>Pump</b><small>${(()=>{const p=pumpDay();return`Today ${inU(p.ml)} / ${inU(p.goal)} ${uL()}`})()}</small>${pumpBar(pumpDay())}</button>
+  <div class="lg-minis"><button class="lg-mini" data-a="weight">⚖️ Weight</button><button class="lg-mini" data-a="noteadd">📝 Note</button></div>
  </div>
  <div class="lg-card"><div class="lg-dayhd"><button data-a="prev" aria-label="Previous day">‹</button><h3>${dLabel}</h3><button data-a="next" ${isToday?'disabled':''} aria-label="Next day">›</button></div>
   <div class="lg-stats">
@@ -125,6 +159,7 @@ function render(){dispatchEvent(new Event('ls-listen-age'));if(!root)return;cons
    <div><i>💧</i><b>${s.wet}</b><small>wet diapers</small></div>
    <div><i>💩</i><b>${s.dirty}</b><small>dirty diapers</small></div>
   </div>${compare(s)}</div>
+ ${pumpCard(day)}
  ${trendsHtml()}
  <div class="lg-card"><h3>Timeline</h3>${items.length?items.map(e=>`<div class="lg-row" data-edit="${e.id}" role="button" tabindex="0"><i>${ICON[e.kind]}</i><span><b>${label(e)}</b>${e.note?`<small class="lg-note">📝 ${esc(e.note.length>70?e.note.slice(0,70)+'…':e.note)}</small>`:''}<small>${hm(e.started_at)}${e.ended_at&&e.kind!='diaper'&&e.kind!='bottle'?' – '+hm(e.ended_at):''}${!e.ended_at&&(e.kind=='sleep'||e.kind=='breast')?' · running':''}</small></span><em>${e.kind=='sleep'||e.kind=='breast'?live('dur',e.started_at,e.ended_at):''}</em><button class="lg-act del" data-del="${e.id}" aria-label="Delete">🗑️</button></div>`).join(''):'<p class="lg-muted">Nothing logged yet. Tap a button above.</p>'}
   <button class="lg-btn ghost" data-a="add">+ Add a past entry</button></div>
@@ -133,7 +168,7 @@ function render(){dispatchEvent(new Event('ls-listen-age'));if(!root)return;cons
  setSheet(sheet?sheetHtml():'');
  bind();liveUpdate()}
 setInterval(()=>{liveUpdate();if(follow&&S.user&&hh&&day!=startOfDay(Date.now())){day=startOfDay(Date.now());render()}},1e3);
-function label(e){if(e.kind=='weight')return'Weight · '+wFmt(e.weight_g)+(e.weight_src?' · '+SRC[e.weight_src]:'');if(e.kind=='note')return'Note';return e.kind=='sleep'?'Sleep':e.kind=='breast'?`Direct nursing (at the breast) · ${e.side=='L'?'Left':'Right'}`:e.kind=='bottle'?MILK[milkOf(e)]+' · '+amt(e):'Diaper · '+(e.diaper=='both'?'Pee + poo':e.diaper[0].toUpperCase()+e.diaper.slice(1))}
+function label(e){if(e.kind=='pump')return`Pumped · ${e.unit=='ml'?Math.round(e.amount_ml)+' mL ('+oz(e.amount_ml)+' oz)':oz(e.amount_ml)+' oz ('+Math.round(e.amount_ml)+' mL)'}${pumpSideTxt(e)}`;if(e.kind=='weight')return'Weight · '+wFmt(e.weight_g)+(e.weight_src?' · '+SRC[e.weight_src]:'');if(e.kind=='note')return'Note';return e.kind=='sleep'?'Sleep':e.kind=='breast'?`Direct nursing (at the breast) · ${e.side=='L'?'Left':'Right'}`:e.kind=='bottle'?MILK[milkOf(e)]+' · '+amt(e):'Diaper · '+(e.diaper=='both'?'Pee + poo':e.diaper[0].toUpperCase()+e.diaper.slice(1))}
 const IOS=/iP(hone|ad|od)/.test(navigator.userAgent)||(navigator.platform=='MacIntel'&&navigator.maxTouchPoints>1),PWA=matchMedia('(display-mode: standalone)').matches||navigator.standalone;
 function signin(){return`<div class="lg-card lg-center"><h3>Family log</h3><p class="lg-muted">Private to your household.</p>
  <input id="lg-email" type="email" autocomplete="username" placeholder="you@example.com" value="${esc(S.lastEmail||'')}">
@@ -191,7 +226,7 @@ function band(k,d,bw){const n=d+1;
  if(k=='bottle')return null; // No generic daily-volume band; never apply formula averages to human milk or partial logs.
  if(k=='weight'){if(!bw)return null;const lo=d<=4?bw*(1-.025*d):d<=14?bw*(.9+.1*(d-4)/10):bw+20*(d-14),hi=d<=5?bw:bw+40*(d-5);return[lo,hi]}
  return null}
-function dayAgg(a){const s=summary(a),b=nd(a),has=evs().some(e=>{const t=Date.parse(e.started_at);return(t>=a&&t<b)||(e.kind=='sleep'&&overlap(e,a,b)>0)});
+function dayAgg(a){const s=summary(a),b=nd(a),has=evs().some(e=>{if(e.kind=='pump')return false;const t=Date.parse(e.started_at);return(t>=a&&t<b)||(e.kind=='sleep'&&overlap(e,a,b)>0)});
  const complete=feedComplete(a),fh=s.feedsBr+s.bottles>0||complete,seen=v=>v>0||complete?v:null;return has?{feeds:s.feeds,hasNursing:s.feedsBr>0||s.L+s.R>0,invalidFeed:evs().some(e=>Date.parse(e.started_at)>=a&&Date.parse(e.started_at)<b&&(e.kind=='bottle'&&!(e.amount_ml>0)||e.kind=='breast'&&!e.ended_at)),nursing:fh?seen(s.feedsBr):null,nf:fh?seen(s.nf):null,nb:fh?seen(s.nb):null,nu:fh?seen(s.nu):null,wet:s.wet,dirty:s.dirty,sleep:s.sleepMs/H,longest:s.longest/H,fo:fh?seen(s.fml/OZ):null,bm:fh?seen(s.bml/OZ):null,un:fh?seen(s.uml/OZ):null,tot:fh?seen(s.ml/OZ):null}:null}
 function chart(o){const W=360,Hh=190,L=34,R=8,T=10,Bm=24,x0=o.x0,x1=o.x1,xs=d=>L+(d-x0)/(x1-x0||1)*(W-L-R);
  const ymax=o.ymax,ymin=o.ymin||0,ys=v=>T+(1-(v-ymin)/(ymax-ymin||1))*(Hh-T-Bm),clampY=v=>ys(Math.max(ymin,Math.min(ymax,v)));
@@ -303,7 +338,27 @@ function methodHtml(){const A=(u,t)=>`<a href="${u}" target="_blank" rel="noopen
  ['Actual weigh-ins help show growth; a projected line or one home-scale reading cannot confirm feeding is adequate.','Log the hospital birth weight and later measured weights with their dates and source. Use the clinician’s weighing plan and comparable scales. Ask promptly about poor feeding or concerning weight loss; more than 10% below birth weight needs clinical evaluation.'],
  ['Solid lines are logs; today is unfinished. Reference bands describe groups, and dotted lines are not a promise or a diagnosis.','Look at the baby as well as the app. Bring the log and weight history to visits. Contact the pediatrician promptly for poor feeding, fewer wet diapers, increasing jaundice, fever or unusual sleepiness; seek emergency care for breathing difficulty or unresponsiveness.']
  ];let section=0;return content.replace(/(<h4>[^<]*<\/h4>)([\s\S]*?)(?=<h4>|<\/div>$)/g,(all,h,body)=>h+body+plainAdvice(...advice[section++]));}
+function pumpSheet(){const u=pu(),lp=lastPump(),p=pumpDay();sheet.pv??=lp?inU(lp.amount_ml,u):(u=='ml'?'60':'2');const chips=recentPumpAmounts(u);
+ const wt=sheet.when||Date.now(),ago=sheet.when?Math.round((Date.now()-sheet.when)/MIN):0;
+ return`<h3>${ICON.pump} Pump</h3><p class="lg-muted lg-psub">Today <b>${inU(p.ml,u)} / ${inU(p.goal,u)} ${uL(u)}</b>${lp?` · last ${live('dur',lp.started_at)} ago`:''}</p>
+ <div class="lg-ptime" role="group" aria-label="When">${[[0,'Now'],[15,'15m ago'],[30,'30m ago'],[60,'1h ago']].map(([m,l])=>`<button data-pwhen="${m}" class="${(m==0&&!sheet.when)||(sheet.when&&sheet.whenChip==m)?'on':''}">${l}</button>`).join('')}</div>
+ <label class="lg-f lg-pwhen">${sheet.when?'Time':'Time (now)'}<input type="datetime-local" id="lg-pwhen" value="${toLocalInput(wt).slice(0,16)}"></label>
+ <div class="lg-seg"><button data-pu="oz" class="${u=='oz'?'on':''}">oz</button><button data-pu="ml" class="${u=='ml'?'on':''}">mL</button></div>
+ <div class="lg-amt"><button data-pstep="-1" aria-label="Less">−</button><input id="lg-pv" type="number" inputmode="decimal" step="${u=='ml'?5:0.1}" min="0" value="${esc(sheet.pv)}" aria-label="Total pumped (${uL(u)})"><button data-pstep="1" aria-label="More">+</button></div>
+ <p class="lg-conv" id="lg-pconv"></p>
+ ${chips.length?`<div class="lg-pchips"><span>Recent</span>${chips.map(c=>`<button data-pchip="${c}">${c}</button>`).join('')}</div>`:''}
+ <button class="lg-plr ${sheet.split?'on':''}" data-a="psplit">${sheet.split?'▾':'▸'} Left / Right amounts <small>(optional — adds up the total)</small></button>
+ ${sheet.split?`<div class="lg-two"><label class="lg-f">Left (${uL(u)})<input id="lg-pl" type="number" inputmode="decimal" step="0.1" min="0" value="${esc(sheet.pl??'')}" placeholder="0"></label><label class="lg-f">Right (${uL(u)})<input id="lg-pr" type="number" inputmode="decimal" step="0.1" min="0" value="${esc(sheet.pr??'')}" placeholder="0"></label></div>`:''}
+ <details class="lg-pnotes" ${sheet.note?'open':''}><summary>Add a note</summary>${noteField(sheet.nInit)}</details>
+ <button class="lg-btn lg-psave" data-a="savepump" id="lg-psave">Save</button><p class="lg-err" id="lg-err"></p>`}
+function goalSheet(){const u=pu();sheet.gv??=inU(goalMl(),u);return`<h3>Personal pump goal</h3><p class="lg-muted">Shared with your partner. This is your own target, not a medical standard — a lactation consultant (IBCLC) or your clinician can help you set one that fits.</p>
+ <div class="lg-amt"><button data-gstep="-1" aria-label="Less">−</button><input id="lg-gv" type="number" inputmode="decimal" step="${u=='ml'?10:0.5}" min="0" value="${esc(sheet.gv)}" aria-label="Daily goal (${uL(u)})"><button data-gstep="1" aria-label="More">+</button></div>
+ <p class="lg-conv">${uL(u)} per day</p><button class="lg-btn" data-a="savegoal">Save goal</button><button class="lg-btn ghost" data-a="goaldefault">Reset to 16 oz</button><p class="lg-err" id="lg-err"></p>`}
+function pumpSync(){const v=$('#lg-pv');if(!v||!sheet)return;const u=pu();if(sheet.split){const l=parseFloat($('#lg-pl')?.value),r=parseFloat($('#lg-pr')?.value);sheet.pl=$('#lg-pl')?.value??'';sheet.pr=$('#lg-pr')?.value??'';if(l>0||r>0){const t=(l>0?l:0)+(r>0?r:0);v.value=u=='ml'?String(Math.round(t)):String(r1(t))}v.readOnly=l>0||r>0}else v.readOnly=false;
+ sheet.pv=v.value;const n=parseFloat(v.value),ml=toMl(n,u);$('#lg-pconv').textContent=n>0?(u=='oz'?`= ${Math.round(ml)} mL`:`= ${oz(ml)} oz`)+` · today → ${inU(pumpDay().ml+ml,u)} / ${inU(goalMl(),u)} ${uL(u)}`:'';
+ const s=$('#lg-psave');if(s)s.textContent=n>0?`Save ${u=='ml'?Math.round(n):r1(n)} ${uL(u)}`:'Save';document.querySelectorAll('[data-pchip]').forEach(c=>c.classList.toggle('on',c.dataset.pchip==v.value))}
 function sheetHtml(){const k=sheet.k;let b='';if(sheet.nInit===undefined)sheet.nInit=sheet.e?.note||'';
+ if(k=='pump')b=pumpSheet();if(k=='pumpgoal')b=goalSheet();
  if(k=='diaper')b=`<h3>Diaper</h3><div class="lg-tri"><button data-d="pee">💧<b>Pee</b></button><button data-d="poo">💩<b>Poo</b></button><button data-d="both">💧💩<b>Both</b></button></div>${whenField()}${noteField(sheet.nInit)}`;
  if(k=='bottle'){const u=sheet.unit||S.unit,v=sheet.v??(u=='oz'?2:60);const mk=sheet.milk||S.milk||'formula';b=`<h3>Bottle</h3><div class="lg-seg lg-milk"><button data-milk="formula" class="${mk=='formula'?'on':''}">Formula</button><button data-milk="breastmilk" class="${mk=='breastmilk'?'on':''}">Expressed breast milk</button></div><div class="lg-seg"><button data-u="oz" class="${u=='oz'?'on':''}">oz</button><button data-u="ml" class="${u=='ml'?'on':''}">mL</button></div>
   <div class="lg-amt"><button data-step="-1">−</button><input id="lg-v" type="number" inputmode="decimal" step="0.1" min="0" value="${v}"><button data-step="1">+</button></div>
@@ -317,13 +372,14 @@ function sheetHtml(){const k=sheet.k;let b='';if(sheet.nInit===undefined)sheet.n
  if(k=='noteadd'){b=`<h3>Note</h3><p class="lg-muted">Anything worth remembering: awake time, mood, symptoms, questions for the pediatrician.</p>${whenField()}${noteField(sheet.nInit)}<button class="lg-btn" data-a="savenote">Save note</button><p class="lg-err" id="lg-err"></p>`}
  if(k=='method')b=methodHtml();
  if(k=='edit'||k=='add'){const e=sheet.e;b=`<h3>${k=='add'?'Add entry':label(e)}</h3>
-  ${k=='add'?`<div class="lg-seg">${[['sleep','Sleep'],['breastL','Left'],['breastR','Right'],['bottle','Bottle'],['diaper','Diaper']].map(([v,l])=>`<button data-kind="${v}" class="${sheet.kind==v?'on':''}">${l}</button>`).join('')}</div>`:''}
-  <label class="lg-f">${['diaper','bottle','weight','note'].includes(e.kind)?'Time':'Start'}<input type="datetime-local" step="1" id="lg-s" value="${toLocalInput(e.started_at)}"><small class="lg-muted" id="lg-s-txt">${dt(e.started_at)}</small></label>
+  ${k=='add'?`<div class="lg-seg">${[['sleep','Sleep'],['breastL','Left'],['breastR','Right'],['bottle','Bottle'],['diaper','Diaper'],['pump','Pump']].map(([v,l])=>`<button data-kind="${v}" class="${sheet.kind==v?'on':''}">${l}</button>`).join('')}</div>`:''}
+  <label class="lg-f">${['diaper','bottle','weight','note','pump'].includes(e.kind)?'Time':'Start'}<input type="datetime-local" step="1" id="lg-s" value="${toLocalInput(e.started_at)}"><small class="lg-muted" id="lg-s-txt">${dt(e.started_at)}</small></label>
   ${e.kind=='sleep'||e.kind=='breast'?(e.ended_at||k=='add'?`<label class="lg-f">End<input type="datetime-local" step="1" id="lg-e" value="${e.ended_at?toLocalInput(e.ended_at):''}"><small class="lg-muted" id="lg-e-txt">${e.ended_at?dt(e.ended_at):''}</small></label>`
    :`<div class="lg-f">End<div class="lg-inprog"><b>In progress</b><button class="lg-btn" data-a="stopedit">Stop now</button></div></div>`)
    +`<p class="lg-total">Total <b id="lg-total">${e.ended_at?durS(Date.parse(e.ended_at)-Date.parse(e.started_at)):live('durS',e.started_at)}</b></p>`:''}
   ${e.kind=='bottle'?`<div class="lg-seg lg-milk"><button data-emilk="formula" class="${milkOf(e)=='formula'?'on':''}">Formula</button><button data-emilk="breastmilk" class="${milkOf(e)=='breastmilk'?'on':''}">Expressed breast milk</button></div>`:''}
   ${e.kind=='bottle'?`<div class="lg-f">Amount (${e.unit=='ml'?'mL':'oz'})<div class="lg-amt"><button data-estep="-1" aria-label="Less">−</button><input type="number" id="lg-amt" inputmode="decimal" step="0.1" min="0" value="${e.unit=='ml'?mlFmt(e.amount_ml):oz(e.amount_ml)}"><button data-estep="1" aria-label="More">+</button></div></div>`:''}
+  ${e.kind=='pump'?`<div class="lg-f">Total pumped (${e.unit=='ml'?'mL':'oz'})<div class="lg-amt"><button data-estep="-1" aria-label="Less">−</button><input type="number" id="lg-amt" inputmode="decimal" step="0.1" min="0" value="${e.unit=='ml'?Math.round(e.amount_ml):oz(e.amount_ml)}"><button data-estep="1" aria-label="More">+</button></div></div><div class="lg-two"><label class="lg-f">Left (optional)<input id="lg-el" type="number" inputmode="decimal" step="0.1" min="0" value="${e.left_ml!=null?inU(e.left_ml,e.unit):''}"></label><label class="lg-f">Right (optional)<input id="lg-er" type="number" inputmode="decimal" step="0.1" min="0" value="${e.right_ml!=null?inU(e.right_ml,e.unit):''}"></label></div><p class="lg-muted">If you enter Left or Right, the total becomes their sum.</p>`:''}
   ${e.kind=='diaper'?`<div class="lg-seg">${['pee','poo','both'].map(d=>`<button data-dk="${d}" class="${e.diaper==d?'on':''}">${d}</button>`).join('')}</div>`:''}
   ${e.kind=='weight'?`<div class="lg-two"><label class="lg-f">lb<input id="lg-elb" type="number" inputmode="numeric" value="${gToLbOz(e.weight_g)[0]}"></label><label class="lg-f">oz<input id="lg-eoz" type="number" inputmode="decimal" step="0.1" value="${gToLbOz(e.weight_g)[1]}"></label></div><div class="lg-seg">${Object.entries(SRC).map(([v,l])=>`<button data-esrc="${v}" class="${e.weight_src==v?'on':''}">${l}</button>`).join('')}</div>`:''}
   ${noteField(sheet.nInit)}
@@ -349,20 +405,33 @@ function bind(){root.querySelectorAll('[data-a]').forEach(x=>x.onclick=ev=>{ev.p
  root.querySelectorAll('[data-trtab]').forEach(x=>x.onclick=()=>{S.tr={...trS(),tab:x.dataset.trtab};persist();render()});
  root.querySelectorAll('[data-trrange]').forEach(x=>x.onclick=()=>{S.tr={...trS(),range:+x.dataset.trrange};persist();render()});
  root.querySelectorAll('[data-dk]').forEach(x=>x.onclick=()=>{sheet.e.diaper=x.dataset.dk;keepEdit();render()});
- root.querySelectorAll('[data-kind]').forEach(x=>x.onclick=()=>{sheet.kind=x.dataset.kind;const kd=x.dataset.kind,E=sheet.e;keepEdit();E.kind=kd.startsWith('breast')?'breast':kd;E.side=kd.startsWith('breast')?kd.slice(6):null;if(kd=='bottle'||kd=='diaper'){if(E.ended_at&&!E._end)E._end=E.ended_at;E.started_at=E._end||E.started_at;E.ended_at=null}else if(!E.ended_at)E.ended_at=E._end||new Date(Date.parse(E.started_at)+H).toISOString(),E.started_at=new Date(Date.parse(E.ended_at)-H).toISOString();if(kd=='bottle'){E.unit=E.unit||S.unit||'oz';E.milk=E.milk||S.milk||'formula';E.amount_ml=E.amount_ml||(E.unit=='ml'?60:2*OZ)}if(kd=='diaper')E.diaper=E.diaper||'pee';sheet.nInit=noteVal();render();return});
+ root.querySelectorAll('[data-kind]').forEach(x=>x.onclick=()=>{if(x.dataset.kind=='pump'){sheet={k:'pump',when:Date.now()-H,whenChip:60};render();return}sheet.kind=x.dataset.kind;const kd=x.dataset.kind,E=sheet.e;keepEdit();E.kind=kd.startsWith('breast')?'breast':kd;E.side=kd.startsWith('breast')?kd.slice(6):null;if(kd=='bottle'||kd=='diaper'){if(E.ended_at&&!E._end)E._end=E.ended_at;E.started_at=E._end||E.started_at;E.ended_at=null}else if(!E.ended_at)E.ended_at=E._end||new Date(Date.parse(E.started_at)+H).toISOString(),E.started_at=new Date(Date.parse(E.ended_at)-H).toISOString();if(kd=='bottle'){E.unit=E.unit||S.unit||'oz';E.milk=E.milk||S.milk||'formula';E.amount_ml=E.amount_ml||(E.unit=='ml'?60:2*OZ)}if(kd=='diaper')E.diaper=E.diaper||'pee';sheet.nInit=noteVal();render();return});
  root.querySelectorAll('[data-u]').forEach(x=>x.onclick=()=>{const v=+$('#lg-v').value,u=x.dataset.u,old=sheet.unit||S.unit;if(u==old)return;sheet.unit=u;sheet.v=u=='ml'?Math.round(v*OZ*10)/10:Math.round(v/OZ*10)/10;render()});
- root.querySelectorAll('[data-step],[data-estep]').forEach(holdStep);
+ root.querySelectorAll('[data-step],[data-estep],[data-pstep],[data-gstep]').forEach(holdStep);
+ root.querySelectorAll('[data-pwhen]').forEach(x=>x.onclick=()=>{const m=+x.dataset.pwhen;sheet.when=m?Date.now()-m*MIN:null;sheet.whenChip=m;render()});
+ const pw=$('#lg-pwhen');if(pw)pw.onchange=()=>{const t=Date.parse(pw.value);if(t){sheet.when=Math.abs(t-Date.now())<MIN?null:t;sheet.whenChip=-1;render()}};
+ root.querySelectorAll('[data-pu]').forEach(x=>x.onclick=()=>{const u=x.dataset.pu,old=pu();if(u==old)return;const cv=v=>v===''||v==null||isNaN(parseFloat(v))?v:u=='ml'?String(Math.round(parseFloat(v)*OZ)):String(r1(parseFloat(v)/OZ));pumpSync();sheet.pv=cv(sheet.pv);sheet.pl=cv(sheet.pl);sheet.pr=cv(sheet.pr);S.pumpUnit=u;persist();render()});
+ root.querySelectorAll('[data-pchip]').forEach(x=>x.onclick=()=>{const v=$('#lg-pv');if(sheet.split){sheet.split=false;sheet.pl=sheet.pr='';sheet.pv=x.dataset.pchip;render();return}v.value=x.dataset.pchip;pumpSync()});
+ ['#lg-pv','#lg-pl','#lg-pr'].forEach(id=>{const i=$(id);if(i)i.oninput=pumpSync});if($('#lg-pv'))pumpSync();
+ const gv=$('#lg-gv');if(gv)gv.oninput=()=>{sheet.gv=gv.value};
  const si=$('#lg-s'),ei=$('#lg-e'),upd=()=>{const sv=si?.value,ev=ei?.value;if(sv)$('#lg-s-txt').textContent=dt(new Date(sv));if(ei)$('#lg-e-txt').textContent=ev?dt(new Date(ev)):'';const tot=$('#lg-total');if(tot&&sv&&ev)tot.textContent=durS(new Date(ev)-new Date(sv))};
  si&&(si.oninput=upd);ei&&(ei.oninput=upd);
  const v=$('#lg-v');if(v)v.oninput=()=>{sheet.v=+v.value;$('#lg-conv').textContent=conv(+v.value,sheet.unit||S.unit)}}
-function holdStep(x){const ed='estep' in x.dataset,dir=+(x.dataset.step||x.dataset.estep),inp=()=>$(ed?'#lg-amt':'#lg-v');let t=null,n=0;
- const bump=d=>{const i=inp();if(!i)return;let v=+i.value||0;v=dir>0?Math.floor((v+1e-9)/d)*d+d:Math.ceil((v-1e-9)/d)*d-d;v=Math.max(0,Math.round(v*10)/10);i.value=String(v);if(!ed){sheet.v=v;sheet.unit=sheet.unit||S.unit;const c=$('#lg-conv');if(c)c.textContent=conv(v,sheet.unit)}};
+function holdStep(x){const pp='pstep' in x.dataset,gg='gstep' in x.dataset,ed='estep' in x.dataset||pp||gg,dir=+(x.dataset.step||x.dataset.estep||x.dataset.pstep||x.dataset.gstep),inp=()=>$(pp?'#lg-pv':gg?'#lg-gv':ed?'#lg-amt':'#lg-v');let t=null,n=0;
+ const base=pp?(pu()=='ml'?50:1):gg?(pu()=='ml'?100:5):1;
+ const bump=d0=>{const i=inp();if(!i||i.readOnly)return;const d=d0*base;let v=+i.value||0;v=dir>0?Math.floor((v+1e-9)/d)*d+d:Math.ceil((v-1e-9)/d)*d-d;v=Math.max(0,Math.round(v*10)/10);i.value=String(v);if(pp)pumpSync();if(gg)sheet.gv=i.value;if(!ed){sheet.v=v;sheet.unit=sheet.unit||S.unit;const c=$('#lg-conv');if(c)c.textContent=conv(v,sheet.unit)}};
  const stop=()=>{clearTimeout(t);t=null};const tick=()=>{n++;bump(n<10?.1:n<25?.5:1);t=setTimeout(tick,n<10?120:90)};
  x.onpointerdown=ev=>{ev.preventDefault();try{x.setPointerCapture(ev.pointerId)}catch(_){};n=0;bump(.1);stop();t=setTimeout(tick,400)};
  ['pointerup','pointercancel','lostpointercapture'].forEach(k=>x.addEventListener(k,stop));x.oncontextmenu=ev=>ev.preventDefault();
  x.onclick=ev=>{if(ev.detail===0)bump(.1)}}
 function keepEdit(){const s=$('#lg-s')?.value,e=$('#lg-e')?.value;if(s)sheet.e.started_at=new Date(s).toISOString();if(e!=null)sheet.e.ended_at=e?new Date(e).toISOString():null}
 async function act(a){const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
+ if(a=='pump'){sheet={k:'pump'};render()}
+ if(a=='savepump'){pumpSync();savePump()}
+ if(a=='psplit'){pumpSync();sheet.split=!sheet.split;if(!sheet.split){sheet.pl=sheet.pr=''}render()}
+ if(a=='pumpgoal'){sheet={k:'pumpgoal'};render()}
+ if(a=='savegoal'){const v=parseFloat($('#lg-gv').value),ml=toMl(v);if(!(ml>0&&ml<5000))return err('Enter a daily goal');setGoal(ml);sheet=null;render();toast(`🎯 Goal set to ${inU(goalMl())} ${uL()} a day`)}
+ if(a=='goaldefault'){setGoal(GOAL_DEFAULT);sheet=null;render();toast('🎯 Goal reset to 16 oz a day')}
  if(a=='sleep')toggleSleep();
  if(a=='breast'){sheet={k:'breast'};render()}
  if(a=='bottle'){sheet={k:'bottle'};render()}
@@ -382,6 +451,7 @@ async function act(a){const err=t=>{const p=$('#lg-err');if(p)p.textContent=t};
  if(a=='savenote'){const n=noteVal();if(!n)return err('Write a note first');put({id:uid(),kind:'note',started_at:whenVal(),ended_at:null,note:n});closeSheet();toast('📝 Note saved')}
  if(a=='saveedit'){keepEdit();const e=sheet.e;delete e._end;e.note=noteVal();if(e.kind=='weight'){const g=(+$('#lg-elb').value*16+ +$('#lg-eoz').value)/16*LB;if(!(g>500&&g<30000))return err('Enter a weight');e.weight_g=Math.round(g)}if(e.ended_at&&e.ended_at<e.started_at)return err('End is before start');if(Date.parse(e.started_at)>Date.now()+MIN)return err('Start is in the future');
   if(e.kind=='bottle'){const v=+$('#lg-amt').value;if(!(v>0))return err('Enter an amount');e.amount_ml=Math.round((e.unit=='ml'?v:v*OZ)*10)/10}
+  if(e.kind=='pump'){const u=e.unit||'oz',l=parseFloat($('#lg-el').value),r=parseFloat($('#lg-er').value),lr=l>0||r>0,v=lr?(l>0?l:0)+(r>0?r:0):+$('#lg-amt').value;if(!(v>0))return err('Enter an amount');const ml=toMl(v,u);if(ml>=1000)return err('That’s more than 1,000 mL — check the amount');e.amount_ml=r1(ml);e.left_ml=lr?r1(toMl(l>0?l:0,u)):null;e.right_ml=lr?r1(toMl(r>0?r:0,u)):null;e.milk=null;e.side=null;e.diaper=null}
   if(e.kind=='sleep'||e.kind=='diaper')e.side=null;put(e);closeSheet()}
  if(a=='delete'){const id=sheet.e.id;closeSheet();delUndo(id)}
  const mailErr=x=>/rate limit|429/i.test(x.message||'')?'Email limit reached — Supabase only sends a couple of sign-in emails per hour. Use your family password, or try again in an hour.':/signups|not allowed|not found/i.test(x.message)?'That email isn’t on the family list.':(x.message||'Something went wrong');
@@ -398,10 +468,10 @@ function bindSignin(){bind();const p=$('#lg-pw');p&&(p.onkeydown=e=>{if(e.key=='
 async function boot(){if(!B)return render();try{await B.fromLink?.()}catch(x){syncErr='That sign-in link was already used (each link works once). Sign in with your email and family password below instead.'}const u=await B.user();S.user=u?.email||null;persist();
  if(!u){hh=null;return render()}
  try{hh=await B.household();S.hh=hh;persist()}catch(e){hh=S.hh||null;syncErr='Offline — showing saved data'}
- render();if(hh){B.subscribe((t,row)=>{if(t=='DELETE')delete S.ev[row.id];else if(!S.ev[row.id]||S.ev[row.id].updated_at<=row.updated_at)S.ev[row.id]=row;persist();render()});await pull();flush()}}
+ render();if(hh){B.subscribe((t,row)=>{if(t=='SETTINGS'){if(!S.q.some(([o])=>o=='set')){S.settings=row;persist();render()}return}if(t=='DELETE')delete S.ev[row.id];else if(!S.ev[row.id]||S.ev[row.id].updated_at<=row.updated_at)S.ev[row.id]=row;persist();render()});await pull();flush()}}
 fetch('typical.json').then(r=>r.json()).then(j=>{typ=j;render()}).catch(()=>{});
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&S.user){if(follow)day=startOfDay(Date.now());pull().then(flush)}});
 addEventListener('online',flush);
-window.LSLog={preview:e=>{if(!S.user||!hh?.birth_date)return null;const b=new Date(hh.birth_date+'T00:00');if(e.months!=null){const day=b.getDate();b.setDate(1);b.setMonth(b.getMonth()+e.months);const last=new Date(b.getFullYear(),b.getMonth()+1,0).getDate();b.setDate(Math.min(day,last));return Date.now()<+b}return ageOf(Date.now())<e.due_day},rerender:()=>{if(!document.querySelector('#log').hidden)render()},show:()=>{render()},state:()=>S,band:(k,d,bw)=>band(k,d,bw)};
+window.LSLog={preview:e=>{if(!S.user||!hh?.birth_date)return null;const b=new Date(hh.birth_date+'T00:00');if(e.months!=null){const day=b.getDate();b.setDate(1);b.setMonth(b.getMonth()+e.months);const last=new Date(b.getFullYear(),b.getMonth()+1,0).getDate();b.setDate(Math.min(day,last));return Date.now()<+b}return ageOf(Date.now())<e.due_day},rerender:()=>{if(!document.querySelector('#log').hidden)render()},show:()=>{render()},state:()=>S,band:(k,d,bw)=>band(k,d,bw),pumpDay:a=>pumpDay(a),summary:a=>summary(a)};
 if(S.hh)hh=S.hh;render();boot();
 })();
