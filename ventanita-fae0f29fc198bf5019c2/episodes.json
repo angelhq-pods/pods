@@ -2,31 +2,31 @@
  {
   "date": "2026-11-09",
   "kind": "diario",
-  "title": "Lunes 9 de noviembre: más sanciones, la patana que se fue y el judo que se quedó",
-  "summary": "Titulares: nuevas sanciones de EE UU y la respuesta de La Habana y Pekín; apagones y la salida de otra patana turca; el dólar a más de 900 pesos; protesta en El Cobre por un activista detenido; renuncia el fiscal del caso contra Raúl Castro. Chisme: los judocas que se quedaron en la Florida, Ugás ahora vende casas, las vallas de la UJC y adiós a Mariconchi. Cierra con El Juzgado de la Ventanita y el chiste del día.",
+  "title": "Lunes 9 de noviembre: más sanciones, la patana que se fue, el judo que se quedó y Holguín",
+  "summary": "Titulares: nuevas sanciones de EE UU y la respuesta de La Habana y Pekín; apagones y la salida de otra patana turca; el dólar a más de 900 pesos; protesta en El Cobre por un activista detenido; renuncia el fiscal del caso contra Raúl Castro; y desde Holguín: Sherritt despide temporalmente a casi la mitad de su plantilla canadiense mientras la mina de Moa sigue parada, se derrumba parte del frente del hospital de Banes y llega el microbús eléctrico «Rutero». Chisme: los judocas que se quedaron en la Florida, Ugás ahora vende casas, las vallas de la UJC, el pan de la bodega en Holguín y adiós a Mariconchi. Cierra con El Juzgado de la Ventanita y el chiste del día.",
   "segments": [
    {
     "t": "00:00",
     "name": "Bienvenida"
    },
    {
-    "t": "00:38",
-    "name": "Titulares: sanciones, apagones, dólar, El Cobre, el fiscal de Miami y más"
+    "t": "00:42",
+    "name": "Titulares: sanciones, apagones, dólar, El Cobre, el fiscal de Miami, Holguín y más"
    },
    {
-    "t": "07:17",
+    "t": "09:10",
     "name": "El chisme de la cocina"
    },
    {
-    "t": "11:23",
+    "t": "13:49",
     "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
    },
    {
-    "t": "12:50",
+    "t": "15:16",
     "name": "El chiste del día (al estilo de Álvarez Guedes)"
    },
    {
-    "t": "14:20",
+    "t": "16:46",
     "name": "Despedida"
    }
   ],
@@ -35,7 +35,11 @@
    "La detención de la esposa del activista de El Cobre solo la reporta el periodista Yosmany Mayeta Labrada; las autoridades no han informado paradero ni cargos.",
    "La salida de la patana Erol Bey la reportan DDC y EFE con testigos; el Gobierno cubano no la ha confirmado. Su destino (Costa Rica) viene del experto Jorge Piñón.",
    "El número de judocas que abandonaron la delegación difiere: CiberCuba dijo tres (4 nov.), 14ymedio dice cuatro (8 nov.).",
-   "El apagón de más de 20 horas en Playa es la denuncia de un vecino, no una medición."
+   "El apagón de más de 20 horas en Playa es la denuncia de un vecino, no una medición.",
+   "Hospital de Banes: que la entrada llevaba unos tres meses clausurada por riesgo de derrumbe son testimonios en redes recogidos por 14ymedio y CiberCuba; no hay versión oficial.",
+   "Microbús «Rutero»: lo de una sola estación de carga funcionando (de cuatro) en la provincia lo publica CiberCuba con datos de finales de octubre.",
+   "El pan de la bodega en Holguín: quejas en Facebook recogidas solo por CiberCuba.",
+   "Moa Nickel: el recorte de plantilla del lado cubano lo cuenta Diario de Cuba con fuentes anónimas."
   ],
   "sources": [
    {
@@ -152,13 +156,65 @@
     "outlet": "Diario de Cuba",
     "title": "Murió en La Habana Orlando Manrufo, creador del personaje humorístico de Mariconchi",
     "url": "https://diariodecuba.com/cultura/1793815980_69700.html"
+   },
+   {
+    "outlet": "Sherritt International (comunicado)",
+    "title": "Sherritt Announces Temporary Workforce Layoffs as it Advances Path Toward Restoring its Metals Refining Operations (4 nov.)",
+    "url": "https://sherritt.com/sherritt-announces-temporary-workforce-layoffs-as-it-advances-path-toward-restoring-its-metals-refining-operations/"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Sherritt cesa a casi la mitad de su plantilla mientras se centra en 'restablecer las operaciones'",
+    "url": "https://diariodecuba.com/economia/1793924401_69721.html"
+   },
+   {
+    "outlet": "Mining Weekly",
+    "title": "Sherritt announces temporary layoff of nearly half of its Canadian workforce (5 nov.)",
+    "url": "https://www.miningweekly.com/article/sherritt-announces-temporary-layoff-of-nearly-half-ot-its-canadian-workforce-2026-11-05"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Un hospital en Banes sufre un derrumbe en medio del deterioro de la infraestructura sanitaria (2 nov.)",
+    "url": "https://www.14ymedio.com/cuba/hospital-banes-sufre-derrumbe-medio_1_1132729.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Se derrumba parte de un hospital de Holguín tras meses de alertas sobre su deterioro",
+    "url": "https://www.cibercuba.com/noticias/2026-11-02-u1-e74-s27061-nid344599-derrumba-parte-hospital-holguin-tras-meses-alertas"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Holguín fabrica microbuses eléctricos",
+    "url": "https://www.ahora.cu/es/holguin/27660-holguin-fabrica-microbuses-electricos"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Cuba fabrica en Holguín sus primeros microbuses eléctricos «Rutero»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-04-u1-e135253-s27061-nid344816-cuba-fabrica-holguin-sus-primeros-microbuses"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "¿Una prueba de resistencia para los dientes? Denuncian pésima calidad del pan de la bodega en Holguín",
+    "url": "https://www.cibercuba.com/noticias/2026-11-07-u1-e209363-s27061-nid345191-prueba-resistencia-dientes-denuncian-pesima-calidad"
    }
   ],
-  "humor_note": "El Juzgado de la Ventanita y el chiste del día son textos originales escritos para este programa, en homenaje al estilo de La Tremenda Corte y de Guillermo Álvarez Guedes. No se usan grabaciones ni guiones originales.",
+  "humor_note": "El Juzgado de la Ventanita y el chiste del día son textos originales escritos para este programa, en homenaje al estilo de La Tremenda Corte y de Guillermo Álvarez Guedes. No se usan grabaciones ni guiones originales. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
   "key": "2026-11-09",
   "file": "ventanita-2026-11-09.mp3",
-  "length": 10714796,
-  "duration": "00:14:53",
+  "length": 21128684,
+  "duration": "00:17:36",
   "guid": "ventanita-2026-11-09",
   "pubDate": "Mon, 09 Nov 2026 05:30:00 -0700"
  }
