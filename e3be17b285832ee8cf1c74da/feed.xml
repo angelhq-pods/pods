@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Nov 2026 05:25:36 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 05:26:45 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 10, 2026</title>
+      <description>Daily briefing for Tuesday, November 10, 2026. A post-midterm fight over a possible DACA deal and the word "amnesty," a celebrity's UK rape sentence and the old posts that resurfaced with it, a proposed credit-card interest cap, and a looming House impeachment vote on the defense secretary. Includes engagement patterns, open forecast tracking, and two speculative business angles.</description>
+      <itunes:summary>Daily briefing for Tuesday, November 10, 2026. A post-midterm fight over a possible DACA deal and the word "amnesty," a celebrity's UK rape sentence and the old posts that resurfaced with it, a proposed credit-card interest cap, and a looming House impeachment vote on the defense secretary. Includes engagement patterns, open forecast tracking, and two speculative business angles.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-10.mp3" length="4308812" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-10</guid>
+      <pubDate>Tue, 10 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:05:59</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 9, 2026</title>
       <description>Daily briefing for Monday, November 9, 2026. A fight over undisclosed paid political posts and lobbying records after a former health adviser's allegations, post-midterm blame over immigration and Texas, and a chipmaker board's investigation into its CEO. Includes engagement patterns, open forecast tracking, and two speculative business angles.</description>
