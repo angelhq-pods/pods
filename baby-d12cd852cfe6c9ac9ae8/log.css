@@ -109,3 +109,6 @@
 #lg-pv[readonly]{color:var(--kD9B8FF)}
 [data-theme=light] .lg-ptime button.on,[data-theme=light] .lg-pchips button.on{color:#fff!important}
 .lg-seg button[data-pu]{text-transform:none}
+
+.lg-chart .ref-range{fill:none;stroke-width:1.1;stroke-dasharray:1.5 2;opacity:.85}.lg-chart .ref-bar{fill-opacity:.32;stroke-width:1;stroke-opacity:.9}
+.lg-pump-ref{border-left-color:#B36BFF}.lg-ptable-wrap{overflow-x:auto;margin:8px 0}.lg-ptable{width:100%;border-collapse:collapse;font-size:12px}.lg-ptable th,.lg-ptable td{text-align:left;vertical-align:top;padding:5px 4px;border-bottom:1px solid var(--k241C48)}.lg-ptable th{font-weight:600}.lg-ptable small{display:block;font-weight:400;opacity:.8;font-size:11px}
