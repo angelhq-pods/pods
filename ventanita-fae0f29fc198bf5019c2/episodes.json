@@ -1,5 +1,204 @@
 [
  {
+  "date": "2026-11-10",
+  "kind": "diario",
+  "title": "Martes 10 de noviembre: Trump dice que «cae pronto», Berta Soler sale, el dólar baja un poquito y la batalla de los EcoFlow",
+  "summary": "Titulares: Trump llama a Cuba «nación fallida» y pronostica su caída, Rubio pide que el régimen «despierte» y Díaz-Canel responde que el futuro de Cuba «no se decidirá jamás al norte»; liberan a Berta Soler tras 46 horas detenida por una protesta por el agua en Lawton; el dólar informal baja a 914 CUP; sigue preso el activista de El Cobre; desde Holguín: los 61 años del hospital Lenin según el periódico Ahora y personas sin hogar frente al parque San José; detienen a un activista de Naturpaz en Las Tunas; Cambridge y Nottingham suspenden sus programas en Cuba. Chisme: Dany Ome pide matrimonio en pleno concierto, los quince de Cenicienta de la hija de Aly Sánchez, El Insurrecto aparece libre, Matanzas culpa a los EcoFlow de quemar transformadores, la parodia de Selena, los jefes del Partido con programa de radio, cinco fugas de deportistas y la repostera de Rafael Freyre. Cierre con El Juzgado de la Ventanita y un chiste original.",
+  "unconfirmed": [
+   "Detalles de la detención de Berta Soler (que la metieron a la fuerza en la patrulla, la herida en el pie y la amenaza de citación) vienen del testimonio de su esposo, Ángel Moya; no hay versión oficial.",
+   "El Cobre: que el activista esté en el cuartel de Versalles y el acta de advertencia a su esposa y su tío lo dice José Daniel Ferrer (Martí Noticias); que las autoridades condicionen su liberación a que salga de Cuba lo publica solo el periodista Yosmany Mayeta (recogido por Diario de Cuba).",
+   "Personas sin hogar frente al parque San José en Holguín: fotos y testimonios en Facebook recogidos solo por CiberCuba.",
+   "Detención del activista de Naturpaz Dagoberto Quiñones en Las Tunas: solo la reporta Martí Noticias, con el coordinador provincial de la organización.",
+   "Suspensión de los programas de Cambridge y Nottingham: 14ymedio cita una investigación de Latin America Reports.",
+   "El Insurrecto en libertad: solo hay un video en redes; ni ICE, ni un tribunal, ni sus abogados lo han confirmado. Lo de la ciudadanía es lo que se dice en el video.",
+   "La fuga de la luchadora Yusneylis Guzmán: Diario de Cuba la da por confirmada con una fuente cercana a las autoridades deportivas y publicaciones en Facebook; la prensa oficial no la ha mencionado.",
+   "Declaraciones sobre los EcoFlow y los transformadores de Matanzas, y los nuevos programas de radio de los jefes provinciales del Partido: publicadas por los periódicos oficiales Girón y Escambray según CiberCuba; no las leímos directamente en esos periódicos.",
+   "Precios de la repostera de Rafael Freyre: publicación propia en Facebook recogida solo por CiberCuba."
+  ],
+  "sources": [
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Trump augura una pronta caída del régimen: 'Cuba va a ser interesante'",
+    "url": "https://diariodecuba.com/cuba/1794294471_69778.html"
+   },
+   {
+    "outlet": "Martí Noticias",
+    "title": "Trump insiste en que Cuba es una nación fallida y que caerá pronto",
+    "url": "https://www.radiotelevisionmarti.com/a/trump-reitera-que-cuba-es-una-naci%C3%B3n-fallida/483833.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Trump compara la ideología del régimen cubano con la de los demócratas: «Cuba está cayendo»",
+    "url": "https://en.cibercuba.com/noticias/2026-11-10-u1-e135253-s27061-nid345350-trump-compara-ideologia-regimen-cubano-democratas"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Rubio: 'Nuestro objetivo es que Cuba tenga un mejor futuro', pero 'requerirá que ellos despierten'",
+    "url": "https://diariodecuba.com/cuba/1794261999_69774.html"
+   },
+   {
+    "outlet": "Europa Press",
+    "title": "EEUU acusa a Cuba de querer mantener al país como 'tercer mundo'; Díaz-Canel: «Cuba no es una amenaza, el bloqueo sí»",
+    "url": "https://www.europapress.es/internacional/noticia-eeuu-acusa-cuba-querer-mantener-pais-tercer-mundo-critica-modelo-no-funciona-20261110060752.html"
+   },
+   {
+    "outlet": "teleSUR (afín al Gobierno cubano)",
+    "title": "Díaz-Canel asegura que el futuro de Cuba no se decidirá jamás desde el norte",
+    "url": "https://www.telesurtv.net/presidente-diaz-canel-asegura-futuro-cuba-decidira-jamas-norte/"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Cuba reconoce su desventaja militar frente a EE.UU.: prefiere el diálogo",
+    "url": "https://www.cibercuba.com/noticias/2026-11-09-u1-e199370-s27061-nid345302-cuba-reconoce-desventaja-militar-frente-ee-uu"
+   },
+   {
+    "outlet": "Martí Noticias",
+    "title": "Liberan a Berta Soler tras 46 horas detenida: denuncia agresión policial y amenazas",
+    "url": "https://www.radiotelevisionmarti.com/a/liberan-a-berta-soler-tras-46-horas-detenida-denuncia-agresi%C3%B3n-policial-y-amenazas/483805.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "La Seguridad del Estado libera a Berta Soler, tras dos días en paradero desconocido",
+    "url": "https://diariodecuba.com/derechos-humanos/1794241955_69766.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Giro en el mercado informal de Cuba: caen el dólar y el euro",
+    "url": "https://www.cibercuba.com/noticias/2026-11-10-u1-e135253-s27061-nid345362-giro-mercado-informal-cuba-caen-dolar-euro"
+   },
+   {
+    "outlet": "Martí Noticias",
+    "title": "Detenido en la unidad provincial de instrucción penal el activista Yoel Alejandro Pérez Serrano",
+    "url": "https://www.radiotelevisionmarti.com/a/detenido-en-la-unidad-provincial-de-instrucci%C3%B3n-penal-el-activista-yoel-alejandro-p%C3%A9rez-serrano/483831.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Camiones de comida llegan a El Cobre tras la protesta por la libertad de un activista",
+    "url": "https://diariodecuba.com/derechos-humanos/1794225644_69762.html"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Celebran los 61 años del Gigante de la Salud holguinera",
+    "url": "https://www.ahora.cu/es/holguin/27687-celebran-los-61-anos-del-gigante-de-la-salud-holguinera"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Personas sin hogar duermen en portales frente al parque San José, en Holguín",
+    "url": "https://www.cibercuba.com/noticias/2026-11-06-u1-e209363-s27061-nid345075-personas-hogar-duermen-portales-frente-al-parque-san"
+   },
+   {
+    "outlet": "Martí Noticias",
+    "title": "Denuncian detención e incomunicación de activista de Naturpaz en Las Tunas",
+    "url": "https://www.radiotelevisionmarti.com/a/denuncian-detenci%C3%B3n-e-incomunicaci%C3%B3n-de-activista-de-naturpaz-en-las-tunas/483873.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Las universidades de Cambridge y Nottingham suspenden sus programas de estudios en Cuba",
+    "url": "https://www.14ymedio.com/cuba/universidades-cambridge-nottingham-suspenden-programas_1_1133001.html"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Cuba y China por estrechar amistad especial con visita de canciller",
+    "url": "https://www.prensa-latina.cu/2026/11/09/cuba-y-china-por-estrechar-amistad-especial-con-visita-de-canciller/"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "«¡Del reparto al altar!»: Dany Ome se arrodilla ante La China y le pide matrimonio en pleno concierto en Miami",
+    "url": "https://www.cibercuba.com/noticias/2026-11-09-u1-e65722-s27065-nid345293-reparto-al-altar-dany-ome-arrodilla-china-le-pide"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "¡En el castillo de Cenicienta! Así fue la fiesta de 15 años de la hija de Aly Sánchez",
+    "url": "https://www.cibercuba.com/noticias/2026-11-09-u1-e208487-s27065-nid345324-castillo-cenicienta-asi-fue-fiesta-15-anos-hija-aly"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "El Insurrecto recupera su libertad tras meses bajo detención de ICE",
+    "url": "https://www.cibercuba.com/noticias/2026-11-10-u194224-e208487-s27065-nid345357-insurrecto-recupera-libertad-tras-meses-bajo"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Régimen achaca a los ecoflow las averías de transformadores en Matanzas",
+    "url": "https://www.cibercuba.com/noticias/2026-11-09-u1-e208512-s27061-nid345286-regimen-culpa-ecoflow-quemar-transformadores"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Si Selena Quintanilla fuera cubana: «Yo sé, que tienes un EcoFlow...»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-09-u208487-e208487-s27065-nid345345-selena-quintanilla-fuera-cubana-tienes-ecoflow"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "«Mono ve, mono hace»: dirigente comunista de Sancti Spíritus tendrá programa radial como Díaz-Canel",
+    "url": "https://www.cibercuba.com/noticias/2026-11-10-u1-e199291-s27061-nid345358-mono-ve-mono-hace-dirigente-comunista-sancti"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Tras los pasos de Díaz-Canel, dirigente comunista de Matanzas estrenó su programa radial",
+    "url": "https://www.cibercuba.com/noticias/2026-11-10-u1-e199291-s27061-nid345363-tras-pasos-diaz-canel-dirigente-comunista-matanzas"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Al menos cinco fugas en una semana: ¿quién representará a Cuba en los Juegos Olímpicos de Los Ángeles?",
+    "url": "https://diariodecuba.com/deportes/1794247003_69769.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Daína Chaviano es galardonada con el Premio Sheridan Le Fanu 2026",
+    "url": "https://diariodecuba.com/cultura/1794303054_69777.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Repostera cubana: «El aumento de precio es una realidad que nos afecta a todos»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-10-u1-e199291-s27061-nid345361-repostera-cubana-aumento-precio-realidad-nos-afecta"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita y el chiste del día son textos originales escritos para este programa, en homenaje al estilo de La Tremenda Corte y de Guillermo Álvarez Guedes. No se usan grabaciones ni guiones originales. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:36",
+    "name": "Titulares: Trump y Rubio, Díaz-Canel, Berta Soler, el dólar, El Cobre, Holguín y más"
+   },
+   {
+    "t": "06:29",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "12:11",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "13:34",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "14:52",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-10",
+  "file": "ventanita-2026-11-10.mp3",
+  "length": 18689804,
+  "duration": "00:15:34",
+  "guid": "ventanita-2026-11-10",
+  "pubDate": "Tue, 10 Nov 2026 05:30:00 -0700"
+ },
+ {
   "date": "2026-11-09",
   "kind": "diario",
   "title": "Lunes 9 de noviembre: más sanciones, la patana que se fue, el judo que se quedó y Holguín",
