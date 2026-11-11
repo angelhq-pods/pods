@@ -1,5 +1,193 @@
 [
  {
+  "date": "2026-11-11",
+  "kind": "diario",
+  "title": "Miércoles 11 de noviembre: un dron frente a la costa, se va el gobernador de Camagüey, la Felton parada y aguacates de oro",
+  "summary": "Titulares: un dron Triton de la Marina de EE UU vuela frente a la costa norte de Cuba; el fiscal general de la Florida cita a Socialistas Democráticos de América por posibles fondos de Cuba y China; renuncia el gobernador de Camagüey por «errores» sin explicar; desde Holguín, la termoeléctrica de Felton para 21 días de mantenimiento y piden la libertad de un preso del 11J en la prisión provincial; diez aeropuertos sin combustible para aviones hasta diciembre; Bruno Rodríguez en Pekín; el Gobierno prohíbe Starlink a las embajadas; el dólar en 910 CUP. Chisme: Camila Cabello presentadora del Latin Grammy, Chequera cambia oro por aguacates, luces y Van Van en la Ciudad Deportiva en plena Habana apagada, un rumor sobre un pacto fallido contra Díaz-Canel, Cuba sub-23 pierde con Gran Bretaña, el ron aguado de Matanzas, la convocatoria del Cine Pobre de Gibara y el adiós a Mariconchi. Cierre con El Juzgado de la Ventanita y un chiste original.",
+  "unconfirmed": [
+   "Que el gobernador de Camagüey estuviera siendo investigado por una red de desvío de combustible lo afirma solo el periodista independiente José Luis Tan Estrada (recogido por Diario de Cuba); el Gobierno no ha confirmado ninguna investigación.",
+   "La falta de combustible Jet A-1 en diez aeropuertos hasta el 1 de diciembre y la escala de Air Europa en Punta Cana: solo lo publica CiberCuba, a partir de avisos aeronáuticos (NOTAM).",
+   "El dólar a 910 CUP: índice publicado solo por CiberCuba.",
+   "El castigo prolongado al preso José Ramón Solano Randiche en Holguín: testimonio de su familia a Martí Noticias y denuncia del OCDH, recogidos por CiberCuba; sin versión oficial.",
+   "La frase sobre funcionarios con Starlink en sus casas es de una fuente diplomática anónima citada por Martí Noticias.",
+   "El supuesto pacto fallido para sacar a Díaz-Canel es un RUMOR atribuido a un corresponsal español en la Casa Blanca, recogido por CiberCuba; nadie lo ha confirmado.",
+   "Ron mezclado con agua en bares de Matanzas: testimonios recogidos solo por 14ymedio.",
+   "Cifras del evento «3x3 por Cuba» en la Ciudad Deportiva (unas 13.000 personas): estimación de 14ymedio."
+  ],
+  "sources": [
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Un dron militar de EEUU vuela frente a costas de Cuba tras el último vaticinio de Trump sobre el régimen",
+    "url": "https://diariodecuba.com/cuba/1794395196_69800.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Dron militar de EE.UU. realiza vuelos de vigilancia frente a las costas de Cuba",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e199894-s27061-nid345444-dron-militar-eeuu-realiza-vuelos-vigilancia-frente"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "La Fiscalía de Florida cita a los Socialistas Democráticos de América por presunto financiamiento de La Habana y Pekín",
+    "url": "https://diariodecuba.com/cuba/1794351177_69795.html"
+   },
+   {
+    "outlet": "Martí Noticias",
+    "title": "Florida investiga fondos vinculados con Cuba de Socialistas Democráticos de América",
+    "url": "https://www.radiotelevisionmarti.com/a/florida-investiga-fondos-vinculados-con-cuba-de-socialistas-democr%C3%A1ticos-de-am%C3%A9rica/483939.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Fiscal de Florida investiga posibles fondos de Cuba y China a organización socialista de EE.UU.",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e199894-s27061-nid345441-fiscal-florida-investiga-posibles-fondos-cuba-china"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "'Errores en el desempeño de sus funciones': el régimen cubano sustituye al gobernador de Camagüey",
+    "url": "https://diariodecuba.com/cuba/1794348347_69794.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Gobernador de Camagüey admite errores y abandona el cargo, según comunicado oficial",
+    "url": "https://www.cibercuba.com/noticias/2026-11-10-u1-e135253-s27061-nid345408-gobernador-camaguey-admite-errores-abandona-cargo"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Marrero pide en Camagüey que «nada nos detenga» mientras las reformas económicas siguen sin aliviar la crisis en Cuba",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e199894-s27061-nid345442-marrero-pide-camaguey-nada-nos-detenga-mientras"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Termoeléctrica de Felton inició mantenimiento de 21 días",
+    "url": "https://www.ahora.cu/es/holguin/27705-termoelectrica-de-felton-inicio-mantenimiento-de-21-dias"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "No aguanta más la caldera de Felton, que sale de servicio por 21 días",
+    "url": "https://diariodecuba.com/cuba/1794336523_69788.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Crisis aérea en Cuba: diez aeropuertos seguirán sin combustible para aviones hasta diciembre",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e199894-s27061-nid345445-crisis-aerea-cuba-diez-aeropuertos-seguiran"
+   },
+   {
+    "outlet": "EFE (vía Infobae)",
+    "title": "El canciller chino reitera a Cuba su apoyo frente a sanciones, bloqueos e injerencias",
+    "url": "https://www.infobae.com/america/agencias/2026/11/11/el-canciller-chino-reitera-a-cuba-su-apoyo-frente-a-sanciones-bloqueos-e-injerencias/"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Cancilleres de Cuba y China reafirman excelentes vínculos bilaterales",
+    "url": "https://www.prensa-latina.cu/2026/11/11/cancilleres-de-cuba-y-china-reafirman-excelentes-vinculos-bilaterales/"
+   },
+   {
+    "outlet": "Martí Noticias",
+    "title": "Régimen cubano extiende prohibición de Starlink a embajadas extranjeras",
+    "url": "https://www.radiotelevisionmarti.com/a/r%C3%A9gimen-cubano-extiende-prohibici%C3%B3n-de-starlink-a-embajadas-extranjeras/483922.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "El dólar baja a 910 pesos en Cuba al cierre del martes y el MLC registra una fuerte caída",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e199894-s27061-nid345438-dolar-baja-910-pesos-cuba-al-cierre-martes-mlc"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Exigen libertad inmediata de preso político cubano José Ramón Solano Randiche",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e199894-s27061-nid345434-exigen-libertad-inmediata-preso-politico-cubano-jose"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Camila Cabello será presentadora en la 27 edición del Latin Grammy",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u208487-e208487-s27065-nid345430-camila-cabello-sera-presentadora-27-edicion"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Chequera cambia prendas por aguacates: «Estoy en modo bicarbonato, limón, me echas agua y los precios para arriba»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-10-u208487-e208487-s27065-nid345416-chequera-cambia-prendas-aguacates-estoy-modo"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "En una Habana apagada, derroche de luz en la Ciudad Deportiva para un evento \"benéfico\"",
+    "url": "https://www.14ymedio.com/cuba/habana-apagada-derroche-luz-ciudad_1_1132985.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Un pacto para sacar a Díaz-Canel fracasó por divisiones dentro del castrismo, según corresponsal español en la Casa Blanca",
+    "url": "https://www.cibercuba.com/noticias/2026-11-09-u1-e207888-s27061-nid345319-pacto-sacar-diaz-canel-fracaso-divisiones-dentro"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Cuba cae ante Gran Bretaña en el Mundial de Béisbol Sub-23",
+    "url": "https://www.prensa-latina.cu/2026/11/10/cuba-cae-ante-gran-bretana-en-el-mundial-de-beisbol-sub-23/"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Havana Club para la exportación, ron mezclado con agua para los bares de Matanzas",
+    "url": "https://www.14ymedio.com/cuba/havana-club-exportacion-ron-mezclado_1_1132981.html"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Festival del Cine Pobre de Gibara apoyará creación en Cuba",
+    "url": "https://www.prensa-latina.cu/2026/11/10/festival-del-cine-pobre-de-gibara-apoyara-creacion-en-cuba/"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Convocan al XXI Festival de Cine Pobre de Gibara",
+    "url": "https://www.ahora.cu/es/cultura/27669-convocan-al-xxi-festival-de-cine-pobre-de-gibara"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Muere en Cuba Orlando Manrufo, el humorista que dio vida a Mariconchi",
+    "url": "https://www.14ymedio.com/cuba/muere-cuba-orlando-manrufo-humorista_1_1132822.html"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita y el chiste del día son textos originales escritos para este programa, en homenaje al estilo de La Tremenda Corte y de Guillermo Álvarez Guedes. No se usan grabaciones ni guiones originales. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:36",
+    "name": "Titulares: el dron, la Florida y los socialistas, Camagüey, la Felton, los aeropuertos, China y Starlink"
+   },
+   {
+    "t": "08:11",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "12:53",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "14:17",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "15:32",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-11",
+  "file": "ventanita-2026-11-11.mp3",
+  "length": 19488524,
+  "duration": "00:16:14",
+  "guid": "ventanita-2026-11-11",
+  "pubDate": "Wed, 11 Nov 2026 05:30:00 -0700"
+ },
+ {
   "date": "2026-11-10",
   "kind": "diario",
   "title": "Martes 10 de noviembre: Trump dice que «cae pronto», Berta Soler sale, el dólar baja un poquito y la batalla de los EcoFlow",
