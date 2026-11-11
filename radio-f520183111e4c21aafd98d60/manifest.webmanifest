@@ -2,7 +2,7 @@
   "name": "Radio",
   "short_name": "Radio",
   "description": "Private show player",
-  "start_url": "./?v=20261110a",
+  "start_url": "./?v=20261110b",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",

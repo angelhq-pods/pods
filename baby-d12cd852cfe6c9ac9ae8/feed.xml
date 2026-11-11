@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Little Steps</title>
+    <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/</link>
+    <atom:link href="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>A private listen-ahead guide to a baby's first year. Weekly episodes through the twelfth week, then monthly through month twelve. Each chapter starts with a mainstream baseline, then a clearly labeled natural lens.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Nov 2026 19:28:42 -0700</lastBuildDate>
+    <itunes:author>Little Steps</itunes:author>
+    <itunes:owner><itunes:name>Little Steps</itunes:name></itunes:owner>
+    <itunes:image href="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/covers/week-0-1-v1.jpg"/>
+    <image><url>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/covers/week-0-1-v1.jpg</url><title>Little Steps</title><link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/</link></image>
+    <itunes:category text="Kids &amp; Family"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>serial</itunes:type>
+    <itunes:block>Yes</itunes:block>
+    <item>
+      <title>Week 0–1: Hello, World</title>
+      <description>Birth to day 7</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-0-1-v2.mp3" length="3647468" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-0-1</guid>
+      <pubDate>Sun, 01 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-0-1-v2.mp3</link>
+      <itunes:title>Week 0–1: Hello, World</itunes:title>
+      <itunes:summary>Birth to day 7</itunes:summary>
+      <itunes:duration>00:10:08</itunes:duration>
+      <itunes:episode>1</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 1: Finding Your Rhythm</title>
+      <description>Days 7–14</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-1-v2.mp3" length="3415628" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-1</guid>
+      <pubDate>Mon, 02 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-1-v2.mp3</link>
+      <itunes:title>Week 1: Finding Your Rhythm</itunes:title>
+      <itunes:summary>Days 7–14</itunes:summary>
+      <itunes:duration>00:09:29</itunes:duration>
+      <itunes:episode>2</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 2: The First Growth Spurt</title>
+      <description>Days 14–21</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-2-v2.mp3" length="4633724" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-2</guid>
+      <pubDate>Tue, 03 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-2-v2.mp3</link>
+      <itunes:title>Week 2: The First Growth Spurt</itunes:title>
+      <itunes:summary>Days 14–21</itunes:summary>
+      <itunes:duration>00:12:52</itunes:duration>
+      <itunes:episode>3</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 3: More Awake, More Opinionated</title>
+      <description>Days 21–28</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-3-v2.mp3" length="4138796" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-3</guid>
+      <pubDate>Wed, 04 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-3-v2.mp3</link>
+      <itunes:title>Week 3: More Awake, More Opinionated</itunes:title>
+      <itunes:summary>Days 21–28</itunes:summary>
+      <itunes:duration>00:11:30</itunes:duration>
+      <itunes:episode>4</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 4: The One-Month Mark</title>
+      <description>Days 28–35</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-4-v2.mp3" length="3832076" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-4</guid>
+      <pubDate>Thu, 05 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-4-v2.mp3</link>
+      <itunes:title>Week 4: The One-Month Mark</itunes:title>
+      <itunes:summary>Days 28–35</itunes:summary>
+      <itunes:duration>00:10:39</itunes:duration>
+      <itunes:episode>5</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 5: Toward the Crying Peak</title>
+      <description>Days 35–42</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-5-v2.mp3" length="3227852" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-5</guid>
+      <pubDate>Fri, 06 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-5-v2.mp3</link>
+      <itunes:title>Week 5: Toward the Crying Peak</itunes:title>
+      <itunes:summary>Days 35–42</itunes:summary>
+      <itunes:duration>00:08:58</itunes:duration>
+      <itunes:episode>6</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 6: Smiles and the Six-Week Peak</title>
+      <description>Days 42–49</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-6-v2.mp3" length="3227708" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-6</guid>
+      <pubDate>Sat, 07 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-6-v2.mp3</link>
+      <itunes:title>Week 6: Smiles and the Six-Week Peak</itunes:title>
+      <itunes:summary>Days 42–49</itunes:summary>
+      <itunes:duration>00:08:58</itunes:duration>
+      <itunes:episode>7</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 7: Hands, Coos, and the Tummy-Time Goal</title>
+      <description>Days 49–56</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-7-v2.mp3" length="3013724" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-7</guid>
+      <pubDate>Sun, 08 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-7-v2.mp3</link>
+      <itunes:title>Week 7: Hands, Coos, and the Tummy-Time Goal</itunes:title>
+      <itunes:summary>Days 49–56</itunes:summary>
+      <itunes:duration>00:08:22</itunes:duration>
+      <itunes:episode>8</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 8: The Two-Month Checkpoint</title>
+      <description>Days 56–63</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-8-v2.mp3" length="2970236" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-8</guid>
+      <pubDate>Mon, 09 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-8-v2.mp3</link>
+      <itunes:title>Week 8: The Two-Month Checkpoint</itunes:title>
+      <itunes:summary>Days 56–63</itunes:summary>
+      <itunes:duration>00:08:15</itunes:duration>
+      <itunes:episode>9</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 9: Conversations Begin</title>
+      <description>Days 63–70</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-9-v2.mp3" length="3140156" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-9</guid>
+      <pubDate>Tue, 10 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-9-v2.mp3</link>
+      <itunes:title>Week 9: Conversations Begin</itunes:title>
+      <itunes:summary>Days 63–70</itunes:summary>
+      <itunes:duration>00:08:43</itunes:duration>
+      <itunes:episode>10</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 10: Reaching Out</title>
+      <description>Days 70–77</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-10-v2.mp3" length="2921852" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-10</guid>
+      <pubDate>Wed, 11 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-10-v2.mp3</link>
+      <itunes:title>Week 10: Reaching Out</itunes:title>
+      <itunes:summary>Days 70–77</itunes:summary>
+      <itunes:duration>00:08:07</itunes:duration>
+      <itunes:episode>11</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 11: Strong Arms, Round Heads</title>
+      <description>Days 77–84</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-11-v2.mp3" length="2943308" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-11</guid>
+      <pubDate>Thu, 12 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-11-v2.mp3</link>
+      <itunes:title>Week 11: Strong Arms, Round Heads</itunes:title>
+      <itunes:summary>Days 77–84</itunes:summary>
+      <itunes:duration>00:08:10</itunes:duration>
+      <itunes:episode>12</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Week 12: End of the Fourth Trimester</title>
+      <description>Days 84–91</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-12-v2.mp3" length="2852012" type="audio/mpeg"/>
+      <guid isPermaLink="false">week-12</guid>
+      <pubDate>Fri, 13 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/week-12-v2.mp3</link>
+      <itunes:title>Week 12: End of the Fourth Trimester</itunes:title>
+      <itunes:summary>Days 84–91</itunes:summary>
+      <itunes:duration>00:07:55</itunes:duration>
+      <itunes:episode>13</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Month 3: Laughter and Hands</title>
+      <description>3 months</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-3-v2.mp3" length="3485036" type="audio/mpeg"/>
+      <guid isPermaLink="false">month-3</guid>
+      <pubDate>Sat, 14 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-3-v2.mp3</link>
+      <itunes:title>Month 3: Laughter and Hands</itunes:title>
+      <itunes:summary>3 months</itunes:summary>
+      <itunes:duration>00:09:41</itunes:duration>
+      <itunes:episode>14</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Month 4: The Great Solids Debate</title>
+      <description>4 months</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-4-v2.mp3" length="3673964" type="audio/mpeg"/>
+      <guid isPermaLink="false">month-4</guid>
+      <pubDate>Sun, 15 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-4-v2.mp3</link>
+      <itunes:title>Month 4: The Great Solids Debate</itunes:title>
+      <itunes:summary>4 months</itunes:summary>
+      <itunes:duration>00:10:12</itunes:duration>
+      <itunes:episode>15</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Month 5: Rolling and Getting Ready</title>
+      <description>5 months</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-5-v2.mp3" length="3434780" type="audio/mpeg"/>
+      <guid isPermaLink="false">month-5</guid>
+      <pubDate>Mon, 16 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-5-v2.mp3</link>
+      <itunes:title>Month 5: Rolling and Getting Ready</itunes:title>
+      <itunes:summary>5 months</itunes:summary>
+      <itunes:duration>00:09:32</itunes:duration>
+      <itunes:episode>16</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Month 6: First Tastes, Safely</title>
+      <description>6 months</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-6-v2.mp3" length="3638684" type="audio/mpeg"/>
+      <guid isPermaLink="false">month-6</guid>
+      <pubDate>Tue, 17 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-6-v2.mp3</link>
+      <itunes:title>Month 6: First Tastes, Safely</itunes:title>
+      <itunes:summary>6 months</itunes:summary>
+      <itunes:duration>00:10:06</itunes:duration>
+      <itunes:episode>17</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Month 7: Textures and Sitting Tall</title>
+      <description>7 months</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-7-v2.mp3" length="3297836" type="audio/mpeg"/>
+      <guid isPermaLink="false">month-7</guid>
+      <pubDate>Wed, 18 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-7-v2.mp3</link>
+      <itunes:title>Month 7: Textures and Sitting Tall</itunes:title>
+      <itunes:summary>7 months</itunes:summary>
+      <itunes:duration>00:09:10</itunes:duration>
+      <itunes:episode>18</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Month 8: On the Move</title>
+      <description>8 months</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-8-v2.mp3" length="3156860" type="audio/mpeg"/>
+      <guid isPermaLink="false">month-8</guid>
+      <pubDate>Thu, 19 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-8-v2.mp3</link>
+      <itunes:title>Month 8: On the Move</itunes:title>
+      <itunes:summary>8 months</itunes:summary>
+      <itunes:duration>00:08:46</itunes:duration>
+      <itunes:episode>19</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Month 9: The Nine-Month Checkpoint</title>
+      <description>9 months</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-9-v2.mp3" length="3054620" type="audio/mpeg"/>
+      <guid isPermaLink="false">month-9</guid>
+      <pubDate>Fri, 20 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-9-v2.mp3</link>
+      <itunes:title>Month 9: The Nine-Month Checkpoint</itunes:title>
+      <itunes:summary>9 months</itunes:summary>
+      <itunes:duration>00:08:29</itunes:duration>
+      <itunes:episode>20</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Month 10: Cruising and First Gestures</title>
+      <description>10 months</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-10-v2.mp3" length="3060236" type="audio/mpeg"/>
+      <guid isPermaLink="false">month-10</guid>
+      <pubDate>Sat, 21 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-10-v2.mp3</link>
+      <itunes:title>Month 10: Cruising and First Gestures</itunes:title>
+      <itunes:summary>10 months</itunes:summary>
+      <itunes:duration>00:08:30</itunes:duration>
+      <itunes:episode>21</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Month 11: Almost One</title>
+      <description>11 months</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-11-v2.mp3" length="2977436" type="audio/mpeg"/>
+      <guid isPermaLink="false">month-11</guid>
+      <pubDate>Sun, 22 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-11-v2.mp3</link>
+      <itunes:title>Month 11: Almost One</itunes:title>
+      <itunes:summary>11 months</itunes:summary>
+      <itunes:duration>00:08:16</itunes:duration>
+      <itunes:episode>22</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Month 12: One Year!</title>
+      <description>First birthday</description>
+      <enclosure url="https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-12-v2.mp3" length="3004220" type="audio/mpeg"/>
+      <guid isPermaLink="false">month-12</guid>
+      <pubDate>Mon, 23 Nov 2026 06:00:00 -0700</pubDate>
+      <link>https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes/month-12-v2.mp3</link>
+      <itunes:title>Month 12: One Year!</itunes:title>
+      <itunes:summary>First birthday</itunes:summary>
+      <itunes:duration>00:08:21</itunes:duration>
+      <itunes:episode>23</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>

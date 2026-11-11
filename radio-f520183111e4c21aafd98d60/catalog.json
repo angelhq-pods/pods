@@ -65,11 +65,12 @@
         "the little steps podcast",
         "little steps podcast"
       ],
-      "feed": "https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes.json",
-      "artwork": "https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/icons/icon-512.png",
+      "feed": "https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/feed.xml",
+      "artwork": "https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/covers/week-0-1-v1.jpg",
       "type": "week-month",
-      "format": "episodes-json",
-      "accent": "#7C5CFF"
+      "format": "rss",
+      "accent": "#7C5CFF",
+      "originDate": "2026-10-28"
     }
   ]
 }

@@ -1,6 +1,6 @@
 (() => {
 const TZ = 'America/Phoenix';
-const BUILD = '20261110a';
+const BUILD = '20261110b';
 const $ = (s, r=document) => r.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pad = n => String(n).padStart(2, '0');
@@ -22,9 +22,14 @@ function addDays(ymd, n) {
   const dt = new Date(Date.UTC(y, m - 1, d + n));
   return `${dt.getUTCFullYear()}-${pad(dt.getUTCMonth() + 1)}-${pad(dt.getUTCDate())}`;
 }
+function daysBetween(a, b) {
+  const [ay, am, ad] = a.split('-').map(Number);
+  const [by, bm, bd] = b.split('-').map(Number);
+  return Math.round((Date.UTC(by, bm - 1, bd) - Date.UTC(ay, am - 1, ad)) / 86400000);
+}
 function lastWeekRange(today = todayYMD()) {
   const [y, m, d] = today.split('-').map(Number);
-  const dow = new Date(Date.UTC(y, m - 1, d)).getUTCDay(); // 0=Sun
+  const dow = new Date(Date.UTC(y, m - 1, d)).getUTCDay();
   const sinceMon = (dow + 6) % 7;
   const thisMon = addDays(today, -sinceMon);
   return [addDays(thisMon, -7), addDays(thisMon, -1)];
@@ -56,6 +61,25 @@ function findShow(q) {
     || catalog.shows.find(s => (s.aliases || []).some(a => norm(a) === n))
     || null;
 }
+function weekMonthFromId(id) {
+  const w = (String(id || '').match(/^week-(.+)$/i) || [])[1] || '';
+  const m = (String(id || '').match(/^month-(.+)$/i) || [])[1] || '';
+  return { week: w, month: m };
+}
+function currentWeekMonth(show, episodes) {
+  const origin = show.originDate;
+  if (!origin) return null;
+  const days = Math.max(0, daysBetween(origin, todayYMD()));
+  const week = Math.floor(days / 7);
+  if (week <= 12) {
+    const w = week === 0 ? '0-1' : String(week);
+    const episode = episodes.find(e => e.week === w || e.id === 'week-' + w);
+    if (episode) return { kind: 'week', value: w, episode };
+  }
+  const month = String(Math.max(3, Math.min(12, Math.floor(days / 30) || 3)));
+  const episode = episodes.find(e => e.month === month || e.id === 'month-' + month);
+  return episode ? { kind: 'month', value: month, episode } : null;
+}
 
 function parseRss(xml, show) {
   const doc = new DOMParser().parseFromString(xml, 'application/xml');
@@ -64,23 +88,31 @@ function parseRss(xml, show) {
   const ch = doc.querySelector('channel');
   const itImg = ch && ch.getElementsByTagNameNS(IT, 'image')[0];
   const cover = (itImg && itImg.getAttribute('href')) || ch?.querySelector('image > url')?.textContent || show.artwork || '';
-  const episodes = [...(ch ? ch.querySelectorAll('item') : [])].map(it => {
+  const episodes = [...(ch ? ch.querySelectorAll('item') : [])].map((it, i) => {
     const enc = it.querySelector('enclosure');
     const pubRaw = it.querySelector('pubDate')?.textContent || '';
     const pub = Date.parse(pubRaw) || 0;
+    const id = (it.querySelector('guid')?.textContent || enc?.getAttribute('url') || '').trim();
+    const wm = weekMonthFromId(id);
+    const epNo = it.getElementsByTagNameNS(IT, 'episode')[0];
+    const order = epNo && /^\d+$/.test(epNo.textContent.trim()) ? +epNo.textContent.trim() - 1 : i;
     return {
-      id: (it.querySelector('guid')?.textContent || enc?.getAttribute('url') || '').trim(),
+      id,
       title: (it.querySelector('title')?.textContent || 'Episode').trim(),
       url: enc?.getAttribute('url') || '',
       pub,
       date: pub ? ymdInTZ(new Date(pub)) : '',
       dur: parseDur(it.getElementsByTagNameNS(IT, 'duration')[0]?.textContent),
       cover,
+      week: wm.week,
+      month: wm.month,
+      order,
       showId: show.id,
       showName: show.name
     };
   }).filter(e => e.url);
-  episodes.sort((a, b) => b.pub - a.pub);
+  if ((show.type || 'dated') === 'week-month') episodes.sort((a, b) => a.order - b.order);
+  else episodes.sort((a, b) => b.pub - a.pub);
   return episodes;
 }
 
@@ -93,8 +125,8 @@ function parseEpisodesJson(text, show) {
     const url = audioPath ? new URL(audioPath, base).href : '';
     const cover = e.cover ? new URL(e.cover, base).href : (show.artwork || '');
     const id = String(e.id || '');
-    const week = (id.match(/^week-(.+)$/i) || [])[1] || '';
-    const month = e.months != null ? String(e.months) : ((id.match(/^month-(.+)$/i) || [])[1] || '');
+    const wm = weekMonthFromId(id);
+    const month = e.months != null ? String(e.months) : wm.month;
     return {
       id: id || url,
       title: e.title || 'Episode',
@@ -103,7 +135,7 @@ function parseEpisodesJson(text, show) {
       date: e.date || '',
       dur: +e.duration || 0,
       cover,
-      week,
+      week: wm.week,
       month,
       order: e.order != null ? +e.order : i,
       showId: show.id,
@@ -127,18 +159,44 @@ function resolveQueue(episodes, show, params) {
   let label = 'Newest';
   let kind = 'newest';
 
+  const epid = params.get('episode') || params.get('id');
   const date = params.get('date');
   const range = (params.get('range') || '').toLowerCase();
   const week = params.get('week');
   const month = params.get('month');
   const nRaw = params.get('n');
-  const n = nRaw && /^\d+$/.test(nRaw) ? Math.max(1, Math.min(100, +nRaw)) : 0;
+  const n = nRaw && /^\d+$/.test(nRaw) ? Math.max(1, Math.min(500, +nRaw)) : 0;
+  const weekNorm = week ? norm(week).replace(/^week /, '') : '';
+  const thisWeek = weekNorm === 'this' || weekNorm === 'current';
 
+  if (epid) {
+    items = items.filter(e => e.id === epid || norm(e.id) === norm(epid));
+    label = items[0] ? items[0].title : 'Episode';
+    kind = 'episode';
+    return { items, label, kind, needsPick: false };
+  }
+  if (range === 'all') {
+    if (type === 'week-month') items = items.slice().sort((a, b) => a.order - b.order);
+    else items = items.slice().sort((a, b) => a.pub - b.pub || a.order - b.order);
+    label = 'All episodes, oldest first';
+    kind = 'all';
+    return { items, label, kind, needsPick: false };
+  }
   if (type === 'week-month' && (week || month)) {
-    if (week) {
-      const w = norm(week).replace(/^week /, '');
-      items = items.filter(e => norm(e.week) === w || norm(e.id) === 'week ' + w);
-      label = 'Week ' + w;
+    if (thisWeek) {
+      const cur = currentWeekMonth(show, episodes);
+      if (cur) {
+        items = [cur.episode];
+        label = 'This week · ' + cur.episode.title;
+        kind = 'this-week';
+      } else {
+        items = [];
+        label = 'This week';
+        kind = 'this-week';
+      }
+    } else if (week) {
+      items = items.filter(e => norm(e.week) === weekNorm || norm(e.id) === 'week ' + weekNorm);
+      label = 'Week ' + weekNorm;
       kind = 'week';
     } else {
       const m = norm(month).replace(/^month /, '');
@@ -183,7 +241,9 @@ function resolveQueue(episodes, show, params) {
     kind = 'newest';
   }
 
-  if (kind !== 'n' && kind !== 'last-week') items = items.slice().sort((a, b) => a.pub - b.pub || a.order - b.order);
+  if (kind !== 'n' && kind !== 'last-week' && kind !== 'this-week' && kind !== 'episode') {
+    items = items.slice().sort((a, b) => a.pub - b.pub || a.order - b.order);
+  }
   if (n && kind !== 'n') {
     items = items.slice(-n);
     label = 'Last ' + items.length + ' · ' + label;
@@ -197,21 +257,43 @@ function setAccent(show) {
 
 function hashParams() {
   const h = location.hash.replace(/^#/, '');
+  if (!h) return { action: '', params: new URLSearchParams() };
+  if (/^siri(\?|$)/i.test(h)) return { action: 'siri', params: new URLSearchParams() };
+  if (/^show(=|\?)/i.test(h)) {
+    const params = /^show\?/i.test(h) ? new URLSearchParams(h.slice(h.indexOf('?') + 1)) : new URLSearchParams(h);
+    return { action: 'show', params };
+  }
   const q = h.indexOf('?');
   const action = (q < 0 ? h : h.slice(0, q)).toLowerCase();
   const params = new URLSearchParams(q < 0 ? '' : h.slice(q + 1));
   return { action, params };
 }
 
+function radioUrl(hash) {
+  const base = location.origin + location.pathname.replace(/index\.html$/, '');
+  return base + hash;
+}
+
+function setChrome(show, title) {
+  $('#home').hidden = false;
+  const siri = $('#siriBtn');
+  if (siri) siri.hidden = (title === 'siri');
+  if (show) setAccent(show);
+  else setAccent(null);
+  document.title = title === 'siri' ? 'Add to Siri · Radio' : (show ? show.name + ' · Radio' : 'Radio');
+}
+
 function renderHome() {
   rec = { show: null, label: '', kind: '' };
   queue = [];
   $('#home').hidden = true;
+  const siri = $('#siriBtn');
+  if (siri) siri.hidden = false;
   setAccent(null);
   document.title = 'Radio';
   main.innerHTML = `
     <h1>What do you want to hear?</h1>
-    <p class="lede">Open a play link, or tap a show to queue the latest episode.</p>
+    <p class="lede">Tap a show to browse every episode, or use a play link to jump straight to one.</p>
     <ul class="shows">
       ${catalog.shows.map(s => `
         <li>
@@ -219,29 +301,139 @@ function renderHome() {
             <img class="art" src="${esc(s.artwork || '')}" alt="">
             <div>
               <h2>${esc(s.name)}</h2>
-              <p>${s.type === 'week-month' ? 'By week or month' : 'Latest episode'}</p>
+              <p>All episodes</p>
             </div>
           </button>
         </li>`).join('')}
     </ul>`;
   main.querySelectorAll('.show').forEach(btn => btn.addEventListener('click', () => {
-    location.hash = '#play?show=' + encodeURIComponent(btn.dataset.id);
+    location.hash = '#show=' + encodeURIComponent(btn.dataset.id);
   }));
 }
 
-function renderPick(show, episodes, err) {
-  const weeks = episodes.filter(e => e.week);
-  const months = episodes.filter(e => e.month);
+function renderBrowse(show, episodes) {
+  const type = show.type || 'dated';
+  const sorted = type === 'week-month'
+    ? episodes.slice().sort((a, b) => a.order - b.order)
+    : episodes.slice().sort((a, b) => b.pub - a.pub || a.order - b.order);
+  const groups = [];
+  if (type === 'week-month') {
+    const weeks = sorted.filter(e => e.week);
+    const months = sorted.filter(e => e.month);
+    if (weeks.length) groups.push({ label: 'Weeks', items: weeks });
+    if (months.length) groups.push({ label: 'Months', items: months });
+  } else {
+    const map = new Map();
+    for (const e of sorted) {
+      const key = e.date || 'undated';
+      if (!map.has(key)) map.set(key, []);
+      map.get(key).push(e);
+    }
+    for (const [key, items] of map) {
+      groups.push({ label: key === 'undated' ? 'Episodes' : niceDate(key), items });
+    }
+  }
+  const cur = type === 'week-month' ? currentWeekMonth(show, episodes) : null;
   main.innerHTML = `
     <h1>${esc(show.name)}</h1>
-    <p class="lede">${err ? esc(err) : 'Pick a week or a month.'}</p>
+    <p class="lede">${sorted.length} episode${sorted.length === 1 ? '' : 's'}${cur ? ' · This week is ' + esc(cur.episode.title.replace(/:.*$/, '')) : ''}</p>
+    ${sorted.length ? `<button type="button" class="playall" data-hash="#play?show=${esc(show.id)}&range=all">Play all, oldest first</button>` : ''}
+    ${groups.map(g => `
+      <div class="group">
+        <div class="section">${esc(g.label)}</div>
+        <ol class="browse">
+          ${g.items.map(e => `
+            <li>
+              <button type="button" class="ep" data-id="${esc(e.id)}" data-date="${esc(e.date || '')}" data-hash="#play?show=${esc(show.id)}&episode=${encodeURIComponent(e.id)}">
+                <span class="n"></span>
+                <div>
+                  <div class="t">${esc(e.title)}</div>
+                  <div class="s">${[e.date && type !== 'week-month' ? niceDate(e.date) : (e.week ? 'Week ' + e.week : e.month ? 'Month ' + e.month : ''), e.dur ? fmtDur(e.dur) : ''].filter(Boolean).join(' · ')}</div>
+                </div>
+              </button>
+            </li>`).join('')}
+        </ol>
+      </div>`).join('')}`;
+  main.querySelectorAll('[data-hash]').forEach(b => b.addEventListener('click', () => { location.hash = b.dataset.hash; }));
+}
+
+function renderPick(show, episodes, err) {
+  // Kept for #play?show=little-steps with no week (existing deep-link behavior).
+  const weeks = episodes.filter(e => e.week);
+  const months = episodes.filter(e => e.month);
+  const cur = currentWeekMonth(show, episodes);
+  main.innerHTML = `
+    <h1>${esc(show.name)}</h1>
+    <p class="lede">${err ? esc(err) : 'Pick a week or a month.'}${cur && !err ? ' This week is ' + esc(cur.episode.title.replace(/:.*$/, '')) + '.' : ''}</p>
+    <button type="button" class="playall" data-hash="#play?show=${esc(show.id)}&range=all">Play all, oldest first</button>
     ${weeks.length ? `<div class="section">Weeks</div><div class="picks">${weeks.map(e =>
       `<button type="button" data-hash="#play?show=${esc(show.id)}&week=${esc(e.week)}">${esc(e.title.replace(/:.*$/, ''))}</button>`
     ).join('')}</div>` : ''}
     ${months.length ? `<div class="section">Months</div><div class="picks">${months.map(e =>
       `<button type="button" data-hash="#play?show=${esc(show.id)}&month=${esc(e.month)}">${esc('Month ' + e.month)}</button>`
-    ).join('')}</div>` : ''}`;
+    ).join('')}</div>` : ''}
+    <p class="lede"><button type="button" class="text-btn" data-hash="#show=${esc(show.id)}">Browse the full list</button></p>`;
   main.querySelectorAll('[data-hash]').forEach(b => b.addEventListener('click', () => { location.hash = b.dataset.hash; }));
+}
+
+function renderSiri() {
+  const base = radioUrl('#');
+  const curShow = findShow('little-steps');
+  let nowLine = '';
+  const shortcuts = [
+    { name: 'Play Ventanita', hash: '#play?show=ventanita' },
+    { name: "Play yesterday's Ventanita", hash: '#play?show=ventanita&range=yesterday' },
+    { name: 'Play X briefing', hash: '#play?show=x-briefing' },
+    { name: 'Play Market briefing', hash: '#play?show=market' },
+    { name: 'Play Little Steps (this week)', hash: '#play?show=little-steps&week=this', current: true }
+  ];
+  main.innerHTML = `
+    <h1>Add to Siri</h1>
+    <p class="lede">These links open Radio to the right queue. iPhone still needs one tap on Play after the page opens. I can’t install a signed shortcut file here, so add each one in the Shortcuts app.</p>
+    ${shortcuts.map((s, i) => `
+      <div class="siri-card">
+        <h2>${esc(s.name)}</h2>
+        <p class="url" id="url-${i}">${esc(base.replace(/#$/, '') + s.hash)}</p>
+        ${s.current ? `<p class="now" id="siri-now">This week’s episode is filled in when you open the link.</p>` : ''}
+        <button type="button" class="copy" data-i="${i}">Copy link</button>
+      </div>`).join('')}
+    <p class="section">On iPhone</p>
+    <ol class="steps">
+      <li>Open the <b>Shortcuts</b> app.</li>
+      <li>Tap <b>+</b>, then <b>Add Action</b>.</li>
+      <li>Search for <b>Open URL</b> and add it.</li>
+      <li>Paste the link you copied.</li>
+      <li>Tap the name at the top, call it one of the names above, then tap <b>Done</b>.</li>
+      <li>To say it to Siri, open that shortcut, tap the drop-down next to its name, then <b>Add to Siri</b> and record the phrase.</li>
+    </ol>
+    <p class="lede">After Siri opens the page, tap Play once.</p>`;
+  main.querySelectorAll('.copy').forEach(btn => btn.addEventListener('click', async () => {
+    const i = btn.dataset.i;
+    const text = $('#url-' + i).textContent.trim();
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) await navigator.clipboard.writeText(text);
+      else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+      }
+      btn.textContent = 'Copied';
+      btn.classList.add('ok');
+      setTimeout(() => { btn.textContent = 'Copy link'; btn.classList.remove('ok'); }, 1500);
+    } catch {
+      btn.textContent = 'Copy it from the link above';
+    }
+  }));
+  if (curShow) {
+    loadEpisodes(curShow).then(eps => {
+      const cur = currentWeekMonth(curShow, eps);
+      const el = $('#siri-now');
+      if (el && cur) el.textContent = 'Right now that opens “' + cur.episode.title + '.” The link stays the same as the weeks go by.';
+    }).catch(() => {});
+  }
 }
 
 function renderQueue(show, result, err) {
@@ -258,7 +450,7 @@ function renderQueue(show, result, err) {
           <span class="n">${i + 1}</span>
           <div>
             <div class="t">${esc(e.title)}</div>
-            <div class="s">${[e.date ? niceDate(e.date) : '', e.dur ? fmtDur(e.dur) : ''].filter(Boolean).join(' · ')}</div>
+            <div class="s">${[e.date && result.kind !== 'week' && result.kind !== 'month' && result.kind !== 'this-week' ? niceDate(e.date) : '', e.dur ? fmtDur(e.dur) : ''].filter(Boolean).join(' · ')}</div>
           </div>
         </li>`).join('')}
     </ol>
@@ -370,22 +562,45 @@ function statusToast(msg) {
   if (el) el.textContent = msg;
 }
 
+async function loadShowView(show, render) {
+  setChrome(show);
+  main.innerHTML = `<p class="muted">Loading ${esc(show.name)}…</p>`;
+  const episodes = await loadEpisodes(show);
+  render(episodes);
+}
+
 async function route() {
   const { action, params } = hashParams();
+  if (action !== 'play' && audio.src) {
+    audio.pause();
+    audio.removeAttribute('src');
+  }
+  if (action === 'siri') {
+    setChrome(null, 'siri');
+    renderSiri();
+    return;
+  }
+  if (action === 'show') {
+    const show = findShow(params.get('show') || '');
+    if (!show) {
+      setChrome(null);
+      main.innerHTML = `<p class="err">That show isn’t in the catalog. Check the link and try again.</p>`;
+      return;
+    }
+    try { await loadShowView(show, eps => renderBrowse(show, eps)); }
+    catch (e) { main.innerHTML = `<p class="err">${esc(e.message || 'Could not load that show.')}</p>`; }
+    return;
+  }
   if (action !== 'play') {
-    if (audio.src && !audio.paused) { /* keep playing if user goes home? stop. */ audio.pause(); audio.removeAttribute('src'); }
     renderHome();
     return;
   }
   const show = findShow(params.get('show') || '');
-  $('#home').hidden = false;
+  setChrome(show);
   if (!show) {
-    setAccent(null);
     main.innerHTML = `<p class="err">That show isn’t in the catalog. Check the link and try again.</p>`;
     return;
   }
-  setAccent(show);
-  document.title = show.name + ' · Radio';
   main.innerHTML = `<p class="muted">Loading ${esc(show.name)}…</p>`;
   try {
     const episodes = await loadEpisodes(show);
@@ -402,6 +617,7 @@ async function route() {
       result.kind === 'yesterday' ? 'No episode for yesterday.' :
       result.kind === 'date' ? 'No episode for that date.' :
       result.kind === 'last-week' ? 'No episodes in last week’s range.' :
+      result.kind === 'this-week' ? 'No episode is set for this week.' :
       'No episodes matched that request.'
     );
     renderQueue(show, result, err);
@@ -428,7 +644,8 @@ async function boot() {
 
 window.addEventListener('hashchange', () => { route(); });
 $('#home').addEventListener('click', () => { location.hash = ''; });
+if ($('#siriBtn')) $('#siriBtn').addEventListener('click', () => { location.hash = '#siri'; });
 boot();
 
-window.__radio = { findShow, resolveQueue, parseRss, parseEpisodesJson, lastWeekRange, todayYMD, addDays, ymdInTZ, get queue(){ return queue; }, get catalog(){ return catalog; } };
+window.__radio = { findShow, resolveQueue, parseRss, parseEpisodesJson, lastWeekRange, todayYMD, addDays, ymdInTZ, currentWeekMonth, get queue(){ return queue; }, get catalog(){ return catalog; } };
 })();
