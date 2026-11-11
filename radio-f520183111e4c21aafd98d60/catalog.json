@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "timezone": "America/Phoenix",
+  "shows": [
+    {
+      "id": "ventanita",
+      "name": "La Ventanita",
+      "aliases": [
+        "ventanita",
+        "la ventanita",
+        "the cuba show",
+        "cuba show",
+        "cuba podcast",
+        "the cuba podcast"
+      ],
+      "feed": "https://angelhq-pods.github.io/pods/ventanita-fae0f29fc198bf5019c2/feed.xml",
+      "artwork": "https://angelhq-pods.github.io/pods/ventanita-fae0f29fc198bf5019c2/cover-v1.jpg",
+      "type": "dated",
+      "format": "rss",
+      "accent": "#E8B86D"
+    },
+    {
+      "id": "x-briefing",
+      "name": "Mr. X: Daily X Briefing",
+      "aliases": [
+        "mr x",
+        "mister x",
+        "mr. x",
+        "x briefing",
+        "x briefings",
+        "the x briefing",
+        "daily x briefing",
+        "x podcast"
+      ],
+      "feed": "https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml",
+      "artwork": "https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg",
+      "type": "dated",
+      "format": "rss",
+      "accent": "#FF2D55"
+    },
+    {
+      "id": "market",
+      "name": "Market Analyst Briefing",
+      "aliases": [
+        "the market podcast",
+        "market podcast",
+        "market analyst",
+        "market briefing",
+        "the market briefing",
+        "market analyst briefing",
+        "market show"
+      ],
+      "feed": "https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/feed.xml",
+      "artwork": "https://angelhq-pods.github.io/pods/6a43a82a2a28f2f3d3a26f1e/cover-v2.jpg",
+      "type": "dated",
+      "format": "rss",
+      "accent": "#FF8B1E"
+    },
+    {
+      "id": "little-steps",
+      "name": "Little Steps",
+      "aliases": [
+        "little steps",
+        "littlesteps",
+        "the little steps podcast",
+        "little steps podcast"
+      ],
+      "feed": "https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/episodes.json",
+      "artwork": "https://angelhq-pods.github.io/pods/baby-d12cd852cfe6c9ac9ae8/icons/icon-512.png",
+      "type": "week-month",
+      "format": "episodes-json",
+      "accent": "#7C5CFF"
+    }
+  ]
+}
