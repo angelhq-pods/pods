@@ -1,5 +1,191 @@
 [
  {
+  "date": "2026-11-12",
+  "kind": "diario",
+  "title": "Jueves 12 de noviembre: el G7 le habla claro a La Habana, se va la gobernadora de Las Tunas y la Guiteras otra vez rota",
+  "summary": "Titulares: los cancilleres del G7 piden a Cuba reformas democráticas y la liberación de detenidos; renuncia la gobernadora de Las Tunas, dos días después del de Camagüey, y Marrero admite que la economía está en retroceso; la Guiteras sale del sistema mientras la Felton sigue en mantenimiento; el transporte interprovincial se desploma; Díaz-Canel reconoce que la gente espera menos apagones y más comida, y un informe sindical independiente documenta la caída de arroz y frijoles; el tercer vuelo de ayuda de EE UU a Matanzas y el apoyo de la ONU en Oriente; Bruno Rodríguez en Pekín; y una detención en Songo-La Maya por robo de aceite de transformadores. Chisme: una reseña de una estrella contra Los 3 de La Habana por contratar a Cuqui La Mora, exiliados cubanos increpan al «Che italiano» en Roma, la peor actuación de Cuba en el Mundial Sub-23 y cómo amaneció el dólar. Cierre con El Juzgado de la Ventanita y un chiste original.",
+  "unconfirmed": [
+   "Las cifras de caída de la producción agrícola 2020–2024 (cítricos −82,7 %, arroz −62,3 %, frijoles −60,2 %): informe del ODLS y la ASIC con datos de la ONEI, recogido solo por Diario de Cuba.",
+   "Unos 1.000 MW disponibles el 11 de noviembre: dato de la UNE citado por CiberCuba.",
+   "La reseña de una estrella contra el Café Cantante de Los 3 de La Habana y la respuesta del grupo: solo CiberCuba.",
+   "El dólar a 908 CUP y el euro a 985 CUP: índice publicado solo por CiberCuba.",
+   "La detención en Songo-La Maya por robo de aceite de transformadores es una acusación policial (perfil del MININT en Facebook, recogida por CiberCuba); no hay juicio.",
+   "El encontronazo de exiliados con Alessandro Di Battista en Roma: Il Tempo, recogido por 14ymedio."
+  ],
+  "sources": [
+   {
+    "outlet": "Diario de Cuba",
+    "title": "El G7 exige al régimen de Cuba 'implementar reformas políticas y económicas significativas'",
+    "url": "https://diariodecuba.com/cuba/1794427300_69810.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Reclaman a Cuba reformas democráticas y liberar a detenidos",
+    "url": "https://www.14ymedio.com/internacional/g7-reclama-cuba-reformas-democraticas_1_1133079.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "El G7 firma declaración conjunta que eleva la presión sobre el régimen cubano",
+    "url": "https://www.cibercuba.com/noticias/2026-11-12-u1-e129488-s27061-nid345485-cancilleres-g7-reclaman-democracia-multipartidista"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Renuncia la gobernadora de Las Tunas a menos de 48 horas del 'explote' del de Camagüey",
+    "url": "https://diariodecuba.com/cuba/1794426386_69813.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Díaz-Canel acepta renuncia de gobernadora de Las Tunas horas después de cesar en el cargo al de Camagüey",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e199894-s27061-nid345483-diaz-canel-acepta-renuncia-gobernadora-tunas-tras"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Termoeléctrica cubana Antonio Guiteras fuera de línea por salidero",
+    "url": "https://www.prensa-latina.cu/2026/11/11/termoelectrica-cubana-antonio-guiteras-fuera-de-linea-por-salidero/"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "La Guiteras no decepciona, y se avería a horas de salir de servicio Felton",
+    "url": "https://diariodecuba.com/cuba/1794437735_69817.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "¡Otra vez! La termoeléctrica Antonio Guiteras sale de servicio por un salidero en el economizador",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e135253-s27061-nid345492-otra-vez-termoelectrica-antonio-guiteras-sale"
+   },
+   {
+    "outlet": "Diario de Cuba (citando a Cubadebate, oficial)",
+    "title": "De 5.000 pasajeros diarios a menos de 900 en un año: cifras del desastre del transporte estatal en Cuba",
+    "url": "https://diariodecuba.com/cuba/1794482956_69823.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Díaz-Canel reconoce que los cubanos esperan «menos apagones y más alimentos»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e74-s27061-nid345471-diaz-canel-reconoce-cubanos-esperan-menos-apagones"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Díaz-Canel pide más alimentos… y más control del Partido sobre la industria",
+    "url": "https://diariodecuba.com/economia/1794466917_69819.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "El campo cubano en terapia: cae hasta un 82% la producción de alimentos básicos entre 2020 y 2024",
+    "url": "https://diariodecuba.com/economia/1794482074_69822.html"
+   },
+   {
+    "outlet": "Martí Noticias (EE UU)",
+    "title": "Llega a Matanzas tercer vuelo con ayuda humanitaria de Estados Unidos",
+    "url": "https://www.radiotelevisionmarti.com/a/llega-a-matanzas-tercer-vuelo-con-ayuda-humanitaria-de-estados-unidos/484009.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Llega a Cuba más ayuda humanitaria desde EEUU: el tercer cargamento de noviembre",
+    "url": "https://diariodecuba.com/cuba/1794420177_69805.html"
+   },
+   {
+    "outlet": "14ymedio / EFE",
+    "title": "La ONU dice apoyar a más de un millón de cubanos",
+    "url": "https://www.14ymedio.com/cuba/onu-dice-sostener-apoyo-cotidiano_1_1133078.html"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Cuba y China exploran nuevas oportunidades de cooperación comercial",
+    "url": "https://www.prensa-latina.cu/2026/11/12/cuba-y-china-exploran-nuevas-oportunidades-de-cooperacion-comercial/"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "El embajador chino receta apertura económica a Cuba",
+    "url": "https://www.14ymedio.com/cuba/embajador-chino-receta-apertura-economica_1_1133021.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Apretón de manos, apoyo retórico y cero dinero: Pekín solventa la nueva visita de Bruno Rodríguez",
+    "url": "https://diariodecuba.com/cuba/1794421302_69809.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Detienen a un hombre en Songo-La Maya por presunto robo de aceite de transformadores",
+    "url": "https://www.cibercuba.com/noticias/2026-11-12-u1-e208574-s27061-nid345515-detienen-hombre-songo-maya-presunto-robo-aceite"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Los 3 de La Habana denuncian un intento de boicot a su negocio en Miami por contratar a Cuqui La Mora",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e74-s27061-nid345486-3-habana-denuncian-intento-boicot-negocio-miami"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Exiliados cubanos increpan en Roma al ‘Che italiano’ por su silencio sobre la dictadura",
+    "url": "https://www.14ymedio.com/internacional/exiliados-cubanos-increpan-roma-che_1_1132999.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Cuba pierde ante Gran Bretaña y consuma su peor actuación en el Mundial Sub-23 de béisbol",
+    "url": "https://www.14ymedio.com/deportes/cuba-pierde-gran-bretana-consuma_1_1133084.html"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Cierre con derrota en una discreta fase clasificatoria en Mundial Sub-23",
+    "url": "https://www.granma.cu/deportes/2026-11-10/cierre-con-derrota-en-una-discreta-fase-clasificatoria-en-mundial-sub-23-10-11-2026-17-11-50"
+   },
+   {
+    "outlet": "British Baseball Federation",
+    "title": "Great Britain secures 2nd win of 2026 U23 World Cup with Extra Inning Victory over Cuba",
+    "url": "https://britishbaseball.org.uk/u23-world-cup-gbr-cub-2026/"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Cierra el mercado informal en Cuba: Así quedaron el dólar y el euro",
+    "url": "https://www.cibercuba.com/noticias/2026-11-12-u1-e208574-s27061-nid345508-cierra-mercado-informal-cuba-asi-quedaron-dolar-euro"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita y el chiste del día son textos originales escritos para este programa, en homenaje al estilo de La Tremenda Corte y de Guillermo Álvarez Guedes. No se usan grabaciones ni guiones originales. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:39",
+    "name": "Titulares: el G7, Las Tunas, la Guiteras, el transporte, la comida, la ayuda y China"
+   },
+   {
+    "t": "08:27",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "12:10",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "13:32",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "14:37",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-12",
+  "file": "ventanita-2026-11-12.mp3",
+  "length": 18409004,
+  "duration": "00:15:20",
+  "guid": "ventanita-2026-11-12",
+  "pubDate": "Thu, 12 Nov 2026 05:30:00 -0700"
+ },
+ {
   "date": "2026-11-11",
   "kind": "diario",
   "title": "Miércoles 11 de noviembre: un dron frente a la costa, se va el gobernador de Camagüey, la Felton parada y aguacates de oro",
