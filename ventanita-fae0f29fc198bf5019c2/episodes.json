@@ -1,5 +1,192 @@
 [
  {
+  "date": "2026-11-13",
+  "kind": "diario",
+  "title": "Viernes 13 de noviembre: Trump dice que «lo consideraría», van tres gobernadores y Yordan es el Más Valioso",
+  "summary": "Titulares: Trump dice que consideraría una campaña militar breve contra Cuba y que quiere «resolver» el asunto antes de irse; el canciller Bruno Rodríguez responde al G7; sale la gobernadora de Guantánamo, la tercera en cuatro días; la avería de la Guiteras deja a muchas provincias en «máximo apagable»; el dengue diez veces por encima de lo normal según un observatorio de Londres; un récord de presos políticos según Prisoners Defenders; y ejercicios de defensa en Holguín y el reclamo por un preso del 11J en la prisión provincial. Chisme: Yordan Álvarez, MVP unánime de la Liga Americana; dos Latin Grammy para Gonzalo Rubalcaba; Coppelia a 175 pesos la bola; el nuevo Ten Cent chino cerrado por inventario; la Cadeca le gana a la calle; y el robo de leche en polvo por el techo en Sancti Spíritus. Cierre con El Juzgado de la Ventanita y un chiste original.",
+  "unconfirmed": [
+   "«Máximo apagable» en muchas provincias y 148 MW apagados en Matanzas: declaraciones del ingeniero Yanan Camaraza a Martí Noticias; solo esa fuente.",
+   "Los 15.859 casos de dengue hasta octubre son estimaciones del Global Dengue Observatory (LSHTM); el último dato oficial del MINSAP es de junio.",
+   "Récord de 1.353 presos políticos al cierre de octubre: informe de Prisoners Defenders, recogido solo por Martí Noticias.",
+   "El castigo prolongado a José Ramón Solano Randiche: denuncia de su esposa y del OCDH, recogida por CiberCuba; sin respuesta oficial vista.",
+   "El dólar a 905 CUP en el mercado informal: índice publicado solo por CiberCuba.",
+   "La Cadeca de Belascoaín y Neptuno comprando el dólar a 917 CUP, por encima de la calle: solo 14ymedio, en una sola Cadeca.",
+   "El robo de leche en polvo en Sancti Spíritus es una acusación policial (perfil vinculado al MININT, recogida por CiberCuba); no hay juicio."
+  ],
+  "sources": [
+   {
+    "outlet": "Diario de Cuba",
+    "title": "'Quiero resolver el asunto de Cuba antes de irme', afirma Donald Trump",
+    "url": "https://diariodecuba.com/cuba/1794522930_69834.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Trump sobre Cuba: «Sin duda consideraría una campaña militar breve»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-12-u1-e74-s27061-nid345568-trump-cuba-duda-consideraria-campana-militar-breve"
+   },
+   {
+    "outlet": "Martí Noticias (EE UU)",
+    "title": "Trump quiere “resolver Cuba” antes de dejar la presidencia",
+    "url": "https://www.radiotelevisionmarti.com/a/trump-quiere-resolver-cuba-antes-de-dejar-la-presidencia-video/484108.html"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Declaración del G-7 omite impacto del bloqueo, denuncia Cuba",
+    "url": "https://www.prensa-latina.cu/2026/11/12/declaracion-del-g-7-omite-impacto-del-bloqueo-denuncia-cuba/"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Bruno Rodríguez responde al G7 tras su llamado a reformas democráticas en Cuba",
+    "url": "https://www.cibercuba.com/noticias/2026-11-12-u1-e199370-s27061-nid345537-bruno-rodriguez-responde-al-g7-tras-llamado-reformas"
+   },
+   {
+    "outlet": "EFE",
+    "title": "Cuba dice que el G7 repite los «falsos argumentos» de EE.UU. para «justificar» el embargo",
+    "url": "https://efe.com/mundo/2026-11-12/cuba-g7-falsos-argumentos-eeuu/"
+   },
+   {
+    "outlet": "Cubadebate (oficial)",
+    "title": "Presidente de la República aprobó el cese en funciones de la Gobernadora de Guantánamo",
+    "url": "http://www.cubadebate.cu/noticias/2026/11/12/presidente-de-la-republica-aprobo-cese-en-funciones-de-la-gobernadora-de-guantanamo/"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Aprobó el Presidente de la República cese en funciones de la Gobernadora de Guantánamo",
+    "url": "https://www.granma.cu/cuba/2026-11-12/aprobo-el-presidente-de-la-republica-cese-en-funciones-de-la-gobernadora-de-guantanamo-12-11-2026-16-11-22"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Van tres los gobernadores cubanos sustituidos en cuatro días: ¿qué hay detrás, qué cambia?",
+    "url": "https://diariodecuba.com/cuba/1794552667_69836.html"
+   },
+   {
+    "outlet": "Martí Noticias (EE UU)",
+    "title": "Cuba entra en “máximo apagable” tras la salida de la Guiteras del Sistema Eléctrico",
+    "url": "https://www.radiotelevisionmarti.com/a/cuba-entra-en-m%C3%A1ximo-apagable-tras-la-salida-de-la-guiteras-del-sistema-el%C3%A9ctrico/484109.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Se avería la Guiteras al mismo tiempo que sale la Felton",
+    "url": "https://www.14ymedio.com/cuba/averia-guiteras-tiempo-felton-sale_1_1133102.html"
+   },
+   {
+    "outlet": "Martí Noticias (EE UU)",
+    "title": "\"El dengue está a tope\"; Cuba con el peor indicador del Caribe",
+    "url": "https://www.radiotelevisionmarti.com/a/el-dengue-est%C3%A1-a-tope-cuba-con-el-peor-indicador-del-caribe/484111.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "El dengue se dispara en Cuba en medio del silencio oficial y la Cruz Roja dona equipos para fumigar",
+    "url": "https://diariodecuba.com/cuba/1794489050_69825.html"
+   },
+   {
+    "outlet": "Martí Noticias (EE UU)",
+    "title": "\"Cuba está cruzando todo límite humano\": informe señala récord de 1.353 presos políticos",
+    "url": "https://www.radiotelevisionmarti.com/a/cuba-est%C3%A1-cruzando-todo-l%C3%ADmite-humano-informe-se%C3%B1ala-r%C3%A9cord-de-1-353-presos-pol%C3%ADticos/484069.html"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Holguineros más unidos y preparados en la defensa",
+    "url": "https://www.ahora.cu/es/holguin/27688-holguineros-mas-unidos-y-preparados-en-la-defensa"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Exigen libertad inmediata de preso político cubano José Ramón Solano Randiche",
+    "url": "https://www.cibercuba.com/noticias/2026-11-11-u1-e199894-s27061-nid345434-exigen-libertad-inmediata-preso-politico-cubano-jose"
+   },
+   {
+    "outlet": "Martí Noticias (EE UU)",
+    "title": "¡Yordán Alvarez se lleva unánime el MVP de la Liga Americana!",
+    "url": "https://www.radiotelevisionmarti.com/a/484169.html"
+   },
+   {
+    "outlet": "MLB.com",
+    "title": "Yordan Alvarez wins 2026 AL MVP Award",
+    "url": "https://www.mlb.com/news/yordan-alvarez-wins-2026-al-mvp-award"
+   },
+   {
+    "outlet": "BBWAA",
+    "title": "Astros’ Yordan Alvarez unanimously wins AL MVP",
+    "url": "https://bbwaa.com/26-al-mvp/"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Gonzalo Rubalcaba gana dos Latin Grammy y premia el legado de Benny Moré",
+    "url": "https://diariodecuba.com/cultura/1794565785_69837.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Coppelia vuelve a servir helado, pero sus precios ahuyentan a los clientes",
+    "url": "https://www.14ymedio.com/cuba/coppelia-vuelve-servir-helado-precios_1_1133086.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "En el Ten Cent chino de La Habana, lo único que no cobran en dólares es mirar",
+    "url": "https://www.14ymedio.com/cuba/ten-cent-chino-habana-unico_1_1133111.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Por primera vez, las Cadeca dan un mejor precio que la calle para el dólar",
+    "url": "https://www.14ymedio.com/cuba/primera-vez-cadeca-dan-mejor_1_1133095.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Así cierra el mercado informal en Cuba: el dólar baja y el euro sube al fin del día",
+    "url": "https://www.cibercuba.com/noticias/2026-11-13-u1-e199894-s27061-nid345589-asi-cierra-mercado-informal-cuba-dolar-baja-euro"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Roban más de 50 sacos de leche en polvo de almacenes en Sancti Spíritus con un curioso método",
+    "url": "https://www.cibercuba.com/noticias/2026-11-12-u1-e129488-s27061-nid345522-roban-50-sacos-leche-polvo-almacenes-estatales"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita y el chiste del día son textos originales escritos para este programa, en homenaje al estilo de La Tremenda Corte y de Guillermo Álvarez Guedes. No se usan grabaciones ni guiones originales. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:47",
+    "name": "Titulares: Trump, el G7, los gobernadores, los apagones, el dengue, los presos y Holguín"
+   },
+   {
+    "t": "06:56",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "11:57",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "13:29",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "14:59",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-13",
+  "file": "ventanita-2026-11-13.mp3",
+  "length": 18866924,
+  "duration": "00:15:43",
+  "guid": "ventanita-2026-11-13",
+  "pubDate": "Fri, 13 Nov 2026 05:30:00 -0700"
+ },
+ {
   "date": "2026-11-12",
   "kind": "diario",
   "title": "Jueves 12 de noviembre: el G7 le habla claro a La Habana, se va la gobernadora de Las Tunas y la Guiteras otra vez rota",
