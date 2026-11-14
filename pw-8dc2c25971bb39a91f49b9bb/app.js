@@ -6,7 +6,8 @@ var FAM={"Lutheran":"lutheran","Reformed":"reformed","Anglican":"anglican","Bapt
 var FAMNAME={orthodox:"Eastern Orthodox",catholic:"Catholic",lutheran:"Lutheran",reformed:"Reformed",anglican:"Anglican",baptist:"Baptist",wesleyan:"Pentecostal / Wesleyan"};
 var COLS=[["orthodox","Orthodox"],["catholic","Catholic"],["lutheran","Lutheran"],["reformed","Reformed"],["anglican","Anglican"],["baptist","Baptist"],["wesleyan","Pent./Wesl."]];
 var STANCE={affirms:"Affirms",denies:"Denies",dogma:"Affirms (defined dogma)",both:"Peter and his confession",christ:"Christ is the rock",
-  wording:"Liturgical wording only",distinguishes:"Sufficient for all, effective for the elect",differ:"Its confessions differ",none:"No source opened"};
+  wording:"Liturgical wording only",distinguishes:"Sufficient for all, effective for the elect",differ:"Its confessions differ",
+  collective:"Reads “seed” as posterity generally",cited:"Lists the verse only",none:"No source opened"};
 var BADGE={agree:"Both tracks agree","disagree":"The tracks disagree","one-track":"Only one track opened",unsourced:"No opened source"};
 var SBADGE={agree:"Both tracks agree","disagree":"The tracks disagree","one-track":"Only one track checked",unsourced:"No article checked"};
 function lsGet(k,d){try{return localStorage.getItem(k)||d}catch(e){return d}}
@@ -129,7 +130,7 @@ function textHTML(q,compact){
     var v=vs.map(function(n){return '<span class="'+(n===t.focus?'':'ctx')+'"><sup>'+n+'</sup>'+esc(b.verses[String(n)])+'</span>'}).join(" ");
     return '<div class="tr '+(cls||"")+'"><div class="v">'+v+'</div><div class="lab">'+esc(b.name)+' · '+esc(b.note.split(";")[0])+' · <a href="'+esc(b.source_url)+'" target="_blank" rel="noopener noreferrer">source</a></div></div>'}
   var codes=compact?["web","kjv"]:t.translations;
-  codes.forEach(function(c){h+=line(c)}); h+=line(t.original,"greek");
+  codes.forEach(function(c){h+=line(c)}); h+=line(t.original, t.original==="wlc"?"hebrew":"greek");
   h+='</div>';
   if(!compact) h+='<button class="ctxbtn" data-act="ctx">'+(showCtx?'Show verse '+t.focus+' only':'Show surrounding verses ('+t.context[0]+'–'+t.context[t.context.length-1]+')')+'</button>';
   if(t.note) h+='<p class="tnote">'+esc(t.note)+'</p>';
@@ -201,7 +202,7 @@ function histHTML(q){
 function srcListHTML(){
   var h='<section class="block" id="sources"><h2 class="sec">Sources on this page</h2><ol class="srcs">';
   state.srcOrder.forEach(function(k){var s=S[k]; h+='<li><a href="'+esc(s.url)+'" target="_blank" rel="noopener noreferrer">'+esc(s.title)+'</a>'+(s.track?' · Track '+s.track:'')+' · '+esc(s.license||"")+'</li>'});
-  return h+'</ol><p class="hint">All sources opened and checked on '+esc(PW.reviewed)+' (America/Denver). Quotes are short excerpts. A claim whose source could not be opened is left out.</p></section>';
+  return h+'</ol><p class="hint">All sources opened and checked on '+esc(PW.reviewed)+' (America/Phoenix). Quotes are short excerpts. A claim whose source could not be opened is left out.</p></section>';
 }
 function toolsHTML(q){
   return '<div class="tools"><a class="btn" href="#/print/'+q.id+'">One-page view</a><button data-act="print">Print</button><button data-act="copy">Copy link</button></div>';
@@ -215,7 +216,7 @@ function onePage(q){
   if(isB) h+='<div class="notice">This describes teachings. It does not issue a ruling or give pastoral advice.</div>';
   h+='<h1 class="qtitle">'+esc(q.title)+'</h1><p class="overview">'+esc(q.summary)+'</p>';
   if(!isB){var t=base.text,B=PW.bible[t.key];
-    h+='<div class="onetext">'+["web","kjv",t.original].map(function(c){return '<p><sup>'+t.focus+'</sup>'+esc(B[c].verses[String(t.focus)])+' <span class="cn">'+esc(c==="sblgnt"?"SBLGNT":c.toUpperCase())+'</span></p>'}).join("")+'</div>';}
+    h+='<div class="onetext">'+["web","kjv",t.original].map(function(c){return '<p><sup>'+t.focus+'</sup>'+esc(B[c].verses[String(t.focus)])+' <span class="cn">'+esc(c==="sblgnt"?"SBLGNT":(c==="wlc"?"WLC":c.toUpperCase()))+'</span></p>'}).join("")+'</div>';}
   h+=gridHTML(base,pt).replace(/<p class="hint">[\s\S]*?<\/p>/,"");
   var T=base.traditions; h+='<div class="onecols">';
   function cell(name,tr){var cl=filt(tr.claims,pt); return '<div><h4>'+name+'</h4><p>'+(isB&&cl.length?esc(cl.map(function(c){return c.says||c.quote}).join(" ")):esc(tr.position||""))+(cl.length?cnums(cl):' <i>No source opened.</i>')+'</p></div>'}
@@ -225,7 +226,7 @@ function onePage(q){
     base.scholar.questions.forEach(function(x){h+='<li><b>'+esc(x.q)+'</b> <span class="badge '+x.status+'">'+BADGE[x.status]+'</span><br>'+esc(x.statement)+((x.A||[]).length?' A:'+cnums(x.A):'')+((x.B||[]).length?' B:'+cnums(x.B):'')+'</li>'});
     h+='</ul>';}
   h+='<h2 class="sec">Sources</h2><ol class="srcs onesrc">'; state.srcOrder.forEach(function(k){h+='<li>'+esc(S[k].title.split(' — ')[0])+(S[k].track?' (Track '+S[k].track+')':'')+'</li>'}); h+='</ol>';
-  h+='<p class="onefoot">Full quotations, arguments and links: '+esc(location.href.replace(/#.*$/,""))+'#/q/'+q.id+' · Sources checked '+esc(PW.reviewed)+' (America/Denver). Describes teachings; does not rule between them.</p>';
+  h+='<p class="onefoot">Full quotations, arguments and links: '+esc(location.href.replace(/#.*$/,""))+'#/q/'+q.id+' · Sources checked '+esc(PW.reviewed)+' (America/Phoenix). Describes teachings; does not rule between them.</p>';
   return h+'<div class="tools"><button data-act="print">Print</button><a class="btn" href="#/q/'+q.id+'">Back to full page</a></div></div>';
 }
 // ---------- pages ----------
@@ -242,7 +243,7 @@ function renderQuery(q,print){
     h+=textHTML(q,print)+gridHTML(q)+tradHTML(q)+scholarHTML(q)+(print?'<p class="hint pv-only">The optional history-of-interpretation row is left out of the one-page view.</p>':histHTML(q));
   }
   h+=srcListHTML();
-  if(print) h+='<p class="hint pv-only">Parallel Witness, a private study tool. It describes teachings; it does not rule between them. Sources checked '+esc(PW.reviewed)+' (America/Denver). '+esc(location.href.replace(/#.*$/,""))+'#/q/'+q.id+'</p>';
+  if(print) h+='<p class="hint pv-only">Parallel Witness, a private study tool. It describes teachings; it does not rule between them. Sources checked '+esc(PW.reviewed)+' (America/Phoenix). '+esc(location.href.replace(/#.*$/,""))+'#/q/'+q.id+'</p>';
   return h;
 }
 
@@ -310,13 +311,19 @@ function viewToggle(){
 }
 
 function homeHTML(){
-  return '<section class="block"><p class="hint">Type a verse any way you like: “jn 3 16”, “Mt 16.18”, “1 Cor 13:4”. Suggestions appear as you type. Only entries whose every claim was opened and checked can be shown. Anything else gets a “not in the sourced corpus yet” note, and nothing is made up.</p></section>';
+  return '<section class="block"><p class="hint">Type a verse any way you like: “jn 3 16”, “Gen 1:1”, “Mt 16.18”, “1 Cor 13:4”. Suggestions appear as you type. Only entries whose every claim was opened and checked can be shown. Anything else gets a “not in the sourced corpus yet” note, and nothing is made up.</p></section>';
 }
 function notFound(text){
   var r=resolve(text,state.mode), p=r.parse||{}, h='';
   if(p.ok){
-    h+='<div class="notice"><b>'+esc(p.label)+'</b> is not in the sourced corpus yet.</div>';
-    h+='<p class="understood">We read “'+esc(text)+'” as <b>'+esc(p.label)+'</b>'+(p.kind==="chapter"?' (the whole chapter)':(p.kind==="book"?' (the whole book)':''))+'.</p>';
+    var inBook=(p.b!=null)?VIDX.filter(function(x){return x.b===p.b}):[];
+    if(p.kind==="book"&&inBook.length){
+      h+='<div class="notice"><b>'+esc(p.label)+'</b> has sourced entries. Add a chapter and verse, or pick one below.</div>';
+      h+='<p class="understood">We read “'+esc(text)+'” as the whole book of <b>'+esc(p.label)+'</b>.</p>';
+    } else {
+      h+='<div class="notice"><b>'+esc(p.label)+'</b> is not in the sourced corpus yet.</div>';
+      h+='<p class="understood">We read “'+esc(text)+'” as <b>'+esc(p.label)+'</b>'+(p.kind==="chapter"?' (the whole chapter)':(p.kind==="book"?' (the whole book)':''))+'.</p>';
+    }
   } else if(p.error==="chapter"){
     var bk=BK.BOOKS[p.b]; h+='<div class="notice">“'+esc(text)+'” doesn’t match a chapter. '+esc(bk.name)+' has '+bk.ch+' chapter'+(bk.ch>1?'s':'')+'.</div>';
   } else if(p.books&&p.books.length){
@@ -333,7 +340,7 @@ function askHTML(){
   var chips=PW.queries.filter(function(q){return q.type===state.mode}).map(function(q){return '<button type="button" data-q="'+q.id+'">'+esc(q.ref||q.title)+'</button>'}).join("");
   return '<div class="ask"><div class="seg" role="group" aria-label="Search for"><button type="button" data-mode="verse" aria-pressed="'+(state.mode==="verse")+'" class="'+(state.mode==="verse"?"on":"")+'">Verse</button><button type="button" data-mode="belief" aria-pressed="'+(state.mode==="belief")+'" class="'+(state.mode==="belief"?"on":"")+'">Belief</button></div>'+
    '<form id="f" role="search"><div class="combo"><label class="sr" for="qin" id="qin-l">'+(state.mode==="verse"?'Verse':'Belief question')+'</label>'+
-   '<input id="qin" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="sugg" aria-labelledby="qin-l" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search" placeholder="'+(state.mode==="verse"?'e.g. John 3:16 or jn 3 16':'e.g. Is the pope Peter’s successor?')+'">'+
+   '<input id="qin" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="sugg" aria-labelledby="qin-l" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search" placeholder="'+(state.mode==="verse"?'e.g. Gen 1:1 or John 3:16':'e.g. image of God, original sin, or the pope Peter’s successor?')+'">'+
    '<ul id="sugg" role="listbox" aria-label="Suggestions" hidden></ul></div><button class="go">Compare</button></form>'+
    '<div id="sugg-status" class="sr" aria-live="polite"></div>'+
    (state.mode==="belief"?'<p class="hint"><b>Belief mode describes teachings.</b> It does not issue a ruling or give pastoral advice.</p>':'')+
