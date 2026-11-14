@@ -1,5 +1,182 @@
 [
  {
+  "date": "2026-11-14",
+  "kind": "diario",
+  "title": "Sábado 14 de noviembre: La Habana responde a Trump, la luz en picada y el primer ministro en Holguín",
+  "summary": "Titulares: el Departamento de Estado respalda las palabras de Trump y Díaz-Canel dice que Cuba se prepara para rechazar cualquier agresión; Granma se desconecta del sistema eléctrico y sale otra unidad en Santa Cruz del Norte; tres vuelos de ayuda humanitaria de EE UU en cuatro días, repartidos por Cáritas; un cuarto cese en la semana, un intendente en Ciego de Ávila; caen las ventas de China a Cuba; el Premio Knight para el editor de elTOQUE; y el primer ministro Marrero en Holguín, más la denuncia por un preso político en la prisión provincial. Después, el chisme de la cocina y el chiste del día.",
+  "unconfirmed": [
+   "Las declaraciones de Tommy Pigott en Fox News (amenaza directa, 100 millones de dólares ofrecidos) las vimos recogidas solo por CiberCuba.",
+   "Déficit de 1.920 MW el jueves y ocho bloques fuera de servicio: cifras de la UNE citadas por Diario de Cuba; no las verificamos en el reporte original.",
+   "Tres vuelos de ayuda en cuatro días y el silencio de la prensa oficial: según Diario de Cuba.",
+   "La golpiza y la herida infectada de Roilán Álvarez Rensoler: denuncia de su hermana a Martí Noticias; solo esa fuente, sin respuesta oficial vista.",
+   "Leoni Torres con pañuelo con los colores de la bandera cubana y el mensaje de Yainer Horta por una Cuba libre: detalles de la gala según CiberCuba.",
+   "El oro sub-14 y el título directo de Maestro FIDE de Erick Angelo Ravelo: según CiberCuba, citando a JIT y a la prensa de Guantánamo; no lo vimos en una segunda fuente.",
+   "Juantorena: el INDER y Julita Osendi dicen que la foto viral es falsa; su diagnóstico específico no ha sido confirmado oficialmente."
+  ],
+  "sources": [
+   {
+    "outlet": "CiberCuba",
+    "title": "Departamento de Estado tras hablar Trump de una operación militar: una Cuba fallida es una «amenaza directa» para EE.UU.",
+    "url": "https://www.cibercuba.com/noticias/2026-11-13-u1-e74-s27061-nid345671-departamento-estado-tras-hablar-trump-operacion-militar"
+   },
+   {
+    "outlet": "NBC News",
+    "title": "Trump says he wants to ‘get Cuba done’ when asked about use of military force",
+    "url": "https://www.nbcnews.com/politics/white-house/trump-cuba-military-force-rubio-rcna609138"
+   },
+   {
+    "outlet": "EFE",
+    "title": "Cuba afirma que prepara su defensa ante una eventual agresión de Estados Unidos",
+    "url": "https://efe.com/mundo/2026-11-13/cuba-defensa-agresion-estados-unidos/"
+   },
+   {
+    "outlet": "Presidencia de Cuba (oficial)",
+    "title": "Cuba enfrentará cualquier intento de agresión",
+    "url": "https://www.presidencia.gob.cu/es/noticias/cuba-enfrentara-cualquier-intento-de-agresion/"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Díaz-Canel asegura que Cuba enfrentará cualquier agresión militar tras las declaraciones de Trump",
+    "url": "https://www.cibercuba.com/noticias/2026-11-13-u1-e74-s27061-nid345672-diaz-canel-asegura-cuba-enfrentara-cualquier-agresion"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Tormenta perfecta en el sistema eléctrico de Cuba. ¿Viene un apagón nacional?",
+    "url": "https://diariodecuba.com/cuba/1794597409_69847.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Tres envíos en una semana: ¿por qué La Habana no habla de la ayuda humanitaria de EEUU?",
+    "url": "https://diariodecuba.com/cuba/1794608059_69848.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Con la destitución de un intendente en Ciego de Ávila, ya van cuatro funcionarios cesados esta semana",
+    "url": "https://www.14ymedio.com/cuba/sustituido-intendente-municipio-ciego-avila_1_1133138.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "EE UU duplica las ventas de China a Cuba, pero Pekín sigue siendo el primer socio de La Habana",
+    "url": "https://www.14ymedio.com/cuba/ee-uu-duplica-ventas-china_1_1133154.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "El Premio Knight reconoce el trabajo de ‘elTOQUE’ frente a la censura y las amenazas",
+    "url": "https://www.14ymedio.com/cuba/premio-knight-reconoce-trabajo-eltoque_1_1133149.html"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Chequea primer ministro implementación de medidas económicas y sociales",
+    "url": "https://www.ahora.cu/es/holguin/27721-chequea-primer-ministro-implementacion-de-medidas-economicas-y-sociales-en-holguin"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Marrero Cruz pide producir alimentos localmente y prever dónde refugiar a los ancianos ante posibles contingencias en Holguín",
+    "url": "https://www.cibercuba.com/noticias/2026-11-13-u1-e209363-s27061-nid345647-marrero-cruz-pide-producir-alimentos-localmente"
+   },
+   {
+    "outlet": "Martí Noticias (EE UU)",
+    "title": "Niegan por cuarta vez visita familiar a preso político golpeado en la cárcel de Holguín",
+    "url": "https://www.radiotelevisionmarti.com/a/niegan-por-cuarta-vez-visita-familiar-a-preso-pol%C3%ADtico-golpeado-en-la-c%C3%A1rcel-de-holgu%C3%ADn/484087.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "¡Mira a quiénes les tocó entregar el premio! Leoni Torres sorprende con un guiño a Cuba como presentador en los Latin Grammy 2026",
+    "url": "https://www.cibercuba.com/noticias/2026-11-13-u65722-e65722-s27065-nid345610-mira-quienes-les-toco-entregar-premio-leoni"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "¡Orgullo cubano! Estos son los artistas de la Isla que triunfaron en los Latin Grammy 2026",
+    "url": "https://www.cibercuba.com/noticias/2026-11-13-u65722-e65722-s27065-nid345607-orgullo-cubano-estos-son-artistas-isla-triunfaron"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Gonzalo Rubalcaba gana dos Latin Grammy y premia el legado de Benny Moré",
+    "url": "https://diariodecuba.com/cultura/1794565785_69837.html"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Industriales detiene a Cienfuegos y Las Tunas amplía su dominio en Oriente",
+    "url": "https://www.granma.cu/deportes/2026-11-12/industriales-detiene-a-cienfuegos-y-las-tunas-amplia-su-dominio-en-oriente-12-11-2026-15-11-45"
+   },
+   {
+    "outlet": "Radio Sancti Spíritus (oficial)",
+    "title": "Los Gallos ceden 9-2 ante Holguín y suman su segunda derrota consecutiva",
+    "url": "https://www.radiosanctispiritus.cu/es/los-gallos-ceden-9-2-ante-holguin-y-suman-su-segunda-derrota-consecutiva/"
+   },
+   {
+    "outlet": "ACN (oficial)",
+    "title": "Serie Nacional prosigue hoy con frenética lucha en el oriente",
+    "url": "https://www.acn.cu/deportes/serie-nacional-prosigue-hoy-con-frenetica-lucha-en-el-oriente"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Niño ajedrecista cubano conquista el oro centroamericano y se convierte en Maestro FIDE",
+    "url": "https://www.cibercuba.com/noticias/2026-11-12-u1-e199370-s27066-nid345551-nino-ajedrecista-cubano-erick-angelo-ravelo-lobaina"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "INDER desmiente publicación sobre Juantorena: «Recibe la atención médica, familiar e institucional que demanda su padecimiento»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-13-u1-e208574-s27061-nid345643-inder-desmiente-publicacion-juantorena-recibe"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Julita Osendi denuncia una foto falsa de Juantorena: «Indignante y denigrante»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-13-u1-e74-s27061-nid345650-julita-osendi-denuncia-foto-falsa-juantorena-indignante"
+   },
+   {
+    "outlet": "América TeVé (Miami)",
+    "title": "Julita Osendi denuncia foto falsa de Alberto Juantorena: Indignante y denigrante",
+    "url": "https://www.americateve.com/cuba/julita-osendi-denuncia-foto-falsa-alberto-juantorena-indignante-y-denigrante-n5467028"
+   }
+  ],
+  "humor_note": "El chisme y el chiste del día fueron escritos para este programa; el chiste es original, en homenaje al estilo de Guillermo Álvarez Guedes, sin reproducir grabaciones ni guiones. El Juzgado (homenaje a La Tremenda Corte) y el chiste del guajiro de Banes y el pollo son originales, escritos para este programa; no reproducen grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:53",
+    "name": "Titulares: Trump y La Habana, la luz, la ayuda, los ceses, China, elTOQUE y Holguín"
+   },
+   {
+    "t": "08:46",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "12:58",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "14:08",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "15:32",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-14",
+  "file": "ventanita-2026-11-14.mp3",
+  "length": 19525964,
+  "duration": "00:16:16",
+  "guid": "ventanita-2026-11-14",
+  "pubDate": "Sat, 14 Nov 2026 05:30:00 -0700"
+ },
+ {
   "date": "2026-11-13",
   "kind": "diario",
   "title": "Viernes 13 de noviembre: Trump dice que «lo consideraría», van tres gobernadores y Yordan es el Más Valioso",
