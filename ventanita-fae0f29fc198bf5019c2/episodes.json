@@ -1,6 +1,143 @@
 [
  {
   "date": "2026-11-14",
+  "kind": "semanal",
+  "topic": "Historia",
+  "title": "Historia: la Guerra de los Diez Años, de La Demajagua a Baraguá",
+  "summary": "Especial de historia: la Guerra Grande (1868–1878). Cómo estaba Cuba en 1868; Céspedes libera a sus esclavos en La Demajagua; la toma de Bayamo y el nacimiento de La Bayamesa; el sitio de La Periquera en Holguín; la primera carga al machete de Máximo Gómez; el incendio de Bayamo; la Asamblea de Guáimaro, la primera constitución y Ana Betancourt; Agramonte, los Maceo, Calixto García y los mambises chinos; el fusilamiento de los ocho estudiantes; la muerte de Céspedes en San Lorenzo; el Pacto del Zanjón y la Protesta de Baraguá; y lo que la guerra dejó.",
+  "unconfirmed": [
+   "La frase de Céspedes «aún quedan doce hombres» tras el revés de Yara es tradición, no un documento.",
+   "Que Perucho Figueredo escribiera la letra del himno a caballo el 20 de octubre de 1868 es tradición muy difundida.",
+   "La respuesta de Céspedes sobre su hijo Oscar («soy el padre de todos los cubanos») se conoce por la tradición.",
+   "Las cifras de muertos de la guerra varían: Cánovas del Castillo habló de unos cien mil; otros historiadores dan cifras más altas."
+  ],
+  "sources": [
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "Guerra de los Diez Años",
+    "url": "https://es.wikipedia.org/wiki/Guerra_de_los_Diez_A%C3%B1os"
+   },
+   {
+    "outlet": "Encyclopaedia Britannica",
+    "title": "Ten Years' War",
+    "url": "https://www.britannica.com/event/Ten-Years-War"
+   },
+   {
+    "outlet": "Biblioteca del Congreso de EE UU",
+    "title": "The World of 1898: The Spanish-American War",
+    "url": "https://www.loc.gov/rr/hispanic/1898/intro.html"
+   },
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "Carlos Manuel de Céspedes",
+    "url": "https://es.wikipedia.org/wiki/Carlos_Manuel_de_C%C3%A9spedes"
+   },
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "La Bayamesa",
+    "url": "https://es.wikipedia.org/wiki/La_Bayamesa"
+   },
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "La Periquera",
+    "url": "https://es.wikipedia.org/wiki/La_Periquera"
+   },
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "Asamblea de Guáimaro",
+    "url": "https://es.wikipedia.org/wiki/Asamblea_de_Gu%C3%A1imaro"
+   },
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "Ana Betancourt",
+    "url": "https://es.wikipedia.org/wiki/Ana_Betancourt"
+   },
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "Ignacio Agramonte",
+    "url": "https://es.wikipedia.org/wiki/Ignacio_Agramonte"
+   },
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "Calixto García",
+    "url": "https://es.wikipedia.org/wiki/Calixto_Garc%C3%ADa"
+   },
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "Fusilamiento de los ocho estudiantes de medicina",
+    "url": "https://es.wikipedia.org/wiki/Fusilamiento_de_los_ocho_estudiantes_de_medicina"
+   },
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "Pacto del Zanjón",
+    "url": "https://es.wikipedia.org/wiki/Pacto_del_Zanj%C3%B3n"
+   },
+   {
+    "outlet": "Wikipedia (es)",
+    "title": "Protesta de Baraguá",
+    "url": "https://es.wikipedia.org/wiki/Protesta_de_Baragu%C3%A1"
+   }
+  ],
+  "humor_note": "Programa de historia sin humor. Texto original escrito para este programa a partir de obras de consulta; no se leen textos ajenos. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "01:01",
+    "name": "Antes del Grito: cómo estaba Cuba en 1868"
+   },
+   {
+    "t": "02:39",
+    "name": "El Grito de La Demajagua y la toma de Bayamo"
+   },
+   {
+    "t": "05:29",
+    "name": "La primera carga al machete y el incendio de Bayamo"
+   },
+   {
+    "t": "07:05",
+    "name": "Guáimaro: una república con constitución"
+   },
+   {
+    "t": "08:49",
+    "name": "Diez años de manigua: los héroes y los golpes"
+   },
+   {
+    "t": "12:34",
+    "name": "El Zanjón y la Protesta de Baraguá"
+   },
+   {
+    "t": "14:11",
+    "name": "Lo que dejó la Guerra Grande"
+   },
+   {
+    "t": "16:04",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "semanal-2026-11-14",
+  "file": "ventanita-semanal-2026-11-14.mp3",
+  "length": 20019404,
+  "duration": "00:16:41",
+  "guid": "ventanita-semanal-2026-11-14",
+  "pubDate": "Sat, 14 Nov 2026 08:00:00 -0700"
+ },
+ {
+  "date": "2026-11-14",
   "kind": "diario",
   "title": "Sábado 14 de noviembre: La Habana responde a Trump, la luz en picada y el primer ministro en Holguín",
   "summary": "Titulares: el Departamento de Estado respalda las palabras de Trump y Díaz-Canel dice que Cuba se prepara para rechazar cualquier agresión; Granma se desconecta del sistema eléctrico y sale otra unidad en Santa Cruz del Norte; tres vuelos de ayuda humanitaria de EE UU en cuatro días, repartidos por Cáritas; un cuarto cese en la semana, un intendente en Ciego de Ávila; caen las ventas de China a Cuba; el Premio Knight para el editor de elTOQUE; y el primer ministro Marrero en Holguín, más la denuncia por un preso político en la prisión provincial. Después, el chisme de la cocina y el chiste del día.",
