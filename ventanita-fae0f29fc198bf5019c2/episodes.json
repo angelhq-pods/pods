@@ -345,7 +345,7 @@
     "url": "https://www.14ymedio.com/cuba/subasta-humidores-habanos-registra-peor_1_1133168.html"
    }
   ],
-  "humor_note": "El chisme y el chiste del día fueron escritos para este programa; el chiste es original, en homenaje al estilo de Guillermo Álvarez Guedes, sin reproducir grabaciones ni guiones. El Juzgado (homenaje a La Tremenda Corte) y el chiste de los viejitos de Las Tunas y el apagón son originales, escritos para este programa; no reproducen grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Voces de Manuel y Belkys en el chisme y el humor: modelo Patriae de voz cubana (Patriae, CC BY-NC-SA 4.0, sobre F5-TTS), uso privado no comercial — https://huggingface.co/spaces/Patriae/patriae-cuban-voices-tts. Resto de las voces: Microsoft Edge TTS. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "humor_note": "El chisme y el chiste del día fueron escritos para este programa; el chiste es original, en homenaje al estilo de Guillermo Álvarez Guedes, sin reproducir grabaciones ni guiones. El Juzgado (homenaje a La Tremenda Corte) y el chiste de los viejitos de Las Tunas y el apagón son originales, escritos para este programa; no reproducen grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Voces de Manuel y Belkys en el chiste del día: modelo Patriae de voz cubana (Patriae, CC BY-NC-SA 4.0, sobre F5-TTS), uso privado no comercial — https://huggingface.co/spaces/Patriae/patriae-cuban-voices-tts. Resto de las voces: Microsoft Edge TTS. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
   "segments": [
    {
     "t": "00:00",
@@ -372,7 +372,7 @@
     "name": "Despedida"
    }
   ],
-  "voice_credit": "Voces de Manuel y Belkys en el chisme y el humor: modelo Patriae de voz cubana (Patriae, CC BY-NC-SA 4.0, sobre F5-TTS), uso privado no comercial — https://huggingface.co/spaces/Patriae/patriae-cuban-voices-tts. Resto de las voces: Microsoft Edge TTS.",
+  "voice_credit": "Voces de Manuel y Belkys en el chiste del día: modelo Patriae de voz cubana (Patriae, CC BY-NC-SA 4.0, sobre F5-TTS), uso privado no comercial — https://huggingface.co/spaces/Patriae/patriae-cuban-voices-tts. Resto de las voces: Microsoft Edge TTS.",
   "music": [
    {
     "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
