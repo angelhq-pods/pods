@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2026 05:28:58 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 07:36:51 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>Weekly X Recap — Nov 15, 2026</title>
+      <description>A weekly recap of a week that moved from post-election politics to technology and markets: a chipmaker's founder-CEO resigning amid an investigation, a nationwide flight ground stop after a major cloud outage, the first tower catch of a rocket's upper stage, and a sharp crypto selloff. Covers which themes audiences endorsed versus merely viewed, how a set of commentators framed the same stories differently, and how earlier forecasts are tracking. Facts first, then clearly labeled analysis, forecasts and speculative business angles.</description>
+      <itunes:summary>A weekly recap of a week that moved from post-election politics to technology and markets: a chipmaker's founder-CEO resigning amid an investigation, a nationwide flight ground stop after a major cloud outage, the first tower catch of a rocket's upper stage, and a sharp crypto selloff. Covers which themes audiences endorsed versus merely viewed, how a set of commentators framed the same stories differently, and how earlier forecasts are tracking. Facts first, then clearly labeled analysis, forecasts and speculative business angles.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-weekly-2026-11-15.mp3" length="4984748" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-weekly-2026-11-15</guid>
+      <pubDate>Sun, 15 Nov 2026 07:30:00 -0700</pubDate>
+      <itunes:duration>00:06:55</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 15, 2026</title>
       <description>SpaceX catches a Starship upper stage with its launch tower for the first time, and this episode checks that against the booster's loss and the media coverage. Also covered: the widening split over the ousted Nvidia CEO and what investigators have actually said, a French novelist's hate-speech charge, immigrant street vendors versus restaurants, and a deepening bitcoin selloff. It closes with analysis, two forecasts and one speculative business idea.</description>
