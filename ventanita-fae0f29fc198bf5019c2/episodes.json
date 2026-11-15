@@ -1,5 +1,235 @@
 [
  {
+  "date": "2026-11-15",
+  "kind": "diario",
+  "title": "Domingo 15 de noviembre: cazuelas en Boyeros, la Felton al taller y unos obispos en el Palacio",
+  "summary": "Titulares: protestas por los apagones en Calabazar y Las Cañas, con el sistema eléctrico cubriendo apenas un tercio de la demanda; la termoeléctrica de Felton entra en un mantenimiento de 21 días, se suspenden los trenes locales de Las Tunas y se convoca el Festival del Cine Pobre de Gibara; Díaz-Canel recibe a los obispos católicos de Estados Unidos; el azúcar en «reconversión» y un productor que pide cinco años; muere el general «Mandarria» y el duro testimonio de su hijo; la denuncia del periodista Vladimir Turro Páez; y un ejercicio con fuego real en Guantánamo. Después, el chisme de la cocina y el chiste del día.",
+  "unconfirmed": [
+   "Quema del puente de Las Cañas durante la protesta: según CiberCuba (citando videos en redes); Martí Noticias habla de quema de escombros y tanques de basura.",
+   "Apagón de 44 horas seguidas en Sancti Spíritus: según un activista entrevistado por Martí Noticias.",
+   "Que el agradecimiento de Díaz-Canel a los obispos se refiera al programa de CRS y Cáritas financiado por el Departamento de Estado: interpretación de CiberCuba; la nota oficial no lo dice.",
+   "Dólar a 915 CUP y euro a 988 CUP en el mercado informal el sábado: según CiberCuba.",
+   "Moscú reitera su «firme solidaridad» con Cuba: según 14ymedio.",
+   "Ejercicio de fuego real supervisado por el jefe del Comando Sur en Guantánamo: según CiberCuba, citando la cuenta oficial de SOUTHCOM en X.",
+   "El hijo del general Fleitas dice que su padre pidió fusilarlo: es su testimonio en Facebook, recogido por 14ymedio, Diario de Cuba y CiberCuba; no hay versión oficial.",
+   "Subasta de humidores de Habanos en Macao (cuatro piezas por unos 715.500 euros, frente a 16,41 millones el año pasado): según 14ymedio; no lo vimos en una segunda fuente.",
+   "Holguín 'se acercó un juego a la cima del oriente': según Visión Tunera; los resultados de los tres juegos ante Sancti Spíritus sí aparecen en varias fuentes.",
+   "Compra de Radio Mambí y WQBA por Newsmax: anunciada, pero pendiente de aprobación de la FCC; la nueva programación no está detallada."
+  ],
+  "sources": [
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "\"La gente salió con cazuelas a gritar\": protestas en Boyeros y cortes de 44 horas en provincias de Cuba",
+    "url": "https://www.radiotelevisionmarti.com/a/la-gente-sali%C3%B3-con-cazuelas-a-gritar-protestas-en-boyeros-y-cortes-de-44-horas-en-provincias-de-cuba/484274.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Vecinos de Calabazar, Boyeros, salen a protestar a la calle tras más de una semana sin electricidad",
+    "url": "https://www.cibercuba.com/noticias/2026-11-14-u1-e207888-s27061-nid345717-vecinos-calabazar-boyeros-salen-protestar-calle-tras"
+   },
+   {
+    "outlet": "Infobae",
+    "title": "“Queremos luz”: residentes de Calabazar protestan por los apagones en medio de la crisis energética cubana",
+    "url": "https://www.infobae.com/cuba/2026/11/14/queremos-luz-residentes-de-calabazar-protestan-por-los-apagones-en-medio-de-la-crisis-energetica-cubana/"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Se desconecta del sistema nacional la tercera termoeléctrica en dos días",
+    "url": "https://www.14ymedio.com/cuba/provincia-granma-apagon-disparo-linea_1_1133172.html"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Termoeléctrica de Felton inició mantenimiento de 21 días",
+    "url": "https://www.ahora.cu/es/holguin/27705-termoelectrica-de-felton-inicio-mantenimiento-de-21-dias"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Convocan al XXI Festival de Cine Pobre de Gibara",
+    "url": "https://www.ahora.cu/es/cultura/27669-convocan-al-xxi-festival-de-cine-pobre-de-gibara"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "El tren volvió a Las Tunas, pero duró poco: suspenden los servicios por falta de combustible",
+    "url": "https://www.cibercuba.com/noticias/2026-11-15-u1-e209363-s27061-nid345753-tren-volvio-tunas-duro-poco-suspenden-servicios"
+   },
+   {
+    "outlet": "Presidencia de Cuba (oficial)",
+    "title": "Recibió Díaz-Canel a delegación de la Conferencia de Obispos Católicos de EE.UU.",
+    "url": "https://www.presidencia.gob.cu/es/noticias/recibio-diaz-canel-a-delegacion-de-la-conferencia-de-obispos-catolicos-de-ee-uu-audio/"
+   },
+   {
+    "outlet": "Radio Rebelde (oficial)",
+    "title": "Recibe Presidente de Cuba a delegación de la Conferencia de Obispos Católicos de Estados Unidos",
+    "url": "https://www.radiorebelde.cu/recibe-presidente-de-cuba-a-delegacion-de-la-conferencia-de-obispos-catolicos-de-estados-unidos-14112026/"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Díaz-Canel agradece a delegación de la Conferencia de Obispos Católicos de EE.UU. su papel «para facilitar la ayuda humanitaria»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-15-u1-e208512-s27061-nid345749-diaz-canel-agradece-delegacion-conferencia-obispos"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "El sector azucarero está en un proceso de reconversión, no de abandono",
+    "url": "https://www.granma.cu/cuba/2026-11-13/el-sector-azucarero-esta-en-un-proceso-de-reconversion-no-de-abandono-13-11-2026-16-11-57"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Productor azucarero dice sin rodeos a Díaz-Canel que se necesitan mínimo cinco años para reactivar el sector",
+    "url": "https://www.cibercuba.com/noticias/2026-11-14-u1-e208574-s27061-nid345707-productor-azucarero-dice-rodeos-diaz-canel-necesitan"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Muere el general cubano 'Mandarria', que llegó a pedir el fusilamiento de su propio hijo",
+    "url": "https://www.14ymedio.com/cuba/muere-general-cubano-mandarria-mando-fusilar-hijo_1_1133199.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Muere el general de brigada Gustavo Fleitas, cuyo hijo asegura que pidió fusilarlo",
+    "url": "https://diariodecuba.com/cuba/1794655281_69853.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "'Uno me apuntaba con la pistola': sube el nivel de la represión al periodismo en Cuba",
+    "url": "https://diariodecuba.com/derechos-humanos/1794695101_69858.html"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "“Me apuntaron con una pistola”: periodista independiente cubano denuncia amenazas de muerte",
+    "url": "https://www.radiotelevisionmarti.com/a/me-apuntaron-con-una-pistola-periodista-independiente-cubano-denuncia-amenazas-de-muerte/484186.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Jefe del Comando Sur supervisa entrenamiento de «fuego vivo» en Guantánamo",
+    "url": "https://www.cibercuba.com/noticias/2026-11-15-u1-e208512-s27061-nid345761-jefe-comando-sur-supervisa-entrenamiento-fuego-vivo"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Moscú reitera a Cuba su \"firme solidaridad\" en \"tiempos tan difíciles\"",
+    "url": "https://www.14ymedio.com/internacional/moscu-reitera-cuba-firme-solidaridad_1_1133212.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Díaz-Canel asegura que la defensa “se va fortaleciendo cada día”",
+    "url": "https://www.14ymedio.com/cuba/diaz-canel-defensa-nacional-trump_1_1133213.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Dólar vuelve a subir y se cotiza a 915 pesos en el mercado informal en Cuba",
+    "url": "https://www.cibercuba.com/noticias/2026-11-15-u1-e209363-s27061-nid345763-dolar-vuelve-subir-cotiza-915-pesos-mercado-informal"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Yordan Álvarez, MVP unánime de la Liga Americana: el tunero se convierte en el cuarto cubano en ganar el premio al Jugador Más Valioso",
+    "url": "https://www.cibercuba.com/noticias/2026-11-14-u1-e199894-s27066-nid345728-yordan-alvarez-mvp-unanime-liga-americana-tunero"
+   },
+   {
+    "outlet": "MLB.com",
+    "title": "Yordan Alvarez wins 2026 AL MVP Award",
+    "url": "https://www.mlb.com/news/yordan-alvarez-wins-2026-al-mvp-award"
+   },
+   {
+    "outlet": "BBWAA",
+    "title": "Astros' Yordan Alvarez unanimously wins AL MVP",
+    "url": "https://bbwaa.com/26-al-mvp/"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Cuba golea 7-1 a Bonaire y queda a un paso del ascenso en la Liga de Naciones de Concacaf",
+    "url": "https://www.cibercuba.com/noticias/2026-11-14-u1-e199894-s27061-nid345722-cuba-golea-7-1-bonaire-queda-paso-ascenso-liga"
+   },
+   {
+    "outlet": "Concacaf",
+    "title": "Cuba, Guyana, Guadeloupe earn big League B victories",
+    "url": "https://www.concacaf.com/competitions/nations-league/news/cuba-guyana-guadeloupe-earn-big-league-b-victories"
+   },
+   {
+    "outlet": "Tele Rebelde (oficial)",
+    "title": "Cuba golea a Bonaire buscando el ascenso en la Liga de Naciones de Concacaf",
+    "url": "https://www.telerebelde.icrt.cu/futbol/cuba-golea-a-bonaire-buscando-el-ascenso-en-la-liga-de-naciones-de-concacaf/"
+   },
+   {
+    "outlet": "BaseballdeCuba",
+    "title": "Rojas decide por Pinar del Río ante Matanzas en extra innings; Mayabeque gana duelo de 24 carreras y Santiago de Cuba deja al campo a Las Tunas",
+    "url": "https://www.baseballdecuba.com/rojas-decide-por-pinar-del-rio-ante-matanzas-en-extra-innings-mayabeque-gana-duelo-de-24-carreras-y-santiago-de-cuba-deja-al-campo-a-las-tunas/"
+   },
+   {
+    "outlet": "Visión Tunera (oficial)",
+    "title": "Avispas dejan al campo a Las Tunas",
+    "url": "https://www.visiontunera.icrt.cu/avispas-dejan-al-campo-a-las-tunas/"
+   },
+   {
+    "outlet": "Radio Sancti Spíritus (oficial)",
+    "title": "Los Gallos ceden 9-2 ante Holguín y suman su segunda derrota consecutiva",
+    "url": "https://www.radiosanctispiritus.cu/es/los-gallos-ceden-9-2-ante-holguin-y-suman-su-segunda-derrota-consecutiva/"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Newsmax compra Radio Mambí y WQBA: la emisora símbolo del exilio cubano volverá a tener noticias y tertulia en español",
+    "url": "https://www.cibercuba.com/noticias/2026-11-15-u1-e199894-s27061-nid345750-newsmax-compra-radio-mambi-wqba-emisora-simbolo"
+   },
+   {
+    "outlet": "Radio Ink",
+    "title": "Newsmax Takes Its Brand to Spanish-Language Radio in Miami",
+    "url": "https://radioink.com/2026/11/09/newsmax-takes-its-brand-to-spanish-language-radio-in-miami/"
+   },
+   {
+    "outlet": "Inside Radio",
+    "title": "Newsmax Acquires 'Radio Mambí' And WQBA In Miami",
+    "url": "https://www.insideradio.com/free/newsmax-acquires-radio-mamb-and-wqba-in-miami/article_161c94dd-3564-41eb-aefe-136c5010ef3d.html"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "La subasta de humidores de Habanos registra su peor resultado en Macao",
+    "url": "https://www.14ymedio.com/cuba/subasta-humidores-habanos-registra-peor_1_1133168.html"
+   }
+  ],
+  "humor_note": "El chisme y el chiste del día fueron escritos para este programa; el chiste es original, en homenaje al estilo de Guillermo Álvarez Guedes, sin reproducir grabaciones ni guiones. El Juzgado (homenaje a La Tremenda Corte) y el chiste de los viejitos de Las Tunas y el apagón son originales, escritos para este programa; no reproducen grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:55",
+    "name": "Titulares: protestas por la luz, la Felton, los obispos, el azúcar, el general Mandarria y Guantánamo"
+   },
+   {
+    "t": "10:15",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "14:29",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "15:38",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "16:52",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-15",
+  "file": "ventanita-2026-11-15.mp3",
+  "length": 21145964,
+  "duration": "00:17:37",
+  "guid": "ventanita-2026-11-15",
+  "pubDate": "Sun, 15 Nov 2026 05:30:00 -0700"
+ },
+ {
   "date": "2026-11-14",
   "kind": "semanal",
   "topic": "Historia",
