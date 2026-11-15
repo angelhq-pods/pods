@@ -1,6 +1,168 @@
 [
  {
   "date": "2026-11-15",
+  "kind": "semanal",
+  "topic": "Política",
+  "title": "Política: ¿quién manda en Cuba? El Partido, los gobernadores y una semana de ceses",
+  "summary": "Especial de política: qué dice la Constitución de 2019 sobre el Partido Comunista (artículo 5) y el socialismo «irrevocable» (artículo 4); cómo se vota en Cuba, del delegado de barrio a la Asamblea Nacional; cómo se escoge al presidente, al primer ministro y a los gobernadores; los tres gobernadores que salieron en cuatro días (Camagüey, Las Tunas y Guantánamo) y las versiones oficial e independiente; cincuenta años del Poder Popular; el peso de los militares y de GAESA; las 176 medidas y la consulta después de aprobarlas; la semana más tensa entre Washington y La Habana; y qué mirar en las próximas semanas.",
+  "unconfirmed": [
+   "Que el gobernador de Camagüey saliera por corrupción y desvío de combustible: según el periodista José Luis Tan Estrada, citado por Martí Noticias; el gobierno solo habló de «errores».",
+   "Que los gobernadores sean «chivos expiatorios»: opinión de analistas consultados por Martí Noticias.",
+   "El peso de GAESA en la economía en divisas: estimaciones de la prensa independiente; no hay cifras oficiales.",
+   "El peso real de Raúl Castro en las decisiones actuales: no se conoce públicamente.",
+   "Moscú reitera su solidaridad con Cuba: según 14ymedio."
+  ],
+  "sources": [
+   {
+    "outlet": "Constitución de la República de Cuba (2019), vía Constitute Project",
+    "title": "Constitución de Cuba 2019 (texto en español)",
+    "url": "https://www.constituteproject.org/constitution/Cuba_2019?lang=es"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Van tres los gobernadores cubanos sustituidos en cuatro días: ¿qué hay detrás, qué cambia?",
+    "url": "https://diariodecuba.com/cuba/1794552667_69836.html"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "El régimen usa a los gobernadores como chivos expiatorios del fracaso, opinan analistas",
+    "url": "https://www.radiotelevisionmarti.com/a/el-r%C3%A9gimen-usa-a-los-gobernadores-como-chivos-expiatorios-del-fracaso-opinan-analistas/484200.html"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Aprueba Presidente de la República el cese de funciones de la gobernadora provincial de Las Tunas",
+    "url": "https://www.granma.cu/cuba/2026-11-11/aprueba-presidente-de-la-republica-miguel-diaz-canel-bermudez-el-cese-de-funciones-de-la-gobernadora-provincial-de-las-tunas-11-11-2026-09-11-48"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "El propósito de las transformaciones es el respaldo de los principios de justicia social",
+    "url": "https://www.granma.cu/cuba/2026-11-14/el-proposito-de-las-transformaciones-es-el-respaldo-de-los-principios-de-justicia-social-14-11-2026-09-11-25"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Decidir primero, preguntar después: ¿para qué pide el Gobierno cubano la opinión de los ciudadanos?",
+    "url": "https://diariodecuba.com/cuba/1794675615_69835.html"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "El sector azucarero está en un proceso de reconversión, no de abandono",
+    "url": "https://www.granma.cu/cuba/2026-11-13/el-sector-azucarero-esta-en-un-proceso-de-reconversion-no-de-abandono-13-11-2026-16-11-57"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Productor azucarero dice sin rodeos a Díaz-Canel que se necesitan mínimo cinco años para reactivar el sector",
+    "url": "https://www.cibercuba.com/noticias/2026-11-14-u1-e208574-s27061-nid345707-productor-azucarero-dice-rodeos-diaz-canel-necesitan"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Poder Popular: 50 años entre cambios y desafíos",
+    "url": "https://www.ahora.cu/es/opinion/27666-poder-popular-50-anos-entre-cambios-y-desafios"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "'Quiero resolver el asunto de Cuba antes de irme', afirma Donald Trump",
+    "url": "https://diariodecuba.com/cuba/1794522930_69834.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "El G7 exige al régimen de Cuba 'implementar reformas políticas y económicas significativas'",
+    "url": "https://diariodecuba.com/cuba/1794427300_69810.html"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Cuba enfrentará cualquier intento de agresión",
+    "url": "https://www.granma.cu/cuba/2026-11-13/cuba-enfrentara-cualquier-intento-de-agresion-13-11-2026-15-11-29"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Reafirmó To Lam solidaridad de Vietnam con Cuba",
+    "url": "https://www.granma.cu/vietnam-y-cuba/2026-11-13/reafirmo-to-lam-solidaridad-de-vietnam-con-cuba-13-11-2026-10-11-30"
+   },
+   {
+    "outlet": "14ymedio",
+    "title": "Moscú reitera a Cuba su \"firme solidaridad\" en \"tiempos tan difíciles\"",
+    "url": "https://www.14ymedio.com/internacional/moscu-reitera-cuba-firme-solidaridad_1_1133212.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "Tres envíos en una semana: ¿por qué La Habana no habla de la ayuda humanitaria de EEUU?",
+    "url": "https://diariodecuba.com/cuba/1794608059_69848.html"
+   },
+   {
+    "outlet": "Presidencia de Cuba (oficial)",
+    "title": "Recibió Díaz-Canel a delegación de la Conferencia de Obispos Católicos de EE.UU.",
+    "url": "https://www.presidencia.gob.cu/es/noticias/recibio-diaz-canel-a-delegacion-de-la-conferencia-de-obispos-catolicos-de-ee-uu-audio/"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "\"La gente salió con cazuelas a gritar\": protestas en Boyeros y cortes de 44 horas en provincias de Cuba",
+    "url": "https://www.radiotelevisionmarti.com/a/la-gente-sali%C3%B3-con-cazuelas-a-gritar-protestas-en-boyeros-y-cortes-de-44-horas-en-provincias-de-cuba/484274.html"
+   }
+  ],
+  "humor_note": "Programa de política sin humor. Texto original escrito para este programa a partir de la Constitución y de la prensa oficial, independiente y estadounidense; las opiniones están señaladas como tales; no se leen textos ajenos. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:58",
+    "name": "La regla número uno: el Partido por encima de todo"
+   },
+   {
+    "t": "02:48",
+    "name": "¿Cómo se vota en Cuba?"
+   },
+   {
+    "t": "04:56",
+    "name": "Las provincias: los gobernadores que nadie elige directamente"
+   },
+   {
+    "t": "07:57",
+    "name": "Cincuenta años del Poder Popular"
+   },
+   {
+    "t": "10:04",
+    "name": "El otro poder: los militares y GAESA"
+   },
+   {
+    "t": "11:32",
+    "name": "Las 176 medidas: ¿quién decide la economía?"
+   },
+   {
+    "t": "12:55",
+    "name": "Washington y La Habana: la semana más tensa en mucho tiempo"
+   },
+   {
+    "t": "14:37",
+    "name": "Qué mirar en las próximas semanas"
+   },
+   {
+    "t": "15:39",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "semanal-2026-11-15",
+  "file": "ventanita-semanal-2026-11-15.mp3",
+  "length": 19589324,
+  "duration": "00:16:19",
+  "guid": "ventanita-semanal-2026-11-15",
+  "pubDate": "Sun, 15 Nov 2026 08:00:00 -0700"
+ },
+ {
+  "date": "2026-11-15",
   "kind": "diario",
   "title": "Domingo 15 de noviembre: cazuelas en Boyeros, la Felton al taller y unos obispos en el Palacio",
   "summary": "Titulares: protestas por los apagones en Calabazar y Las Cañas, con el sistema eléctrico cubriendo apenas un tercio de la demanda; la termoeléctrica de Felton entra en un mantenimiento de 21 días, se suspenden los trenes locales de Las Tunas y se convoca el Festival del Cine Pobre de Gibara; Díaz-Canel recibe a los obispos católicos de Estados Unidos; el azúcar en «reconversión» y un productor que pide cinco años; muere el general «Mandarria» y el duro testimonio de su hijo; la denuncia del periodista Vladimir Turro Páez; y un ejercicio con fuego real en Guantánamo. Después, el chisme de la cocina y el chiste del día.",
