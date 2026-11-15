@@ -105,6 +105,9 @@ function suggest(text,mode){
       else add({key:"book"+b,label:nm,sub:"Book · add a chapter and verse",act:"fill",text:nm+" "})});
   }
   if(!(p.b!=null)) KS.forEach(function(x){ if(x.q.type==="verse"||mode==="verse") addQ(x.q) });
+  // When the user typed a book name, keep every sourced entry in that book
+  // (Genesis now has more than seven). Cap only the mixed / fuzzy lists.
+  if(p.ok&&p.kind==="book") return items;
   return items.slice(0,7);
 }
 // ---------- citation numbering ----------
