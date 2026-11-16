@@ -1,5 +1,200 @@
 [
  {
+  "date": "2026-11-16",
+  "kind": "diario",
+  "title": "Lunes 16 de noviembre: el turismo pierde 20.000 empleos, la Guiteras sigue parada y leña en el Lenin",
+  "summary": "Titulares: el ministro de Turismo admite que el sector bajó de unos 103.000 a 83.000 trabajadores mientras se abre a arrendamientos y capital privado; la Guiteras sigue fuera de servicio en su salida número 28 del año y Díaz-Canel pide generar electricidad con caña; el Departamento de Estado promete seguir presionando y La Habana responde; el Marabana número 40 sin Adidas y con pocos extranjeros; en Holguín, comida cocinada con leña en el hospital Lenin, la desalinizadora de Caletones en pruebas, Marrero y los mercados de barrio, y los Cachorros ganan cuatro de cinco a Sancti Spíritus. Después, el chisme de la cocina y el chiste del día.",
+  "unconfirmed": [
+   "Que la Guiteras pudiera arrancar en la madrugada del lunes 16: pronóstico de un periodista matancero citado por CiberCuba; el domingo por la noche seguía fuera de servicio.",
+   "Que Adidas se retirara del Marabana por las medidas de Trump: según un trabajador del evento citado por 14ymedio; ni la marca ni la organización lo explicaron.",
+   "Que el humo de los fogones de leña del hospital Lenin llegue a terapia intensiva y maternidad: según la publicación de Patria 1892 recogida por CiberCuba; ¡Ahora! solo reconoce que la cocina busca 'alternativas' para cocinar.",
+   "Lanzamiento de elTOQUE USA (elTOQUE + Café Fuerte) con apoyo de Knight Foundation: según 14ymedio; no lo vimos en una segunda fuente.",
+   "Dólar a 918 CUP y euro a 990 CUP en el mercado informal el domingo: según CiberCuba.",
+   "Cifra de turistas internacionales enero-septiembre (menos de medio millón, -65 %): datos de la ONEI citados por CiberCuba.",
+   "Supuesta nueva pareja de Manny Odicio: rumor de un perfil de farándula basado en interacciones en redes; CiberCuba aclara que no hay confirmación pública.",
+   "La canción de Amanda Camaraza como 'dedicatoria' a su ex: interpretación de las redes, no declarada por ella."
+  ],
+  "sources": [
+   {
+    "outlet": "14ymedio (independiente) / EFE",
+    "title": "El Gobierno cubano admite que 22.000 trabajadores del turismo están afectados por la crisis",
+    "url": "https://www.14ymedio.com/cuba/gobierno-cubano-admite-22-000_1_1133270.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "El turismo del régimen se queda sin trabajo para 20.000 cubanos: el ministro admite que el sector pasó de 103.000 a 83.000 empleados",
+    "url": "https://www.cibercuba.com/noticias/2026-11-15-u1-e209395-s27061-nid345769-turismo-regimen-queda-trabajo-20000-cubanos-ministro"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "El turismo cubano abre espacio a nuevas formas de gestión",
+    "url": "https://www.granma.cu/cuba/2026-11-15/el-turismo-cubano-abre-espacio-a-nuevas-formas-de-gestion-15-11-2026-17-11-30"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "La Habana abre el turismo al capital privado mientras pierde trabajadores",
+    "url": "https://diariodecuba.com/economia/1794827563_69871.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Trabajan «a jornada extendida» en el sistema de tuberías de la Guiteras que aún no arranca",
+    "url": "https://www.cibercuba.com/noticias/2026-11-16-u1-e208512-s27061-nid345819-trabajan-jornada-extendida-sistema-tuberias-guiteras"
+   },
+   {
+    "outlet": "14ymedio (independiente) / EFE",
+    "title": "Díaz-Canel rescata una vieja propuesta de expertos independientes: generar electricidad con la caña de azúcar",
+    "url": "https://www.14ymedio.com/cuba/diaz-canel-rescata-vieja-propuesta_1_1133260.html"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "EEUU seguirá presionando por una Cuba libre y próspera, afirma Departamento de Estado",
+    "url": "https://www.radiotelevisionmarti.com/a/eeuu-seguir%C3%A1-presionando-por-una-cuba-libre-y-pr%C3%B3spera-afirma-departamento-de-estado/484285.html"
+   },
+   {
+    "outlet": "Diario de Cuba",
+    "title": "EEUU seguirá presionando al régimen para que los cubanos sean 'libres, felices y prósperos'",
+    "url": "https://diariodecuba.com/cuba/1794823445_69870.html"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "«El problema no es Cuba, el problema es la agresión de EE.UU. contra Cuba»",
+    "url": "https://www.granma.cu/cuba-no-es-una-amenaza/2026-11-13/el-problema-no-es-cuba-el-problema-es-la-agresion-de-eeuu-contra-cuba-13-11-2026-12-11-22"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "La Maratón de La Habana llega a su 40ª edición con pocos patrocinadores y menos corredores extranjeros",
+    "url": "https://www.14ymedio.com/cuba/maraton-habana-llega-40a-edicion_1_1133219.html"
+   },
+   {
+    "outlet": "CiberCuba (cita a Cubadebate y AP)",
+    "title": "Entre el abandono de patrocinadores y la crisis: el régimen usa el Marabana para protestar contra las sanciones",
+    "url": "https://www.cibercuba.com/noticias/2026-11-16-u1-e208512-s27061-nid345812-abandono-patrocinadores-crisis-regimen-usa-marabana"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "«Para que vean cómo está nuestro hospital: se ha caído todo»: triste imagen del Lenin en Holguín",
+    "url": "https://www.cibercuba.com/noticias/2026-11-15-u1-e209395-s27061-nid345790-vean-esta-nuestro-hospital-ha-caido-todo-triste"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Conmemoran aniversario 61 del Hospital Lenin",
+    "url": "https://www.ahora.cu/es/multimedia/video/27696-conmemoran-aniversario-61-del-hospital-lenin"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Inversiones en el sector hidráulico en Holguín",
+    "url": "https://www.ahora.cu/es/holguin/27724-inversiones-en-el-sector-hidraulico-en-holguin"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Chequea primer ministro implementación de medidas económicas y sociales en Holguín",
+    "url": "https://www.ahora.cu/es/holguin/27721-chequea-primer-ministro-implementacion-de-medidas-economicas-y-sociales-en-holguin"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Holguín, de tres-tres frente a Sancti Spíritus",
+    "url": "https://www.ahora.cu/es/deportes/27723-holguin-de-tres-tres-frente-a-sancti-spiritus"
+   },
+   {
+    "outlet": "Radio Sancti Spíritus (oficial)",
+    "title": "Grandales se creció y Gallos salvan la honra ante Cachorros holguineros",
+    "url": "https://www.radiosanctispiritus.cu/es/grandales-se-crecio-y-gallos-salvan-la-honra-ante-cachorros-holguineros/"
+   },
+   {
+    "outlet": "Cubadebate (oficial)",
+    "title": "Alazanes golpean dos veces y mejoran posiciones en la SNB",
+    "url": "http://www.cubadebate.cu/noticias/2026/11/15/alazanes-golpean-dos-veces-y-mejoran-posiciones-en-la-snb/"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "'elTOQUE' y 'Café Fuerte' se unen para crear un nuevo medio en español en Miami",
+    "url": "https://www.14ymedio.com/cuba/eltoque-cafe-fuerte-unen-crear_1_1133236.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Así cierra el mercado informal en Cuba: dólar y euro terminan al alza",
+    "url": "https://www.cibercuba.com/noticias/2026-11-16-u1-e208512-s27061-nid345817-asi-cierra-mercado-informal-cuba-dolar-euro-terminan"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "«Ha caído el Haier, más conocido como El Frío», humor amargo para un refrigerador «muerto» por los apagones",
+    "url": "https://www.cibercuba.com/noticias/2026-11-15-u1-e209395-s27065-nid345772-ha-caido-haier-conocido-frio-humor-amargo"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Pollito Tropical no aguanta más y estalla en redes: «¡Yaaaa que me la tienen pelada con el cafecito!»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-14-u208487-e208487-s27065-nid345725-pollito-tropical-aguanta-estalla-redes-yaaaa-me"
+   },
+   {
+    "outlet": "Cuba Headlines",
+    "title": "Pollito Tropical Finally Breaks Silence Over Viral Song: \"Enough with the Coffee!\"",
+    "url": "https://www.cubaheadlines.com/articles/345725"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "«Que bien me va desde que tú te has ido»: Amanda Camaraza sale cantando mientras llueven rumores de su ex Manny y una nueva pareja",
+    "url": "https://www.cibercuba.com/noticias/2026-11-15-u194224-e208487-s27065-nid345755-bien-me-te-has-ido-amanda-camaraza-sale"
+   },
+   {
+    "outlet": "Serie Nacional de Béisbol (oficial)",
+    "title": "Resultados del día: HOL Cachorros 8, SSP Gallos 6 (14/11/2026)",
+    "url": "http://www.beisbolcubano.cu/"
+   },
+   {
+    "outlet": "Béisbol en Cuba",
+    "title": "Resultados de Holguín. Clasificatoria. 65 Serie Nacional",
+    "url": "https://www.beisbolencuba.com/series/serie-nacional-beisbol-2026-2027/clasificatoria/juegos-de-holguin.html"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Cuba golea 7-1 a Bonaire y queda a un paso del ascenso en la Liga de Naciones de Concacaf",
+    "url": "https://www.cibercuba.com/noticias/2026-11-14-u1-e199894-s27061-nid345722-cuba-golea-7-1-bonaire-queda-paso-ascenso-liga"
+   }
+  ],
+  "humor_note": "El chisme y el chiste del día se escribieron para este programa; el chiste es original, en homenaje al estilo de Guillermo Álvarez Guedes, sin reproducir grabaciones ni guiones. El chiste de Cuco y el refrigerador que reza es original, escrito para este programa; no reproduce grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Voces de Manuel y Belkys en el chisme de la cocina y el chiste del día: modelo Patriae de voz cubana (Patriae, CC BY-NC-SA 4.0, sobre F5-TTS), uso privado no comercial — https://huggingface.co/spaces/Patriae/patriae-cuban-voices-tts. Resto de las voces: Microsoft Edge TTS. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:46",
+    "name": "Titulares: el turismo pierde gente, la Guiteras, Washington, el Marabana y Holguín"
+   },
+   {
+    "t": "10:06",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "13:13",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "13:59",
+    "name": "Despedida"
+   }
+  ],
+  "voice_credit": "Voces de Manuel y Belkys en el chisme de la cocina y el chiste del día: modelo Patriae de voz cubana (Patriae, CC BY-NC-SA 4.0, sobre F5-TTS), uso privado no comercial — https://huggingface.co/spaces/Patriae/patriae-cuban-voices-tts. Resto de las voces: Microsoft Edge TTS.",
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-16",
+  "file": "ventanita-2026-11-16.mp3",
+  "length": 17601644,
+  "duration": "00:14:40",
+  "guid": "ventanita-2026-11-16",
+  "pubDate": "Mon, 16 Nov 2026 05:30:00 -0700"
+ },
+ {
   "date": "2026-11-15",
   "kind": "semanal",
   "topic": "Política",
