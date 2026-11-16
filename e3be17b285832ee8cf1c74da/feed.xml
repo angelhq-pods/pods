@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Nov 2026 07:36:51 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 05:31:09 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 16, 2026</title>
+      <description>A newly elected Southern Democrat's pitch to hold the president to his promises draws huge attention, while a debate over whether the FBI can be reformed gets fact-checked. Also covered: the campaign to bring back Nvidia's ousted CEO ahead of earnings, Senate Republicans stalling judicial nominees, a third carrier in the Middle East, and a bitcoin low. It closes with analysis, three forecasts and one speculative business idea.</description>
+      <itunes:summary>A newly elected Southern Democrat's pitch to hold the president to his promises draws huge attention, while a debate over whether the FBI can be reformed gets fact-checked. Also covered: the campaign to bring back Nvidia's ousted CEO ahead of earnings, Senate Republicans stalling judicial nominees, a third carrier in the Middle East, and a bitcoin low. It closes with analysis, three forecasts and one speculative business idea.</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-16.mp3" length="4265612" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-16</guid>
+      <pubDate>Mon, 16 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:05:55</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Weekly X Recap — Nov 15, 2026</title>
       <description>A weekly recap of a week that moved from post-election politics to technology and markets: a chipmaker's founder-CEO resigning amid an investigation, a nationwide flight ground stop after a major cloud outage, the first tower catch of a rocket's upper stage, and a sharp crypto selloff. Covers which themes audiences endorsed versus merely viewed, how a set of commentators framed the same stories differently, and how earlier forecasts are tracking. Facts first, then clearly labeled analysis, forecasts and speculative business angles.</description>
