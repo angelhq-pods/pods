@@ -1,5 +1,158 @@
 [
  {
+  "date": "2026-11-18",
+  "kind": "diario",
+  "title": "Miércoles 18 de noviembre: Díaz-Canel pide defender las medidas, el dólar de Cadeca a 920 y un camión de carne",
+  "summary": "Titulares: Díaz-Canel en Pinar del Río pide salir a defender las 176 medidas y admite que todavía deben dar resultados; las Cadeca saltan a 920 pesos por dólar, igual que el mercado informal; la policía cita por 'atentado' a la periodista Camila Acosta y al escritor Ángel Santiesteban; un tribunal federal dice que el I-220A no es un parole para la Ley de Ajuste; Alemania mantiene su recomendación de no viajar a Cuba; un camión de Cupet con más de 4.000 libras de carne sin papeles en Matanzas; en Holguín, los Mercados de Barrio y un joven que frustró un robo en el Salón 1720. Después, el chisme de la cocina y el chiste del día.",
+  "unconfirmed": [
+   "Motivo de la citación por 'atentado' a Camila Acosta y Ángel Santiesteban: es la sospecha de la propia periodista; las autoridades no han precisado los hechos.",
+   "Carne de res robada en un camión de Cupet en Matanzas: versión de un perfil oficialista en Facebook recogida por 14ymedio; sin proceso judicial conocido.",
+   "Joven que impidió un robo en el Salón 1720 de Holguín: informado por un perfil oficialista vinculado al MININT y recogido por CiberCuba; no se precisó cómo ocurrió.",
+   "Recomendación de viaje de Alemania: resumida según Martí Noticias.",
+   "Tasa de 920 CUP por dólar en las Cadeca el 10 de noviembre: según el boletín del OMFi citado por 14ymedio; las tasas cambian a diario.",
+   "Tasas del mercado informal de divisas: valores orientativos de un monitoreo independiente, no oficiales."
+  ],
+  "sources": [
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Díaz-Canel en Pinar del Río: Hay que innovar, hay que hacer cosas distintas para seguir adelante",
+    "url": "https://www.granma.cu/cuba/2026-11-18/diaz-canel-en-pinar-del-rio-hay-que-innovar-hay-que-hacer-cosas-distintas-para-seguir-adelante-18-11-2026-07-11-34"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Díaz-Canel exige blindar en la calle las 176 medidas económicas",
+    "url": "https://diariodecuba.com/cuba/1794995249_69905.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Díaz-Canel admite que sus reformas aún no dan los resultados esperados, pero pide a los cubanos salir a defenderlas",
+    "url": "https://www.cibercuba.com/noticias/2026-11-18-u1-e199894-s27061-nid345997-diaz-canel-admite-sus-reformas-aun-dan-resultados"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "La nueva tasa del dólar en las Cadeca es \"un paso importante, aunque insuficiente\"",
+    "url": "https://www.14ymedio.com/economia/nueva-tasa-dolar-cadeca-paso_1_1133393.html"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Tasa Oficial de Cambio de Monedas",
+    "url": "https://www.granma.cu/cuba/2026-11-18/tasa-oficial-de-cambio-de-monedas-18-11-2026-08-11-51"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "La Policía cubana acusa de \"atentado\" a Camila Acosta y al escritor Ángel Santiesteban",
+    "url": "https://www.14ymedio.com/cuba/policia-cubana-acusa-atentado-camila_1_1133395.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "La policía política cubana cita por 'atentado' a Camila Acosta y Ángel Santiesteban",
+    "url": "https://diariodecuba.com/derechos-humanos/1795000324_69907.html"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "Tribunal descarta acogerse a la Ley de Ajuste Cubano con un documento I 220-A",
+    "url": "https://www.radiotelevisionmarti.com/a/tribunal-descarta-acogerse-a-la-ley-de-ajuste-cubano-con-un-documento-i-220-a/484436.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Revés judicial para cubanos con I-220A: tribunal determina que el documento no equivale a un parole",
+    "url": "https://www.cibercuba.com/noticias/2026-11-17-u1-e74-s27061-nid345958-reves-judicial-cubanos-220a-tribunal-determina-documento"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "Alemania aconseja no viajar a Cuba por apagones, inseguridad y falta de atención médica",
+    "url": "https://www.radiotelevisionmarti.com/a/alemania-aconseja-no-viajar-a-cuba-por-apagones-inseguridad-y-falta-de-atenci%C3%B3n-m%C3%A9dica/484407.html"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "Detienen en Matanzas un camión de Cupet con 2.000 kg de carne de res robada",
+    "url": "https://www.14ymedio.com/cuba/detienen-matanzas-camion-cupet-toneladas_1_1133349.html"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Holguín: Nuevos Mercados de Barrio, bajo la lupa del bolsillo",
+    "url": "https://www.ahora.cu/es/holguin/27738-holguin-nuevos-mercados-de-barrio-bajo-la-lupa-del-bolsillo"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Un joven se enfrenta a presunto ladrón en Holguín e impide robo en restaurante",
+    "url": "https://www.cibercuba.com/noticias/2026-11-17-u1-e135253-s27061-nid345932-joven-enfrenta-presunto-ladron-holguin-impide-robo"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Muere humorista Juan Karlos el Gordo, recordado por «Pateando la lata» y «A otro con ese cuento»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-17-u1-e135253-s27061-nid345945-muere-humorista-juan-karlos-gordo-recordado-pateando"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Irela Bravo revela por qué nunca tuvo hijos y sorprende con su confesión: «Te estaría mintiendo»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-17-u65722-e65722-s27065-nid345926-irela-bravo-revela-nunca-tuvo-hijos-sorprende"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "Amanda Camaraza confiesa quién es el amor más grande de su vida y derrite a sus seguidores",
+    "url": "https://www.cibercuba.com/noticias/2026-11-17-u208487-e208487-s27065-nid345972-amanda-camaraza-confiesa-quien-amor-grande-vida"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "El régimen cubano pide a Canadá que rebaje su alerta de viaje y admite que los hoteles cerraron por falta de clientes",
+    "url": "https://www.cibercuba.com/noticias/2026-11-17-u1-e129488-s27061-nid345925-regimen-cubano-pide-canada-rebaje-alerta-viaje"
+   },
+   {
+    "outlet": "CiberCuba",
+    "title": "El dólar aprieta el paso en el mercado informal cubano y suma nuevo aumento de precio",
+    "url": "https://www.cibercuba.com/noticias/2026-11-17-u1-e129488-s27061-nid345938-dolar-aprieta-paso-mercado-informal-cubano-suma"
+   },
+   {
+    "outlet": "Béisbol en Cuba",
+    "title": "Resultados de Holguín. Clasificatoria. 65 Serie Nacional",
+    "url": "https://www.beisbolencuba.com/series/serie-nacional-beisbol-2026-2027/clasificatoria/juegos-de-holguin.html"
+   }
+  ],
+  "humor_note": "El chisme y el chiste del día se escribieron para este programa; el chiste es original, en homenaje al estilo de Guillermo Álvarez Guedes, sin reproducir grabaciones ni guiones. El chiste del holguinero en el hotel cerrado es original, escrito para este programa; no reproduce grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Voces de Manuel y Belkys en el chiste del día: modelo Patriae de voz cubana (Patriae, CC BY-NC-SA 4.0, sobre F5-TTS), uso privado no comercial — https://huggingface.co/spaces/Patriae/patriae-cuban-voices-tts. Resto de las voces: Microsoft Edge TTS. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:45",
+    "name": "Titulares: Díaz-Canel y las 176 medidas, el dólar en las Cadeca, Camila Acosta, el I-220A, Alemania y Holguín"
+   },
+   {
+    "t": "09:21",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "13:30",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "14:20",
+    "name": "Despedida"
+   }
+  ],
+  "voice_credit": "Voces de Manuel y Belkys en el chiste del día: modelo Patriae de voz cubana (Patriae, CC BY-NC-SA 4.0, sobre F5-TTS), uso privado no comercial — https://huggingface.co/spaces/Patriae/patriae-cuban-voices-tts. Resto de las voces: Microsoft Edge TTS.",
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-18",
+  "file": "ventanita-2026-11-18.mp3",
+  "length": 17999084,
+  "duration": "00:15:00",
+  "guid": "ventanita-2026-11-18",
+  "pubDate": "Wed, 18 Nov 2026 08:45:00 -0700"
+ },
+ {
   "date": "2026-11-17",
   "kind": "diario",
   "title": "Martes 17 de noviembre: récord de comida de EE UU, maletas de 50 libras y Felton en mantenimiento",
