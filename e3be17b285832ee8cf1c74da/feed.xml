@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Nov 2026 05:33:34 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 05:29:09 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 18, 2026</title>
+      <description>Today's episode follows a split over whether a famous chip-company founder will return after his board ruled it out, alongside the company's blowout quarter. It also covers a wave of tech outages and the fears and calm they produced, the argument that an unpopular war decided the midterms as Gulf strikes resumed, and a new batch of predictions added to the show's tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
+      <itunes:summary>Today's episode follows a split over whether a famous chip-company founder will return after his board ruled it out, alongside the company's blowout quarter. It also covers a wave of tech outages and the fears and calm they produced, the argument that an unpopular war decided the midterms as Gulf strikes resumed, and a new batch of predictions added to the show's tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-18.mp3" length="8163404" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-18</guid>
+      <pubDate>Wed, 18 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:06:48</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 17, 2026</title>
       <description>Today's episode follows how a fresh report about an alleged dirty-bomb plot in Washington was received as an echo of the run-up to the Iraq war. It also covers a shared argument about men hitting a career and health wall around fifty, a split between buying the market dip and bracing for more pain ahead of Nvidia's first earnings without its founder, and the launch of a permanent tracker for the predictions made on the show. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
