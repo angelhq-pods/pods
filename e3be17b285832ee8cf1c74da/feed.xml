@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2026 05:29:09 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 09:53:51 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 19, 2026</title>
+      <description>A morning briefing on the midterms hangover, a sharp drop in oil and gasoline prices, a fight over who should run a major chipmaker, and the first big standalone A.I. stock listing. Also: a new immigration bill in the House, a warning about charter schools in Texas, and a claim that a high-profile C.E.O. is next. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
+      <itunes:summary>A morning briefing on the midterms hangover, a sharp drop in oil and gasoline prices, a fight over who should run a major chipmaker, and the first big standalone A.I. stock listing. Also: a new immigration bill in the House, a warning about charter schools in Texas, and a claim that a high-profile C.E.O. is next. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-19.mp3" length="9285644" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-19</guid>
+      <pubDate>Thu, 19 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:07:44</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 18, 2026</title>
       <description>Today's episode follows a split over whether a famous chip-company founder will return after his board ruled it out, alongside the company's blowout quarter. It also covers a wave of tech outages and the fears and calm they produced, the argument that an unpopular war decided the midterms as Gulf strikes resumed, and a new batch of predictions added to the show's tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
