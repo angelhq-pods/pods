@@ -1,5 +1,191 @@
 [
  {
+  "date": "2026-11-19",
+  "kind": "diario",
+  "title": "Jueves 19 de noviembre: la encuesta que dice 'nada', las nuevas pensiones y la comida 50% más cara",
+  "summary": "Titulares: una encuesta del IRI hecha cara a cara en Cuba (86% cree que el país va por mal camino, 78% pide cambios urgentes); la reforma de la Seguridad Social que entra en vigor el 25 de noviembre y el debate sobre si de verdad ajusta las pensiones a la inflación; la ONEI reporta alimentos 50,7% más caros en un año; Díaz-Canel critica la burocracia en su programa de radio; Alina Bárbara López detenida unas cuatro horas frente al tribunal de Matanzas; en Holguín, fecha para el juicio de los creadores de El4tico, un puente dañado por las lluvias en Banes y una tormenta en Caletones; y relevos de dirigentes en Santiago de Cuba. Después, el chisme de la cocina (Celia Cruz en el Salón de la Fama del Rock, Bates de Plata para Yordan Álvarez y Arozarena, los Cachorros de Holguín, Kevincito El 13 y Kevin Durant), El Juzgado de la Ventanita y el chiste del día.",
+  "unconfirmed": [
+   "Ajuste de las pensiones a la inflación: EFE lo describe como un mecanismo anual de ajuste; 14ymedio señala que la norma solo obliga al Consejo de Ministros a fijar mínimos teniendo en cuenta la inflación, sin porcentaje obligatorio.",
+   "Daños por lluvias en Banes y tormenta en Playa Caletones (Gibara): reportados por Radio Banes, Radio Gibara y Telecristal según CiberCuba; la posible tromba marina no está confirmada.",
+   "Relevos de dirigentes en Mella, Segundo Frente y Tercer Frente (Santiago de Cuba): según CiberCuba, a partir del anuncio del gobernador; sin razones oficiales.",
+   "Detalles de la detención de Alina Bárbara López (duración, acta de advertencia, el cartel): relato de la propia activista en Facebook recogido por CiberCuba.",
+   "Reacción de Kevin Durant a los tatuajes de Kevincito El 13: según fotos publicadas en Instagram y recogidas por CiberCuba.",
+   "Equivalencias en dólares de la pensión mínima: al cambio informal, según EFE; las tasas cambian a diario."
+  ],
+  "sources": [
+   {
+    "outlet": "Miami Herald (prensa de EE UU)",
+    "title": "'Everything' in Cuba needs to change, Cubans say in rare nationwide poll",
+    "url": "https://www.miamiherald.com/news/nation-world/world/americas/cuba/article318139923.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "El 73% de los cubanos no confía en ninguna figura pública, mientras las iglesias superan ampliamente al PCC",
+    "url": "https://www.cibercuba.com/noticias/2026-11-18-u1-e199894-s27061-nid346065-73-cubanos-confia-ninguna-figura-publica-mientras"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "El Instituto Republicano Internacional recoge el rechazo a los dirigentes y el sistema en Cuba",
+    "url": "https://diariodecuba.com/cuba/1795094440_69928.html"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Nueva normativa amplía derechos y sostenibilidad del sistema de Seguridad Social en Cuba",
+    "url": "https://www.granma.cu/cuba/2026-11-18/nueva-normativa-amplia-derechos-y-sostenibilidad-del-sistema-de-seguridad-social-en-cuba-18-11-2026-14-11-21"
+   },
+   {
+    "outlet": "EFE vía Infobae (internacional)",
+    "title": "Cuba reforma su Seguridad Social: de los cuidados como trabajo al pluriempleo",
+    "url": "https://www.infobae.com/america/agencias/2026/11/18/cuba-reforma-su-seguridad-social-de-los-cuidados-como-trabajo-al-pluriempleo/"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "El Gobierno cubano modifica las pensiones, pero no garantiza aumentos frente a la inflación",
+    "url": "https://www.14ymedio.com/cuba/gobierno-cubano-modifica-pensiones-no_1_1133463.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "El régimen cubano reforma las pensiones y traslada el peso de financiarlas al sector privado",
+    "url": "https://diariodecuba.com/cuba/1795037053_69917.html"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "Los alimentos se encarecen más de un 50% en un año, mientras la inflación acelera su ritmo",
+    "url": "https://www.14ymedio.com/cuba/alimentos-encarecen-50-ano-inflacion_1_1133449.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Los alimentos cuyo precio se dispara en Cuba ilustran qué comen en la Isla para subsistir",
+    "url": "https://diariodecuba.com/economia/1795038992_69916.html"
+   },
+   {
+    "outlet": "EFE vía Infobae (internacional)",
+    "title": "Díaz-Canel señala la burocracia e 'insensibilidad' oficial ante las quejas por la crisis",
+    "url": "https://www.infobae.com/america/agencias/2026/11/18/diaz-canel-senala-la-burocracia-e-insensibilidad-oficial-ante-las-quejas-por-la-crisis/"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Díaz-Canel promete exponer a funcionarios: ¿qué pasa con las quejas?",
+    "url": "https://diariodecuba.com/cuba/1795081647_69924.html"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "La Policía detiene a Alina Bárbara López frente al tribunal donde exigía la celebración de su juicio",
+    "url": "https://www.14ymedio.com/cuba/policia-detiene-alina-barbara-lopez_1_1133461.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Alina Bárbara López queda en libertad tras más de cuatro horas detenida",
+    "url": "https://www.cibercuba.com/noticias/2026-11-19-u1-e43231-s27061-nid346104-alina-barbara-lopez-queda-libertad-tras-cuatro-horas"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Arrestada la intelectual cubana Alina Bárbara López por exigir al tribunal que la juzgue",
+    "url": "https://diariodecuba.com/derechos-humanos/1795086652_69925.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "El régimen cubano pone fecha al juicio contra los creadores de El4tico",
+    "url": "https://diariodecuba.com/derechos-humanos/1795048114_69922.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Ponen fecha al juicio contra los creadores de El 4tico: Fiscalía pide hasta 10 años de cárcel",
+    "url": "https://www.cibercuba.com/noticias/2026-11-19-u1-e135253-s27061-nid346084-ponen-fecha-al-juicio-contra-creadores-4tico"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Fuertes lluvias provocan colapso junto a un puente en Holguín y obligan a cerrar la carretera",
+    "url": "https://www.cibercuba.com/noticias/2026-11-18-u1-e74-s27061-nid346052-fuertes-lluvias-provocan-colapso-junto-puente-holguin"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Fuerte tormenta golpea de madrugada una comunidad de Holguín y daña varias viviendas",
+    "url": "https://www.cibercuba.com/noticias/2026-11-18-u1-e74-s27061-nid346057-fuerte-tormenta-golpea-madrugada-comunidad-holguin-dana"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Ola de cambios llega a Santiago de Cuba: el régimen sustituye a dirigentes en tres municipios",
+    "url": "https://www.cibercuba.com/noticias/2026-11-18-u1-e43231-s27061-nid346029-ola-cambios-llega-santiago-cuba-regimen-sustituye"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "De Cuba al Salón de la Fama del Rock & Roll: el legado universal de Celia Cruz",
+    "url": "https://www.radiotelevisionmarti.com/a/de-cuba-al-sal%C3%B3n-de-la-fama-del-rock-roll-el-legado-universal-de-celia-cruz/484431.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Yordan Álvarez y Randy Arozarena siguen haciendo historia en MLB, ahora como Bates de Plata",
+    "url": "https://diariodecuba.com/deportes/1795026682_69915.html"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Holguín, de tres-tres frente a Sancti Spíritus",
+    "url": "https://www.ahora.cu/es/deportes/27723-holguin-de-tres-tres-frente-a-sancti-spiritus"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "¡Kevin Durant no daba crédito! El tatuaje de Kevincito El 13 que sorprendió a la estrella de la NBA",
+    "url": "https://www.cibercuba.com/noticias/2026-11-18-u65722-e65722-s27065-nid346017-kevin-durant-daba-credito-tatuaje-kevincito-13"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "«Ella no puede ser normal»: cubana muestra cómo su mamá decoró la casa para Navidad y arrasa en TikTok",
+    "url": "https://www.cibercuba.com/noticias/2026-11-17-u65722-e65722-s27065-nid345923-ella-puede-ser-normal-cubana-muestra-mama-decoro"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Panaderías y cafeterías cubanas de Miami siguen creciendo: estos son sus próximos destinos",
+    "url": "https://www.cibercuba.com/noticias/2026-11-19-u1-e129488-s27061-nid346019-panaderias-cafeterias-cubanas-miami-siguen-creciendo"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita (Panchito Malanga, el encuestador) y el chiste del viejito de Banes y la pensión 'tenida en cuenta' son originales, escritos para este programa en homenaje a La Tremenda Corte y al estilo de Guillermo Álvarez Guedes; no reproducen grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:46",
+    "name": "Titulares: la encuesta del IRI, las pensiones, la inflación, Díaz-Canel y la burocracia, Alina Bárbara López, Holguín y Santiago"
+   },
+   {
+    "t": "09:07",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "13:41",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "14:57",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "16:09",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-19",
+  "file": "ventanita-2026-11-19.mp3",
+  "length": 20188844,
+  "duration": "00:16:49",
+  "guid": "ventanita-2026-11-19",
+  "pubDate": "Thu, 19 Nov 2026 08:45:00 -0700"
+ },
+ {
   "date": "2026-11-18",
   "kind": "diario",
   "title": "Miércoles 18 de noviembre: Díaz-Canel pide defender las medidas, el dólar de Cadeca a 920 y un camión de carne",
