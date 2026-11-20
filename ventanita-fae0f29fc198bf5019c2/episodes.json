@@ -1,5 +1,151 @@
 [
  {
+  "date": "2026-11-20",
+  "kind": "diario",
+  "title": "Viernes 20 de noviembre: La Habana sin agua, Camila Acosta acusada de 'atentado' y un barco cubano encallado",
+  "summary": "Titulares: Díaz-Canel dice que 'hemos avanzado' con el agua mientras el propio gobierno reconoce 255.000 habaneros afectados; Camila Acosta y Ángel Santiesteban, acusados de 'atentado' por comentarios de terceros; choque en la ONU por los cubanos que combaten para Rusia; el buque cubano Nova Orion encallado en República Dominicana; en Holguín, se suspende sin fecha el juicio de El4tico y las presas suben al 85%; y una donación sueca de paneles solares para cinco centros de salud. Después, el chisme de la cocina (adiós a Electricitio, El Chulo contra Roberto Ferrante, Beatriz Valdés y su veto en Venezuela, el Tesla en el cementerio, los diez jabones de diez mil pesos y las Pequeñas Ligas de Holguín), El Juzgado de la Ventanita y el chiste del día.",
+  "unconfirmed": [
+   "Origen de la acusación de 'atentado' contra Camila Acosta y Ángel Santiesteban: versión de la propia Acosta recogida por Martí Noticias y Diario de Cuba; la policía no ha publicado su versión.",
+   "Cifra de más de 1.000 cubanos en las filas rusas: proyecto ucraniano 'Quiero Vivir', citado por CiberCuba; no verificada de forma independiente.",
+   "Causa del encallamiento del Nova Orion (mal tiempo y oleaje) y estado de la tripulación: según prensa dominicana citada por Diario de Cuba; sin confirmación oficial.",
+   "Suspensión del juicio de El4tico: anunciada por la esposa de uno de los acusados en Facebook (CiberCuba, Diario de Cuba); sin comunicado oficial del tribunal.",
+   "Acusaciones de El Chulo contra Roberto Ferrante y Planet Records: afirmaciones del cantante en un live, no probadas.",
+   "Precio de los diez jabones en pesos: cálculo al cambio informal según la autora del post y CiberCuba; las tasas cambian a diario."
+  ],
+  "sources": [
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Presidente Díaz-Canel comprueba programa integral de abasto de agua en La Habana y otras regiones del país",
+    "url": "https://www.granma.cu/cuba/2026-11-19/presidente-diaz-canel-comprueba-programa-integral-de-abasto-de-agua-en-la-habana-y-otras-regiones-del-pais-19-11-2026-12-11-00"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Crisis del agua en La Habana: 255.000 afectados y Díaz-Canel presume de 'avances'",
+    "url": "https://diariodecuba.com/cuba/1795164854_69938.html"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "Periodista cubana denuncia acusación de \"atentado\" por informar en redes",
+    "url": "https://www.radiotelevisionmarti.com/a/camila-acosta-denuncia-que-acusaci%C3%B3n-de-atentado-se-vincula-al-juicio-a-los-masones/484585.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "¿En qué basa el régimen su nueva acusación contra Camila Acosta y Ángel Santiesteban?",
+    "url": "https://diariodecuba.com/cuba/1795177333_69941.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "En la ONU, EE.UU. acusa a la dictadura cubana de hipocresía por los miles de cubanos que combaten para Rusia",
+    "url": "https://www.cibercuba.com/noticias/2026-11-20-u1-e199894-s27061-nid346176-onu-eeuu-acusa-dictadura-cubana-hipocresia-miles"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Un buque mercante cubano encalla frente a República Dominicana: ¿qué hacía allí?",
+    "url": "https://diariodecuba.com/cuba/1795130820_69936.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Suspenden el juicio de El4tico previsto para el 24 de noviembre y lo dejan sin nueva fecha",
+    "url": "https://www.cibercuba.com/noticias/2026-11-19-u1-e43231-s27061-nid346150-suspenden-juicio-el4tico-previsto-24-noviembre-dejan"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "'El miedo los hace retroceder': el régimen cubano pospone el juicio contra los creadores de El4tico",
+    "url": "https://diariodecuba.com/derechos-humanos/1795120643_69935.html"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Beneficiaron lluvias recientes a embalses de Holguín",
+    "url": "https://www.ahora.cu/es/holguin/27752-beneficiaron-lluvias-recientes-a-embalses-de-holguin"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "En medio de la crisis energética en Cuba, organizaciones suecas y emigrados donan sistemas solares para cinco centros de salud",
+    "url": "https://www.cibercuba.com/noticias/2026-11-20-u1-e199894-s27061-nid346185-medio-crisis-energetica-cuba-organizaciones-suecas"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Fallece humorista cubano Daniel Hernández Rodríguez, conocido popularmente por \"Electricitio\"",
+    "url": "https://www.cibercuba.com/noticias/2026-11-19-u65722-e65722-s27061-nid346133-fallece-actor-cubano-daniel-hernandez-rodriguez"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "El Chulo vuelve a la carga contra Roberto Ferrante y advierte a los artistas en Cuba",
+    "url": "https://www.cibercuba.com/noticias/2026-11-20-u208487-e208487-s27065-nid346173-chulo-vuelve-carga-contra-roberto-ferrante"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "«Me negué a hablar mal de Cuba»: Beatriz Valdés revela el veto que sufrió durante tres años en Venezuela",
+    "url": "https://www.cibercuba.com/noticias/2026-11-20-u194224-e208487-s27065-nid346174-me-negue-hablar-mal-cuba-beatriz-valdes-revela"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "¡De película de terror! Cubana lleva su Tesla a un cementerio y lo que aparece en la pantalla la deja sorprendida",
+    "url": "https://www.cibercuba.com/noticias/2026-11-19-u65722-e65722-s27065-nid346121-pelicula-terror-cubana-lleva-tesla-cementerio"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "«Fue un artículo de lujo»: cubana tras comprar 10 jabones",
+    "url": "https://www.cibercuba.com/noticias/2026-11-20-u1-e199291-s27061-nid346164-fue-articulo-lujo-cubana-tras-comprar-10-jabones"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Holguín se alista para el comienzo de pequeñas ligas de béisbol",
+    "url": "https://www.ahora.cu/es/deportes/27750-holguin-se-alista-para-el-comienzo-de-pequenas-ligas-de-beisbol"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "Los alimentos se encarecen más de un 50% en un año, mientras la inflación acelera su ritmo",
+    "url": "https://www.14ymedio.com/cuba/alimentos-encarecen-50-ano-inflacion_1_1133449.html"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita (Cundo Pomarrosa y los cuarenta pomos de agua) y el chiste del guajiro de Mayarí y el carro que ve cosas son originales, escritos para este programa en homenaje a La Tremenda Corte y al estilo de Guillermo Álvarez Guedes; no reproducen grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:41",
+    "name": "Titulares: el agua en La Habana, Camila Acosta y Santiesteban, la ONU y los cubanos en Rusia, el barco encallado y Holguín"
+   },
+   {
+    "t": "06:26",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "10:43",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "12:02",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "13:11",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-20",
+  "file": "ventanita-2026-11-20.mp3",
+  "length": 16638284,
+  "duration": "00:13:52",
+  "guid": "ventanita-2026-11-20",
+  "pubDate": "Fri, 20 Nov 2026 08:45:00 -0700"
+ },
+ {
   "date": "2026-11-19",
   "kind": "diario",
   "title": "Jueves 19 de noviembre: la encuesta que dice 'nada', las nuevas pensiones y la comida 50% más cara",
