@@ -1,5 +1,159 @@
 [
  {
+  "date": "2026-11-21",
+  "kind": "diario",
+  "title": "Sábado 21 de noviembre: Alina López Miyares en casa, los entierros más caros y un sismológico a ciegas",
+  "summary": "Titulares: el Departamento de Estado confirma que la cubanoamericana Alina López Miyares volvió a EE UU tras casi una década presa en Cuba; el cementerio de Colón empieza a cobrar sus servicios con subidas de hasta casi quince veces; el Servicio Sismológico advierte que en Oriente solo le queda la estación de la base de Guantánamo; Díaz-Canel habla de avances en el transporte mientras su ministro reconoce la caída; Cuba, la mayor caída latinoamericana en un índice de buen gobierno; y en Holguín, hasta la radio oficial denuncia la basura y las aguas albañales. Después, el chisme de la cocina (el sabor cubano de GTA VI, Raider Sánchez con los Cardenales, los Cachorros contra los Leñadores, Raúl Torres contra Delcy Rodríguez y Eslinda Núñez), El Juzgado de la Ventanita y el chiste del día.",
+  "unconfirmed": [
+   "Nuevos precios de los servicios funerarios en el Cementerio de Colón (desde el 23 de noviembre): según Diario de Cuba, a partir de una nota de la propia necrópolis en Facebook; sin publicación oficial del Gobierno provincial al cierre.",
+   "Situación crítica del Servicio Sismológico Nacional en Oriente: declaraciones de su jefe en redes, recogidas por Diario de Cuba.",
+   "Firma de Raider Sánchez con los Cardenales de San Luis (bono de 650.000 dólares): según CiberCuba, citando al periodista Francys Romero; sin comunicado del equipo.",
+   "Precio de GTA VI en Revolico (120 dólares): anuncios consultados por Martí Noticias."
+  ],
+  "sources": [
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "Liberan a cubanoamericana Alina López Miyares tras gestiones de EEUU",
+    "url": "https://www.radiotelevisionmarti.com/a/liberan-a-cubanoamericana-presa-en-cuba-desde-2017-tras-gestiones-de-eeuu/484669.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Confirman liberación de Alina López Miyares, ciudadana estadounidense que estuvo casi una década presa en Cuba",
+    "url": "https://www.cibercuba.com/noticias/2026-11-20-u1-e208574-s27061-nid346226-confirman-liberacion-alina-lopez-miyares-ciudadana"
+   },
+   {
+    "outlet": "The Washington Times (EE UU)",
+    "title": "Cuba has released American Alina Lopez Miyares after 9-year detention",
+    "url": "https://www.washingtontimes.com/news/2026/nov/20/cuba-released-american-alina-lopez-miyares-9-year-detention/"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Ser enterrado en Cuba será hasta 15 veces más caro, anuncia el Gobierno",
+    "url": "https://diariodecuba.com/cuba/1795257939_69959.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "El Servicio Sismológico de Cuba, en situación crítica y dependiendo de la base naval de Guantánamo",
+    "url": "https://diariodecuba.com/cuba/1795268023_69960.html"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Presidente cubano reconoce avances en el sector del transporte",
+    "url": "https://www.prensa-latina.cu/2026/11/20/presidente-cubano-reconoce-avances-en-el-sector-del-transporte/"
+   },
+   {
+    "outlet": "teleSUR (afín al gobierno)",
+    "title": "Díaz-Canel define como “tarea de defensa nacional” mantener operatividad del transporte",
+    "url": "https://www.telesurtv.net/diaz-canel-defensa-operatividad-transporte/"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "En una Cuba sin transporte, ¿de qué 'avances en el sector' habla Díaz-Canel?",
+    "url": "https://diariodecuba.com/cuba/1795200336_69951.html"
+   },
+   {
+    "outlet": "EFE vía ABC Color (internacional)",
+    "title": "El presidente de Cuba aboga por \"un acercamiento, cooperación y diálogo\" con EEUU",
+    "url": "https://www.abc.com.py/internacionales/2026/11/20/el-presidente-de-cuba-aboga-por-un-acercamiento-cooperacion-y-dialogo-con-eeuu/"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Cuba registra el mayor retroceso de América Latina en el Índice de Buen Gobierno, según informe",
+    "url": "https://www.cibercuba.com/noticias/2026-11-21-u1-e129488-s27061-nid346293-cuba-registra-mayor-retroceso-america-latina-indice"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Cuba registra el mayor retroceso de América Latina en el Índice de Buen Gobierno",
+    "url": "https://diariodecuba.com/cuba/1795214437_69957.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Hasta la radio estatal lo reconoce: «Holguín entre la basura y las aguas albañales»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-20-u1-e209395-s27061-nid346217-radio-estatal-reconoce-holguin-basura-aguas"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Emilio y Gloria Estefan, Celia Cruz, Benny Moré y Willy Chirino ponen sabor cubano a GTA VI",
+    "url": "https://www.cibercuba.com/noticias/2026-11-21-u208487-e208487-s27065-nid346272-emilio-gloria-estefan-celia-cruz-benny-more"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "GTA 6 sale al mercado con referencias a Cuba, pero jugarlo en la isla es un lujo",
+    "url": "https://www.radiotelevisionmarti.com/a/gta-6-llega-al-mercado-mundial-con-referencias-a-la-cultura-cubana-pero-jugarlo-dentro-de-la-isla-es-un-lujo/484574.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Santiaguero Raider Sánchez firma con los Cardenales de San Luis por 650,000 dólares",
+    "url": "https://www.cibercuba.com/noticias/2026-11-20-u1-e208574-s27066-nid346225-santiaguero-raider-sanchez-firma-cardenales-san-luis"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Leñadores frenan en seco a los Cachorros",
+    "url": "https://www.ahora.cu/es/deportes/27757-lenadores-frenan-en-seco-a-los-cachorros"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Vegueros y Leñadores aseguran los primeros boletos a los play off",
+    "url": "https://www.granma.cu/deportes/2026-11-20/vegueros-y-lenadores-aseguran-los-primeros-boletos-a-los-play-off-20-11-2026-15-11-57"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Raúl Torres arremete contra Delcy Rodríguez y la compara con Judas",
+    "url": "https://www.cibercuba.com/noticias/2026-11-21-u1-e129488-s27061-nid346285-raul-torres-arremete-contra-delcy-rodriguez-compara"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Eslinda Núñez revela por qué nunca se ha ido de Cuba: «Yo amo lo mío»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-21-u1-e208487-s27065-nid346265-eslinda-nunez-revela-nunca-ha-ido-cuba-amo-mio"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita (Panchito Mamoncillo, el que se niega a morirse por los precios del cementerio) y el chiste del guajiro de Banes y la consola que siempre se está actualizando son originales, escritos para este programa en homenaje a La Tremenda Corte y al estilo de Guillermo Álvarez Guedes; no reproducen grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:36",
+    "name": "Titulares: Alina López Miyares libre, los entierros más caros, el sismológico a ciegas, el transporte y Holguín"
+   },
+   {
+    "t": "06:25",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "10:15",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "11:48",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "13:01",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-21",
+  "file": "ventanita-2026-11-21.mp3",
+  "length": 16586924,
+  "duration": "00:13:49",
+  "guid": "ventanita-2026-11-21",
+  "pubDate": "Sat, 21 Nov 2026 08:45:00 -0700"
+ },
+ {
   "date": "2026-11-20",
   "kind": "diario",
   "title": "Viernes 20 de noviembre: La Habana sin agua, Camila Acosta acusada de 'atentado' y un barco cubano encallado",
