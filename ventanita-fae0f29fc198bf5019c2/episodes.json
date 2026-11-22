@@ -161,6 +161,168 @@
   "pubDate": "Sun, 22 Nov 2026 08:45:00 -0700"
  },
  {
+  "date": "2026-11-22",
+  "kind": "semanal",
+  "topic": "Economía",
+  "title": "Economía: ¿por qué todo cuesta más? La inflación, el dólar, los privados y la promesa del azúcar",
+  "summary": "Especial de economía: lo que dice el informe de precios de octubre de la ONEI (inflación interanual de 32,7% y alimentos cerca del 51%) y qué productos suben más; el dólar informal rumbo a los mil pesos y los 'dos bolsillos' de una economía que compra en divisas y cobra en pesos; el estudio de CubaData sobre quién gana en el sector privado; las cafeterías estatales que pasan a mipymes y sus trabajadores; las nuevas reglas de pensiones que entran en vigor el 25 de noviembre, sin ajuste automático por inflación; la propuesta de sacar electricidad de los centrales azucareros y la crítica de Jorge Piñón; los barcos de diésel ruso que se desviaron a Brasil; la versión oficial (el bloqueo y las 176 medidas); y qué mirar de aquí a fin de año.",
+  "unconfirmed": [
+   "Despidos sin indemnización en la gastronomía estatal de La Habana: testimonios de trabajadores recogidos por 14ymedio.",
+   "Tasa informal del dólar (955 CUP el 21 de noviembre; 823 hace un mes): reporte diario de CiberCuba, que advierte de posibles ajustes de metodología.",
+   "Resultados del estudio de CubaData sobre el sector no estatal: encuesta en línea a 2.564 adultos con acceso a Internet, presentada con CIPE (adscrito a la NED); reportado por Diario de Cuba.",
+   "Desvío a Brasil de tres tanqueros con diésel ruso: según Diario de Cuba, a partir de The Maritime Executive y plataformas de rastreo.",
+   "Producción azucarera por debajo de 150.000 toneladas: cifras atribuidas a Azcuba por la prensa independiente.",
+   "Las equivalencias 'lo que costaba 100 hoy cuesta 133 / 151' son cálculos nuestros a partir de los datos oficiales de la ONEI."
+  ],
+  "sources": [
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "Los alimentos se encarecen más de un 50% en un año, mientras la inflación acelera su ritmo",
+    "url": "https://www.14ymedio.com/cuba/alimentos-encarecen-50-ano-inflacion_1_1133449.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Los alimentos cuyo precio se dispara en Cuba ilustran qué comen en la Isla para subsistir",
+    "url": "https://diariodecuba.com/economia/1795038992_69916.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "La inflación se dispara en Cuba: la ONEI precisa qué alimentos subieron más de precio en octubre",
+    "url": "https://www.cibercuba.com/noticias/2026-11-22-u1-e129488-s27061-nid346298-inflacion-vuelve-dispararse-cuba-onei-revela"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "¡Sorpresa! El dólar rompe un nuevo umbral de venta en el mercado informal cubano",
+    "url": "https://www.cibercuba.com/noticias/2026-11-21-u1-e129488-s27061-nid346300-sorpresa-dolar-rompe-nuevo-umbral-venta-mercado"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Radiografía del sector privado en Cuba: ¿cómo funciona y a quién beneficia?",
+    "url": "https://diariodecuba.com/economia/1795126166_69933.html"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "El Estado cubano se deshace de sus cafeterías y despide a sus trabajadores sin indemnización",
+    "url": "https://www.14ymedio.com/cuba/cubano-deshace-cafeterias-despide-trabajadores_1_1133493.html"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "El Gobierno cubano modifica las pensiones, pero no garantiza aumentos frente a la inflación",
+    "url": "https://www.14ymedio.com/cuba/gobierno-cubano-modifica-pensiones-no_1_1133463.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "El régimen cubano reforma las pensiones y traslada el peso de financiarlas al sector privado",
+    "url": "https://diariodecuba.com/cuba/1795037053_69917.html"
+   },
+   {
+    "outlet": "Granma (oficial)",
+    "title": "El sector azucarero está en un proceso de reconversión, no de abandono",
+    "url": "https://www.granma.cu/cuba/2026-11-13/el-sector-azucarero-esta-en-un-proceso-de-reconversion-no-de-abandono-13-11-2026-16-11-57"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "\"Un cuento de hadas\": experto desestima plan energético de Díaz-Canel en centrales azucareros",
+    "url": "https://www.radiotelevisionmarti.com/a/un-cuento-de-hadas-experto-desestima-plan-energ%C3%A9tico-de-d%C3%ADaz-canel-en-centrales-azucareros/484663.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Experto cuestiona la reconversión azucarera de Díaz-Canel: «Un cuento de hadas»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-22-u1-e208512-s27061-nid346358-experto-cuestiona-reconversion-azucarera-diaz-canel"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Los compradores de EEUU rechazan el diésel ruso, ¿los barcos irán a Cuba?",
+    "url": "https://diariodecuba.com/economia/1795281737_69961.html"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "Hegseth destaca fin de envíos de petróleo venezolano a Cuba antes de viajar a Colombia",
+    "url": "https://www.radiotelevisionmarti.com/a/hegseth-destaca-fin-de-env%C3%ADos-de-petr%C3%B3leo-venezolano-a-cuba-antes-de-viajar-a-colombia/484559.html"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Cuba alista termoeléctrica de Mayarí para generación eléctrica",
+    "url": "https://www.prensa-latina.cu/2026/11/21/cuba-alista-termoelectrica-de-mayari-para-generacion-electrica/"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Piden a próximo Congreso de EEUU cambiar política hacia Cuba",
+    "url": "https://www.prensa-latina.cu/2026/11/22/piden-a-proximo-congreso-de-eeuu-cambiar-politica-hacia-cuba/"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "El cementerio de Colón borra su publicación sobre el aumento del precio de sus servicios",
+    "url": "https://diariodecuba.com/cuba/1795344117_69966.html"
+   }
+  ],
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:52",
+    "name": "Los precios: lo que dice la propia ONEI"
+   },
+   {
+    "t": "03:07",
+    "name": "El dólar y los dos bolsillos"
+   },
+   {
+    "t": "04:38",
+    "name": "Los privados: crecen, pero no para todos"
+   },
+   {
+    "t": "05:57",
+    "name": "El Estado suelta las cafeterías"
+   },
+   {
+    "t": "06:57",
+    "name": "Las pensiones nuevas"
+   },
+   {
+    "t": "08:24",
+    "name": "Azúcar y corriente: la propuesta del gobierno"
+   },
+   {
+    "t": "10:13",
+    "name": "Combustible: los barcos que no llegan"
+   },
+   {
+    "t": "11:14",
+    "name": "La versión oficial: el bloqueo y las 176 medidas"
+   },
+   {
+    "t": "12:48",
+    "name": "Qué mirar en las próximas semanas"
+   },
+   {
+    "t": "13:56",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "humor_note": "Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "key": "semanal-2026-11-22",
+  "file": "ventanita-semanal-2026-11-22.mp3",
+  "length": 17541644,
+  "duration": "00:14:37",
+  "guid": "ventanita-semanal-2026-11-22",
+  "pubDate": "Sun, 22 Nov 2026 08:00:00 -0700"
+ },
+ {
   "date": "2026-11-21",
   "kind": "diario",
   "title": "Sábado 21 de noviembre: Alina López Miyares en casa, los entierros más caros y un sismológico a ciegas",
