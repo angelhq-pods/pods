@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 21 Nov 2026 05:28:18 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 05:28:14 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 22, 2026</title>
+      <description>A quiet Saturday full of deal-making: openness to immigration and health care talks with the incoming Congress, and a promised Iran agreement that Tehran says isn't ready to sign. Plus a warning about an AI-industry cash crunch in 2027, debate over whether Bitcoin has bottomed after the selloff, and a weekend turn toward faith and family. Every forecast is logged in our predictions tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
+      <itunes:summary>A quiet Saturday full of deal-making: openness to immigration and health care talks with the incoming Congress, and a promised Iran agreement that Tehran says isn't ready to sign. Plus a warning about an AI-industry cash crunch in 2027, debate over whether Bitcoin has bottomed after the selloff, and a weekend turn toward faith and family. Every forecast is logged in our predictions tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-22.mp3" length="7818284" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-22</guid>
+      <pubDate>Sun, 22 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:06:31</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 21, 2026</title>
       <description>A capitulation Friday on Wall Street: tech stocks, chipmakers, Bitcoin and gold all tumble together, and the debate turns to whether this is 1998 with a melt-up still ahead or the start of a long bust. Also: Fed rate-hike talk, an SEC look at a chip giant's accounting, Senate blame for the midterms, a campus free-speech arrest in Texas, and why gas got cheap. Plus the predictions tracker's first resolution. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
