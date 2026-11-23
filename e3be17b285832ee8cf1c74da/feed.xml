@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 22 Nov 2026 07:27:41 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 05:33:41 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 23, 2026</title>
+      <description>After Wall Street's worst week in six years, a Sunday of victory laps and roadmaps: a three-stage rally map into Christmas, old "never short America" receipts, and a reversal on the Fed's December move. Plus warnings about record federal spending, a fight over whether the Nvidia scandal was overblown, a debate about robots replacing human labor and video games for the jobless, and an Iran deal that never got signed. Every new forecast is logged in our predictions tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
+      <itunes:summary>After Wall Street's worst week in six years, a Sunday of victory laps and roadmaps: a three-stage rally map into Christmas, old "never short America" receipts, and a reversal on the Fed's December move. Plus warnings about record federal spending, a fight over whether the Nvidia scandal was overblown, a debate about robots replacing human labor and video games for the jobless, and an Iran deal that never got signed. Every new forecast is logged in our predictions tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-23.mp3" length="8318924" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-23</guid>
+      <pubDate>Mon, 23 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:06:56</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>Weekly X Recap — Nov 22, 2026</title>
       <description>A week in review: a chipmaker's ousted CEO, a boardroom that said no, and the question of which tech founder is next. A market capitulation that hit stocks, gold and Bitcoin at once, and the split between buying the dip and waiting it out. Plus the midterm blame game, an Iran "time loop," men at midlife, and the first verdict from our running predictions tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
