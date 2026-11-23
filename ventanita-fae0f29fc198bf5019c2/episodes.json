@@ -1,5 +1,167 @@
 [
  {
+  "date": "2026-11-23",
+  "kind": "diario",
+  "title": "Lunes 23 de noviembre: un preso del 11J libre, el dólar a un paso de los mil y Holguín sin cobertura",
+  "summary": "Titulares: Nadir Martín Perdomo sale de prisión tras cinco años y medio por el 11J, mientras el expreso político Jorge Serrano Alfonso muere apuñalado en Cárdenas; el dólar informal cierra en 963 pesos y el salario medio equivale a unos siete dólares; el Tesoro de EE UU aclara que el comercio autorizado puede seguir pasando por el Mariel; una dirigente cubana admite en México más de 100.000 pacientes en espera de operación, y el director de la OMS llega a La Habana; prohíben las visitas a la pareja de Henry Constantín; aviso de lluvias y vientos por una baja extratropical y un frente frío; y en Holguín, ETECSA reconoce 71 robos y vandalismo contra sus instalaciones y radiobases fuera de servicio en San Germán. Después, el chisme de la cocina (los 80 años de Silvio Rodríguez, el octavo premio de 'Plantadas', las 50 horas para descargar GTA VI en Cuba, la Gibara vacía que se hizo viral y la despedida de Ulises Toirac a cuatro humoristas), El Juzgado de la Ventanita y el chiste del día.",
+  "unconfirmed": [
+   "Circunstancias de la muerte de Jorge Serrano Alfonso: versión de su amigo Samuel Pupo Martínez a Martí Noticias (recogida por CiberCuba); sin comunicado oficial al cierre.",
+   "Cifras de pacientes en espera quirúrgica y mortalidad infantil citadas por Ana María Mari Machado en el Senado mexicano: según CiberCuba; no verificadas de forma independiente.",
+   "Declaraciones del director general de la OMS sobre el sistema de salud cubano: según Prensa Latina (oficial).",
+   "Datos de ETECSA sobre robos y radiobases en Holguín: reportaje del periódico oficial ¡Ahora!, recogido por CiberCuba.",
+   "Tasa informal del dólar (963 CUP el 22 de noviembre): según la tasa de elToque citada por CiberCuba y Diario de Cuba.",
+   "Pronóstico de baja extratropical y frente frío: avisos preventivos de Canal Caribe y del meteorólogo Luis Enrique Ramos citados por CiberCuba; seguir las notas oficiales del INSMET.",
+   "Calles vacías en Gibara: publicación viral en Facebook y comentarios de internautas recogidos por CiberCuba, no una estadística."
+  ],
+  "sources": [
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "«¡Que viva la libertad!»: así recibieron a Nadir Martín Perdomo, héroe del 11J que cumplió cinco años y medio de prisión",
+    "url": "https://www.cibercuba.com/noticias/2026-11-23-u1-e209395-s27061-nid346421-viva-libertad-asi-recibieron-nadir-martin-perdomo"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Nadir Martín Perdomo sale de prisión tras cumplir su condena por el 11J: ¿qué pasa con su hermano?",
+    "url": "https://diariodecuba.com/derechos-humanos/1795428382_69978.html"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "Asesinan en Cárdenas a Jorge Serrano Alfonso, exprisionero político de las protestas del 11J",
+    "url": "https://www.radiotelevisionmarti.com/a/asesinan-en-c%C3%A1rdenas-a-jorge-serrano-alfonso-exprisionero-pol%C3%ADtico-de-las-protestas-del-11j/484771.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Asesinan en Cárdenas a expreso político del 11J Jorge Serrano Alfonso",
+    "url": "https://www.cibercuba.com/noticias/2026-11-23-u1-e208512-s27061-nid346414-asesinan-cardenas-expreso-politico-11j-jorge-serrano"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "El salario se evapora en Cuba mientras el dólar acaricia los 1.000 pesos en el mercado informal",
+    "url": "https://diariodecuba.com/economia/1795364789_69968.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "El dólar y el euro cierran con una nueva sorpresa para los cubanos",
+    "url": "https://www.cibercuba.com/noticias/2026-11-23-u1-e135253-s27061-nid346415-dolar-euro-cierran-nueva-sorpresa-cubanos"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "Sanciones: EE UU aclara que el comercio autorizado puede seguir pasando por Mariel",
+    "url": "https://www.14ymedio.com/cuba/ee-uu-aclara-comercio-autorizado_1_1133593.html"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "EEUU aclara dudas sobre sectores sancionados y operaciones en puertos de Cuba",
+    "url": "https://www.radiotelevisionmarti.com/a/eeuu-aclara-dudas-sobre-sectores-sancionados-y-operaciones-en-puertos-de-cuba/484759.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Dirigente del régimen admite en México que más de 100,000 cubanos esperan una operación",
+    "url": "https://www.cibercuba.com/noticias/2026-11-23-u1-e199370-s27061-nid346424-dirigente-regimen-admite-mexico-100000-cubanos"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Director general de la OMS cumple intensa agenda en Cuba",
+    "url": "https://www.prensa-latina.cu/2026/11/23/director-general-de-la-oms-cumple-intensa-agenda-en-cuba/"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "Represión: Prohíben las visitas de la pareja de Henry Constantín a la cárcel",
+    "url": "https://www.14ymedio.com/cuba/regimen-cubano-ensana-henry-constantin_1_1133591.html"
+   },
+   {
+    "outlet": "Martí Noticias (gobierno de EE UU)",
+    "title": "Prohíben a pareja de periodista cubano Henry Constantín visitarlo en prisión durante tres meses",
+    "url": "https://www.radiotelevisionmarti.com/a/proh%C3%ADben-a-pareja-de-periodista-cubano-henry-constant%C3%ADn-visitarlo-en-prisi%C3%B3n-durante-tres-meses/484766.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "¡Atentos! Probables lluvias y vientos fuertes por posible baja extratropical seguida de frente frío en avance sobre Cuba",
+    "url": "https://www.cibercuba.com/noticias/2026-11-23-u1-e209395-s27061-nid346419-atentos-probables-lluvias-vientos-fuertes-posible"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "ETECSA admite situación alarmante en Holguín: solo una de cinco radiobases funciona de manera intermitente",
+    "url": "https://www.cibercuba.com/noticias/2026-11-23-u1-e135253-s27061-nid346411-etecsa-admite-situacion-alarmante-holguin-solo-cinco"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Cuba celebrará a Silvio Rodríguez con un diluvio de voces",
+    "url": "https://www.prensa-latina.cu/2026/11/23/cuba-celebrara-a-silvio-rodriguez-con-un-diluvio-de-voces/"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Régimen cubano prepara una jornada nacional de conciertos para celebrar el cumpleaños 80 de Silvio Rodríguez",
+    "url": "https://www.cibercuba.com/noticias/2026-11-22-u1-e208512-s27061-nid346398-regimen-cubano-prepara-jornada-nacional-conciertos"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "«Que la verdad de Cuba no quede en el olvido»: Plantadas recibe premio en festival de cine de Colombia y ya suma ocho galardones",
+    "url": "https://www.cibercuba.com/noticias/2026-11-23-u1-e209395-s27061-nid346420-verdad-cuba-quede-olvido-plantadas-recibe-premio"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "Telecomunicaciones: Los cubanos necesitarían más de 58 horas para descargar GTA VI",
+    "url": "https://www.14ymedio.com/cuba/cubanos-necesitan-58-horas-descargar-gta_1_1133558.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "«Pueblo fantasma»: familia decide pasear por Gibara y se encuentra una ciudad desierta",
+    "url": "https://www.cibercuba.com/noticias/2026-11-23-u1-e209395-s27061-nid346422-pueblo-fantasma-familia-decide-pasear-gibara"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "La reflexión de Ulises Toirac tras la muerte de cuatro humoristas cubanos en menos de un mes",
+    "url": "https://www.cibercuba.com/noticias/2026-11-22-u1-e43231-s27061-nid346379-reflexion-ulises-toirac-tras-cuatro-humoristas"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita (Panchito Guanábana y la torre de ETECSA) y el chiste del señor de Banes en la casa de cambio son originales, escritos para este programa en homenaje a La Tremenda Corte y al estilo de Guillermo Álvarez Guedes; no reproducen grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:35",
+    "name": "Titulares: presos del 11J, el dólar, Mariel, la salud y Holguín"
+   },
+   {
+    "t": "05:28",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "09:09",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "10:46",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "11:42",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-23",
+  "file": "ventanita-2026-11-23.mp3",
+  "length": 14948204,
+  "duration": "00:12:27",
+  "guid": "ventanita-2026-11-23",
+  "pubDate": "Mon, 23 Nov 2026 08:45:00 -0700"
+ },
+ {
   "date": "2026-11-22",
   "kind": "diario",
   "title": "Domingo 22 de noviembre: la comida 51% más cara, el cementerio que borró su anuncio y la OMS en La Habana",
