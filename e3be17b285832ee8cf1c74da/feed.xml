@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Nov 2026 05:33:41 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 05:31:14 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 24, 2026</title>
+      <description>A chipmaker's ousted founder is reinstated as CEO, setting off the market's best day in months and settling a long-running bet on the predictions tracker. Today's episode covers who called it, who conceded, and the debate over who really made the decision. Also: a fight over Covid vaccines, a call for a Ukraine deal before Christmas, and a growing Orthodox church revival. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
+      <itunes:summary>A chipmaker's ousted founder is reinstated as CEO, setting off the market's best day in months and settling a long-running bet on the predictions tracker. Today's episode covers who called it, who conceded, and the debate over who really made the decision. Also: a fight over Covid vaccines, a call for a Ukraine deal before Christmas, and a growing Orthodox church revival. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-24.mp3" length="8188364" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-24</guid>
+      <pubDate>Tue, 24 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:06:49</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 23, 2026</title>
       <description>After Wall Street's worst week in six years, a Sunday of victory laps and roadmaps: a three-stage rally map into Christmas, old "never short America" receipts, and a reversal on the Fed's December move. Plus warnings about record federal spending, a fight over whether the Nvidia scandal was overblown, a debate about robots replacing human labor and video games for the jobless, and an Iran deal that never got signed. Every new forecast is logged in our predictions tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
