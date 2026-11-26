@@ -1,5 +1,184 @@
 [
  {
+  "date": "2026-11-26",
+  "kind": "diario",
+  "title": "Jueves 26 de noviembre: el hueco del presupuesto, el recado de un cardenal y los embalses llenos en Holguín",
+  "summary": "Titulares: el Gobierno sube un 85% el tope del déficit fiscal de 2026 y amplía el endeudamiento; el cardenal Seán O'Malley dice que sin liberar presos políticos será difícil un diálogo con Washington, mientras Trump habla de 'acabar con Cuba'; llega a Alemania el ex preso del 11J Luis Frómeta Compte; el turismo cae a su peor cifra en décadas e Iberostar pierde casi todas sus ganancias en Cuba; la UNE prevé 1.675 MW de afectación y el dólar informal llega a 975 pesos; inundaciones en Nueva Gerona y el acto por Fidel se pasa al jueves; y en Oriente, hepatitis A en Granma y los embalses de Holguín al 85%. Después, el chisme de la cocina (el avioncito de juguete retenido en la aduana, la abuela y el tatuaje falso, Lina Luaces, el Rolex de Flor de Cuba, Camila Arteche en Egipto, las Pequeñas Ligas en Holguín y los 80 de Silvio), El Juzgado de la Ventanita y el chiste del día.",
+  "unconfirmed": [
+   "Declaraciones del cardenal O'Malley: entrevista con EWTN recogida por Diario de Cuba.",
+   "Frase de Trump ('quiero acabar con Cuba antes de irme') y posible acción militar: según el análisis de CNN en Español.",
+   "Llegada de Luis Frómeta Compte a Alemania: según 14ymedio, citando a la activista Daniela Rojo; sin información oficial. Cifra de 1.353 presos políticos: Prisoners Defenders.",
+   "Unos 570.000 visitantes en 2026: según Martí Noticias, con datos de la ONEI y AP.",
+   "Pérdidas de Iberostar: según 14ymedio, citando a 20 Minutos.",
+   "Tasa informal del dólar (975 CUP el 26 de noviembre): tasa de elToque citada por CiberCuba.",
+   "Brote de hepatitis A en Granma: declaraciones de un médico en la TV local recogidas por Diario de Cuba; sin cifras oficiales.",
+   "Nueva visita del canciller de Panamá por siete panameños detenidos: solo Martí Noticias.",
+   "Retención de una viajera por un avión de juguete: relato de la propia viajera en TikTok, recogido por CiberCuba."
+  ],
+  "sources": [
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "El déficit fiscal del Gobierno cubano se dispara a niveles sin precedente: 138.000 millones de CUP",
+    "url": "https://www.14ymedio.com/economia/deficit-fiscal-gobierno-cubano-dispara_1_1133697.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente, exilio)",
+    "title": "Economía en picada: el Gobierno cubano eleva el techo del déficit fiscal un 85,2%",
+    "url": "https://diariodecuba.com/economia/1795632413_70021.html"
+   },
+   {
+    "outlet": "Infobae (internacional)",
+    "title": "El régimen cubano amplía su endeudamiento: sube un 85.2% el límite del déficit fiscal previsto para 2026",
+    "url": "https://www.infobae.com/cuba/2026/11/26/el-regimen-cubano-amplia-su-endeudamiento-sube-un-852-el-limite-del-deficit-fiscal-previsto-para-2026/"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente, exilio)",
+    "title": "'A menos que liberen a los presos políticos, será difícil un diálogo': lo que un cardenal de EEUU dijo a Díaz-Canel",
+    "url": "https://diariodecuba.com/cuba/1795641467_70023.html"
+   },
+   {
+    "outlet": "CNN en Español (internacional)",
+    "title": "El fiasco de Trump en las elecciones de mitad de mandato no ha disminuido sus planes sobre Cuba",
+    "url": "https://cnnespanol.cnn.com/2026/11/26/latinoamerica/trump-elecciones-intermedias-planes-cuba-rubio-trax"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "Llega a Alemania el ex preso del 11J Frometa Compte después de cinco años de reclusión en Cuba",
+    "url": "https://www.14ymedio.com/cuba/llega-alemania-ex-preso-11j_1_1133681.html"
+   },
+   {
+    "outlet": "Martí Noticias (financiado por EE UU)",
+    "title": "El turismo en Cuba toca fondo en 2026 con su peor cifra en décadas",
+    "url": "https://www.radiotelevisionmarti.com/a/este-ser%C3%A1-el-peor-a%C3%B1o-del-turismo-para-cuba-mientras-sus-vecinos-crecen/485027.html"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "La hotelera española Iberostar perdió casi el 100% de sus beneficios en Cuba en 2025",
+    "url": "https://www.14ymedio.com/cuba/hotelera-espanola-iberostar-perdio-100_1_1133689.html"
+   },
+   {
+    "outlet": "EFE vía Infobae (internacional)",
+    "title": "Temas del día de EFE Internacional del jueves 26 de noviembre",
+    "url": "https://www.infobae.com/america/agencias/2026/11/26/temas-del-dia-de-efe-internacional-del-jueves-26-de-noviembre-1200-gmt/"
+   },
+   {
+    "outlet": "Cubadebate (oficial)",
+    "title": "Unión Eléctrica estima 1675 MW de afectación en la máxima demanda de hoy jueves",
+    "url": "http://www.cubadebate.cu/noticias/2026/11/26/union-electrica-estima-1675-mw-de-afectacion-en-la-maxima-demanda-de-hoy-jueves/"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "El dólar sigue escalando en Cuba mientras el euro cede: así están las tasas de cambio hoy",
+    "url": "https://www.cibercuba.com/noticias/2026-11-26-u1-e129488-s27061-nid346683-dolar-sigue-escalando-cuba-mientras-euro-cede-asi"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Lluvias intensas inundan Nueva Gerona y obligan a evacuar residentes de la Isla de la Juventud",
+    "url": "https://www.cibercuba.com/noticias/2026-11-26-u1-e208574-s27061-nid346659-lluvias-intensas-inundan-nueva-gerona-obligan"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente, exilio)",
+    "title": "Un frente frío obliga al régimen a aplazar su homenaje a Fidel Castro",
+    "url": "https://diariodecuba.com/cuba/1795603570_70014.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente, exilio)",
+    "title": "La hepatitis A golpea a Granma y alcanza 'a muchos médicos'",
+    "url": "https://diariodecuba.com/cuba/1795695346_70028.html"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Beneficiaron lluvias recientes a embalses de Holguín",
+    "url": "https://www.ahora.cu/es/holguin/27752-beneficiaron-lluvias-recientes-a-embalses-de-holguin"
+   },
+   {
+    "outlet": "Martí Noticias (financiado por EE UU)",
+    "title": "Canciller de Panamá negocia nuevamente en Cuba liberación de panameños",
+    "url": "https://www.radiotelevisionmarti.com/a/canciller-de-panam%C3%A1-negocia-nuevamente-en-cuba-liberaci%C3%B3n-de-paname%C3%B1os/485048.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Cubana lleva un avioncito de juguete a Cuba y termina retenida más de cinco horas en el aeropuerto",
+    "url": "https://www.cibercuba.com/noticias/2026-11-26-u65722-e65722-s27065-nid346670-insolito-cubana-lleva-avioncito-juguete-cuba"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Abuela cubana en Miami al ver el tatuaje de Fidel y el Che que se hizo su nieta",
+    "url": "https://www.cibercuba.com/noticias/2026-11-26-u1-e199370-s27065-nid346666-abuela-cubana-miami-al-ver-tatuaje-fidel-che-hizo"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Lina Luaces revela que padece esclerosis múltiple",
+    "url": "https://www.cibercuba.com/noticias/2026-11-26-u65722-e65722-s27065-nid346667-lina-luaces-revela-padece-esclerosis-multiple"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Flor de Cuba y Alex regalan un Rolex al médico que atendió el parto",
+    "url": "https://www.cibercuba.com/noticias/2026-11-24-u65722-e65722-s27065-nid346526-vaya-sorpresa-hospital-flor-cuba-alex-regalan"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Camila Arteche sorprende con lo que aprendió en Egipto",
+    "url": "https://www.cibercuba.com/noticias/2026-11-26-u65722-e65722-s27065-nid346673-esperaba-camila-arteche-sorprende-aprendio-egipto"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Holguín se alista para el comienzo de pequeñas ligas de béisbol",
+    "url": "https://www.ahora.cu/es/deportes/27750-holguin-se-alista-para-el-comienzo-de-pequenas-ligas-de-beisbol"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Cuba celebrará a Silvio Rodríguez con un diluvio de voces",
+    "url": "https://www.prensa-latina.cu/2026/11/23/cuba-celebrara-a-silvio-rodriguez-con-un-diluvio-de-voces/"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita (Pancho Mamey y el avioncito de juguete) y el chiste del señor de Banes y el dólar son originales, escritos para este programa en homenaje a La Tremenda Corte y al estilo de Guillermo Álvarez Guedes; no reproducen grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:34",
+    "name": "Titulares: el presupuesto, los presos, el turismo, la corriente y Oriente"
+   },
+   {
+    "t": "06:13",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "10:05",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "11:42",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "12:46",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-26",
+  "file": "ventanita-2026-11-26.mp3",
+  "length": 16248044,
+  "duration": "00:13:32",
+  "guid": "ventanita-2026-11-26",
+  "pubDate": "Thu, 26 Nov 2026 08:45:00 -0700"
+ },
+ {
   "date": "2026-11-24",
   "kind": "diario",
   "title": "Martes 24 de noviembre: balseros sin rastro, una carta a Díaz-Canel y el laurel que revivió en Holguín",
