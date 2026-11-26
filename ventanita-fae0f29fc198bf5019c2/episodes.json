@@ -179,6 +179,163 @@
   "pubDate": "Thu, 26 Nov 2026 08:45:00 -0700"
  },
  {
+  "date": "2026-11-25",
+  "kind": "diario",
+  "title": "Miércoles 25 de noviembre: baja la esperanza de vida, sube el déficit y en Banes se fue la luz casi veinte horas",
+  "summary": "Titulares: el director de la OMS dice que la esperanza de vida en Cuba bajó de 78,8 a 74,4 años, por primera vez desde 1950, y anuncia dos millones de dólares en ayuda; el Gobierno publica un decreto ley que sube un 85% el tope del déficit fiscal; el frente frío aplaza la velada por los diez años de la muerte de Fidel Castro y hay inundaciones en Nueva Gerona; la UNE prevé 1.810 MW de afectación y el dólar informal ronda los 970 pesos; el embajador chino describe partos a la luz de linternas; la SIP exige la libertad de Henry Constantín; y en Oriente, el circuito Banes 2 lleva casi veinte horas sin luz y se confirman casos de hepatitis A en Granma. Después, el chisme de la cocina (Sofía Vergara y El Taxi, Mia Dio en Miss Universo, Pouzii en La Casa de Alofoke, un árbol cubano en Florida, el sub-12 y la pelota oriental), El Juzgado de la Ventanita y el chiste del día.",
+  "unconfirmed": [
+   "Cifras de esperanza de vida (78,8 a 74,4), mortalidad infantil (4 a 9,9) y supervivencia del cáncer pediátrico (85% a 65%): dichas por Tedros Adhanom en conferencia de prensa, según AFP / France 24; no auditadas de forma independiente en este episodio. CiberCuba interpreta que la OMS adoptó el discurso oficial sobre el embargo.",
+   "Mortalidad materna (37,4 a 44,1): AFP / France 24 cita esas cifras de la misma conferencia; la unidad de medida en esa nota aparece como por cada 1.000 nacidos, que no es la unidad habitual, así que no la repetimos en el aire.",
+   "Tope del déficit (de 74.500 millones a casi 138.000 millones, +85%) y del endeudamiento (+51%): según 14ymedio y Diario de Cuba, con el Decreto-Ley 142/2026 publicado en la Gaceta Oficial el 24 de noviembre.",
+   "Pronóstico eléctrico de 1.810 MW y cierre de 1.735 MW: partes de la UNE recogidos por Cubadebate y CiberCuba; la diferencia entre pronóstico y cierre es normal.",
+   "Tasa informal del dólar: 970 CUP en la madrugada del 25, según elToque citado por Directorio Cubano; 975 CUP al cierre de la tarde, según el índice propio de CiberCuba. Son dos cuentas distintas.",
+   "Relato del embajador Hua Xin (apagones de más de 20 horas y partos con linternas): artículo en el Diario del Pueblo, recogido por CiberCuba a partir de la embajada china. Es la versión de un aliado del gobierno.",
+   "Estado de salud de Henry Constantín y detalles de la citación: según CiberCuba, que cita a la SIP y a su pareja, la periodista Alejandra García; no hay parte oficial.",
+   "19 horas y 47 minutos sin servicio en Banes 2 / Tanganica, y 167 MW de máximo en Holguín el martes: parte de la Empresa Eléctrica de Holguín recogido por El Alambique.",
+   "Casos de hepatitis A en Granma, con personal de la salud afectado: declaraciones del doctor Orlando Iglesias Pérez en CNC TV Granma, recogidas por CiberCuba; sin cifras ni municipios oficiales.",
+   "247.000 afectados por el déficit de agua en La Habana: cifra del delegado provincial de Recursos Hidráulicos, publicada por la Presidencia.",
+   "Lluvias e inundaciones en Nueva Gerona (unos 60 mm y evacuaciones preventivas): CiberCuba e Infobae, citando medios locales; no hay cifra oficial de evacuados.",
+   "Aplazamiento de la velada por Fidel Castro: OnCuba cita a Granma; también lo recogen Diario de Cuba y CiberCuba."
+  ],
+  "sources": [
+   {
+    "outlet": "France 24 (internacional, cita AFP)",
+    "title": "Cae la esperanza de vida en Cuba por primera vez en casi 80 años, alerta la OMS",
+    "url": "https://www.france24.com/es/minuto-a-minuto/20261125-cae-la-esperanza-de-vida-en-cuba-por-primera-vez-en-casi-80-años-alerta-la-oms"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "La OMS anuncia dos millones de dólares para Cuba y adopta el discurso del régimen sobre el embargo",
+    "url": "https://www.cibercuba.com/archivo/2026/11/25/"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "El déficit fiscal se dispara a 138.000 millones de CUP",
+    "url": "https://www.14ymedio.com/economia/deficit-fiscal-gobierno-cubano-dispara_1_1133697.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente)",
+    "title": "Economía en picada: el Gobierno cubano eleva el techo del déficit fiscal un 85,2%",
+    "url": "https://diariodecuba.com/economia/1795632413_70021.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Se complica el panorama meteorológico en Cuba: ¿qué zonas serán las más afectadas por el mal tiempo?",
+    "url": "https://www.cibercuba.com/noticias/2026-11-25-u1-e129488-s27061-nid346595-complica-panorama-meteorologico-cuba-zonas-seran"
+   },
+   {
+    "outlet": "OnCuba (independiente)",
+    "title": "Situación meteorológica obliga a posponer velada por aniversario de la muerte de Fidel Castro",
+    "url": "https://oncubanews.com/cuba/situacion-meteorologica-obliga-a-posponer-velada-por-aniversario-de-la-muerte-de-fidel-castro/"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Afectación eléctrica de 1.735 MW en Cuba | 25 nov 2026",
+    "url": "https://www.cibercuba.com/apagones/2026/11/25/"
+   },
+   {
+    "outlet": "El Alambique (independiente)",
+    "title": "Holguín reporta 19:47 horas sin servicio en circuitos de Banes este miércoles",
+    "url": "https://elalambique.net/historias/holguin-reporta-19-47-horas-sin-servicio-en-circuitos-de-banes-este-miercoles/"
+   },
+   {
+    "outlet": "Directorio Cubano (independiente, cita elToque)",
+    "title": "El euro y el dólar en máximos: tasas de cambio hoy 25 de noviembre",
+    "url": "https://www.directoriocubano.info/cuba/tasas-de-cambio-cuba-hoy-25-noviembre-2026-euro-dolar/"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Embajador de China en Cuba admite partos a la luz de linternas, mientras cuadros del PCC piden aprender del modelo chino",
+    "url": "https://www.cibercuba.com/noticias/2026-11-25-u1-e43231-s27061-nid346632-embajador-china-cuba-admite-partos-luz-linternas"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "La SIP responsabiliza al régimen de la integridad del periodista Henry Constantín, preso desde septiembre, y exige su liberación inmediata",
+    "url": "https://www.cibercuba.com/noticias/2026-11-25-u1-e43231-s27061-nid346596-sip-responsabiliza-al-regimen-integridad-henry"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Confirman casos de hepatitis A en Granma: «Tenemos muchos médicos, personal de la salud que están afectados»",
+    "url": "https://www.cibercuba.com/noticias/2026-11-25-u1-e135253-s27061-nid346616-confirman-casos-hepatitis-granma-alertan-riesgo"
+   },
+   {
+    "outlet": "Presidencia de la República (oficial)",
+    "title": "Díaz-Canel visita la fuente de abasto Los Meireles",
+    "url": "https://www.presidencia.gob.cu/es/noticias/diaz-canel-visita-la-fuente-de-abasto-los-meireles-audio/"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Leñadores blindan el liderazgo oriental en el béisbol cubano",
+    "url": "https://www.prensa-latina.cu/2026/11/25/lenadores-blindan-el-liderazgo-oriental-en-el-beisbol-cubano/"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Cuba cedió 0-1 ante Venezuela en la Súper Ronda del Campeonato Panamericano de Béisbol Sub-12",
+    "url": "https://www.cibercuba.com/archivo/2026/11/25/"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Sofía Vergara se despelota al ritmo de El Taxi en Barranquilla y Osmani García reacciona",
+    "url": "https://www.cibercuba.com/archivo/2026/11/25/"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "Mia Dio rompe el silencio tras quedarse sin la corona de Miss Universo",
+    "url": "https://www.cibercuba.com/archivo/2026/11/25/"
+   },
+   {
+    "outlet": "CiberCuba (independiente)",
+    "title": "De los apagones en Cuba a La Casa de Alofoke 3: Pouzii se sincera",
+    "url": "https://www.cibercuba.com/archivo/2026/11/25/"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita (Cheo Foco de Banes y las horas de apagón) y el chiste del señor de Banes y el dólar a 970 son originales, escritos para este programa en homenaje a La Tremenda Corte y al estilo de Guillermo Álvarez Guedes; no reproducen grabaciones ni guiones de Álvarez Guedes ni de Tres Patines. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:34",
+    "name": "Titulares: la salud, el presupuesto, el tiempo, la corriente y Oriente"
+   },
+   {
+    "t": "08:12",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "11:34",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "13:01",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "13:53",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-25",
+  "file": "ventanita-2026-11-25.mp3",
+  "length": 17619884,
+  "duration": "00:14:41",
+  "guid": "ventanita-2026-11-25",
+  "pubDate": "Wed, 25 Nov 2026 08:45:00 -0700"
+ },
+ {
   "date": "2026-11-24",
   "kind": "diario",
   "title": "Martes 24 de noviembre: balseros sin rastro, una carta a Díaz-Canel y el laurel que revivió en Holguín",
