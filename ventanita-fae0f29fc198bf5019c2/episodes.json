@@ -1,5 +1,176 @@
 [
  {
+  "date": "2026-11-27",
+  "kind": "diario",
+  "title": "Viernes 27 de noviembre: un naufragio frente a Cabañas, la libreta que se apaga y un oro guantanamero",
+  "summary": "Titulares: naufraga el carguero Halima frente a Cabañas, Artemisa (un fallecido y tres desaparecidos) y el Nova Orion encallado en Puerto Plata daña un arrecife; solo 1.913 de unas 12.000 bodegas seguirán con la canasta subsidiada, para unos 883.000 'vulnerables'; el dólar informal llega a 978 pesos y la UNE prevé 1.630 MW de afectación; 40 negocios con capital extranjero por 2.000 millones, según el Gobierno; la CIDH da siete días a La Habana para informar sobre Henry Constantin, citan a Nadir Martín Perdomo días después de salir de prisión y el canciller de Panamá visita a sus siete compatriotas presos; y en Holguín, 20 años de cárcel a un campesino de Gibara por cultivar marihuana y la jornada de la Medicina Latinoamericana. Después, el chisme de la cocina (el juego suspendido por falta de agua, Industriales en play off, el oro olímpico de Jorge Grau, el 7-0 ante Croacia, Leoni Torres, Amanda Sanz en la batería y dos hermanas en el Árbol de los Ángeles), El Juzgado de la Ventanita y el chiste del día.",
+  "unconfirmed": [
+   "Reducción a 1.913 bodegas y 883.426 beneficiarios: declaraciones en Radio Rebelde recogidas por CiberCuba.",
+   "Tasa informal del dólar (978 CUP el 27 de noviembre): tasa publicada por CiberCuba.",
+   "Daños al arrecife por el Nova Orion: informe del Ministerio de Medio Ambiente dominicano recogido por Diario de Cuba.",
+   "Condena de 20 años a un campesino de Gibara: según 14ymedio, citando a una periodista de la prensa oficial.",
+   "Rastra con 7.000 litros de petróleo interceptada en Corralillo: solo CiberCuba, citando un perfil oficialista de Facebook.",
+   "Críticas a las cifras de inversión extranjera: análisis de 14ymedio."
+  ],
+  "sources": [
+   {
+    "outlet": "Granma (oficial)",
+    "title": "Naufragó buque de bandera panameña al norte de Artemisa",
+    "url": "https://www.granma.cu/cuba/2026-11-26/naufrago-buque-de-bandera-panamena-al-norte-de-artemisa-26-11-2026-19-11-03"
+   },
+   {
+    "outlet": "EFE vía La Prensa (internacional)",
+    "title": "Un buque de bandera panameña naufraga a unas tres millas de la costa oeste de Cuba",
+    "url": "https://www.prensa.com/economia/un-buque-de-bandera-panamena-naufraga-a-unas-tres-millas-de-la-costa-oeste-de-cuba/"
+   },
+   {
+    "outlet": "Prensa Latina (oficial)",
+    "title": "Continúa rescate tras naufragio de buque al norte de Cuba",
+    "url": "https://www.prensa-latina.cu/2026/11/27/continua-rescate-tras-naufragio-de-buque-al-norte-de-cuba/"
+   },
+   {
+    "outlet": "Martí Noticias (financiado por EE UU)",
+    "title": "Un muerto y tres desaparecidos tras naufragio de buque de carga frente a las costas de Cuba",
+    "url": "https://www.radiotelevisionmarti.com/a/un-muerto-y-tres-desaparecidos-tras-naufragio-de-buque-de-carga-frente-a-las-costas-de-cuba/485168.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente, exilio)",
+    "title": "El buque cubano varado en República Dominicana provoca una crisis ambiental",
+    "url": "https://diariodecuba.com/cuba/1795726845_70037.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente, exilio)",
+    "title": "El régimen cierra en la práctica la libreta: solo 1,913 de las 12,000 bodegas atenderán a 883,000 vulnerables",
+    "url": "https://www.cibercuba.com/noticias/2026-11-26-u1-e43231-s27061-nid346707-regimen-cierra-practica-libreta-solo-1913-12000"
+   },
+   {
+    "outlet": "CiberCuba (independiente, exilio)",
+    "title": "El dólar marca un nuevo máximo en Cuba y el euro vuelve a subir",
+    "url": "https://www.cibercuba.com/noticias/2026-11-27-u1-e129488-s27061-nid346764-dolar-marca-nuevo-maximo-cuba-euro-vuelve-subir-asi"
+   },
+   {
+    "outlet": "Cubadebate (oficial)",
+    "title": "Portada: pronóstico de la UNE, baterías Habana 220, cartera de inversión extranjera, Industriales en play off",
+    "url": "http://www.cubadebate.cu/"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "Muchos anuncios y pocos datos sobre las inversiones de las empresas extranjeras en Cuba",
+    "url": "https://www.14ymedio.com/cuba/anuncios-datos-inversiones-empresas-extranjeras_1_1133770.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente, exilio)",
+    "title": "La CIDH pide información a Bruno Rodríguez sobre Henry Constantin y le da un plazo para responder",
+    "url": "https://diariodecuba.com/derechos-humanos/1795773949_70041.html"
+   },
+   {
+    "outlet": "CiberCuba (independiente, exilio)",
+    "title": "Apenas salió de prisión y ya lo citan: la denuncia de la familia de Nadir Martín Perdomo",
+    "url": "https://www.cibercuba.com/noticias/2026-11-27-u1-e74-s27061-nid346765-apenas-salio-prision-citan-amenazarlo-denuncia-familia"
+   },
+   {
+    "outlet": "Martí Noticias (financiado por EE UU)",
+    "title": "Embajada de EEUU en Cuba recuerda en Acción de Gracias a las familias separadas por el exilio y la prisión política",
+    "url": "https://www.radiotelevisionmarti.com/a/embajada-de-eeuu-en-cuba-recuerda-en-acci%C3%B3n-de-gracias-a-las-familias-separadas-por-el-exilio-y-la-prisi%C3%B3n-pol%C3%ADtica/485116.html"
+   },
+   {
+    "outlet": "Diario de Cuba (independiente, exilio)",
+    "title": "El canciller de Panamá visita a sus compatriotas acusados de subversión en Cuba",
+    "url": "https://diariodecuba.com/cuba/1795782585_70043.html"
+   },
+   {
+    "outlet": "14ymedio (independiente)",
+    "title": "Veinte años de cárcel para un campesino holguinero por cultivar marihuana",
+    "url": "https://www.14ymedio.com/cuba/veinte-anos-carcel-campesino-holguinero_1_1133772.html"
+   },
+   {
+    "outlet": "¡Ahora! (oficial, Holguín)",
+    "title": "Holguín: con múltiples actividades por Día de la Medicina Latinoamericana",
+    "url": "https://www.ahora.cu/es/holguin/27784-holguin-con-multiples-actividades-por-dia-medicina-latinoamericana"
+   },
+   {
+    "outlet": "CiberCuba (independiente, exilio)",
+    "title": "Interceptan una rastra en Cuba con un cargamento irregular de miles de litros de petróleo",
+    "url": "https://www.cibercuba.com/noticias/2026-11-27-u1-e129488-s27061-nid346753-interceptan-rastra-cuba-cargamento-irregular-miles"
+   },
+   {
+    "outlet": "CiberCuba (chisme)",
+    "title": "Suspenden partido de béisbol en Cuba porque el hotel donde se hospedaban los equipos no tenía agua",
+    "url": "https://www.cibercuba.com/noticias/2026-11-25-u1-e199291-s27066-nid346569-suspenden-partido-beisbol-cuba-porque-hotel-donde"
+   },
+   {
+    "outlet": "CiberCuba (chisme)",
+    "title": "Tirador Jorge Grau gana el oro en el Campeonato de las Américas y es el primer cubano clasificado a Los Ángeles 2028",
+    "url": "https://www.cibercuba.com/noticias/2026-11-26-u1-e43231-s27066-nid346669-tirador-jorge-grau-gana-oro-campeonato-americas"
+   },
+   {
+    "outlet": "CiberCuba (chisme)",
+    "title": "Cuba sufre una goleada 7-0 ante Croacia y queda eliminada del Mundial Sub-17 de Qatar",
+    "url": "https://www.cibercuba.com/noticias/2026-11-26-u1-e199894-s27061-nid346717-cuba-sufre-goleada-7-0-croacia-queda-eliminada"
+   },
+   {
+    "outlet": "CiberCuba (chisme)",
+    "title": "Leoni Torres celebra Thanksgiving en familia",
+    "url": "https://www.cibercuba.com/noticias/2026-11-27-u208487-e208487-s27065-nid346743-leoni-torres-celebra-thanksgiving-familia-hoy"
+   },
+   {
+    "outlet": "CiberCuba (chisme)",
+    "title": "Amanda Sanz sorprende tocando la batería al ritmo de Rammstein",
+    "url": "https://www.cibercuba.com/noticias/2026-11-27-u65722-e65722-s27065-nid346760-solo-canta-amanda-sanz-sorprende-todos-tocando"
+   },
+   {
+    "outlet": "CiberCuba (chisme)",
+    "title": "Dos hermanas cubanas van a Walmart y emocionan a miles con lo que hicieron por dos niños esta Navidad",
+    "url": "https://www.cibercuba.com/noticias/2026-11-27-u65722-e65722-s27065-nid346759-dos-hermanas-cubanas-van-walmart-emocionan-miles"
+   }
+  ],
+  "humor_note": "El Juzgado de la Ventanita y el chiste del día son originales, escritos por La Ventanita en homenaje a La Tremenda Corte y al estilo de Guillermo Álvarez Guedes; no se reproduce material grabado ni guiones de terceros. Música de fondo: «Cuban Ensemble» de szegvari (Freesound, CC0) — https://freesound.org/people/szegvari/sounds/619557/; «Cuban mambo» de oymaldonado (Freesound, CC BY 4.0) — https://freesound.org/people/oymaldonado/sounds/544019/.",
+  "segments": [
+   {
+    "t": "00:00",
+    "name": "Bienvenida"
+   },
+   {
+    "t": "00:33",
+    "name": "Titulares: el naufragio, la libreta, el dólar, los presos y Holguín"
+   },
+   {
+    "t": "05:46",
+    "name": "El chisme de la cocina"
+   },
+   {
+    "t": "08:56",
+    "name": "El Juzgado de la Ventanita (homenaje a La Tremenda Corte)"
+   },
+   {
+    "t": "10:27",
+    "name": "El chiste del día (al estilo de Álvarez Guedes)"
+   },
+   {
+    "t": "11:34",
+    "name": "Despedida"
+   }
+  ],
+  "music": [
+   {
+    "credit": "«Cuban Ensemble» de szegvari (Freesound, CC0)",
+    "url": "https://freesound.org/people/szegvari/sounds/619557/",
+    "license": "CC0 1.0"
+   },
+   {
+    "credit": "«Cuban mambo» de oymaldonado (Freesound, CC BY 4.0)",
+    "url": "https://freesound.org/people/oymaldonado/sounds/544019/",
+    "license": "CC BY 4.0"
+   }
+  ],
+  "key": "2026-11-27",
+  "file": "ventanita-2026-11-27.mp3",
+  "length": 14812364,
+  "duration": "00:12:21",
+  "guid": "ventanita-2026-11-27",
+  "pubDate": "Fri, 27 Nov 2026 08:45:00 -0700"
+ },
+ {
   "date": "2026-11-26",
   "kind": "diario",
   "title": "Jueves 26 de noviembre: el hueco del presupuesto, el recado de un cardenal y los embalses llenos en Holguín",
