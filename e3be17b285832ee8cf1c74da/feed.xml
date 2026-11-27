@@ -6,7 +6,7 @@
     <atom:link href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/feed.xml" rel="self" type="application/rss+xml"/>
     <description>A private daily audio briefing on what a handful of influential X accounts are saying: themes, engagement, analysis and business angles. By Mr. X.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Nov 2026 20:16:37 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 05:25:54 -0700</lastBuildDate>
     <itunes:author>Mr. X</itunes:author>
     <itunes:owner><itunes:name>Mr. X</itunes:name></itunes:owner>
     <itunes:image href="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/x-briefing-cover-v3.jpg"/>
@@ -15,6 +15,17 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>serial</itunes:type>
     <itunes:block>yes</itunes:block>
+    <item>
+      <title>X Briefing — Nov 27, 2026</title>
+      <description>A short Thanksgiving-night edition. A viral argument over a surgeon's salary turns into a wider debate about whether the classic prestige careers still pay off, and the replies fill up with thanks from grateful patients. Also: a resurfaced exposé of a progressive think tank courting populists, fringe campus chapters, a trucker licensing case, and a quiet night on the predictions tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
+      <itunes:summary>A short Thanksgiving-night edition. A viral argument over a surgeon's salary turns into a wider debate about whether the classic prestige careers still pay off, and the replies fill up with thanks from grateful patients. Also: a resurfaced exposé of a progressive think tank courting populists, fringe campus chapters, a trucker licensing case, and a quiet night on the predictions tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</itunes:summary>
+      <enclosure url="https://angelhq-pods.github.io/pods/e3be17b285832ee8cf1c74da/episodes/x-briefing-2026-11-27.mp3" length="8201324" type="audio/mpeg"/>
+      <guid isPermaLink="false">x-briefing-2026-11-27</guid>
+      <pubDate>Fri, 27 Nov 2026 06:00:00 -0700</pubDate>
+      <itunes:duration>00:06:50</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
     <item>
       <title>X Briefing — Nov 26, 2026</title>
       <description>A holiday catch-up covering Thanksgiving Eve and Thanksgiving Day. New tariffs become official and inflation runs hot, yet stocks claw back a steep plunge. Also: a pledge to put company shares into every child's investment account, a viral reflection on returning to church, a thread on spiritual warfare, a brigading fight, and the latest on the predictions tracker. Music: «Lofi Beat Loop Schmoop» by Seth_Makes_Sounds (Freesound, CC0 1.0).</description>
